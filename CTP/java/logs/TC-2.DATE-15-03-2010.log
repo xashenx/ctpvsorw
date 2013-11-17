@@ -1,0 +1,7377 @@
+Source: serial@/dev/ttyUSB0:tmote
+Experiment ID: 2
+Number of packets to transmit: 5
+Radio channel: 17
+Delta Time [ms]: 20000
+Pure PLR Experiment
+Received Statistics from Node: 0 Nr Hop:0 Seq N:0 Stats Retx:1 (Experiment ID: 0 got from node 0 - 20:15:24 @ 15-03-2010)Node: 0 Support Data: Avg Temperature:29.339999999999996 Avg Humidity:10.8321472 Init Battery:2.9626465 End Battery:2.9538574 Radio Activations:0
+Ref ID	Rcv	RSSI[dBm]	LQI
+1	5	-34	10
+2	5	-44	77
+3	5	-47	74
+4	5	-48	99
+5	5	-46	50
+6	5	-40	4
+7	5	-39	5
+8	5	-55	117
+9	0	0	0
+10	5	-51	70
+11	5	-56	117
+12	5	-48	124
+13	3	-90	82
+14	5	-43	1
+15	5	-63	109
+Waiting for: 
+
+Node 0 < 1 2 >
+Node 1 < 0 1 2 >
+Node 2 < 0 1 2 >
+Node 3 < 0 1 2 >
+Node 4 < 0 1 2 >
+Node 5 < 0 1 2 >
+Node 6 < 0 1 2 >
+Node 7 < 0 1 2 >
+Node 8 < 0 1 2 >
+Node 9 < 0 1 2 >
+Node 10 < 0 1 2 >
+Node 11 < 0 1 2 >
+Node 12 < 0 1 2 >
+Node 13 < 0 1 2 >
+Node 14 < 0 1 2 >
+Node 15 < 0 1 2 >
+Node 16 < 0 1 2 >
+Node 17 < 0 1 2 >
+Node 18 < 0 1 2 >
+Node 19 < 0 1 2 >
+Node 20 < 0 1 2 >
+Node 21 < 0 1 2 >
+Node 22 < 0 1 2 >
+Node 23 < 0 1 2 >
+Node 24 < 0 1 2 >
+Node 25 < 0 1 2 >
+Node 26 < 0 1 2 >
+Node 27 < 0 1 2 >
+Node 28 < 0 1 2 >
+Node 29 < 0 1 2 >
+Node 30 < 0 1 2 >
+Node 31 < 0 1 2 >
+Node 32 < 0 1 2 >
+Node 33 < 0 1 2 >
+Node 34 < 0 1 2 >
+Node 35 < 0 1 2 >
+Node 36 < 0 1 2 >
+Node 37 < 0 1 2 >
+Node 38 < 0 1 2 >
+Node 39 < 0 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 1 Nr Hop:0 Seq N:0 Stats Retx:1 (Experiment ID: 0 got from node 0 - 20:15:30 @ 15-03-2010)Node: 1 Support Data: Avg Temperature:25.470000000000006 Avg Humidity:12.4016108 Init Battery:2.9992676 End Battery:2.9992676 Radio Activations:0
+Ref ID	Rcv	RSSI[dBm]	LQI
+0	5	-28	17
+2	5	-20	24
+3	5	-25	19
+4	5	-24	20
+5	5	-41	3
+6	5	-19	25
+7	5	-21	23
+8	5	-43	1
+9	0	0	0
+10	5	-38	6
+11	5	-38	6
+12	5	-52	120
+13	0	0	0
+14	5	-42	3
+15	5	-53	68
+Waiting for: 
+
+Node 0 < 1 2 >
+Node 1 < 1 2 >
+Node 2 < 0 1 2 >
+Node 3 < 0 1 2 >
+Node 4 < 0 1 2 >
+Node 5 < 0 1 2 >
+Node 6 < 0 1 2 >
+Node 7 < 0 1 2 >
+Node 8 < 0 1 2 >
+Node 9 < 0 1 2 >
+Node 10 < 0 1 2 >
+Node 11 < 0 1 2 >
+Node 12 < 0 1 2 >
+Node 13 < 0 1 2 >
+Node 14 < 0 1 2 >
+Node 15 < 0 1 2 >
+Node 16 < 0 1 2 >
+Node 17 < 0 1 2 >
+Node 18 < 0 1 2 >
+Node 19 < 0 1 2 >
+Node 20 < 0 1 2 >
+Node 21 < 0 1 2 >
+Node 22 < 0 1 2 >
+Node 23 < 0 1 2 >
+Node 24 < 0 1 2 >
+Node 25 < 0 1 2 >
+Node 26 < 0 1 2 >
+Node 27 < 0 1 2 >
+Node 28 < 0 1 2 >
+Node 29 < 0 1 2 >
+Node 30 < 0 1 2 >
+Node 31 < 0 1 2 >
+Node 32 < 0 1 2 >
+Node 33 < 0 1 2 >
+Node 34 < 0 1 2 >
+Node 35 < 0 1 2 >
+Node 36 < 0 1 2 >
+Node 37 < 0 1 2 >
+Node 38 < 0 1 2 >
+Node 39 < 0 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 2 Nr Hop:0 Seq N:0 Stats Retx:1 (Experiment ID: 0 got from node 0 - 20:15:31 @ 15-03-2010)Node: 2 Support Data: Avg Temperature:24.940000000000005 Avg Humidity:13.239881200000003 Init Battery:2.9992676 End Battery:2.9992676 Radio Activations:0
+Ref ID	Rcv	RSSI[dBm]	LQI
+0	5	-40	4
+1	5	-21	23
+3	5	-24	21
+4	5	-21	24
+5	5	-31	13
+6	5	-19	26
+7	5	-19	26
+8	5	-42	3
+9	0	0	0
+10	5	-35	9
+11	5	-38	6
+12	5	-55	117
+13	0	0	0
+14	5	-50	123
+15	5	-53	68
+Waiting for: 
+
+Node 0 < 1 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 0 1 2 >
+Node 4 < 0 1 2 >
+Node 5 < 0 1 2 >
+Node 6 < 0 1 2 >
+Node 7 < 0 1 2 >
+Node 8 < 0 1 2 >
+Node 9 < 0 1 2 >
+Node 10 < 0 1 2 >
+Node 11 < 0 1 2 >
+Node 12 < 0 1 2 >
+Node 13 < 0 1 2 >
+Node 14 < 0 1 2 >
+Node 15 < 0 1 2 >
+Node 16 < 0 1 2 >
+Node 17 < 0 1 2 >
+Node 18 < 0 1 2 >
+Node 19 < 0 1 2 >
+Node 20 < 0 1 2 >
+Node 21 < 0 1 2 >
+Node 22 < 0 1 2 >
+Node 23 < 0 1 2 >
+Node 24 < 0 1 2 >
+Node 25 < 0 1 2 >
+Node 26 < 0 1 2 >
+Node 27 < 0 1 2 >
+Node 28 < 0 1 2 >
+Node 29 < 0 1 2 >
+Node 30 < 0 1 2 >
+Node 31 < 0 1 2 >
+Node 32 < 0 1 2 >
+Node 33 < 0 1 2 >
+Node 34 < 0 1 2 >
+Node 35 < 0 1 2 >
+Node 36 < 0 1 2 >
+Node 37 < 0 1 2 >
+Node 38 < 0 1 2 >
+Node 39 < 0 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 3 Nr Hop:0 Seq N:0 Stats Retx:1 (Experiment ID: 0 got from node 0 - 20:15:32 @ 15-03-2010)Node: 3 Support Data: Avg Temperature:25.199999999999996 Avg Humidity:12.439772800000002 Init Battery:2.9992676 End Battery:2.9992676 Radio Activations:0
+Ref ID	Rcv	RSSI[dBm]	LQI
+0	5	-42	53
+1	5	-26	18
+2	5	-23	21
+4	5	-14	31
+5	5	-23	21
+6	5	-24	20
+7	5	-19	25
+8	5	-28	17
+9	0	0	0
+10	5	-25	19
+11	5	-31	13
+12	5	-37	7
+13	0	0	0
+14	5	-43	1
+15	5	-51	70
+Waiting for: 
+
+Node 0 < 1 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 1 2 >
+Node 4 < 0 1 2 >
+Node 5 < 0 1 2 >
+Node 6 < 0 1 2 >
+Node 7 < 0 1 2 >
+Node 8 < 0 1 2 >
+Node 9 < 0 1 2 >
+Node 10 < 0 1 2 >
+Node 11 < 0 1 2 >
+Node 12 < 0 1 2 >
+Node 13 < 0 1 2 >
+Node 14 < 0 1 2 >
+Node 15 < 0 1 2 >
+Node 16 < 0 1 2 >
+Node 17 < 0 1 2 >
+Node 18 < 0 1 2 >
+Node 19 < 0 1 2 >
+Node 20 < 0 1 2 >
+Node 21 < 0 1 2 >
+Node 22 < 0 1 2 >
+Node 23 < 0 1 2 >
+Node 24 < 0 1 2 >
+Node 25 < 0 1 2 >
+Node 26 < 0 1 2 >
+Node 27 < 0 1 2 >
+Node 28 < 0 1 2 >
+Node 29 < 0 1 2 >
+Node 30 < 0 1 2 >
+Node 31 < 0 1 2 >
+Node 32 < 0 1 2 >
+Node 33 < 0 1 2 >
+Node 34 < 0 1 2 >
+Node 35 < 0 1 2 >
+Node 36 < 0 1 2 >
+Node 37 < 0 1 2 >
+Node 38 < 0 1 2 >
+Node 39 < 0 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 4 Nr Hop:0 Seq N:0 Stats Retx:1 (Experiment ID: 0 got from node 0 - 20:15:33 @ 15-03-2010)Node: 4 Support Data: Avg Temperature:25.309999999999995 Avg Humidity:12.439772800000002 Init Battery:2.9992676 End Battery:2.9992676 Radio Activations:0
+Ref ID	Rcv	RSSI[dBm]	LQI
+0	5	-45	50
+1	5	-25	19
+2	5	-22	23
+3	5	-16	28
+5	5	-19	25
+6	5	-49	123
+7	5	-24	20
+8	5	-41	3
+9	0	0	0
+10	5	-25	20
+11	5	-37	8
+12	5	-29	15
+13	5	-88	84
+14	5	-39	5
+15	5	-70	102
+Waiting for: 
+
+Node 0 < 1 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 1 2 >
+Node 4 < 1 2 >
+Node 5 < 0 1 2 >
+Node 6 < 0 1 2 >
+Node 7 < 0 1 2 >
+Node 8 < 0 1 2 >
+Node 9 < 0 1 2 >
+Node 10 < 0 1 2 >
+Node 11 < 0 1 2 >
+Node 12 < 0 1 2 >
+Node 13 < 0 1 2 >
+Node 14 < 0 1 2 >
+Node 15 < 0 1 2 >
+Node 16 < 0 1 2 >
+Node 17 < 0 1 2 >
+Node 18 < 0 1 2 >
+Node 19 < 0 1 2 >
+Node 20 < 0 1 2 >
+Node 21 < 0 1 2 >
+Node 22 < 0 1 2 >
+Node 23 < 0 1 2 >
+Node 24 < 0 1 2 >
+Node 25 < 0 1 2 >
+Node 26 < 0 1 2 >
+Node 27 < 0 1 2 >
+Node 28 < 0 1 2 >
+Node 29 < 0 1 2 >
+Node 30 < 0 1 2 >
+Node 31 < 0 1 2 >
+Node 32 < 0 1 2 >
+Node 33 < 0 1 2 >
+Node 34 < 0 1 2 >
+Node 35 < 0 1 2 >
+Node 36 < 0 1 2 >
+Node 37 < 0 1 2 >
+Node 38 < 0 1 2 >
+Node 39 < 0 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 5 Nr Hop:0 Seq N:0 Stats Retx:1 (Experiment ID: 0 got from node 0 - 20:15:35 @ 15-03-2010)Node: 5 Support Data: Avg Temperature:24.740000000000002 Avg Humidity:12.325270000000002 Init Battery:2.9992676 End Battery:2.9992676 Radio Activations:0
+Ref ID	Rcv	RSSI[dBm]	LQI
+0	5	-44	52
+1	5	-43	1
+2	5	-33	11
+3	5	-26	19
+4	5	-19	25
+6	5	-30	14
+7	5	-25	19
+8	5	-39	6
+9	0	0	0
+10	5	-20	24
+11	5	-35	10
+12	5	-31	13
+13	5	-85	87
+14	5	-39	6
+15	5	-48	73
+Waiting for: 
+
+Node 0 < 1 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 1 2 >
+Node 4 < 1 2 >
+Node 5 < 1 2 >
+Node 6 < 0 1 2 >
+Node 7 < 0 1 2 >
+Node 8 < 0 1 2 >
+Node 9 < 0 1 2 >
+Node 10 < 0 1 2 >
+Node 11 < 0 1 2 >
+Node 12 < 0 1 2 >
+Node 13 < 0 1 2 >
+Node 14 < 0 1 2 >
+Node 15 < 0 1 2 >
+Node 16 < 0 1 2 >
+Node 17 < 0 1 2 >
+Node 18 < 0 1 2 >
+Node 19 < 0 1 2 >
+Node 20 < 0 1 2 >
+Node 21 < 0 1 2 >
+Node 22 < 0 1 2 >
+Node 23 < 0 1 2 >
+Node 24 < 0 1 2 >
+Node 25 < 0 1 2 >
+Node 26 < 0 1 2 >
+Node 27 < 0 1 2 >
+Node 28 < 0 1 2 >
+Node 29 < 0 1 2 >
+Node 30 < 0 1 2 >
+Node 31 < 0 1 2 >
+Node 32 < 0 1 2 >
+Node 33 < 0 1 2 >
+Node 34 < 0 1 2 >
+Node 35 < 0 1 2 >
+Node 36 < 0 1 2 >
+Node 37 < 0 1 2 >
+Node 38 < 0 1 2 >
+Node 39 < 0 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 6 Nr Hop:0 Seq N:0 Stats Retx:1 (Experiment ID: 0 got from node 0 - 20:15:36 @ 15-03-2010)Node: 6 Support Data: Avg Temperature:25.059999999999995 Avg Humidity:12.363443199999999 Init Battery:2.9992676 End Battery:2.9992676 Radio Activations:0
+Ref ID	Rcv	RSSI[dBm]	LQI
+0	5	-36	8
+1	5	-18	27
+2	5	-17	27
+3	5	-23	21
+4	5	-47	74
+5	5	-28	16
+7	5	-23	21
+8	5	-36	8
+9	0	0	0
+10	5	-27	17
+11	5	-41	3
+12	5	-46	101
+13	0	0	0
+14	5	-53	119
+15	5	-66	106
+Waiting for: 
+
+Node 0 < 1 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 1 2 >
+Node 4 < 1 2 >
+Node 5 < 1 2 >
+Node 6 < 1 2 >
+Node 7 < 0 1 2 >
+Node 8 < 0 1 2 >
+Node 9 < 0 1 2 >
+Node 10 < 0 1 2 >
+Node 11 < 0 1 2 >
+Node 12 < 0 1 2 >
+Node 13 < 0 1 2 >
+Node 14 < 0 1 2 >
+Node 15 < 0 1 2 >
+Node 16 < 0 1 2 >
+Node 17 < 0 1 2 >
+Node 18 < 0 1 2 >
+Node 19 < 0 1 2 >
+Node 20 < 0 1 2 >
+Node 21 < 0 1 2 >
+Node 22 < 0 1 2 >
+Node 23 < 0 1 2 >
+Node 24 < 0 1 2 >
+Node 25 < 0 1 2 >
+Node 26 < 0 1 2 >
+Node 27 < 0 1 2 >
+Node 28 < 0 1 2 >
+Node 29 < 0 1 2 >
+Node 30 < 0 1 2 >
+Node 31 < 0 1 2 >
+Node 32 < 0 1 2 >
+Node 33 < 0 1 2 >
+Node 34 < 0 1 2 >
+Node 35 < 0 1 2 >
+Node 36 < 0 1 2 >
+Node 37 < 0 1 2 >
+Node 38 < 0 1 2 >
+Node 39 < 0 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 7 Nr Hop:0 Seq N:0 Stats Retx:1 (Experiment ID: 0 got from node 0 - 20:15:37 @ 15-03-2010)Node: 7 Support Data: Avg Temperature:25.369999999999997 Avg Humidity:12.8210848 Init Battery:2.9992676 End Battery:2.9992676 Radio Activations:0
+Ref ID	Rcv	RSSI[dBm]	LQI
+0	5	-33	11
+1	5	-20	24
+2	5	-17	28
+3	5	-17	27
+4	5	-26	18
+5	5	-27	18
+6	5	-23	22
+8	5	-30	14
+9	0	0	0
+10	5	-23	21
+11	5	-42	2
+12	5	-41	3
+13	0	0	0
+14	5	-47	125
+15	5	-60	112
+Waiting for: 
+
+Node 0 < 1 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 1 2 >
+Node 4 < 1 2 >
+Node 5 < 1 2 >
+Node 6 < 1 2 >
+Node 7 < 1 2 >
+Node 8 < 0 1 2 >
+Node 9 < 0 1 2 >
+Node 10 < 0 1 2 >
+Node 11 < 0 1 2 >
+Node 12 < 0 1 2 >
+Node 13 < 0 1 2 >
+Node 14 < 0 1 2 >
+Node 15 < 0 1 2 >
+Node 16 < 0 1 2 >
+Node 17 < 0 1 2 >
+Node 18 < 0 1 2 >
+Node 19 < 0 1 2 >
+Node 20 < 0 1 2 >
+Node 21 < 0 1 2 >
+Node 22 < 0 1 2 >
+Node 23 < 0 1 2 >
+Node 24 < 0 1 2 >
+Node 25 < 0 1 2 >
+Node 26 < 0 1 2 >
+Node 27 < 0 1 2 >
+Node 28 < 0 1 2 >
+Node 29 < 0 1 2 >
+Node 30 < 0 1 2 >
+Node 31 < 0 1 2 >
+Node 32 < 0 1 2 >
+Node 33 < 0 1 2 >
+Node 34 < 0 1 2 >
+Node 35 < 0 1 2 >
+Node 36 < 0 1 2 >
+Node 37 < 0 1 2 >
+Node 38 < 0 1 2 >
+Node 39 < 0 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 8 Nr Hop:0 Seq N:0 Stats Retx:1 (Experiment ID: 0 got from node 0 - 20:15:38 @ 15-03-2010)Node: 8 Support Data: Avg Temperature:25.309999999999995 Avg Humidity:12.2107168 Init Battery:2.9992676 End Battery:2.9992676 Radio Activations:0
+Ref ID	Rcv	RSSI[dBm]	LQI
+0	5	-30	14
+1	5	-24	20
+2	5	-25	19
+3	5	-14	31
+4	5	-25	20
+5	5	-22	23
+6	5	-21	24
+7	5	-18	27
+9	0	0	0
+10	5	-28	16
+11	5	-31	13
+12	5	-40	4
+13	5	-84	89
+14	5	-35	10
+15	5	-50	71
+Waiting for: 
+
+Node 0 < 1 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 1 2 >
+Node 4 < 1 2 >
+Node 5 < 1 2 >
+Node 6 < 1 2 >
+Node 7 < 1 2 >
+Node 8 < 1 2 >
+Node 9 < 0 1 2 >
+Node 10 < 0 1 2 >
+Node 11 < 0 1 2 >
+Node 12 < 0 1 2 >
+Node 13 < 0 1 2 >
+Node 14 < 0 1 2 >
+Node 15 < 0 1 2 >
+Node 16 < 0 1 2 >
+Node 17 < 0 1 2 >
+Node 18 < 0 1 2 >
+Node 19 < 0 1 2 >
+Node 20 < 0 1 2 >
+Node 21 < 0 1 2 >
+Node 22 < 0 1 2 >
+Node 23 < 0 1 2 >
+Node 24 < 0 1 2 >
+Node 25 < 0 1 2 >
+Node 26 < 0 1 2 >
+Node 27 < 0 1 2 >
+Node 28 < 0 1 2 >
+Node 29 < 0 1 2 >
+Node 30 < 0 1 2 >
+Node 31 < 0 1 2 >
+Node 32 < 0 1 2 >
+Node 33 < 0 1 2 >
+Node 34 < 0 1 2 >
+Node 35 < 0 1 2 >
+Node 36 < 0 1 2 >
+Node 37 < 0 1 2 >
+Node 38 < 0 1 2 >
+Node 39 < 0 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 10 Nr Hop:0 Seq N:0 Stats Retx:1 (Experiment ID: 0 got from node 0 - 20:15:39 @ 15-03-2010)Node: 10 Support Data: Avg Temperature:25.240000000000002 Avg Humidity:11.904995200000002 Init Battery:2.9992676 End Battery:2.9992676 Radio Activations:0
+Ref ID	Rcv	RSSI[dBm]	LQI
+0	5	-48	47
+1	5	-41	4
+2	5	-37	8
+3	5	-23	22
+4	5	-25	20
+5	5	-20	24
+6	5	-25	20
+7	5	-24	20
+8	5	-45	25
+9	0	0	0
+11	5	-28	16
+12	5	-32	12
+13	5	-84	89
+14	5	-39	5
+15	5	-47	74
+Waiting for: 
+
+Node 0 < 1 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 1 2 >
+Node 4 < 1 2 >
+Node 5 < 1 2 >
+Node 6 < 1 2 >
+Node 7 < 1 2 >
+Node 8 < 1 2 >
+Node 9 < 0 1 2 >
+Node 10 < 1 2 >
+Node 11 < 0 1 2 >
+Node 12 < 0 1 2 >
+Node 13 < 0 1 2 >
+Node 14 < 0 1 2 >
+Node 15 < 0 1 2 >
+Node 16 < 0 1 2 >
+Node 17 < 0 1 2 >
+Node 18 < 0 1 2 >
+Node 19 < 0 1 2 >
+Node 20 < 0 1 2 >
+Node 21 < 0 1 2 >
+Node 22 < 0 1 2 >
+Node 23 < 0 1 2 >
+Node 24 < 0 1 2 >
+Node 25 < 0 1 2 >
+Node 26 < 0 1 2 >
+Node 27 < 0 1 2 >
+Node 28 < 0 1 2 >
+Node 29 < 0 1 2 >
+Node 30 < 0 1 2 >
+Node 31 < 0 1 2 >
+Node 32 < 0 1 2 >
+Node 33 < 0 1 2 >
+Node 34 < 0 1 2 >
+Node 35 < 0 1 2 >
+Node 36 < 0 1 2 >
+Node 37 < 0 1 2 >
+Node 38 < 0 1 2 >
+Node 39 < 0 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 11 Nr Hop:0 Seq N:0 Stats Retx:1 (Experiment ID: 0 got from node 0 - 20:15:41 @ 15-03-2010)Node: 11 Support Data: Avg Temperature:25.029999999999994 Avg Humidity:12.2107168 Init Battery:2.9992676 End Battery:2.9992676 Radio Activations:0
+Ref ID	Rcv	RSSI[dBm]	LQI
+0	5	-52	121
+1	5	-41	4
+2	5	-39	5
+3	5	-34	10
+4	5	-37	8
+5	5	-33	11
+6	5	-44	52
+7	5	-46	101
+8	5	-54	118
+9	0	0	0
+10	5	-28	16
+12	5	-21	23
+13	5	-75	98
+14	5	-40	4
+15	5	-48	73
+Waiting for: 
+
+Node 0 < 1 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 1 2 >
+Node 4 < 1 2 >
+Node 5 < 1 2 >
+Node 6 < 1 2 >
+Node 7 < 1 2 >
+Node 8 < 1 2 >
+Node 9 < 0 1 2 >
+Node 10 < 1 2 >
+Node 11 < 1 2 >
+Node 12 < 0 1 2 >
+Node 13 < 0 1 2 >
+Node 14 < 0 1 2 >
+Node 15 < 0 1 2 >
+Node 16 < 0 1 2 >
+Node 17 < 0 1 2 >
+Node 18 < 0 1 2 >
+Node 19 < 0 1 2 >
+Node 20 < 0 1 2 >
+Node 21 < 0 1 2 >
+Node 22 < 0 1 2 >
+Node 23 < 0 1 2 >
+Node 24 < 0 1 2 >
+Node 25 < 0 1 2 >
+Node 26 < 0 1 2 >
+Node 27 < 0 1 2 >
+Node 28 < 0 1 2 >
+Node 29 < 0 1 2 >
+Node 30 < 0 1 2 >
+Node 31 < 0 1 2 >
+Node 32 < 0 1 2 >
+Node 33 < 0 1 2 >
+Node 34 < 0 1 2 >
+Node 35 < 0 1 2 >
+Node 36 < 0 1 2 >
+Node 37 < 0 1 2 >
+Node 38 < 0 1 2 >
+Node 39 < 0 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 12 Nr Hop:0 Seq N:0 Stats Retx:1 (Experiment ID: 0 got from node 0 - 20:15:42 @ 15-03-2010)Node: 12 Support Data: Avg Temperature:25.059999999999995 Avg Humidity:12.325270000000002 Init Battery:2.9992676 End Battery:2.9992676 Radio Activations:0
+Ref ID	Rcv	RSSI[dBm]	LQI
+0	5	-42	2
+1	5	-54	118
+2	5	-56	117
+3	5	-38	6
+4	5	-28	16
+5	5	-29	15
+6	5	-48	124
+7	5	-44	1
+8	5	-59	113
+9	0	0	0
+10	5	-29	15
+11	5	-19	25
+13	5	-62	110
+14	5	-24	20
+15	5	-53	68
+Waiting for: 
+
+Node 0 < 1 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 1 2 >
+Node 4 < 1 2 >
+Node 5 < 1 2 >
+Node 6 < 1 2 >
+Node 7 < 1 2 >
+Node 8 < 1 2 >
+Node 9 < 0 1 2 >
+Node 10 < 1 2 >
+Node 11 < 1 2 >
+Node 12 < 1 2 >
+Node 13 < 0 1 2 >
+Node 14 < 0 1 2 >
+Node 15 < 0 1 2 >
+Node 16 < 0 1 2 >
+Node 17 < 0 1 2 >
+Node 18 < 0 1 2 >
+Node 19 < 0 1 2 >
+Node 20 < 0 1 2 >
+Node 21 < 0 1 2 >
+Node 22 < 0 1 2 >
+Node 23 < 0 1 2 >
+Node 24 < 0 1 2 >
+Node 25 < 0 1 2 >
+Node 26 < 0 1 2 >
+Node 27 < 0 1 2 >
+Node 28 < 0 1 2 >
+Node 29 < 0 1 2 >
+Node 30 < 0 1 2 >
+Node 31 < 0 1 2 >
+Node 32 < 0 1 2 >
+Node 33 < 0 1 2 >
+Node 34 < 0 1 2 >
+Node 35 < 0 1 2 >
+Node 36 < 0 1 2 >
+Node 37 < 0 1 2 >
+Node 38 < 0 1 2 >
+Node 39 < 0 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 13 Nr Hop:0 Seq N:0 Stats Retx:1 (Experiment ID: 0 got from node 0 - 20:15:43 @ 15-03-2010)Node: 13 Support Data: Avg Temperature:25.29 Avg Humidity:12.287091199999999 Init Battery:2.9992676 End Battery:2.9992676 Radio Activations:0
+Ref ID	Rcv	RSSI[dBm]	LQI
+0	5	-41	3
+1	5	-50	122
+2	5	-45	0
+3	5	-45	0
+4	5	-41	3
+5	5	-39	6
+6	5	-53	119
+7	5	-51	122
+8	5	-57	116
+9	0	0	0
+10	5	-37	8
+11	5	-26	19
+12	5	-19	26
+14	5	-24	21
+15	5	-34	10
+Waiting for: 
+
+Node 0 < 1 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 1 2 >
+Node 4 < 1 2 >
+Node 5 < 1 2 >
+Node 6 < 1 2 >
+Node 7 < 1 2 >
+Node 8 < 1 2 >
+Node 9 < 0 1 2 >
+Node 10 < 1 2 >
+Node 11 < 1 2 >
+Node 12 < 1 2 >
+Node 13 < 1 2 >
+Node 14 < 0 1 2 >
+Node 15 < 0 1 2 >
+Node 16 < 0 1 2 >
+Node 17 < 0 1 2 >
+Node 18 < 0 1 2 >
+Node 19 < 0 1 2 >
+Node 20 < 0 1 2 >
+Node 21 < 0 1 2 >
+Node 22 < 0 1 2 >
+Node 23 < 0 1 2 >
+Node 24 < 0 1 2 >
+Node 25 < 0 1 2 >
+Node 26 < 0 1 2 >
+Node 27 < 0 1 2 >
+Node 28 < 0 1 2 >
+Node 29 < 0 1 2 >
+Node 30 < 0 1 2 >
+Node 31 < 0 1 2 >
+Node 32 < 0 1 2 >
+Node 33 < 0 1 2 >
+Node 34 < 0 1 2 >
+Node 35 < 0 1 2 >
+Node 36 < 0 1 2 >
+Node 37 < 0 1 2 >
+Node 38 < 0 1 2 >
+Node 39 < 0 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 14 Nr Hop:0 Seq N:0 Stats Retx:1 (Experiment ID: 0 got from node 0 - 20:15:44 @ 15-03-2010)Node: 14 Support Data: Avg Temperature:25.229999999999997 Avg Humidity:11.828508799999998 Init Battery:2.9992676 End Battery:2.9992676 Radio Activations:0
+Ref ID	Rcv	RSSI[dBm]	LQI
+0	5	-42	3
+1	5	-47	74
+2	5	-51	121
+3	5	-46	75
+4	5	-41	3
+5	5	-40	4
+6	5	-55	118
+7	5	-52	120
+8	5	-54	119
+9	0	0	0
+10	5	-40	4
+11	5	-41	3
+12	5	-24	20
+13	5	-71	101
+15	5	-32	13
+Waiting for: 
+
+Node 0 < 1 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 1 2 >
+Node 4 < 1 2 >
+Node 5 < 1 2 >
+Node 6 < 1 2 >
+Node 7 < 1 2 >
+Node 8 < 1 2 >
+Node 9 < 0 1 2 >
+Node 10 < 1 2 >
+Node 11 < 1 2 >
+Node 12 < 1 2 >
+Node 13 < 1 2 >
+Node 14 < 1 2 >
+Node 15 < 0 1 2 >
+Node 16 < 0 1 2 >
+Node 17 < 0 1 2 >
+Node 18 < 0 1 2 >
+Node 19 < 0 1 2 >
+Node 20 < 0 1 2 >
+Node 21 < 0 1 2 >
+Node 22 < 0 1 2 >
+Node 23 < 0 1 2 >
+Node 24 < 0 1 2 >
+Node 25 < 0 1 2 >
+Node 26 < 0 1 2 >
+Node 27 < 0 1 2 >
+Node 28 < 0 1 2 >
+Node 29 < 0 1 2 >
+Node 30 < 0 1 2 >
+Node 31 < 0 1 2 >
+Node 32 < 0 1 2 >
+Node 33 < 0 1 2 >
+Node 34 < 0 1 2 >
+Node 35 < 0 1 2 >
+Node 36 < 0 1 2 >
+Node 37 < 0 1 2 >
+Node 38 < 0 1 2 >
+Node 39 < 0 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 15 Nr Hop:0 Seq N:0 Stats Retx:1 (Experiment ID: 0 got from node 0 - 20:15:45 @ 15-03-2010)Node: 15 Support Data: Avg Temperature:25.279999999999994 Avg Humidity:12.8210848 Init Battery:2.9992676 End Battery:2.9992676 Radio Activations:0
+Ref ID	Rcv	RSSI[dBm]	LQI
+0	5	-49	97
+1	5	-43	1
+2	5	-41	4
+3	5	-39	5
+4	5	-58	114
+5	5	-35	10
+6	5	-56	117
+7	5	-53	119
+8	5	-54	118
+9	0	0	0
+10	5	-33	12
+11	5	-33	11
+12	5	-42	2
+13	5	-68	105
+14	5	-20	25
+Waiting for: 
+
+Node 0 < 1 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 1 2 >
+Node 4 < 1 2 >
+Node 5 < 1 2 >
+Node 6 < 1 2 >
+Node 7 < 1 2 >
+Node 8 < 1 2 >
+Node 9 < 0 1 2 >
+Node 10 < 1 2 >
+Node 11 < 1 2 >
+Node 12 < 1 2 >
+Node 13 < 1 2 >
+Node 14 < 1 2 >
+Node 15 < 1 2 >
+Node 16 < 0 1 2 >
+Node 17 < 0 1 2 >
+Node 18 < 0 1 2 >
+Node 19 < 0 1 2 >
+Node 20 < 0 1 2 >
+Node 21 < 0 1 2 >
+Node 22 < 0 1 2 >
+Node 23 < 0 1 2 >
+Node 24 < 0 1 2 >
+Node 25 < 0 1 2 >
+Node 26 < 0 1 2 >
+Node 27 < 0 1 2 >
+Node 28 < 0 1 2 >
+Node 29 < 0 1 2 >
+Node 30 < 0 1 2 >
+Node 31 < 0 1 2 >
+Node 32 < 0 1 2 >
+Node 33 < 0 1 2 >
+Node 34 < 0 1 2 >
+Node 35 < 0 1 2 >
+Node 36 < 0 1 2 >
+Node 37 < 0 1 2 >
+Node 38 < 0 1 2 >
+Node 39 < 0 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 16 Seq N:0 (Experiment ID: 0 got from node 0 - 20:15:46 @ 15-03-2010)Node: 16 Support Data: Avg Temperature:25.479999999999997 Avg Humidity:11.751999999999999 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+0	5	-36	8
+1	5	-37	7
+2	5	-39	5
+3	5	-28	17
+4	5	-27	18
+5	5	-26	18
+6	5	-37	7
+7	5	-35	9
+8	5	-51	121
+9	0	0	0
+10	5	-24	20
+11	5	-18	26
+12	5	-21	24
+13	5	-68	105
+14	5	-25	19
+15	5	-49	72
+Waiting for: 
+
+Node 0 < 1 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 1 2 >
+Node 4 < 1 2 >
+Node 5 < 1 2 >
+Node 6 < 1 2 >
+Node 7 < 1 2 >
+Node 8 < 1 2 >
+Node 9 < 0 1 2 >
+Node 10 < 1 2 >
+Node 11 < 1 2 >
+Node 12 < 1 2 >
+Node 13 < 1 2 >
+Node 14 < 1 2 >
+Node 15 < 1 2 >
+Node 16 < 1 2 >
+Node 17 < 0 1 2 >
+Node 18 < 0 1 2 >
+Node 19 < 0 1 2 >
+Node 20 < 0 1 2 >
+Node 21 < 0 1 2 >
+Node 22 < 0 1 2 >
+Node 23 < 0 1 2 >
+Node 24 < 0 1 2 >
+Node 25 < 0 1 2 >
+Node 26 < 0 1 2 >
+Node 27 < 0 1 2 >
+Node 28 < 0 1 2 >
+Node 29 < 0 1 2 >
+Node 30 < 0 1 2 >
+Node 31 < 0 1 2 >
+Node 32 < 0 1 2 >
+Node 33 < 0 1 2 >
+Node 34 < 0 1 2 >
+Node 35 < 0 1 2 >
+Node 36 < 0 1 2 >
+Node 37 < 0 1 2 >
+Node 38 < 0 1 2 >
+Node 39 < 0 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 17 Seq N:0 (Experiment ID: 0 got from node 0 - 20:15:48 @ 15-03-2010)Node: 17 Support Data: Avg Temperature:25.259999999999998 Avg Humidity:12.2107168 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+0	5	-45	25
+1	5	-40	4
+2	5	-38	6
+3	5	-38	6
+4	5	-36	8
+5	5	-26	18
+6	5	-43	1
+7	5	-41	3
+8	5	-52	120
+9	0	0	0
+10	5	-36	8
+11	5	-22	22
+12	5	-15	29
+13	5	-64	108
+14	5	-20	25
+15	5	-35	9
+Waiting for: 
+
+Node 0 < 1 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 1 2 >
+Node 4 < 1 2 >
+Node 5 < 1 2 >
+Node 6 < 1 2 >
+Node 7 < 1 2 >
+Node 8 < 1 2 >
+Node 9 < 0 1 2 >
+Node 10 < 1 2 >
+Node 11 < 1 2 >
+Node 12 < 1 2 >
+Node 13 < 1 2 >
+Node 14 < 1 2 >
+Node 15 < 1 2 >
+Node 16 < 1 2 >
+Node 17 < 1 2 >
+Node 18 < 0 1 2 >
+Node 19 < 0 1 2 >
+Node 20 < 0 1 2 >
+Node 21 < 0 1 2 >
+Node 22 < 0 1 2 >
+Node 23 < 0 1 2 >
+Node 24 < 0 1 2 >
+Node 25 < 0 1 2 >
+Node 26 < 0 1 2 >
+Node 27 < 0 1 2 >
+Node 28 < 0 1 2 >
+Node 29 < 0 1 2 >
+Node 30 < 0 1 2 >
+Node 31 < 0 1 2 >
+Node 32 < 0 1 2 >
+Node 33 < 0 1 2 >
+Node 34 < 0 1 2 >
+Node 35 < 0 1 2 >
+Node 36 < 0 1 2 >
+Node 37 < 0 1 2 >
+Node 38 < 0 1 2 >
+Node 39 < 0 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 18 Seq N:0 (Experiment ID: 0 got from node 0 - 20:15:49 @ 15-03-2010)Node: 18 Support Data: Avg Temperature:25.229999999999997 Avg Humidity:12.668627200000001 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+0	5	-40	4
+1	5	-53	119
+2	5	-47	126
+3	5	-41	3
+4	5	-33	11
+5	5	-31	14
+6	5	-40	4
+7	5	-42	2
+8	5	-59	113
+9	0	0	0
+10	5	-50	122
+11	5	-24	20
+12	5	-27	18
+13	5	-62	110
+14	5	-21	23
+15	5	-34	10
+Waiting for: 
+
+Node 0 < 1 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 1 2 >
+Node 4 < 1 2 >
+Node 5 < 1 2 >
+Node 6 < 1 2 >
+Node 7 < 1 2 >
+Node 8 < 1 2 >
+Node 9 < 0 1 2 >
+Node 10 < 1 2 >
+Node 11 < 1 2 >
+Node 12 < 1 2 >
+Node 13 < 1 2 >
+Node 14 < 1 2 >
+Node 15 < 1 2 >
+Node 16 < 1 2 >
+Node 17 < 1 2 >
+Node 18 < 1 2 >
+Node 19 < 0 1 2 >
+Node 20 < 0 1 2 >
+Node 21 < 0 1 2 >
+Node 22 < 0 1 2 >
+Node 23 < 0 1 2 >
+Node 24 < 0 1 2 >
+Node 25 < 0 1 2 >
+Node 26 < 0 1 2 >
+Node 27 < 0 1 2 >
+Node 28 < 0 1 2 >
+Node 29 < 0 1 2 >
+Node 30 < 0 1 2 >
+Node 31 < 0 1 2 >
+Node 32 < 0 1 2 >
+Node 33 < 0 1 2 >
+Node 34 < 0 1 2 >
+Node 35 < 0 1 2 >
+Node 36 < 0 1 2 >
+Node 37 < 0 1 2 >
+Node 38 < 0 1 2 >
+Node 39 < 0 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 19 Seq N:0 (Experiment ID: 0 got from node 0 - 20:15:50 @ 15-03-2010)Node: 19 Support Data: Avg Temperature:25.339999999999996 Avg Humidity:12.2107168 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+0	5	-41	4
+1	5	-44	25
+2	5	-56	117
+3	5	-41	4
+4	5	-38	7
+5	5	-34	10
+6	5	-42	2
+7	5	-46	49
+8	5	-62	110
+9	0	0	0
+10	5	-53	119
+11	5	-23	21
+12	5	-27	18
+13	5	-70	103
+14	5	-19	25
+15	5	-26	18
+Waiting for: 
+
+Node 0 < 1 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 1 2 >
+Node 4 < 1 2 >
+Node 5 < 1 2 >
+Node 6 < 1 2 >
+Node 7 < 1 2 >
+Node 8 < 1 2 >
+Node 9 < 0 1 2 >
+Node 10 < 1 2 >
+Node 11 < 1 2 >
+Node 12 < 1 2 >
+Node 13 < 1 2 >
+Node 14 < 1 2 >
+Node 15 < 1 2 >
+Node 16 < 1 2 >
+Node 17 < 1 2 >
+Node 18 < 1 2 >
+Node 19 < 1 2 >
+Node 20 < 0 1 2 >
+Node 21 < 0 1 2 >
+Node 22 < 0 1 2 >
+Node 23 < 0 1 2 >
+Node 24 < 0 1 2 >
+Node 25 < 0 1 2 >
+Node 26 < 0 1 2 >
+Node 27 < 0 1 2 >
+Node 28 < 0 1 2 >
+Node 29 < 0 1 2 >
+Node 30 < 0 1 2 >
+Node 31 < 0 1 2 >
+Node 32 < 0 1 2 >
+Node 33 < 0 1 2 >
+Node 34 < 0 1 2 >
+Node 35 < 0 1 2 >
+Node 36 < 0 1 2 >
+Node 37 < 0 1 2 >
+Node 38 < 0 1 2 >
+Node 39 < 0 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 20 Seq N:0 (Experiment ID: 0 got from node 0 - 20:15:51 @ 15-03-2010)Node: 20 Support Data: Avg Temperature:25.21 Avg Humidity:12.13432 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+0	5	-45	50
+1	5	-44	0
+2	5	-49	123
+3	5	-42	2
+4	5	-45	50
+5	5	-38	6
+6	5	-56	116
+7	5	-47	99
+8	5	-79	93
+9	0	0	0
+10	5	-42	2
+11	5	-38	6
+12	5	-27	18
+13	5	-76	97
+14	5	-26	19
+15	5	-26	19
+Waiting for: 
+
+Node 0 < 1 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 1 2 >
+Node 4 < 1 2 >
+Node 5 < 1 2 >
+Node 6 < 1 2 >
+Node 7 < 1 2 >
+Node 8 < 1 2 >
+Node 9 < 0 1 2 >
+Node 10 < 1 2 >
+Node 11 < 1 2 >
+Node 12 < 1 2 >
+Node 13 < 1 2 >
+Node 14 < 1 2 >
+Node 15 < 1 2 >
+Node 16 < 1 2 >
+Node 17 < 1 2 >
+Node 18 < 1 2 >
+Node 19 < 1 2 >
+Node 20 < 1 2 >
+Node 21 < 0 1 2 >
+Node 22 < 0 1 2 >
+Node 23 < 0 1 2 >
+Node 24 < 0 1 2 >
+Node 25 < 0 1 2 >
+Node 26 < 0 1 2 >
+Node 27 < 0 1 2 >
+Node 28 < 0 1 2 >
+Node 29 < 0 1 2 >
+Node 30 < 0 1 2 >
+Node 31 < 0 1 2 >
+Node 32 < 0 1 2 >
+Node 33 < 0 1 2 >
+Node 34 < 0 1 2 >
+Node 35 < 0 1 2 >
+Node 36 < 0 1 2 >
+Node 37 < 0 1 2 >
+Node 38 < 0 1 2 >
+Node 39 < 0 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 21 Seq N:0 (Experiment ID: 0 got from node 0 - 20:15:53 @ 15-03-2010)Node: 21 Support Data: Avg Temperature:25.190000000000005 Avg Humidity:12.7448672 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+0	5	-25	19
+1	5	-38	6
+2	5	-58	114
+3	5	-40	4
+4	5	-26	18
+5	5	-33	11
+6	5	-23	21
+7	5	-25	19
+8	5	-50	122
+9	0	0	0
+10	5	-32	12
+11	5	-48	124
+12	5	-39	5
+13	1	-89	84
+14	5	-47	99
+15	5	-56	91
+Waiting for: 
+
+Node 0 < 1 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 1 2 >
+Node 4 < 1 2 >
+Node 5 < 1 2 >
+Node 6 < 1 2 >
+Node 7 < 1 2 >
+Node 8 < 1 2 >
+Node 9 < 0 1 2 >
+Node 10 < 1 2 >
+Node 11 < 1 2 >
+Node 12 < 1 2 >
+Node 13 < 1 2 >
+Node 14 < 1 2 >
+Node 15 < 1 2 >
+Node 16 < 1 2 >
+Node 17 < 1 2 >
+Node 18 < 1 2 >
+Node 19 < 1 2 >
+Node 20 < 1 2 >
+Node 21 < 1 2 >
+Node 22 < 0 1 2 >
+Node 23 < 0 1 2 >
+Node 24 < 0 1 2 >
+Node 25 < 0 1 2 >
+Node 26 < 0 1 2 >
+Node 27 < 0 1 2 >
+Node 28 < 0 1 2 >
+Node 29 < 0 1 2 >
+Node 30 < 0 1 2 >
+Node 31 < 0 1 2 >
+Node 32 < 0 1 2 >
+Node 33 < 0 1 2 >
+Node 34 < 0 1 2 >
+Node 35 < 0 1 2 >
+Node 36 < 0 1 2 >
+Node 37 < 0 1 2 >
+Node 38 < 0 1 2 >
+Node 39 < 0 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 22 Seq N:0 (Experiment ID: 0 got from node 0 - 20:15:54 @ 15-03-2010)Node: 22 Support Data: Avg Temperature:25.35 Avg Humidity:13.239881200000003 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+0	5	-33	11
+1	5	-34	10
+2	5	-28	16
+3	5	-39	5
+4	5	-34	10
+5	5	-40	4
+6	5	-29	16
+7	5	-38	7
+8	5	-63	110
+9	0	0	0
+10	5	-31	14
+11	5	-43	1
+12	5	-49	123
+13	0	0	0
+14	5	-50	122
+15	5	-60	112
+Waiting for: 
+
+Node 0 < 1 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 1 2 >
+Node 4 < 1 2 >
+Node 5 < 1 2 >
+Node 6 < 1 2 >
+Node 7 < 1 2 >
+Node 8 < 1 2 >
+Node 9 < 0 1 2 >
+Node 10 < 1 2 >
+Node 11 < 1 2 >
+Node 12 < 1 2 >
+Node 13 < 1 2 >
+Node 14 < 1 2 >
+Node 15 < 1 2 >
+Node 16 < 1 2 >
+Node 17 < 1 2 >
+Node 18 < 1 2 >
+Node 19 < 1 2 >
+Node 20 < 1 2 >
+Node 21 < 1 2 >
+Node 22 < 1 2 >
+Node 23 < 0 1 2 >
+Node 24 < 0 1 2 >
+Node 25 < 0 1 2 >
+Node 26 < 0 1 2 >
+Node 27 < 0 1 2 >
+Node 28 < 0 1 2 >
+Node 29 < 0 1 2 >
+Node 30 < 0 1 2 >
+Node 31 < 0 1 2 >
+Node 32 < 0 1 2 >
+Node 33 < 0 1 2 >
+Node 34 < 0 1 2 >
+Node 35 < 0 1 2 >
+Node 36 < 0 1 2 >
+Node 37 < 0 1 2 >
+Node 38 < 0 1 2 >
+Node 39 < 0 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 23 Seq N:0 (Experiment ID: 0 got from node 0 - 20:15:55 @ 15-03-2010)Node: 23 Support Data: Avg Temperature:25.240000000000002 Avg Humidity:12.0579008 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+0	5	-34	10
+1	5	-25	19
+2	5	-36	8
+3	5	-29	15
+4	5	-35	10
+5	5	-34	10
+6	5	-30	14
+7	5	-49	123
+8	5	-49	123
+9	0	0	0
+10	5	-28	17
+11	5	-42	2
+12	5	-46	75
+13	0	0	0
+14	5	-60	112
+15	5	-58	115
+Waiting for: 
+
+Node 0 < 1 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 1 2 >
+Node 4 < 1 2 >
+Node 5 < 1 2 >
+Node 6 < 1 2 >
+Node 7 < 1 2 >
+Node 8 < 1 2 >
+Node 9 < 0 1 2 >
+Node 10 < 1 2 >
+Node 11 < 1 2 >
+Node 12 < 1 2 >
+Node 13 < 1 2 >
+Node 14 < 1 2 >
+Node 15 < 1 2 >
+Node 16 < 1 2 >
+Node 17 < 1 2 >
+Node 18 < 1 2 >
+Node 19 < 1 2 >
+Node 20 < 1 2 >
+Node 21 < 1 2 >
+Node 22 < 1 2 >
+Node 23 < 1 2 >
+Node 24 < 0 1 2 >
+Node 25 < 0 1 2 >
+Node 26 < 0 1 2 >
+Node 27 < 0 1 2 >
+Node 28 < 0 1 2 >
+Node 29 < 0 1 2 >
+Node 30 < 0 1 2 >
+Node 31 < 0 1 2 >
+Node 32 < 0 1 2 >
+Node 33 < 0 1 2 >
+Node 34 < 0 1 2 >
+Node 35 < 0 1 2 >
+Node 36 < 0 1 2 >
+Node 37 < 0 1 2 >
+Node 38 < 0 1 2 >
+Node 39 < 0 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 24 Seq N:0 (Experiment ID: 0 got from node 0 - 20:15:56 @ 15-03-2010)Node: 24 Support Data: Avg Temperature:25.15 Avg Humidity:11.637194800000001 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+0	5	-28	16
+1	5	-26	18
+2	5	-28	17
+3	5	-33	11
+4	5	-28	16
+5	5	-30	14
+6	5	-29	16
+7	5	-29	16
+8	5	-54	118
+9	0	0	0
+10	5	-29	15
+11	5	-42	2
+12	5	-37	7
+13	0	0	0
+14	5	-46	75
+15	5	-57	116
+Waiting for: 
+
+Node 0 < 1 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 1 2 >
+Node 4 < 1 2 >
+Node 5 < 1 2 >
+Node 6 < 1 2 >
+Node 7 < 1 2 >
+Node 8 < 1 2 >
+Node 9 < 0 1 2 >
+Node 10 < 1 2 >
+Node 11 < 1 2 >
+Node 12 < 1 2 >
+Node 13 < 1 2 >
+Node 14 < 1 2 >
+Node 15 < 1 2 >
+Node 16 < 1 2 >
+Node 17 < 1 2 >
+Node 18 < 1 2 >
+Node 19 < 1 2 >
+Node 20 < 1 2 >
+Node 21 < 1 2 >
+Node 22 < 1 2 >
+Node 23 < 1 2 >
+Node 24 < 1 2 >
+Node 25 < 0 1 2 >
+Node 26 < 0 1 2 >
+Node 27 < 0 1 2 >
+Node 28 < 0 1 2 >
+Node 29 < 0 1 2 >
+Node 30 < 0 1 2 >
+Node 31 < 0 1 2 >
+Node 32 < 0 1 2 >
+Node 33 < 0 1 2 >
+Node 34 < 0 1 2 >
+Node 35 < 0 1 2 >
+Node 36 < 0 1 2 >
+Node 37 < 0 1 2 >
+Node 38 < 0 1 2 >
+Node 39 < 0 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 25 Seq N:0 (Experiment ID: 0 got from node 0 - 20:15:56 @ 15-03-2010)Node: 25 Support Data: Avg Temperature:24.949999999999996 Avg Humidity:12.5923648 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+0	5	-29	15
+1	5	-38	6
+2	5	-27	17
+3	5	-33	11
+4	5	-36	9
+5	5	-33	11
+6	5	-25	19
+7	5	-25	20
+8	5	-43	1
+9	0	0	0
+10	5	-29	15
+11	5	-32	13
+12	5	-43	2
+13	0	0	0
+14	5	-44	1
+15	5	-49	72
+Waiting for: 
+
+Node 0 < 1 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 1 2 >
+Node 4 < 1 2 >
+Node 5 < 1 2 >
+Node 6 < 1 2 >
+Node 7 < 1 2 >
+Node 8 < 1 2 >
+Node 9 < 0 1 2 >
+Node 10 < 1 2 >
+Node 11 < 1 2 >
+Node 12 < 1 2 >
+Node 13 < 1 2 >
+Node 14 < 1 2 >
+Node 15 < 1 2 >
+Node 16 < 1 2 >
+Node 17 < 1 2 >
+Node 18 < 1 2 >
+Node 19 < 1 2 >
+Node 20 < 1 2 >
+Node 21 < 1 2 >
+Node 22 < 1 2 >
+Node 23 < 1 2 >
+Node 24 < 1 2 >
+Node 25 < 1 2 >
+Node 26 < 0 1 2 >
+Node 27 < 0 1 2 >
+Node 28 < 0 1 2 >
+Node 29 < 0 1 2 >
+Node 30 < 0 1 2 >
+Node 31 < 0 1 2 >
+Node 32 < 0 1 2 >
+Node 33 < 0 1 2 >
+Node 34 < 0 1 2 >
+Node 35 < 0 1 2 >
+Node 36 < 0 1 2 >
+Node 37 < 0 1 2 >
+Node 38 < 0 1 2 >
+Node 39 < 0 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 26 Seq N:0 (Experiment ID: 0 got from node 0 - 20:15:58 @ 15-03-2010)Node: 26 Support Data: Avg Temperature:25.240000000000002 Avg Humidity:11.828508799999998 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+0	5	-30	14
+1	5	-19	25
+2	5	-34	10
+3	5	-25	20
+4	5	-41	3
+5	5	-42	2
+6	5	-40	5
+7	5	-28	16
+8	5	-51	121
+9	0	0	0
+10	5	-34	10
+11	5	-42	28
+12	5	-50	71
+13	0	0	0
+14	5	-46	75
+15	5	-54	67
+Waiting for: 
+
+Node 0 < 1 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 1 2 >
+Node 4 < 1 2 >
+Node 5 < 1 2 >
+Node 6 < 1 2 >
+Node 7 < 1 2 >
+Node 8 < 1 2 >
+Node 9 < 0 1 2 >
+Node 10 < 1 2 >
+Node 11 < 1 2 >
+Node 12 < 1 2 >
+Node 13 < 1 2 >
+Node 14 < 1 2 >
+Node 15 < 1 2 >
+Node 16 < 1 2 >
+Node 17 < 1 2 >
+Node 18 < 1 2 >
+Node 19 < 1 2 >
+Node 20 < 1 2 >
+Node 21 < 1 2 >
+Node 22 < 1 2 >
+Node 23 < 1 2 >
+Node 24 < 1 2 >
+Node 25 < 1 2 >
+Node 26 < 1 2 >
+Node 27 < 0 1 2 >
+Node 28 < 0 1 2 >
+Node 29 < 0 1 2 >
+Node 30 < 0 1 2 >
+Node 31 < 0 1 2 >
+Node 32 < 0 1 2 >
+Node 33 < 0 1 2 >
+Node 34 < 0 1 2 >
+Node 35 < 0 1 2 >
+Node 36 < 0 1 2 >
+Node 37 < 0 1 2 >
+Node 38 < 0 1 2 >
+Node 39 < 0 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 27 Seq N:0 (Experiment ID: 0 got from node 0 - 20:16:00 @ 15-03-2010)Node: 27 Support Data: Avg Temperature:25.059999999999995 Avg Humidity:12.325270000000002 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+0	5	-41	3
+1	5	-24	21
+2	5	-23	21
+3	5	-25	20
+4	5	-32	12
+5	5	-30	14
+6	5	-26	18
+7	5	-29	16
+8	5	-55	117
+9	0	0	0
+10	5	-27	17
+11	5	-41	3
+12	5	-38	7
+13	0	0	0
+14	5	-42	2
+15	5	-72	100
+Waiting for: 
+
+Node 0 < 1 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 1 2 >
+Node 4 < 1 2 >
+Node 5 < 1 2 >
+Node 6 < 1 2 >
+Node 7 < 1 2 >
+Node 8 < 1 2 >
+Node 9 < 0 1 2 >
+Node 10 < 1 2 >
+Node 11 < 1 2 >
+Node 12 < 1 2 >
+Node 13 < 1 2 >
+Node 14 < 1 2 >
+Node 15 < 1 2 >
+Node 16 < 1 2 >
+Node 17 < 1 2 >
+Node 18 < 1 2 >
+Node 19 < 1 2 >
+Node 20 < 1 2 >
+Node 21 < 1 2 >
+Node 22 < 1 2 >
+Node 23 < 1 2 >
+Node 24 < 1 2 >
+Node 25 < 1 2 >
+Node 26 < 1 2 >
+Node 27 < 1 2 >
+Node 28 < 0 1 2 >
+Node 29 < 0 1 2 >
+Node 30 < 0 1 2 >
+Node 31 < 0 1 2 >
+Node 32 < 0 1 2 >
+Node 33 < 0 1 2 >
+Node 34 < 0 1 2 >
+Node 35 < 0 1 2 >
+Node 36 < 0 1 2 >
+Node 37 < 0 1 2 >
+Node 38 < 0 1 2 >
+Node 39 < 0 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 28 Seq N:0 (Experiment ID: 0 got from node 0 - 20:16:01 @ 15-03-2010)Node: 28 Support Data: Avg Temperature:25.160000000000004 Avg Humidity:12.172521200000002 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+0	5	-41	29
+1	5	-24	20
+2	5	-23	21
+3	5	-20	24
+4	5	-27	18
+5	5	-25	20
+6	5	-30	15
+7	5	-32	12
+8	5	-43	2
+9	0	0	0
+10	5	-28	17
+11	5	-40	4
+12	5	-31	13
+13	0	0	0
+14	5	-39	6
+15	5	-63	110
+Waiting for: 
+
+Node 0 < 1 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 1 2 >
+Node 4 < 1 2 >
+Node 5 < 1 2 >
+Node 6 < 1 2 >
+Node 7 < 1 2 >
+Node 8 < 1 2 >
+Node 9 < 0 1 2 >
+Node 10 < 1 2 >
+Node 11 < 1 2 >
+Node 12 < 1 2 >
+Node 13 < 1 2 >
+Node 14 < 1 2 >
+Node 15 < 1 2 >
+Node 16 < 1 2 >
+Node 17 < 1 2 >
+Node 18 < 1 2 >
+Node 19 < 1 2 >
+Node 20 < 1 2 >
+Node 21 < 1 2 >
+Node 22 < 1 2 >
+Node 23 < 1 2 >
+Node 24 < 1 2 >
+Node 25 < 1 2 >
+Node 26 < 1 2 >
+Node 27 < 1 2 >
+Node 28 < 1 2 >
+Node 29 < 0 1 2 >
+Node 30 < 0 1 2 >
+Node 31 < 0 1 2 >
+Node 32 < 0 1 2 >
+Node 33 < 0 1 2 >
+Node 34 < 0 1 2 >
+Node 35 < 0 1 2 >
+Node 36 < 0 1 2 >
+Node 37 < 0 1 2 >
+Node 38 < 0 1 2 >
+Node 39 < 0 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 29 Seq N:0 (Experiment ID: 0 got from node 0 - 20:16:02 @ 15-03-2010)Node: 29 Support Data: Avg Temperature:25.35 Avg Humidity:12.4016108 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+0	5	-36	8
+1	5	-52	120
+2	5	-30	14
+3	5	-23	22
+4	5	-30	14
+5	5	-28	16
+6	5	-28	16
+7	5	-29	16
+8	5	-44	1
+9	0	0	0
+10	5	-25	20
+11	5	-43	2
+12	5	-40	4
+13	4	-90	83
+14	5	-49	123
+15	5	-59	113
+Waiting for: 
+
+Node 0 < 1 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 1 2 >
+Node 4 < 1 2 >
+Node 5 < 1 2 >
+Node 6 < 1 2 >
+Node 7 < 1 2 >
+Node 8 < 1 2 >
+Node 9 < 0 1 2 >
+Node 10 < 1 2 >
+Node 11 < 1 2 >
+Node 12 < 1 2 >
+Node 13 < 1 2 >
+Node 14 < 1 2 >
+Node 15 < 1 2 >
+Node 16 < 1 2 >
+Node 17 < 1 2 >
+Node 18 < 1 2 >
+Node 19 < 1 2 >
+Node 20 < 1 2 >
+Node 21 < 1 2 >
+Node 22 < 1 2 >
+Node 23 < 1 2 >
+Node 24 < 1 2 >
+Node 25 < 1 2 >
+Node 26 < 1 2 >
+Node 27 < 1 2 >
+Node 28 < 1 2 >
+Node 29 < 1 2 >
+Node 30 < 0 1 2 >
+Node 31 < 0 1 2 >
+Node 32 < 0 1 2 >
+Node 33 < 0 1 2 >
+Node 34 < 0 1 2 >
+Node 35 < 0 1 2 >
+Node 36 < 0 1 2 >
+Node 37 < 0 1 2 >
+Node 38 < 0 1 2 >
+Node 39 < 0 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 30 Seq N:0 (Experiment ID: 0 got from node 0 - 20:16:03 @ 15-03-2010)Node: 30 Support Data: Avg Temperature:25.119999999999997 Avg Humidity:12.325270000000002 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+0	5	-36	8
+1	5	-45	50
+2	5	-24	20
+3	5	-26	19
+4	5	-23	21
+5	5	-26	19
+6	5	-26	18
+7	5	-25	20
+8	5	-39	5
+9	0	0	0
+10	5	-27	17
+11	5	-39	5
+12	5	-27	17
+13	5	-84	89
+14	5	-41	3
+15	5	-44	77
+Waiting for: 
+
+Node 0 < 1 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 1 2 >
+Node 4 < 1 2 >
+Node 5 < 1 2 >
+Node 6 < 1 2 >
+Node 7 < 1 2 >
+Node 8 < 1 2 >
+Node 9 < 0 1 2 >
+Node 10 < 1 2 >
+Node 11 < 1 2 >
+Node 12 < 1 2 >
+Node 13 < 1 2 >
+Node 14 < 1 2 >
+Node 15 < 1 2 >
+Node 16 < 1 2 >
+Node 17 < 1 2 >
+Node 18 < 1 2 >
+Node 19 < 1 2 >
+Node 20 < 1 2 >
+Node 21 < 1 2 >
+Node 22 < 1 2 >
+Node 23 < 1 2 >
+Node 24 < 1 2 >
+Node 25 < 1 2 >
+Node 26 < 1 2 >
+Node 27 < 1 2 >
+Node 28 < 1 2 >
+Node 29 < 1 2 >
+Node 30 < 1 2 >
+Node 31 < 0 1 2 >
+Node 32 < 0 1 2 >
+Node 33 < 0 1 2 >
+Node 34 < 0 1 2 >
+Node 35 < 0 1 2 >
+Node 36 < 0 1 2 >
+Node 37 < 0 1 2 >
+Node 38 < 0 1 2 >
+Node 39 < 0 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 31 Seq N:0 (Experiment ID: 0 got from node 0 - 20:16:04 @ 15-03-2010)Node: 31 Support Data: Avg Temperature:25.119999999999997 Avg Humidity:12.8210848 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+0	5	-34	11
+1	5	-46	49
+2	5	-49	123
+3	5	-39	5
+4	5	-33	11
+5	5	-39	5
+6	5	-39	5
+7	5	-38	6
+8	5	-55	117
+9	0	0	0
+10	5	-31	14
+11	5	-25	19
+12	5	-31	14
+13	5	-83	89
+14	5	-40	4
+15	5	-54	67
+Waiting for: 
+
+Node 0 < 1 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 1 2 >
+Node 4 < 1 2 >
+Node 5 < 1 2 >
+Node 6 < 1 2 >
+Node 7 < 1 2 >
+Node 8 < 1 2 >
+Node 9 < 0 1 2 >
+Node 10 < 1 2 >
+Node 11 < 1 2 >
+Node 12 < 1 2 >
+Node 13 < 1 2 >
+Node 14 < 1 2 >
+Node 15 < 1 2 >
+Node 16 < 1 2 >
+Node 17 < 1 2 >
+Node 18 < 1 2 >
+Node 19 < 1 2 >
+Node 20 < 1 2 >
+Node 21 < 1 2 >
+Node 22 < 1 2 >
+Node 23 < 1 2 >
+Node 24 < 1 2 >
+Node 25 < 1 2 >
+Node 26 < 1 2 >
+Node 27 < 1 2 >
+Node 28 < 1 2 >
+Node 29 < 1 2 >
+Node 30 < 1 2 >
+Node 31 < 1 2 >
+Node 32 < 0 1 2 >
+Node 33 < 0 1 2 >
+Node 34 < 0 1 2 >
+Node 35 < 0 1 2 >
+Node 36 < 0 1 2 >
+Node 37 < 0 1 2 >
+Node 38 < 0 1 2 >
+Node 39 < 0 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 32 Seq N:0 (Experiment ID: 0 got from node 0 - 20:16:05 @ 15-03-2010)Node: 32 Support Data: Avg Temperature:24.93 Avg Humidity:12.516080000000002 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+0	5	-40	5
+1	5	-57	115
+2	5	-42	2
+3	5	-49	123
+4	5	-31	13
+5	5	-37	8
+6	5	-52	121
+7	5	-38	6
+8	5	-57	116
+9	0	0	0
+10	5	-31	14
+11	5	-43	2
+12	5	-32	12
+13	5	-82	90
+14	5	-34	10
+15	5	-52	69
+Waiting for: 
+
+Node 0 < 1 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 1 2 >
+Node 4 < 1 2 >
+Node 5 < 1 2 >
+Node 6 < 1 2 >
+Node 7 < 1 2 >
+Node 8 < 1 2 >
+Node 9 < 0 1 2 >
+Node 10 < 1 2 >
+Node 11 < 1 2 >
+Node 12 < 1 2 >
+Node 13 < 1 2 >
+Node 14 < 1 2 >
+Node 15 < 1 2 >
+Node 16 < 1 2 >
+Node 17 < 1 2 >
+Node 18 < 1 2 >
+Node 19 < 1 2 >
+Node 20 < 1 2 >
+Node 21 < 1 2 >
+Node 22 < 1 2 >
+Node 23 < 1 2 >
+Node 24 < 1 2 >
+Node 25 < 1 2 >
+Node 26 < 1 2 >
+Node 27 < 1 2 >
+Node 28 < 1 2 >
+Node 29 < 1 2 >
+Node 30 < 1 2 >
+Node 31 < 1 2 >
+Node 32 < 1 2 >
+Node 33 < 0 1 2 >
+Node 34 < 0 1 2 >
+Node 35 < 0 1 2 >
+Node 36 < 0 1 2 >
+Node 37 < 0 1 2 >
+Node 38 < 0 1 2 >
+Node 39 < 0 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 33 Seq N:0 (Experiment ID: 0 got from node 0 - 20:16:07 @ 15-03-2010)Node: 33 Support Data: Avg Temperature:25.020000000000003 Avg Humidity:12.287091199999999 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+0	5	-44	52
+1	5	-56	117
+2	5	-44	26
+3	5	-39	5
+4	5	-35	9
+5	5	-28	16
+6	5	-46	127
+7	5	-46	75
+8	5	-57	116
+9	0	0	0
+10	5	-35	9
+11	5	-27	18
+12	5	-25	20
+13	5	-76	97
+14	5	-39	6
+15	5	-50	71
+Waiting for: 
+
+Node 0 < 1 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 1 2 >
+Node 4 < 1 2 >
+Node 5 < 1 2 >
+Node 6 < 1 2 >
+Node 7 < 1 2 >
+Node 8 < 1 2 >
+Node 9 < 0 1 2 >
+Node 10 < 1 2 >
+Node 11 < 1 2 >
+Node 12 < 1 2 >
+Node 13 < 1 2 >
+Node 14 < 1 2 >
+Node 15 < 1 2 >
+Node 16 < 1 2 >
+Node 17 < 1 2 >
+Node 18 < 1 2 >
+Node 19 < 1 2 >
+Node 20 < 1 2 >
+Node 21 < 1 2 >
+Node 22 < 1 2 >
+Node 23 < 1 2 >
+Node 24 < 1 2 >
+Node 25 < 1 2 >
+Node 26 < 1 2 >
+Node 27 < 1 2 >
+Node 28 < 1 2 >
+Node 29 < 1 2 >
+Node 30 < 1 2 >
+Node 31 < 1 2 >
+Node 32 < 1 2 >
+Node 33 < 1 2 >
+Node 34 < 0 1 2 >
+Node 35 < 0 1 2 >
+Node 36 < 0 1 2 >
+Node 37 < 0 1 2 >
+Node 38 < 0 1 2 >
+Node 39 < 0 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 34 Seq N:0 (Experiment ID: 0 got from node 0 - 20:16:08 @ 15-03-2010)Node: 34 Support Data: Avg Temperature:25.1 Avg Humidity:12.516080000000002 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+0	5	-39	6
+1	5	-51	121
+2	5	-43	2
+3	5	-41	3
+4	5	-37	8
+5	5	-31	13
+6	5	-53	119
+7	5	-47	99
+8	5	-62	110
+9	0	0	0
+10	5	-38	7
+11	5	-32	12
+12	5	-28	16
+13	5	-78	95
+14	5	-24	20
+15	5	-43	78
+Waiting for: 
+
+Node 0 < 1 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 1 2 >
+Node 4 < 1 2 >
+Node 5 < 1 2 >
+Node 6 < 1 2 >
+Node 7 < 1 2 >
+Node 8 < 1 2 >
+Node 9 < 0 1 2 >
+Node 10 < 1 2 >
+Node 11 < 1 2 >
+Node 12 < 1 2 >
+Node 13 < 1 2 >
+Node 14 < 1 2 >
+Node 15 < 1 2 >
+Node 16 < 1 2 >
+Node 17 < 1 2 >
+Node 18 < 1 2 >
+Node 19 < 1 2 >
+Node 20 < 1 2 >
+Node 21 < 1 2 >
+Node 22 < 1 2 >
+Node 23 < 1 2 >
+Node 24 < 1 2 >
+Node 25 < 1 2 >
+Node 26 < 1 2 >
+Node 27 < 1 2 >
+Node 28 < 1 2 >
+Node 29 < 1 2 >
+Node 30 < 1 2 >
+Node 31 < 1 2 >
+Node 32 < 1 2 >
+Node 33 < 1 2 >
+Node 34 < 1 2 >
+Node 35 < 0 1 2 >
+Node 36 < 0 1 2 >
+Node 37 < 0 1 2 >
+Node 38 < 0 1 2 >
+Node 39 < 0 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 35 Seq N:0 (Experiment ID: 0 got from node 0 - 20:16:09 @ 15-03-2010)Node: 35 Support Data: Avg Temperature:24.79 Avg Humidity:12.6304988 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+0	5	-53	119
+1	5	-53	119
+2	5	-48	124
+3	5	-41	3
+4	5	-31	13
+5	5	-39	6
+6	5	-61	112
+7	5	-66	106
+8	5	-54	118
+9	0	0	0
+10	5	-37	7
+11	5	-26	18
+12	5	-27	18
+13	5	-76	96
+14	5	-40	5
+15	5	-41	80
+Waiting for: 
+
+Node 0 < 1 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 1 2 >
+Node 4 < 1 2 >
+Node 5 < 1 2 >
+Node 6 < 1 2 >
+Node 7 < 1 2 >
+Node 8 < 1 2 >
+Node 9 < 0 1 2 >
+Node 10 < 1 2 >
+Node 11 < 1 2 >
+Node 12 < 1 2 >
+Node 13 < 1 2 >
+Node 14 < 1 2 >
+Node 15 < 1 2 >
+Node 16 < 1 2 >
+Node 17 < 1 2 >
+Node 18 < 1 2 >
+Node 19 < 1 2 >
+Node 20 < 1 2 >
+Node 21 < 1 2 >
+Node 22 < 1 2 >
+Node 23 < 1 2 >
+Node 24 < 1 2 >
+Node 25 < 1 2 >
+Node 26 < 1 2 >
+Node 27 < 1 2 >
+Node 28 < 1 2 >
+Node 29 < 1 2 >
+Node 30 < 1 2 >
+Node 31 < 1 2 >
+Node 32 < 1 2 >
+Node 33 < 1 2 >
+Node 34 < 1 2 >
+Node 35 < 1 2 >
+Node 36 < 0 1 2 >
+Node 37 < 0 1 2 >
+Node 38 < 0 1 2 >
+Node 39 < 0 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 36 Seq N:0 (Experiment ID: 0 got from node 0 - 20:16:10 @ 15-03-2010)Node: 36 Support Data: Avg Temperature:25.029999999999994 Avg Humidity:12.668627200000001 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+0	5	-38	7
+1	5	-40	5
+2	5	-35	9
+3	5	-38	6
+4	5	-25	20
+5	5	-24	21
+6	5	-41	3
+7	5	-37	8
+8	5	-49	123
+9	0	0	0
+10	5	-23	21
+11	5	-23	22
+12	5	-29	15
+13	5	-76	96
+14	5	-30	14
+15	5	-46	75
+Waiting for: 
+
+Node 0 < 1 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 1 2 >
+Node 4 < 1 2 >
+Node 5 < 1 2 >
+Node 6 < 1 2 >
+Node 7 < 1 2 >
+Node 8 < 1 2 >
+Node 9 < 0 1 2 >
+Node 10 < 1 2 >
+Node 11 < 1 2 >
+Node 12 < 1 2 >
+Node 13 < 1 2 >
+Node 14 < 1 2 >
+Node 15 < 1 2 >
+Node 16 < 1 2 >
+Node 17 < 1 2 >
+Node 18 < 1 2 >
+Node 19 < 1 2 >
+Node 20 < 1 2 >
+Node 21 < 1 2 >
+Node 22 < 1 2 >
+Node 23 < 1 2 >
+Node 24 < 1 2 >
+Node 25 < 1 2 >
+Node 26 < 1 2 >
+Node 27 < 1 2 >
+Node 28 < 1 2 >
+Node 29 < 1 2 >
+Node 30 < 1 2 >
+Node 31 < 1 2 >
+Node 32 < 1 2 >
+Node 33 < 1 2 >
+Node 34 < 1 2 >
+Node 35 < 1 2 >
+Node 36 < 1 2 >
+Node 37 < 0 1 2 >
+Node 38 < 0 1 2 >
+Node 39 < 0 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 37 Seq N:0 (Experiment ID: 0 got from node 0 - 20:16:12 @ 15-03-2010)Node: 37 Support Data: Avg Temperature:24.889999999999993 Avg Humidity:12.8591852 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+0	5	-40	5
+1	5	-48	124
+2	5	-39	5
+3	5	-38	6
+4	5	-32	12
+5	5	-31	14
+6	5	-41	3
+7	5	-52	120
+8	5	-55	117
+9	0	0	0
+10	5	-35	9
+11	5	-31	14
+12	5	-22	23
+13	5	-88	85
+14	5	-33	11
+15	5	-41	80
+Waiting for: 
+
+Node 0 < 1 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 1 2 >
+Node 4 < 1 2 >
+Node 5 < 1 2 >
+Node 6 < 1 2 >
+Node 7 < 1 2 >
+Node 8 < 1 2 >
+Node 9 < 0 1 2 >
+Node 10 < 1 2 >
+Node 11 < 1 2 >
+Node 12 < 1 2 >
+Node 13 < 1 2 >
+Node 14 < 1 2 >
+Node 15 < 1 2 >
+Node 16 < 1 2 >
+Node 17 < 1 2 >
+Node 18 < 1 2 >
+Node 19 < 1 2 >
+Node 20 < 1 2 >
+Node 21 < 1 2 >
+Node 22 < 1 2 >
+Node 23 < 1 2 >
+Node 24 < 1 2 >
+Node 25 < 1 2 >
+Node 26 < 1 2 >
+Node 27 < 1 2 >
+Node 28 < 1 2 >
+Node 29 < 1 2 >
+Node 30 < 1 2 >
+Node 31 < 1 2 >
+Node 32 < 1 2 >
+Node 33 < 1 2 >
+Node 34 < 1 2 >
+Node 35 < 1 2 >
+Node 36 < 1 2 >
+Node 37 < 1 2 >
+Node 38 < 0 1 2 >
+Node 39 < 0 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 38 Seq N:0 (Experiment ID: 0 got from node 0 - 20:16:13 @ 15-03-2010)Node: 38 Support Data: Avg Temperature:25.04 Avg Humidity:12.0579008 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+0	5	-41	3
+1	5	-40	4
+2	5	-50	122
+3	5	-44	0
+4	5	-42	2
+5	5	-42	3
+6	5	-44	1
+7	5	-45	51
+8	5	-71	102
+9	0	0	0
+10	5	-37	7
+11	5	-29	15
+12	5	-24	20
+13	5	-66	107
+14	5	-32	12
+15	5	-47	74
+Waiting for: 
+
+Node 0 < 1 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 1 2 >
+Node 4 < 1 2 >
+Node 5 < 1 2 >
+Node 6 < 1 2 >
+Node 7 < 1 2 >
+Node 8 < 1 2 >
+Node 9 < 0 1 2 >
+Node 10 < 1 2 >
+Node 11 < 1 2 >
+Node 12 < 1 2 >
+Node 13 < 1 2 >
+Node 14 < 1 2 >
+Node 15 < 1 2 >
+Node 16 < 1 2 >
+Node 17 < 1 2 >
+Node 18 < 1 2 >
+Node 19 < 1 2 >
+Node 20 < 1 2 >
+Node 21 < 1 2 >
+Node 22 < 1 2 >
+Node 23 < 1 2 >
+Node 24 < 1 2 >
+Node 25 < 1 2 >
+Node 26 < 1 2 >
+Node 27 < 1 2 >
+Node 28 < 1 2 >
+Node 29 < 1 2 >
+Node 30 < 1 2 >
+Node 31 < 1 2 >
+Node 32 < 1 2 >
+Node 33 < 1 2 >
+Node 34 < 1 2 >
+Node 35 < 1 2 >
+Node 36 < 1 2 >
+Node 37 < 1 2 >
+Node 38 < 1 2 >
+Node 39 < 0 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 39 Seq N:0 (Experiment ID: 0 got from node 0 - 20:16:14 @ 15-03-2010)Node: 39 Support Data: Avg Temperature:25.119999999999997 Avg Humidity:11.8667548 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+0	5	-43	27
+1	5	-46	49
+2	5	-60	112
+3	4	-61	111
+4	5	-43	1
+5	5	-39	5
+6	5	-55	118
+7	5	-44	0
+8	5	-59	113
+9	0	0	0
+10	5	-38	6
+11	5	-33	11
+12	5	-25	20
+13	5	-78	95
+14	5	-19	26
+15	5	-38	83
+Waiting for: 
+
+Node 0 < 1 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 1 2 >
+Node 4 < 1 2 >
+Node 5 < 1 2 >
+Node 6 < 1 2 >
+Node 7 < 1 2 >
+Node 8 < 1 2 >
+Node 9 < 0 1 2 >
+Node 10 < 1 2 >
+Node 11 < 1 2 >
+Node 12 < 1 2 >
+Node 13 < 1 2 >
+Node 14 < 1 2 >
+Node 15 < 1 2 >
+Node 16 < 1 2 >
+Node 17 < 1 2 >
+Node 18 < 1 2 >
+Node 19 < 1 2 >
+Node 20 < 1 2 >
+Node 21 < 1 2 >
+Node 22 < 1 2 >
+Node 23 < 1 2 >
+Node 24 < 1 2 >
+Node 25 < 1 2 >
+Node 26 < 1 2 >
+Node 27 < 1 2 >
+Node 28 < 1 2 >
+Node 29 < 1 2 >
+Node 30 < 1 2 >
+Node 31 < 1 2 >
+Node 32 < 1 2 >
+Node 33 < 1 2 >
+Node 34 < 1 2 >
+Node 35 < 1 2 >
+Node 36 < 1 2 >
+Node 37 < 1 2 >
+Node 38 < 1 2 >
+Node 39 < 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 0 Seq N:1 (Experiment ID: 1 got from node 0 - 20:16:24 @ 15-03-2010)Node: 0 Support Data: Avg Temperature:29.339999999999996 Avg Humidity:10.8321472 Init Battery:2.9626465 End Battery:2.9538574
+Ref ID	Rcv	RSSI[dBm]	LQI
+16	5	-41	3
+17	5	-67	105
+18	5	-41	3
+19	5	-47	100
+20	5	-46	75
+21	5	-24	20
+22	5	-35	9
+23	5	-55	92
+24	5	-29	15
+25	5	-35	9
+26	5	-36	8
+27	5	-43	27
+28	5	-48	73
+29	5	-40	4
+30	5	-58	114
+31	5	-37	7
+Waiting for: 
+
+Node 0 < 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 1 2 >
+Node 4 < 1 2 >
+Node 5 < 1 2 >
+Node 6 < 1 2 >
+Node 7 < 1 2 >
+Node 8 < 1 2 >
+Node 9 < 0 1 2 >
+Node 10 < 1 2 >
+Node 11 < 1 2 >
+Node 12 < 1 2 >
+Node 13 < 1 2 >
+Node 14 < 1 2 >
+Node 15 < 1 2 >
+Node 16 < 1 2 >
+Node 17 < 1 2 >
+Node 18 < 1 2 >
+Node 19 < 1 2 >
+Node 20 < 1 2 >
+Node 21 < 1 2 >
+Node 22 < 1 2 >
+Node 23 < 1 2 >
+Node 24 < 1 2 >
+Node 25 < 1 2 >
+Node 26 < 1 2 >
+Node 27 < 1 2 >
+Node 28 < 1 2 >
+Node 29 < 1 2 >
+Node 30 < 1 2 >
+Node 31 < 1 2 >
+Node 32 < 1 2 >
+Node 33 < 1 2 >
+Node 34 < 1 2 >
+Node 35 < 1 2 >
+Node 36 < 1 2 >
+Node 37 < 1 2 >
+Node 38 < 1 2 >
+Node 39 < 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 3 Seq N:1 (Experiment ID: 1 got from node 0 - 20:16:24 @ 15-03-2010)Node: 3 Support Data: Avg Temperature:25.199999999999996 Avg Humidity:12.439772800000002 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+16	5	-28	16
+17	5	-55	118
+18	5	-38	6
+19	5	-41	3
+20	5	-40	4
+21	5	-40	4
+22	5	-36	9
+23	5	-47	99
+24	5	-29	16
+25	5	-32	12
+26	5	-24	20
+27	5	-26	18
+28	5	-18	27
+29	5	-23	21
+30	5	-39	5
+31	5	-38	6
+Waiting for: 
+
+Node 0 < 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 2 >
+Node 4 < 1 2 >
+Node 5 < 1 2 >
+Node 6 < 1 2 >
+Node 7 < 1 2 >
+Node 8 < 1 2 >
+Node 9 < 0 1 2 >
+Node 10 < 1 2 >
+Node 11 < 1 2 >
+Node 12 < 1 2 >
+Node 13 < 1 2 >
+Node 14 < 1 2 >
+Node 15 < 1 2 >
+Node 16 < 1 2 >
+Node 17 < 1 2 >
+Node 18 < 1 2 >
+Node 19 < 1 2 >
+Node 20 < 1 2 >
+Node 21 < 1 2 >
+Node 22 < 1 2 >
+Node 23 < 1 2 >
+Node 24 < 1 2 >
+Node 25 < 1 2 >
+Node 26 < 1 2 >
+Node 27 < 1 2 >
+Node 28 < 1 2 >
+Node 29 < 1 2 >
+Node 30 < 1 2 >
+Node 31 < 1 2 >
+Node 32 < 1 2 >
+Node 33 < 1 2 >
+Node 34 < 1 2 >
+Node 35 < 1 2 >
+Node 36 < 1 2 >
+Node 37 < 1 2 >
+Node 38 < 1 2 >
+Node 39 < 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 4 Seq N:1 (Experiment ID: 1 got from node 0 - 20:16:24 @ 15-03-2010)Node: 4 Support Data: Avg Temperature:25.309999999999995 Avg Humidity:12.439772800000002 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+16	5	-24	20
+17	5	-56	116
+18	5	-33	12
+19	5	-41	4
+20	5	-45	0
+21	5	-27	17
+22	5	-31	13
+23	5	-50	96
+24	5	-26	18
+25	5	-38	6
+26	5	-43	1
+27	5	-30	14
+28	5	-27	18
+29	5	-27	17
+30	5	-39	5
+31	5	-33	11
+Waiting for: 
+
+Node 0 < 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 1 2 >
+Node 6 < 1 2 >
+Node 7 < 1 2 >
+Node 8 < 1 2 >
+Node 9 < 0 1 2 >
+Node 10 < 1 2 >
+Node 11 < 1 2 >
+Node 12 < 1 2 >
+Node 13 < 1 2 >
+Node 14 < 1 2 >
+Node 15 < 1 2 >
+Node 16 < 1 2 >
+Node 17 < 1 2 >
+Node 18 < 1 2 >
+Node 19 < 1 2 >
+Node 20 < 1 2 >
+Node 21 < 1 2 >
+Node 22 < 1 2 >
+Node 23 < 1 2 >
+Node 24 < 1 2 >
+Node 25 < 1 2 >
+Node 26 < 1 2 >
+Node 27 < 1 2 >
+Node 28 < 1 2 >
+Node 29 < 1 2 >
+Node 30 < 1 2 >
+Node 31 < 1 2 >
+Node 32 < 1 2 >
+Node 33 < 1 2 >
+Node 34 < 1 2 >
+Node 35 < 1 2 >
+Node 36 < 1 2 >
+Node 37 < 1 2 >
+Node 38 < 1 2 >
+Node 39 < 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 5 Seq N:1 (Experiment ID: 1 got from node 0 - 20:16:25 @ 15-03-2010)Node: 5 Support Data: Avg Temperature:24.740000000000002 Avg Humidity:12.325270000000002 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+16	5	-29	16
+17	5	-51	122
+18	5	-30	14
+19	5	-38	7
+20	5	-38	6
+21	5	-36	8
+22	5	-39	5
+23	5	-49	98
+24	5	-29	16
+25	5	-37	8
+26	5	-43	1
+27	5	-29	15
+28	5	-25	20
+29	5	-26	18
+30	5	-42	3
+31	5	-39	5
+Waiting for: 
+
+Node 0 < 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 1 2 >
+Node 7 < 1 2 >
+Node 8 < 1 2 >
+Node 9 < 0 1 2 >
+Node 10 < 1 2 >
+Node 11 < 1 2 >
+Node 12 < 1 2 >
+Node 13 < 1 2 >
+Node 14 < 1 2 >
+Node 15 < 1 2 >
+Node 16 < 1 2 >
+Node 17 < 1 2 >
+Node 18 < 1 2 >
+Node 19 < 1 2 >
+Node 20 < 1 2 >
+Node 21 < 1 2 >
+Node 22 < 1 2 >
+Node 23 < 1 2 >
+Node 24 < 1 2 >
+Node 25 < 1 2 >
+Node 26 < 1 2 >
+Node 27 < 1 2 >
+Node 28 < 1 2 >
+Node 29 < 1 2 >
+Node 30 < 1 2 >
+Node 31 < 1 2 >
+Node 32 < 1 2 >
+Node 33 < 1 2 >
+Node 34 < 1 2 >
+Node 35 < 1 2 >
+Node 36 < 1 2 >
+Node 37 < 1 2 >
+Node 38 < 1 2 >
+Node 39 < 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 6 Seq N:1 (Experiment ID: 1 got from node 0 - 20:16:26 @ 15-03-2010)Node: 6 Support Data: Avg Temperature:25.059999999999995 Avg Humidity:12.363443199999999 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+16	5	-38	6
+17	5	-62	110
+18	5	-38	6
+19	5	-44	26
+20	5	-56	116
+21	5	-27	17
+22	5	-25	19
+23	5	-48	98
+24	5	-25	19
+25	5	-25	19
+26	5	-38	6
+27	5	-24	20
+28	5	-28	16
+29	5	-24	20
+30	5	-45	0
+31	5	-37	7
+Waiting for: 
+
+Node 0 < 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 1 2 >
+Node 8 < 1 2 >
+Node 9 < 0 1 2 >
+Node 10 < 1 2 >
+Node 11 < 1 2 >
+Node 12 < 1 2 >
+Node 13 < 1 2 >
+Node 14 < 1 2 >
+Node 15 < 1 2 >
+Node 16 < 1 2 >
+Node 17 < 1 2 >
+Node 18 < 1 2 >
+Node 19 < 1 2 >
+Node 20 < 1 2 >
+Node 21 < 1 2 >
+Node 22 < 1 2 >
+Node 23 < 1 2 >
+Node 24 < 1 2 >
+Node 25 < 1 2 >
+Node 26 < 1 2 >
+Node 27 < 1 2 >
+Node 28 < 1 2 >
+Node 29 < 1 2 >
+Node 30 < 1 2 >
+Node 31 < 1 2 >
+Node 32 < 1 2 >
+Node 33 < 1 2 >
+Node 34 < 1 2 >
+Node 35 < 1 2 >
+Node 36 < 1 2 >
+Node 37 < 1 2 >
+Node 38 < 1 2 >
+Node 39 < 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 7 Seq N:1 (Experiment ID: 1 got from node 0 - 20:16:27 @ 15-03-2010)Node: 7 Support Data: Avg Temperature:25.369999999999997 Avg Humidity:12.8210848 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+16	5	-33	12
+17	5	-57	115
+18	5	-39	6
+19	5	-45	25
+20	5	-43	1
+21	5	-24	20
+22	5	-31	13
+23	5	-61	86
+24	5	-24	20
+25	5	-24	20
+26	5	-26	18
+27	5	-25	20
+28	5	-29	15
+29	5	-25	19
+30	5	-41	4
+31	5	-35	9
+Waiting for: 
+
+Node 0 < 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 1 2 >
+Node 9 < 0 1 2 >
+Node 10 < 1 2 >
+Node 11 < 1 2 >
+Node 12 < 1 2 >
+Node 13 < 1 2 >
+Node 14 < 1 2 >
+Node 15 < 1 2 >
+Node 16 < 1 2 >
+Node 17 < 1 2 >
+Node 18 < 1 2 >
+Node 19 < 1 2 >
+Node 20 < 1 2 >
+Node 21 < 1 2 >
+Node 22 < 1 2 >
+Node 23 < 1 2 >
+Node 24 < 1 2 >
+Node 25 < 1 2 >
+Node 26 < 1 2 >
+Node 27 < 1 2 >
+Node 28 < 1 2 >
+Node 29 < 1 2 >
+Node 30 < 1 2 >
+Node 31 < 1 2 >
+Node 32 < 1 2 >
+Node 33 < 1 2 >
+Node 34 < 1 2 >
+Node 35 < 1 2 >
+Node 36 < 1 2 >
+Node 37 < 1 2 >
+Node 38 < 1 2 >
+Node 39 < 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 8 Seq N:1 (Experiment ID: 1 got from node 0 - 20:16:28 @ 15-03-2010)Node: 8 Support Data: Avg Temperature:25.309999999999995 Avg Humidity:12.2107168 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+16	5	-31	13
+17	5	-52	120
+18	5	-39	6
+19	5	-46	50
+20	5	-55	117
+21	5	-29	15
+22	5	-41	3
+23	5	-48	99
+24	5	-30	14
+25	5	-25	19
+26	5	-30	14
+27	5	-34	10
+28	5	-27	18
+29	5	-26	18
+30	5	-39	5
+31	5	-33	11
+Waiting for: 
+
+Node 0 < 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < 1 2 >
+Node 11 < 1 2 >
+Node 12 < 1 2 >
+Node 13 < 1 2 >
+Node 14 < 1 2 >
+Node 15 < 1 2 >
+Node 16 < 1 2 >
+Node 17 < 1 2 >
+Node 18 < 1 2 >
+Node 19 < 1 2 >
+Node 20 < 1 2 >
+Node 21 < 1 2 >
+Node 22 < 1 2 >
+Node 23 < 1 2 >
+Node 24 < 1 2 >
+Node 25 < 1 2 >
+Node 26 < 1 2 >
+Node 27 < 1 2 >
+Node 28 < 1 2 >
+Node 29 < 1 2 >
+Node 30 < 1 2 >
+Node 31 < 1 2 >
+Node 32 < 1 2 >
+Node 33 < 1 2 >
+Node 34 < 1 2 >
+Node 35 < 1 2 >
+Node 36 < 1 2 >
+Node 37 < 1 2 >
+Node 38 < 1 2 >
+Node 39 < 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 10 Seq N:1 (Experiment ID: 1 got from node 0 - 20:16:31 @ 15-03-2010)Node: 10 Support Data: Avg Temperature:25.240000000000002 Avg Humidity:11.904995200000002 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+16	5	-27	18
+17	5	-55	117
+18	5	-51	122
+19	5	-55	117
+20	5	-43	2
+21	5	-35	9
+22	5	-30	14
+23	5	-48	99
+24	5	-28	16
+25	5	-32	13
+26	5	-37	8
+27	5	-27	18
+28	5	-23	21
+29	5	-23	21
+30	5	-51	121
+31	5	-31	13
+Waiting for: 
+
+Node 0 < 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < 2 >
+Node 11 < 1 2 >
+Node 12 < 1 2 >
+Node 13 < 1 2 >
+Node 14 < 1 2 >
+Node 15 < 1 2 >
+Node 16 < 1 2 >
+Node 17 < 1 2 >
+Node 18 < 1 2 >
+Node 19 < 1 2 >
+Node 20 < 1 2 >
+Node 21 < 1 2 >
+Node 22 < 1 2 >
+Node 23 < 1 2 >
+Node 24 < 1 2 >
+Node 25 < 1 2 >
+Node 26 < 1 2 >
+Node 27 < 1 2 >
+Node 28 < 1 2 >
+Node 29 < 1 2 >
+Node 30 < 1 2 >
+Node 31 < 1 2 >
+Node 32 < 1 2 >
+Node 33 < 1 2 >
+Node 34 < 1 2 >
+Node 35 < 1 2 >
+Node 36 < 1 2 >
+Node 37 < 1 2 >
+Node 38 < 1 2 >
+Node 39 < 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 11 Seq N:1 (Experiment ID: 1 got from node 0 - 20:16:32 @ 15-03-2010)Node: 11 Support Data: Avg Temperature:25.029999999999994 Avg Humidity:12.2107168 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+16	5	-21	23
+17	5	-40	5
+18	5	-27	17
+19	5	-26	18
+20	5	-38	7
+21	5	-53	120
+22	5	-42	2
+23	5	-59	88
+24	5	-41	3
+25	5	-35	9
+26	5	-43	52
+27	5	-40	5
+28	5	-40	4
+29	5	-43	2
+30	5	-59	114
+31	5	-26	18
+Waiting for: 
+
+Node 0 < 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < 2 >
+Node 11 < 2 >
+Node 12 < 1 2 >
+Node 13 < 1 2 >
+Node 14 < 1 2 >
+Node 15 < 1 2 >
+Node 16 < 1 2 >
+Node 17 < 1 2 >
+Node 18 < 1 2 >
+Node 19 < 1 2 >
+Node 20 < 1 2 >
+Node 21 < 1 2 >
+Node 22 < 1 2 >
+Node 23 < 1 2 >
+Node 24 < 1 2 >
+Node 25 < 1 2 >
+Node 26 < 1 2 >
+Node 27 < 1 2 >
+Node 28 < 1 2 >
+Node 29 < 1 2 >
+Node 30 < 1 2 >
+Node 31 < 1 2 >
+Node 32 < 1 2 >
+Node 33 < 1 2 >
+Node 34 < 1 2 >
+Node 35 < 1 2 >
+Node 36 < 1 2 >
+Node 37 < 1 2 >
+Node 38 < 1 2 >
+Node 39 < 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 12 Seq N:1 (Experiment ID: 1 got from node 0 - 20:16:33 @ 15-03-2010)Node: 12 Support Data: Avg Temperature:25.059999999999995 Avg Humidity:12.325270000000002 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+16	5	-22	23
+17	5	-29	16
+18	5	-25	20
+19	5	-23	22
+20	5	-25	19
+21	5	-39	5
+22	5	-44	0
+23	5	-59	87
+24	5	-33	12
+25	5	-44	0
+26	5	-51	96
+27	5	-34	10
+28	5	-30	14
+29	5	-39	5
+30	5	-49	124
+31	5	-30	14
+Waiting for: 
+
+Node 0 < 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < 2 >
+Node 11 < 2 >
+Node 12 < 2 >
+Node 13 < 1 2 >
+Node 14 < 1 2 >
+Node 15 < 1 2 >
+Node 16 < 1 2 >
+Node 17 < 1 2 >
+Node 18 < 1 2 >
+Node 19 < 1 2 >
+Node 20 < 1 2 >
+Node 21 < 1 2 >
+Node 22 < 1 2 >
+Node 23 < 1 2 >
+Node 24 < 1 2 >
+Node 25 < 1 2 >
+Node 26 < 1 2 >
+Node 27 < 1 2 >
+Node 28 < 1 2 >
+Node 29 < 1 2 >
+Node 30 < 1 2 >
+Node 31 < 1 2 >
+Node 32 < 1 2 >
+Node 33 < 1 2 >
+Node 34 < 1 2 >
+Node 35 < 1 2 >
+Node 36 < 1 2 >
+Node 37 < 1 2 >
+Node 38 < 1 2 >
+Node 39 < 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 13 Seq N:1 (Experiment ID: 1 got from node 0 - 20:16:35 @ 15-03-2010)Node: 13 Support Data: Avg Temperature:25.29 Avg Humidity:12.287091199999999 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+16	5	-23	22
+17	5	-38	7
+18	5	-18	26
+19	5	-25	20
+20	5	-27	18
+21	5	-44	26
+22	5	-51	121
+23	5	-71	101
+24	5	-54	118
+25	5	-61	111
+26	5	-50	122
+27	5	-53	119
+28	5	-54	118
+29	5	-42	2
+30	5	-56	117
+31	5	-39	6
+Waiting for: 
+
+Node 0 < 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < 2 >
+Node 11 < 2 >
+Node 12 < 2 >
+Node 13 < 2 >
+Node 14 < 1 2 >
+Node 15 < 1 2 >
+Node 16 < 1 2 >
+Node 17 < 1 2 >
+Node 18 < 1 2 >
+Node 19 < 1 2 >
+Node 20 < 1 2 >
+Node 21 < 1 2 >
+Node 22 < 1 2 >
+Node 23 < 1 2 >
+Node 24 < 1 2 >
+Node 25 < 1 2 >
+Node 26 < 1 2 >
+Node 27 < 1 2 >
+Node 28 < 1 2 >
+Node 29 < 1 2 >
+Node 30 < 1 2 >
+Node 31 < 1 2 >
+Node 32 < 1 2 >
+Node 33 < 1 2 >
+Node 34 < 1 2 >
+Node 35 < 1 2 >
+Node 36 < 1 2 >
+Node 37 < 1 2 >
+Node 38 < 1 2 >
+Node 39 < 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 14 Seq N:1 (Experiment ID: 1 got from node 0 - 20:16:36 @ 15-03-2010)Node: 14 Support Data: Avg Temperature:25.229999999999997 Avg Humidity:11.828508799999998 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+16	5	-29	15
+17	5	-40	5
+18	5	-22	22
+19	5	-23	22
+20	5	-24	20
+21	5	-51	121
+22	5	-51	122
+23	5	-77	96
+24	5	-46	75
+25	5	-48	124
+26	5	-49	123
+27	5	-42	3
+28	5	-41	4
+29	5	-51	121
+30	5	-63	110
+31	5	-42	2
+Waiting for: 
+
+Node 0 < 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < 2 >
+Node 11 < 2 >
+Node 12 < 2 >
+Node 13 < 2 >
+Node 14 < 2 >
+Node 15 < 1 2 >
+Node 16 < 1 2 >
+Node 17 < 1 2 >
+Node 18 < 1 2 >
+Node 19 < 1 2 >
+Node 20 < 1 2 >
+Node 21 < 1 2 >
+Node 22 < 1 2 >
+Node 23 < 1 2 >
+Node 24 < 1 2 >
+Node 25 < 1 2 >
+Node 26 < 1 2 >
+Node 27 < 1 2 >
+Node 28 < 1 2 >
+Node 29 < 1 2 >
+Node 30 < 1 2 >
+Node 31 < 1 2 >
+Node 32 < 1 2 >
+Node 33 < 1 2 >
+Node 34 < 1 2 >
+Node 35 < 1 2 >
+Node 36 < 1 2 >
+Node 37 < 1 2 >
+Node 38 < 1 2 >
+Node 39 < 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 15 Seq N:1 (Experiment ID: 1 got from node 0 - 20:16:37 @ 15-03-2010)Node: 15 Support Data: Avg Temperature:25.279999999999994 Avg Humidity:12.8210848 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+16	5	-38	6
+17	5	-42	2
+18	5	-27	18
+19	5	-19	25
+20	5	-17	27
+21	5	-46	101
+22	5	-49	123
+23	5	-62	84
+24	5	-43	1
+25	5	-39	5
+26	5	-44	26
+27	5	-60	113
+28	5	-52	120
+29	5	-46	100
+30	5	-53	119
+31	5	-42	2
+Waiting for: 
+
+Node 0 < 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < 2 >
+Node 11 < 2 >
+Node 12 < 2 >
+Node 13 < 2 >
+Node 14 < 2 >
+Node 15 < 2 >
+Node 16 < 1 2 >
+Node 17 < 1 2 >
+Node 18 < 1 2 >
+Node 19 < 1 2 >
+Node 20 < 1 2 >
+Node 21 < 1 2 >
+Node 22 < 1 2 >
+Node 23 < 1 2 >
+Node 24 < 1 2 >
+Node 25 < 1 2 >
+Node 26 < 1 2 >
+Node 27 < 1 2 >
+Node 28 < 1 2 >
+Node 29 < 1 2 >
+Node 30 < 1 2 >
+Node 31 < 1 2 >
+Node 32 < 1 2 >
+Node 33 < 1 2 >
+Node 34 < 1 2 >
+Node 35 < 1 2 >
+Node 36 < 1 2 >
+Node 37 < 1 2 >
+Node 38 < 1 2 >
+Node 39 < 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 16 Nr Hop:0 Seq N:1 Stats Retx:1 (Experiment ID: 1 got from node 0 - 20:16:38 @ 15-03-2010)Node: 16 Support Data: Avg Temperature:25.479999999999997 Avg Humidity:11.751999999999999 Init Battery:2.9992676 End Battery:2.9992676 Radio Activations:0
+Ref ID	Rcv	RSSI[dBm]	LQI
+17	5	-37	8
+18	5	-25	19
+19	5	-25	19
+20	5	-41	3
+21	5	-47	74
+22	5	-57	115
+23	5	-52	95
+24	5	-26	18
+25	5	-28	16
+26	5	-52	120
+27	5	-37	7
+28	5	-35	9
+29	5	-28	16
+30	5	-42	2
+31	5	-26	18
+Waiting for: 
+
+Node 0 < 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < 2 >
+Node 11 < 2 >
+Node 12 < 2 >
+Node 13 < 2 >
+Node 14 < 2 >
+Node 15 < 2 >
+Node 16 < 2 >
+Node 17 < 1 2 >
+Node 18 < 1 2 >
+Node 19 < 1 2 >
+Node 20 < 1 2 >
+Node 21 < 1 2 >
+Node 22 < 1 2 >
+Node 23 < 1 2 >
+Node 24 < 1 2 >
+Node 25 < 1 2 >
+Node 26 < 1 2 >
+Node 27 < 1 2 >
+Node 28 < 1 2 >
+Node 29 < 1 2 >
+Node 30 < 1 2 >
+Node 31 < 1 2 >
+Node 32 < 1 2 >
+Node 33 < 1 2 >
+Node 34 < 1 2 >
+Node 35 < 1 2 >
+Node 36 < 1 2 >
+Node 37 < 1 2 >
+Node 38 < 1 2 >
+Node 39 < 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 17 Nr Hop:0 Seq N:1 Stats Retx:1 (Experiment ID: 1 got from node 0 - 20:16:39 @ 15-03-2010)Node: 17 Support Data: Avg Temperature:25.259999999999998 Avg Humidity:12.2107168 Init Battery:2.9992676 End Battery:2.9992676 Radio Activations:0
+Ref ID	Rcv	RSSI[dBm]	LQI
+16	5	-22	22
+18	5	-21	24
+19	5	-28	16
+20	5	-40	5
+21	5	-51	121
+22	5	-54	118
+23	5	-57	90
+24	5	-37	7
+25	5	-30	14
+26	5	-52	120
+27	5	-54	118
+28	5	-41	3
+29	5	-34	10
+30	5	-54	118
+31	5	-26	18
+Waiting for: 
+
+Node 0 < 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < 2 >
+Node 11 < 2 >
+Node 12 < 2 >
+Node 13 < 2 >
+Node 14 < 2 >
+Node 15 < 2 >
+Node 16 < 2 >
+Node 17 < 2 >
+Node 18 < 1 2 >
+Node 19 < 1 2 >
+Node 20 < 1 2 >
+Node 21 < 1 2 >
+Node 22 < 1 2 >
+Node 23 < 1 2 >
+Node 24 < 1 2 >
+Node 25 < 1 2 >
+Node 26 < 1 2 >
+Node 27 < 1 2 >
+Node 28 < 1 2 >
+Node 29 < 1 2 >
+Node 30 < 1 2 >
+Node 31 < 1 2 >
+Node 32 < 1 2 >
+Node 33 < 1 2 >
+Node 34 < 1 2 >
+Node 35 < 1 2 >
+Node 36 < 1 2 >
+Node 37 < 1 2 >
+Node 38 < 1 2 >
+Node 39 < 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 18 Nr Hop:0 Seq N:1 Stats Retx:1 (Experiment ID: 1 got from node 0 - 20:16:40 @ 15-03-2010)Node: 18 Support Data: Avg Temperature:25.229999999999997 Avg Humidity:12.668627200000001 Init Battery:2.9992676 End Battery:2.9992676 Radio Activations:0
+Ref ID	Rcv	RSSI[dBm]	LQI
+16	5	-29	16
+17	5	-39	6
+19	5	-21	24
+20	5	-26	18
+21	5	-50	122
+22	5	-51	121
+23	5	-75	97
+24	5	-55	118
+25	5	-41	3
+26	5	-50	122
+27	5	-58	114
+28	5	-51	121
+29	5	-40	4
+30	5	-54	118
+31	5	-31	13
+Waiting for: 
+
+Node 0 < 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < 2 >
+Node 11 < 2 >
+Node 12 < 2 >
+Node 13 < 2 >
+Node 14 < 2 >
+Node 15 < 2 >
+Node 16 < 2 >
+Node 17 < 2 >
+Node 18 < 2 >
+Node 19 < 1 2 >
+Node 20 < 1 2 >
+Node 21 < 1 2 >
+Node 22 < 1 2 >
+Node 23 < 1 2 >
+Node 24 < 1 2 >
+Node 25 < 1 2 >
+Node 26 < 1 2 >
+Node 27 < 1 2 >
+Node 28 < 1 2 >
+Node 29 < 1 2 >
+Node 30 < 1 2 >
+Node 31 < 1 2 >
+Node 32 < 1 2 >
+Node 33 < 1 2 >
+Node 34 < 1 2 >
+Node 35 < 1 2 >
+Node 36 < 1 2 >
+Node 37 < 1 2 >
+Node 38 < 1 2 >
+Node 39 < 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 19 Nr Hop:0 Seq N:1 Stats Retx:1 (Experiment ID: 1 got from node 0 - 20:16:41 @ 15-03-2010)Node: 19 Support Data: Avg Temperature:25.339999999999996 Avg Humidity:12.2107168 Init Battery:2.9992676 End Battery:2.9992676 Radio Activations:0
+Ref ID	Rcv	RSSI[dBm]	LQI
+16	5	-25	20
+17	5	-41	3
+18	5	-17	27
+20	5	-25	20
+21	5	-52	120
+22	5	-61	111
+23	5	-59	87
+24	5	-37	8
+25	5	-57	115
+26	5	-52	120
+27	5	-47	125
+28	5	-58	115
+29	5	-52	120
+30	5	-50	122
+31	5	-37	7
+Waiting for: 
+
+Node 0 < 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < 2 >
+Node 11 < 2 >
+Node 12 < 2 >
+Node 13 < 2 >
+Node 14 < 2 >
+Node 15 < 2 >
+Node 16 < 2 >
+Node 17 < 2 >
+Node 18 < 2 >
+Node 19 < 2 >
+Node 20 < 1 2 >
+Node 21 < 1 2 >
+Node 22 < 1 2 >
+Node 23 < 1 2 >
+Node 24 < 1 2 >
+Node 25 < 1 2 >
+Node 26 < 1 2 >
+Node 27 < 1 2 >
+Node 28 < 1 2 >
+Node 29 < 1 2 >
+Node 30 < 1 2 >
+Node 31 < 1 2 >
+Node 32 < 1 2 >
+Node 33 < 1 2 >
+Node 34 < 1 2 >
+Node 35 < 1 2 >
+Node 36 < 1 2 >
+Node 37 < 1 2 >
+Node 38 < 1 2 >
+Node 39 < 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 20 Nr Hop:0 Seq N:1 Stats Retx:1 (Experiment ID: 1 got from node 0 - 20:16:42 @ 15-03-2010)Node: 20 Support Data: Avg Temperature:25.21 Avg Humidity:12.13432 Init Battery:2.9992676 End Battery:2.9992676 Radio Activations:0
+Ref ID	Rcv	RSSI[dBm]	LQI
+16	5	-43	1
+17	5	-60	113
+18	5	-26	18
+19	5	-29	16
+21	5	-51	121
+22	5	-51	121
+23	5	-59	88
+24	5	-39	6
+25	5	-39	6
+26	5	-52	121
+27	5	-43	1
+28	5	-48	99
+29	5	-44	1
+30	5	-58	114
+31	5	-56	116
+Waiting for: 
+
+Node 0 < 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < 2 >
+Node 11 < 2 >
+Node 12 < 2 >
+Node 13 < 2 >
+Node 14 < 2 >
+Node 15 < 2 >
+Node 16 < 2 >
+Node 17 < 2 >
+Node 18 < 2 >
+Node 19 < 2 >
+Node 20 < 2 >
+Node 21 < 1 2 >
+Node 22 < 1 2 >
+Node 23 < 1 2 >
+Node 24 < 1 2 >
+Node 25 < 1 2 >
+Node 26 < 1 2 >
+Node 27 < 1 2 >
+Node 28 < 1 2 >
+Node 29 < 1 2 >
+Node 30 < 1 2 >
+Node 31 < 1 2 >
+Node 32 < 1 2 >
+Node 33 < 1 2 >
+Node 34 < 1 2 >
+Node 35 < 1 2 >
+Node 36 < 1 2 >
+Node 37 < 1 2 >
+Node 38 < 1 2 >
+Node 39 < 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 21 Nr Hop:0 Seq N:1 Stats Retx:1 (Experiment ID: 1 got from node 0 - 20:16:43 @ 15-03-2010)Node: 21 Support Data: Avg Temperature:25.190000000000005 Avg Humidity:12.7448672 Init Battery:2.9992676 End Battery:2.9992676 Radio Activations:0
+Ref ID	Rcv	RSSI[dBm]	LQI
+16	5	-48	99
+17	5	-68	104
+18	5	-48	124
+19	5	-55	118
+20	5	-47	125
+22	5	-22	22
+23	5	-44	103
+24	5	-28	16
+25	5	-49	72
+26	5	-24	21
+27	5	-25	19
+28	5	-25	19
+29	5	-30	14
+30	5	-53	119
+31	5	-30	15
+Waiting for: 
+
+Node 0 < 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < 2 >
+Node 11 < 2 >
+Node 12 < 2 >
+Node 13 < 2 >
+Node 14 < 2 >
+Node 15 < 2 >
+Node 16 < 2 >
+Node 17 < 2 >
+Node 18 < 2 >
+Node 19 < 2 >
+Node 20 < 2 >
+Node 21 < 2 >
+Node 22 < 1 2 >
+Node 23 < 1 2 >
+Node 24 < 1 2 >
+Node 25 < 1 2 >
+Node 26 < 1 2 >
+Node 27 < 1 2 >
+Node 28 < 1 2 >
+Node 29 < 1 2 >
+Node 30 < 1 2 >
+Node 31 < 1 2 >
+Node 32 < 1 2 >
+Node 33 < 1 2 >
+Node 34 < 1 2 >
+Node 35 < 1 2 >
+Node 36 < 1 2 >
+Node 37 < 1 2 >
+Node 38 < 1 2 >
+Node 39 < 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 22 Nr Hop:0 Seq N:1 Stats Retx:1 (Experiment ID: 1 got from node 0 - 20:16:44 @ 15-03-2010)Node: 22 Support Data: Avg Temperature:25.35 Avg Humidity:13.239881200000003 Init Battery:2.9992676 End Battery:2.9992676 Radio Activations:0
+Ref ID	Rcv	RSSI[dBm]	LQI
+16	5	-61	112
+17	5	-76	96
+18	5	-53	120
+19	5	-66	107
+20	5	-51	121
+21	5	-24	20
+23	5	-39	5
+24	5	-25	19
+25	5	-35	9
+26	5	-22	22
+27	5	-19	26
+28	5	-24	21
+29	5	-28	16
+30	5	-54	119
+31	5	-31	14
+Waiting for: 
+
+Node 0 < 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < 2 >
+Node 11 < 2 >
+Node 12 < 2 >
+Node 13 < 2 >
+Node 14 < 2 >
+Node 15 < 2 >
+Node 16 < 2 >
+Node 17 < 2 >
+Node 18 < 2 >
+Node 19 < 2 >
+Node 20 < 2 >
+Node 21 < 2 >
+Node 22 < 2 >
+Node 23 < 1 2 >
+Node 24 < 1 2 >
+Node 25 < 1 2 >
+Node 26 < 1 2 >
+Node 27 < 1 2 >
+Node 28 < 1 2 >
+Node 29 < 1 2 >
+Node 30 < 1 2 >
+Node 31 < 1 2 >
+Node 32 < 1 2 >
+Node 33 < 1 2 >
+Node 34 < 1 2 >
+Node 35 < 1 2 >
+Node 36 < 1 2 >
+Node 37 < 1 2 >
+Node 38 < 1 2 >
+Node 39 < 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 23 Nr Hop:0 Seq N:1 Stats Retx:1 (Experiment ID: 1 got from node 0 - 20:16:45 @ 15-03-2010)Node: 23 Support Data: Avg Temperature:25.240000000000002 Avg Humidity:12.0579008 Init Battery:2.9992676 End Battery:2.9992676 Radio Activations:0
+Ref ID	Rcv	RSSI[dBm]	LQI
+16	5	-36	8
+17	5	-60	112
+18	5	-56	116
+19	5	-47	100
+20	5	-42	2
+21	5	-25	19
+22	5	-23	22
+24	5	-22	22
+25	5	-26	18
+26	5	-24	20
+27	5	-24	21
+28	5	-23	22
+29	5	-23	21
+30	5	-46	126
+31	5	-28	16
+Waiting for: 
+
+Node 0 < 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < 2 >
+Node 11 < 2 >
+Node 12 < 2 >
+Node 13 < 2 >
+Node 14 < 2 >
+Node 15 < 2 >
+Node 16 < 2 >
+Node 17 < 2 >
+Node 18 < 2 >
+Node 19 < 2 >
+Node 20 < 2 >
+Node 21 < 2 >
+Node 22 < 2 >
+Node 23 < 2 >
+Node 24 < 1 2 >
+Node 25 < 1 2 >
+Node 26 < 1 2 >
+Node 27 < 1 2 >
+Node 28 < 1 2 >
+Node 29 < 1 2 >
+Node 30 < 1 2 >
+Node 31 < 1 2 >
+Node 32 < 1 2 >
+Node 33 < 1 2 >
+Node 34 < 1 2 >
+Node 35 < 1 2 >
+Node 36 < 1 2 >
+Node 37 < 1 2 >
+Node 38 < 1 2 >
+Node 39 < 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 24 Nr Hop:0 Seq N:1 Stats Retx:1 (Experiment ID: 1 got from node 0 - 20:16:46 @ 15-03-2010)Node: 24 Support Data: Avg Temperature:25.15 Avg Humidity:11.637194800000001 Init Battery:2.9992676 End Battery:2.9992676 Radio Activations:0
+Ref ID	Rcv	RSSI[dBm]	LQI
+16	5	-31	14
+17	5	-59	113
+18	5	-57	116
+19	5	-41	4
+20	5	-40	4
+21	5	-32	12
+22	5	-26	18
+23	5	-38	6
+25	5	-24	20
+26	5	-29	15
+27	5	-24	20
+28	5	-25	20
+29	5	-20	25
+30	5	-44	0
+31	5	-28	16
+Waiting for: 
+
+Node 0 < 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < 2 >
+Node 11 < 2 >
+Node 12 < 2 >
+Node 13 < 2 >
+Node 14 < 2 >
+Node 15 < 2 >
+Node 16 < 2 >
+Node 17 < 2 >
+Node 18 < 2 >
+Node 19 < 2 >
+Node 20 < 2 >
+Node 21 < 2 >
+Node 22 < 2 >
+Node 23 < 2 >
+Node 24 < 2 >
+Node 25 < 1 2 >
+Node 26 < 1 2 >
+Node 27 < 1 2 >
+Node 28 < 1 2 >
+Node 29 < 1 2 >
+Node 30 < 1 2 >
+Node 31 < 1 2 >
+Node 32 < 1 2 >
+Node 33 < 1 2 >
+Node 34 < 1 2 >
+Node 35 < 1 2 >
+Node 36 < 1 2 >
+Node 37 < 1 2 >
+Node 38 < 1 2 >
+Node 39 < 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 25 Nr Hop:0 Seq N:1 Stats Retx:1 (Experiment ID: 1 got from node 0 - 20:16:47 @ 15-03-2010)Node: 25 Support Data: Avg Temperature:24.949999999999996 Avg Humidity:12.5923648 Init Battery:2.9992676 End Battery:2.9992676 Radio Activations:0
+Ref ID	Rcv	RSSI[dBm]	LQI
+16	5	-29	16
+17	5	-51	121
+18	5	-39	6
+19	5	-57	115
+20	5	-36	8
+21	5	-47	23
+22	5	-30	14
+23	5	-44	103
+24	5	-23	21
+26	5	-27	17
+27	5	-27	18
+28	5	-25	20
+29	5	-21	24
+30	5	-37	8
+31	5	-27	18
+Waiting for: 
+
+Node 0 < 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < 2 >
+Node 11 < 2 >
+Node 12 < 2 >
+Node 13 < 2 >
+Node 14 < 2 >
+Node 15 < 2 >
+Node 16 < 2 >
+Node 17 < 2 >
+Node 18 < 2 >
+Node 19 < 2 >
+Node 20 < 2 >
+Node 21 < 2 >
+Node 22 < 2 >
+Node 23 < 2 >
+Node 24 < 2 >
+Node 25 < 2 >
+Node 26 < 1 2 >
+Node 27 < 1 2 >
+Node 28 < 1 2 >
+Node 29 < 1 2 >
+Node 30 < 1 2 >
+Node 31 < 1 2 >
+Node 32 < 1 2 >
+Node 33 < 1 2 >
+Node 34 < 1 2 >
+Node 35 < 1 2 >
+Node 36 < 1 2 >
+Node 37 < 1 2 >
+Node 38 < 1 2 >
+Node 39 < 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 26 Nr Hop:0 Seq N:1 Stats Retx:1 (Experiment ID: 1 got from node 0 - 20:16:49 @ 15-03-2010)Node: 26 Support Data: Avg Temperature:25.240000000000002 Avg Humidity:11.828508799999998 Init Battery:2.9992676 End Battery:2.9992676 Radio Activations:0
+Ref ID	Rcv	RSSI[dBm]	LQI
+16	5	-52	95
+17	5	-69	103
+18	5	-49	123
+19	5	-52	120
+20	5	-50	122
+21	5	-24	21
+22	5	-20	24
+23	5	-42	105
+24	5	-27	18
+25	5	-28	16
+27	5	-23	21
+28	5	-29	15
+29	5	-26	18
+30	5	-57	115
+31	5	-47	125
+Waiting for: 
+
+Node 0 < 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < 2 >
+Node 11 < 2 >
+Node 12 < 2 >
+Node 13 < 2 >
+Node 14 < 2 >
+Node 15 < 2 >
+Node 16 < 2 >
+Node 17 < 2 >
+Node 18 < 2 >
+Node 19 < 2 >
+Node 20 < 2 >
+Node 21 < 2 >
+Node 22 < 2 >
+Node 23 < 2 >
+Node 24 < 2 >
+Node 25 < 2 >
+Node 26 < 2 >
+Node 27 < 1 2 >
+Node 28 < 1 2 >
+Node 29 < 1 2 >
+Node 30 < 1 2 >
+Node 31 < 1 2 >
+Node 32 < 1 2 >
+Node 33 < 1 2 >
+Node 34 < 1 2 >
+Node 35 < 1 2 >
+Node 36 < 1 2 >
+Node 37 < 1 2 >
+Node 38 < 1 2 >
+Node 39 < 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 27 Nr Hop:0 Seq N:1 Stats Retx:1 (Experiment ID: 1 got from node 0 - 20:16:50 @ 15-03-2010)Node: 27 Support Data: Avg Temperature:25.059999999999995 Avg Humidity:12.325270000000002 Init Battery:2.9992676 End Battery:2.9992676 Radio Activations:0
+Ref ID	Rcv	RSSI[dBm]	LQI
+16	5	-41	3
+17	5	-74	98
+18	5	-57	115
+19	5	-53	120
+20	5	-45	25
+21	5	-23	21
+22	5	-19	26
+23	5	-40	4
+24	5	-23	22
+25	5	-30	14
+26	5	-25	19
+28	5	-21	23
+29	5	-27	18
+30	5	-54	119
+31	5	-49	123
+Waiting for: 
+
+Node 0 < 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < 2 >
+Node 11 < 2 >
+Node 12 < 2 >
+Node 13 < 2 >
+Node 14 < 2 >
+Node 15 < 2 >
+Node 16 < 2 >
+Node 17 < 2 >
+Node 18 < 2 >
+Node 19 < 2 >
+Node 20 < 2 >
+Node 21 < 2 >
+Node 22 < 2 >
+Node 23 < 2 >
+Node 24 < 2 >
+Node 25 < 2 >
+Node 26 < 2 >
+Node 27 < 2 >
+Node 28 < 1 2 >
+Node 29 < 1 2 >
+Node 30 < 1 2 >
+Node 31 < 1 2 >
+Node 32 < 1 2 >
+Node 33 < 1 2 >
+Node 34 < 1 2 >
+Node 35 < 1 2 >
+Node 36 < 1 2 >
+Node 37 < 1 2 >
+Node 38 < 1 2 >
+Node 39 < 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 28 Nr Hop:0 Seq N:1 Stats Retx:1 (Experiment ID: 1 got from node 0 - 20:16:51 @ 15-03-2010)Node: 28 Support Data: Avg Temperature:25.160000000000004 Avg Humidity:12.172521200000002 Init Battery:2.9992676 End Battery:2.9992676 Radio Activations:0
+Ref ID	Rcv	RSSI[dBm]	LQI
+16	5	-37	7
+17	5	-60	112
+18	5	-52	121
+19	5	-61	111
+20	5	-47	74
+21	5	-24	20
+22	5	-27	18
+23	5	-38	7
+24	5	-28	16
+25	5	-25	19
+26	5	-30	14
+27	5	-20	24
+29	5	-17	27
+30	5	-43	1
+31	5	-38	6
+Waiting for: 
+
+Node 0 < 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < 2 >
+Node 11 < 2 >
+Node 12 < 2 >
+Node 13 < 2 >
+Node 14 < 2 >
+Node 15 < 2 >
+Node 16 < 2 >
+Node 17 < 2 >
+Node 18 < 2 >
+Node 19 < 2 >
+Node 20 < 2 >
+Node 21 < 2 >
+Node 22 < 2 >
+Node 23 < 2 >
+Node 24 < 2 >
+Node 25 < 2 >
+Node 26 < 2 >
+Node 27 < 2 >
+Node 28 < 2 >
+Node 29 < 1 2 >
+Node 30 < 1 2 >
+Node 31 < 1 2 >
+Node 32 < 1 2 >
+Node 33 < 1 2 >
+Node 34 < 1 2 >
+Node 35 < 1 2 >
+Node 36 < 1 2 >
+Node 37 < 1 2 >
+Node 38 < 1 2 >
+Node 39 < 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 29 Nr Hop:0 Seq N:1 Stats Retx:1 (Experiment ID: 1 got from node 0 - 20:16:52 @ 15-03-2010)Node: 29 Support Data: Avg Temperature:25.35 Avg Humidity:12.4016108 Init Battery:2.9992676 End Battery:2.9992676 Radio Activations:0
+Ref ID	Rcv	RSSI[dBm]	LQI
+16	5	-34	10
+17	5	-55	118
+18	5	-41	3
+19	5	-56	117
+20	5	-47	74
+21	5	-35	9
+22	5	-28	16
+23	5	-42	105
+24	5	-20	24
+25	5	-23	21
+26	5	-29	16
+27	5	-23	21
+28	5	-20	24
+30	5	-38	6
+31	5	-34	10
+Waiting for: 
+
+Node 0 < 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < 2 >
+Node 11 < 2 >
+Node 12 < 2 >
+Node 13 < 2 >
+Node 14 < 2 >
+Node 15 < 2 >
+Node 16 < 2 >
+Node 17 < 2 >
+Node 18 < 2 >
+Node 19 < 2 >
+Node 20 < 2 >
+Node 21 < 2 >
+Node 22 < 2 >
+Node 23 < 2 >
+Node 24 < 2 >
+Node 25 < 2 >
+Node 26 < 2 >
+Node 27 < 2 >
+Node 28 < 2 >
+Node 29 < 2 >
+Node 30 < 1 2 >
+Node 31 < 1 2 >
+Node 32 < 1 2 >
+Node 33 < 1 2 >
+Node 34 < 1 2 >
+Node 35 < 1 2 >
+Node 36 < 1 2 >
+Node 37 < 1 2 >
+Node 38 < 1 2 >
+Node 39 < 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 30 Nr Hop:0 Seq N:1 Stats Retx:1 (Experiment ID: 1 got from node 0 - 20:16:53 @ 15-03-2010)Node: 30 Support Data: Avg Temperature:25.119999999999997 Avg Humidity:12.325270000000002 Init Battery:2.9992676 End Battery:2.9992676 Radio Activations:0
+Ref ID	Rcv	RSSI[dBm]	LQI
+16	5	-24	21
+17	5	-54	118
+18	5	-36	8
+19	5	-30	14
+20	5	-39	6
+21	5	-32	12
+22	5	-29	16
+23	5	-45	101
+24	5	-27	18
+25	5	-21	23
+26	5	-36	8
+27	5	-36	9
+28	5	-26	18
+29	5	-19	25
+31	5	-28	16
+Waiting for: 
+
+Node 0 < 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < 2 >
+Node 11 < 2 >
+Node 12 < 2 >
+Node 13 < 2 >
+Node 14 < 2 >
+Node 15 < 2 >
+Node 16 < 2 >
+Node 17 < 2 >
+Node 18 < 2 >
+Node 19 < 2 >
+Node 20 < 2 >
+Node 21 < 2 >
+Node 22 < 2 >
+Node 23 < 2 >
+Node 24 < 2 >
+Node 25 < 2 >
+Node 26 < 2 >
+Node 27 < 2 >
+Node 28 < 2 >
+Node 29 < 2 >
+Node 30 < 2 >
+Node 31 < 1 2 >
+Node 32 < 1 2 >
+Node 33 < 1 2 >
+Node 34 < 1 2 >
+Node 35 < 1 2 >
+Node 36 < 1 2 >
+Node 37 < 1 2 >
+Node 38 < 1 2 >
+Node 39 < 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 31 Nr Hop:0 Seq N:1 Stats Retx:1 (Experiment ID: 1 got from node 0 - 20:16:54 @ 15-03-2010)Node: 31 Support Data: Avg Temperature:25.119999999999997 Avg Humidity:12.8210848 Init Battery:2.9992676 End Battery:2.9992676 Radio Activations:0
+Ref ID	Rcv	RSSI[dBm]	LQI
+16	5	-27	17
+17	5	-50	122
+18	5	-31	14
+19	5	-40	4
+20	5	-56	116
+21	5	-31	13
+22	5	-29	16
+23	5	-46	100
+24	5	-26	18
+25	5	-28	16
+26	5	-47	100
+27	5	-49	98
+28	5	-38	6
+29	5	-31	13
+30	5	-50	122
+Waiting for: 
+
+Node 0 < 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < 2 >
+Node 11 < 2 >
+Node 12 < 2 >
+Node 13 < 2 >
+Node 14 < 2 >
+Node 15 < 2 >
+Node 16 < 2 >
+Node 17 < 2 >
+Node 18 < 2 >
+Node 19 < 2 >
+Node 20 < 2 >
+Node 21 < 2 >
+Node 22 < 2 >
+Node 23 < 2 >
+Node 24 < 2 >
+Node 25 < 2 >
+Node 26 < 2 >
+Node 27 < 2 >
+Node 28 < 2 >
+Node 29 < 2 >
+Node 30 < 2 >
+Node 31 < 2 >
+Node 32 < 1 2 >
+Node 33 < 1 2 >
+Node 34 < 1 2 >
+Node 35 < 1 2 >
+Node 36 < 1 2 >
+Node 37 < 1 2 >
+Node 38 < 1 2 >
+Node 39 < 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 32 Seq N:1 (Experiment ID: 1 got from node 0 - 20:16:55 @ 15-03-2010)Node: 32 Support Data: Avg Temperature:24.93 Avg Humidity:12.516080000000002 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+16	5	-29	15
+17	5	-50	122
+18	5	-39	5
+19	5	-25	19
+20	5	-30	15
+21	5	-37	8
+22	5	-41	3
+23	5	-59	88
+24	5	-42	2
+25	5	-32	12
+26	5	-47	125
+27	5	-51	122
+28	5	-34	10
+29	5	-34	10
+30	5	-49	123
+31	5	-21	24
+Waiting for: 
+
+Node 0 < 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < 2 >
+Node 11 < 2 >
+Node 12 < 2 >
+Node 13 < 2 >
+Node 14 < 2 >
+Node 15 < 2 >
+Node 16 < 2 >
+Node 17 < 2 >
+Node 18 < 2 >
+Node 19 < 2 >
+Node 20 < 2 >
+Node 21 < 2 >
+Node 22 < 2 >
+Node 23 < 2 >
+Node 24 < 2 >
+Node 25 < 2 >
+Node 26 < 2 >
+Node 27 < 2 >
+Node 28 < 2 >
+Node 29 < 2 >
+Node 30 < 2 >
+Node 31 < 2 >
+Node 32 < 2 >
+Node 33 < 1 2 >
+Node 34 < 1 2 >
+Node 35 < 1 2 >
+Node 36 < 1 2 >
+Node 37 < 1 2 >
+Node 38 < 1 2 >
+Node 39 < 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 33 Seq N:1 (Experiment ID: 1 got from node 0 - 20:16:57 @ 15-03-2010)Node: 33 Support Data: Avg Temperature:25.020000000000003 Avg Humidity:12.287091199999999 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+16	5	-27	17
+17	5	-48	124
+18	5	-27	18
+19	5	-29	16
+20	5	-30	14
+21	5	-42	3
+22	5	-38	6
+23	5	-53	94
+24	5	-37	7
+25	5	-31	14
+26	5	-41	4
+27	5	-39	5
+28	5	-36	8
+29	5	-31	13
+30	5	-55	117
+31	5	-23	21
+Waiting for: 
+
+Node 0 < 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < 2 >
+Node 11 < 2 >
+Node 12 < 2 >
+Node 13 < 2 >
+Node 14 < 2 >
+Node 15 < 2 >
+Node 16 < 2 >
+Node 17 < 2 >
+Node 18 < 2 >
+Node 19 < 2 >
+Node 20 < 2 >
+Node 21 < 2 >
+Node 22 < 2 >
+Node 23 < 2 >
+Node 24 < 2 >
+Node 25 < 2 >
+Node 26 < 2 >
+Node 27 < 2 >
+Node 28 < 2 >
+Node 29 < 2 >
+Node 30 < 2 >
+Node 31 < 2 >
+Node 32 < 2 >
+Node 33 < 2 >
+Node 34 < 1 2 >
+Node 35 < 1 2 >
+Node 36 < 1 2 >
+Node 37 < 1 2 >
+Node 38 < 1 2 >
+Node 39 < 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 34 Seq N:1 (Experiment ID: 1 got from node 0 - 20:16:58 @ 15-03-2010)Node: 34 Support Data: Avg Temperature:25.1 Avg Humidity:12.516080000000002 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+16	5	-40	4
+17	5	-41	3
+18	5	-29	16
+19	5	-28	16
+20	5	-35	9
+21	5	-32	12
+22	5	-34	10
+23	5	-52	95
+24	5	-28	16
+25	5	-28	16
+26	5	-48	99
+27	5	-43	1
+28	5	-50	97
+29	5	-41	3
+30	5	-55	117
+31	5	-30	14
+Waiting for: 
+
+Node 0 < 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < 2 >
+Node 11 < 2 >
+Node 12 < 2 >
+Node 13 < 2 >
+Node 14 < 2 >
+Node 15 < 2 >
+Node 16 < 2 >
+Node 17 < 2 >
+Node 18 < 2 >
+Node 19 < 2 >
+Node 20 < 2 >
+Node 21 < 2 >
+Node 22 < 2 >
+Node 23 < 2 >
+Node 24 < 2 >
+Node 25 < 2 >
+Node 26 < 2 >
+Node 27 < 2 >
+Node 28 < 2 >
+Node 29 < 2 >
+Node 30 < 2 >
+Node 31 < 2 >
+Node 32 < 2 >
+Node 33 < 2 >
+Node 34 < 2 >
+Node 35 < 1 2 >
+Node 36 < 1 2 >
+Node 37 < 1 2 >
+Node 38 < 1 2 >
+Node 39 < 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 35 Seq N:1 (Experiment ID: 1 got from node 0 - 20:16:59 @ 15-03-2010)Node: 35 Support Data: Avg Temperature:24.79 Avg Humidity:12.6304988 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+16	5	-37	8
+17	5	-49	124
+18	5	-28	16
+19	5	-31	14
+20	5	-29	16
+21	5	-37	8
+22	5	-41	3
+23	5	-59	87
+24	5	-43	1
+25	5	-45	0
+26	5	-58	114
+27	5	-58	114
+28	5	-54	118
+29	5	-42	2
+30	5	-57	115
+31	5	-37	7
+Waiting for: 
+
+Node 0 < 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < 2 >
+Node 11 < 2 >
+Node 12 < 2 >
+Node 13 < 2 >
+Node 14 < 2 >
+Node 15 < 2 >
+Node 16 < 2 >
+Node 17 < 2 >
+Node 18 < 2 >
+Node 19 < 2 >
+Node 20 < 2 >
+Node 21 < 2 >
+Node 22 < 2 >
+Node 23 < 2 >
+Node 24 < 2 >
+Node 25 < 2 >
+Node 26 < 2 >
+Node 27 < 2 >
+Node 28 < 2 >
+Node 29 < 2 >
+Node 30 < 2 >
+Node 31 < 2 >
+Node 32 < 2 >
+Node 33 < 2 >
+Node 34 < 2 >
+Node 35 < 2 >
+Node 36 < 1 2 >
+Node 37 < 1 2 >
+Node 38 < 1 2 >
+Node 39 < 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 36 Seq N:1 (Experiment ID: 1 got from node 0 - 20:17:01 @ 15-03-2010)Node: 36 Support Data: Avg Temperature:25.029999999999994 Avg Humidity:12.668627200000001 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+16	5	-36	8
+17	5	-47	125
+18	5	-27	18
+19	5	-37	8
+20	5	-45	50
+21	5	-43	2
+22	5	-46	49
+23	5	-60	87
+24	5	-43	1
+25	5	-29	16
+26	5	-43	2
+27	5	-44	26
+28	5	-40	4
+29	5	-35	9
+30	5	-53	120
+31	5	-22	22
+Waiting for: 
+
+Node 0 < 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < 2 >
+Node 11 < 2 >
+Node 12 < 2 >
+Node 13 < 2 >
+Node 14 < 2 >
+Node 15 < 2 >
+Node 16 < 2 >
+Node 17 < 2 >
+Node 18 < 2 >
+Node 19 < 2 >
+Node 20 < 2 >
+Node 21 < 2 >
+Node 22 < 2 >
+Node 23 < 2 >
+Node 24 < 2 >
+Node 25 < 2 >
+Node 26 < 2 >
+Node 27 < 2 >
+Node 28 < 2 >
+Node 29 < 2 >
+Node 30 < 2 >
+Node 31 < 2 >
+Node 32 < 2 >
+Node 33 < 2 >
+Node 34 < 2 >
+Node 35 < 2 >
+Node 36 < 2 >
+Node 37 < 1 2 >
+Node 38 < 1 2 >
+Node 39 < 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 37 Seq N:1 (Experiment ID: 1 got from node 0 - 20:17:02 @ 15-03-2010)Node: 37 Support Data: Avg Temperature:24.889999999999993 Avg Humidity:12.8591852 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+16	5	-29	16
+17	5	-56	116
+18	5	-31	14
+19	5	-28	16
+20	5	-33	11
+21	5	-41	4
+22	5	-37	7
+23	5	-56	91
+24	5	-38	6
+25	5	-36	9
+26	5	-52	121
+27	5	-45	50
+28	5	-42	2
+29	5	-37	7
+30	5	-51	121
+31	5	-25	20
+Waiting for: 
+
+Node 0 < 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < 2 >
+Node 11 < 2 >
+Node 12 < 2 >
+Node 13 < 2 >
+Node 14 < 2 >
+Node 15 < 2 >
+Node 16 < 2 >
+Node 17 < 2 >
+Node 18 < 2 >
+Node 19 < 2 >
+Node 20 < 2 >
+Node 21 < 2 >
+Node 22 < 2 >
+Node 23 < 2 >
+Node 24 < 2 >
+Node 25 < 2 >
+Node 26 < 2 >
+Node 27 < 2 >
+Node 28 < 2 >
+Node 29 < 2 >
+Node 30 < 2 >
+Node 31 < 2 >
+Node 32 < 2 >
+Node 33 < 2 >
+Node 34 < 2 >
+Node 35 < 2 >
+Node 36 < 2 >
+Node 37 < 2 >
+Node 38 < 1 2 >
+Node 39 < 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 38 Seq N:1 (Experiment ID: 1 got from node 0 - 20:17:03 @ 15-03-2010)Node: 38 Support Data: Avg Temperature:25.04 Avg Humidity:12.0579008 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+16	5	-29	15
+17	5	-49	124
+18	5	-29	16
+19	5	-29	16
+20	5	-27	18
+21	5	-41	3
+22	5	-43	1
+23	5	-61	86
+24	5	-49	123
+25	5	-31	14
+26	5	-38	6
+27	5	-35	9
+28	5	-34	10
+29	5	-31	13
+30	5	-45	25
+31	5	-25	19
+Waiting for: 
+
+Node 0 < 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < 2 >
+Node 11 < 2 >
+Node 12 < 2 >
+Node 13 < 2 >
+Node 14 < 2 >
+Node 15 < 2 >
+Node 16 < 2 >
+Node 17 < 2 >
+Node 18 < 2 >
+Node 19 < 2 >
+Node 20 < 2 >
+Node 21 < 2 >
+Node 22 < 2 >
+Node 23 < 2 >
+Node 24 < 2 >
+Node 25 < 2 >
+Node 26 < 2 >
+Node 27 < 2 >
+Node 28 < 2 >
+Node 29 < 2 >
+Node 30 < 2 >
+Node 31 < 2 >
+Node 32 < 2 >
+Node 33 < 2 >
+Node 34 < 2 >
+Node 35 < 2 >
+Node 36 < 2 >
+Node 37 < 2 >
+Node 38 < 2 >
+Node 39 < 1 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 39 Seq N:1 (Experiment ID: 1 got from node 0 - 20:17:04 @ 15-03-2010)Node: 39 Support Data: Avg Temperature:25.119999999999997 Avg Humidity:11.8667548 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+16	5	-25	19
+17	5	-46	126
+18	5	-35	10
+19	5	-31	13
+20	5	-29	16
+21	5	-44	77
+22	5	-46	50
+23	5	-62	85
+24	5	-49	123
+25	5	-36	8
+26	5	-47	74
+27	5	-41	4
+28	5	-39	5
+29	5	-31	13
+30	5	-57	115
+31	5	-29	15
+Waiting for: 
+
+Node 0 < 2 >
+Node 1 < 1 2 >
+Node 2 < 1 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < 2 >
+Node 11 < 2 >
+Node 12 < 2 >
+Node 13 < 2 >
+Node 14 < 2 >
+Node 15 < 2 >
+Node 16 < 2 >
+Node 17 < 2 >
+Node 18 < 2 >
+Node 19 < 2 >
+Node 20 < 2 >
+Node 21 < 2 >
+Node 22 < 2 >
+Node 23 < 2 >
+Node 24 < 2 >
+Node 25 < 2 >
+Node 26 < 2 >
+Node 27 < 2 >
+Node 28 < 2 >
+Node 29 < 2 >
+Node 30 < 2 >
+Node 31 < 2 >
+Node 32 < 2 >
+Node 33 < 2 >
+Node 34 < 2 >
+Node 35 < 2 >
+Node 36 < 2 >
+Node 37 < 2 >
+Node 38 < 2 >
+Node 39 < 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 1 Seq N:1 (Experiment ID: 1 got from node 0 - 20:17:10 @ 15-03-2010)Node: 1 Support Data: Avg Temperature:25.470000000000006 Avg Humidity:12.4016108 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+16	5	-38	6
+17	5	-59	113
+18	5	-51	121
+19	5	-45	76
+20	5	-44	26
+21	5	-36	8
+22	5	-28	16
+23	5	-44	103
+24	5	-25	19
+25	5	-38	6
+26	5	-19	25
+27	5	-24	20
+28	5	-23	22
+29	5	-45	51
+30	5	-64	108
+31	5	-44	1
+Waiting for: 
+
+Node 0 < 2 >
+Node 1 < 2 >
+Node 2 < 1 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < 2 >
+Node 11 < 2 >
+Node 12 < 2 >
+Node 13 < 2 >
+Node 14 < 2 >
+Node 15 < 2 >
+Node 16 < 2 >
+Node 17 < 2 >
+Node 18 < 2 >
+Node 19 < 2 >
+Node 20 < 2 >
+Node 21 < 2 >
+Node 22 < 2 >
+Node 23 < 2 >
+Node 24 < 2 >
+Node 25 < 2 >
+Node 26 < 2 >
+Node 27 < 2 >
+Node 28 < 2 >
+Node 29 < 2 >
+Node 30 < 2 >
+Node 31 < 2 >
+Node 32 < 2 >
+Node 33 < 2 >
+Node 34 < 2 >
+Node 35 < 2 >
+Node 36 < 2 >
+Node 37 < 2 >
+Node 38 < 2 >
+Node 39 < 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 2 Seq N:1 (Experiment ID: 1 got from node 0 - 20:17:11 @ 15-03-2010)Node: 2 Support Data: Avg Temperature:24.940000000000005 Avg Humidity:13.239881200000003 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+16	5	-41	3
+17	5	-58	114
+18	5	-45	24
+19	5	-56	116
+20	5	-47	125
+21	5	-59	113
+22	5	-25	19
+23	5	-51	96
+24	5	-25	19
+25	5	-28	16
+26	5	-35	9
+27	5	-21	23
+28	5	-22	22
+29	5	-27	17
+30	5	-45	0
+31	5	-46	75
+Waiting for: 
+
+Node 0 < 2 >
+Node 1 < 2 >
+Node 2 < 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < 2 >
+Node 11 < 2 >
+Node 12 < 2 >
+Node 13 < 2 >
+Node 14 < 2 >
+Node 15 < 2 >
+Node 16 < 2 >
+Node 17 < 2 >
+Node 18 < 2 >
+Node 19 < 2 >
+Node 20 < 2 >
+Node 21 < 2 >
+Node 22 < 2 >
+Node 23 < 2 >
+Node 24 < 2 >
+Node 25 < 2 >
+Node 26 < 2 >
+Node 27 < 2 >
+Node 28 < 2 >
+Node 29 < 2 >
+Node 30 < 2 >
+Node 31 < 2 >
+Node 32 < 2 >
+Node 33 < 2 >
+Node 34 < 2 >
+Node 35 < 2 >
+Node 36 < 2 >
+Node 37 < 2 >
+Node 38 < 2 >
+Node 39 < 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 0 Seq N:2 (Experiment ID: 2 got from node 0 - 20:17:21 @ 15-03-2010)Node: 0 Support Data: Avg Temperature:29.339999999999996 Avg Humidity:10.8321472 Init Battery:2.9626465 End Battery:2.9538574
+Ref ID	Rcv	RSSI[dBm]	LQI
+32	5	-43	1
+33	5	-47	74
+34	5	-61	111
+35	1	-52	121
+36	5	-40	4
+37	5	-59	113
+38	5	-46	49
+39	5	-49	123
+40	0	0	0
+41	0	0	0
+42	0	0	0
+Waiting for: 
+
+Node 0 < >
+Node 1 < 2 >
+Node 2 < 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < 2 >
+Node 11 < 2 >
+Node 12 < 2 >
+Node 13 < 2 >
+Node 14 < 2 >
+Node 15 < 2 >
+Node 16 < 2 >
+Node 17 < 2 >
+Node 18 < 2 >
+Node 19 < 2 >
+Node 20 < 2 >
+Node 21 < 2 >
+Node 22 < 2 >
+Node 23 < 2 >
+Node 24 < 2 >
+Node 25 < 2 >
+Node 26 < 2 >
+Node 27 < 2 >
+Node 28 < 2 >
+Node 29 < 2 >
+Node 30 < 2 >
+Node 31 < 2 >
+Node 32 < 2 >
+Node 33 < 2 >
+Node 34 < 2 >
+Node 35 < 2 >
+Node 36 < 2 >
+Node 37 < 2 >
+Node 38 < 2 >
+Node 39 < 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 10 Seq N:2 (Experiment ID: 2 got from node 0 - 20:17:22 @ 15-03-2010)Node: 10 Support Data: Avg Temperature:25.240000000000002 Avg Humidity:11.904995200000002 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+32	5	-34	10
+33	5	-36	8
+34	5	-57	116
+35	5	-73	73
+36	5	-24	21
+37	5	-53	119
+38	5	-39	5
+39	5	-43	2
+40	0	0	0
+41	0	0	0
+42	0	0	0
+Waiting for: 
+
+Node 0 < >
+Node 1 < 2 >
+Node 2 < 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < >
+Node 11 < 2 >
+Node 12 < 2 >
+Node 13 < 2 >
+Node 14 < 2 >
+Node 15 < 2 >
+Node 16 < 2 >
+Node 17 < 2 >
+Node 18 < 2 >
+Node 19 < 2 >
+Node 20 < 2 >
+Node 21 < 2 >
+Node 22 < 2 >
+Node 23 < 2 >
+Node 24 < 2 >
+Node 25 < 2 >
+Node 26 < 2 >
+Node 27 < 2 >
+Node 28 < 2 >
+Node 29 < 2 >
+Node 30 < 2 >
+Node 31 < 2 >
+Node 32 < 2 >
+Node 33 < 2 >
+Node 34 < 2 >
+Node 35 < 2 >
+Node 36 < 2 >
+Node 37 < 2 >
+Node 38 < 2 >
+Node 39 < 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 11 Seq N:2 (Experiment ID: 2 got from node 0 - 20:17:23 @ 15-03-2010)Node: 11 Support Data: Avg Temperature:25.029999999999994 Avg Humidity:12.2107168 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+32	5	-44	26
+33	5	-26	18
+34	5	-56	116
+35	5	-64	82
+36	5	-23	22
+37	5	-48	124
+38	5	-31	14
+39	5	-38	6
+40	0	0	0
+41	0	0	0
+42	0	0	0
+Waiting for: 
+
+Node 0 < >
+Node 1 < 2 >
+Node 2 < 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < >
+Node 11 < >
+Node 12 < 2 >
+Node 13 < 2 >
+Node 14 < 2 >
+Node 15 < 2 >
+Node 16 < 2 >
+Node 17 < 2 >
+Node 18 < 2 >
+Node 19 < 2 >
+Node 20 < 2 >
+Node 21 < 2 >
+Node 22 < 2 >
+Node 23 < 2 >
+Node 24 < 2 >
+Node 25 < 2 >
+Node 26 < 2 >
+Node 27 < 2 >
+Node 28 < 2 >
+Node 29 < 2 >
+Node 30 < 2 >
+Node 31 < 2 >
+Node 32 < 2 >
+Node 33 < 2 >
+Node 34 < 2 >
+Node 35 < 2 >
+Node 36 < 2 >
+Node 37 < 2 >
+Node 38 < 2 >
+Node 39 < 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 12 Seq N:2 (Experiment ID: 2 got from node 0 - 20:17:24 @ 15-03-2010)Node: 12 Support Data: Avg Temperature:25.059999999999995 Avg Humidity:12.325270000000002 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+32	5	-31	13
+33	5	-24	20
+34	5	-48	124
+35	5	-62	84
+36	5	-28	17
+37	5	-34	10
+38	5	-25	20
+39	5	-26	18
+40	0	0	0
+41	0	0	0
+42	0	0	0
+Waiting for: 
+
+Node 0 < >
+Node 1 < 2 >
+Node 2 < 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < >
+Node 11 < >
+Node 12 < >
+Node 13 < 2 >
+Node 14 < 2 >
+Node 15 < 2 >
+Node 16 < 2 >
+Node 17 < 2 >
+Node 18 < 2 >
+Node 19 < 2 >
+Node 20 < 2 >
+Node 21 < 2 >
+Node 22 < 2 >
+Node 23 < 2 >
+Node 24 < 2 >
+Node 25 < 2 >
+Node 26 < 2 >
+Node 27 < 2 >
+Node 28 < 2 >
+Node 29 < 2 >
+Node 30 < 2 >
+Node 31 < 2 >
+Node 32 < 2 >
+Node 33 < 2 >
+Node 34 < 2 >
+Node 35 < 2 >
+Node 36 < 2 >
+Node 37 < 2 >
+Node 38 < 2 >
+Node 39 < 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 13 Seq N:2 (Experiment ID: 2 got from node 0 - 20:17:25 @ 15-03-2010)Node: 13 Support Data: Avg Temperature:25.29 Avg Humidity:12.287091199999999 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+32	5	-37	8
+33	5	-27	18
+34	5	-52	120
+35	5	-66	81
+36	5	-27	18
+37	5	-54	119
+38	5	-24	21
+39	5	-34	10
+40	0	0	0
+41	0	0	0
+42	0	0	0
+Waiting for: 
+
+Node 0 < >
+Node 1 < 2 >
+Node 2 < 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < >
+Node 11 < >
+Node 12 < >
+Node 13 < >
+Node 14 < 2 >
+Node 15 < 2 >
+Node 16 < 2 >
+Node 17 < 2 >
+Node 18 < 2 >
+Node 19 < 2 >
+Node 20 < 2 >
+Node 21 < 2 >
+Node 22 < 2 >
+Node 23 < 2 >
+Node 24 < 2 >
+Node 25 < 2 >
+Node 26 < 2 >
+Node 27 < 2 >
+Node 28 < 2 >
+Node 29 < 2 >
+Node 30 < 2 >
+Node 31 < 2 >
+Node 32 < 2 >
+Node 33 < 2 >
+Node 34 < 2 >
+Node 35 < 2 >
+Node 36 < 2 >
+Node 37 < 2 >
+Node 38 < 2 >
+Node 39 < 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 14 Seq N:2 (Experiment ID: 2 got from node 0 - 20:17:27 @ 15-03-2010)Node: 14 Support Data: Avg Temperature:25.229999999999997 Avg Humidity:11.828508799999998 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+32	5	-37	8
+33	5	-40	4
+34	5	-47	125
+35	5	-77	70
+36	5	-31	13
+37	5	-53	120
+38	5	-37	8
+39	5	-23	22
+40	0	0	0
+41	0	0	0
+42	0	0	0
+Waiting for: 
+
+Node 0 < >
+Node 1 < 2 >
+Node 2 < 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < >
+Node 11 < >
+Node 12 < >
+Node 13 < >
+Node 14 < >
+Node 15 < 2 >
+Node 16 < 2 >
+Node 17 < 2 >
+Node 18 < 2 >
+Node 19 < 2 >
+Node 20 < 2 >
+Node 21 < 2 >
+Node 22 < 2 >
+Node 23 < 2 >
+Node 24 < 2 >
+Node 25 < 2 >
+Node 26 < 2 >
+Node 27 < 2 >
+Node 28 < 2 >
+Node 29 < 2 >
+Node 30 < 2 >
+Node 31 < 2 >
+Node 32 < 2 >
+Node 33 < 2 >
+Node 34 < 2 >
+Node 35 < 2 >
+Node 36 < 2 >
+Node 37 < 2 >
+Node 38 < 2 >
+Node 39 < 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 15 Seq N:2 (Experiment ID: 2 got from node 0 - 20:17:28 @ 15-03-2010)Node: 15 Support Data: Avg Temperature:25.279999999999994 Avg Humidity:12.8210848 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+32	5	-41	3
+33	5	-37	7
+34	5	-54	119
+35	5	-64	82
+36	5	-31	13
+37	5	-45	0
+38	5	-36	9
+39	5	-29	15
+40	0	0	0
+41	0	0	0
+42	0	0	0
+Waiting for: 
+
+Node 0 < >
+Node 1 < 2 >
+Node 2 < 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < >
+Node 11 < >
+Node 12 < >
+Node 13 < >
+Node 14 < >
+Node 15 < >
+Node 16 < 2 >
+Node 17 < 2 >
+Node 18 < 2 >
+Node 19 < 2 >
+Node 20 < 2 >
+Node 21 < 2 >
+Node 22 < 2 >
+Node 23 < 2 >
+Node 24 < 2 >
+Node 25 < 2 >
+Node 26 < 2 >
+Node 27 < 2 >
+Node 28 < 2 >
+Node 29 < 2 >
+Node 30 < 2 >
+Node 31 < 2 >
+Node 32 < 2 >
+Node 33 < 2 >
+Node 34 < 2 >
+Node 35 < 2 >
+Node 36 < 2 >
+Node 37 < 2 >
+Node 38 < 2 >
+Node 39 < 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 16 Seq N:2 (Experiment ID: 2 got from node 0 - 20:17:29 @ 15-03-2010)Node: 16 Support Data: Avg Temperature:25.479999999999997 Avg Humidity:11.751999999999999 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+32	5	-27	17
+33	5	-25	19
+34	5	-57	115
+35	5	-69	78
+36	5	-31	13
+37	5	-43	1
+38	5	-29	15
+39	5	-25	19
+40	0	0	0
+41	0	0	0
+42	0	0	0
+Waiting for: 
+
+Node 0 < >
+Node 1 < 2 >
+Node 2 < 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < >
+Node 11 < >
+Node 12 < >
+Node 13 < >
+Node 14 < >
+Node 15 < >
+Node 16 < >
+Node 17 < 2 >
+Node 18 < 2 >
+Node 19 < 2 >
+Node 20 < 2 >
+Node 21 < 2 >
+Node 22 < 2 >
+Node 23 < 2 >
+Node 24 < 2 >
+Node 25 < 2 >
+Node 26 < 2 >
+Node 27 < 2 >
+Node 28 < 2 >
+Node 29 < 2 >
+Node 30 < 2 >
+Node 31 < 2 >
+Node 32 < 2 >
+Node 33 < 2 >
+Node 34 < 2 >
+Node 35 < 2 >
+Node 36 < 2 >
+Node 37 < 2 >
+Node 38 < 2 >
+Node 39 < 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 17 Seq N:2 (Experiment ID: 2 got from node 0 - 20:17:30 @ 15-03-2010)Node: 17 Support Data: Avg Temperature:25.259999999999998 Avg Humidity:12.2107168 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+32	5	-28	17
+33	5	-26	19
+34	5	-42	3
+35	5	-62	84
+36	5	-24	21
+37	5	-55	117
+38	5	-27	17
+39	5	-27	18
+40	0	0	0
+41	0	0	0
+42	0	0	0
+Waiting for: 
+
+Node 0 < >
+Node 1 < 2 >
+Node 2 < 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < >
+Node 11 < >
+Node 12 < >
+Node 13 < >
+Node 14 < >
+Node 15 < >
+Node 16 < >
+Node 17 < >
+Node 18 < 2 >
+Node 19 < 2 >
+Node 20 < 2 >
+Node 21 < 2 >
+Node 22 < 2 >
+Node 23 < 2 >
+Node 24 < 2 >
+Node 25 < 2 >
+Node 26 < 2 >
+Node 27 < 2 >
+Node 28 < 2 >
+Node 29 < 2 >
+Node 30 < 2 >
+Node 31 < 2 >
+Node 32 < 2 >
+Node 33 < 2 >
+Node 34 < 2 >
+Node 35 < 2 >
+Node 36 < 2 >
+Node 37 < 2 >
+Node 38 < 2 >
+Node 39 < 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 18 Seq N:2 (Experiment ID: 2 got from node 0 - 20:17:31 @ 15-03-2010)Node: 18 Support Data: Avg Temperature:25.229999999999997 Avg Humidity:12.668627200000001 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+32	5	-40	4
+33	5	-27	18
+34	5	-53	119
+35	5	-66	81
+36	5	-27	18
+37	5	-49	123
+38	5	-31	14
+39	5	-38	6
+40	0	0	0
+41	0	0	0
+42	0	0	0
+Waiting for: 
+
+Node 0 < >
+Node 1 < 2 >
+Node 2 < 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < >
+Node 11 < >
+Node 12 < >
+Node 13 < >
+Node 14 < >
+Node 15 < >
+Node 16 < >
+Node 17 < >
+Node 18 < >
+Node 19 < 2 >
+Node 20 < 2 >
+Node 21 < 2 >
+Node 22 < 2 >
+Node 23 < 2 >
+Node 24 < 2 >
+Node 25 < 2 >
+Node 26 < 2 >
+Node 27 < 2 >
+Node 28 < 2 >
+Node 29 < 2 >
+Node 30 < 2 >
+Node 31 < 2 >
+Node 32 < 2 >
+Node 33 < 2 >
+Node 34 < 2 >
+Node 35 < 2 >
+Node 36 < 2 >
+Node 37 < 2 >
+Node 38 < 2 >
+Node 39 < 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 19 Seq N:2 (Experiment ID: 2 got from node 0 - 20:17:32 @ 15-03-2010)Node: 19 Support Data: Avg Temperature:25.339999999999996 Avg Humidity:12.2107168 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+32	5	-23	21
+33	5	-25	19
+34	5	-45	25
+35	5	-65	81
+36	5	-31	13
+37	5	-43	2
+38	5	-28	17
+39	5	-31	13
+40	0	0	0
+41	0	0	0
+42	0	0	0
+Waiting for: 
+
+Node 0 < >
+Node 1 < 2 >
+Node 2 < 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < >
+Node 11 < >
+Node 12 < >
+Node 13 < >
+Node 14 < >
+Node 15 < >
+Node 16 < >
+Node 17 < >
+Node 18 < >
+Node 19 < >
+Node 20 < 2 >
+Node 21 < 2 >
+Node 22 < 2 >
+Node 23 < 2 >
+Node 24 < 2 >
+Node 25 < 2 >
+Node 26 < 2 >
+Node 27 < 2 >
+Node 28 < 2 >
+Node 29 < 2 >
+Node 30 < 2 >
+Node 31 < 2 >
+Node 32 < 2 >
+Node 33 < 2 >
+Node 34 < 2 >
+Node 35 < 2 >
+Node 36 < 2 >
+Node 37 < 2 >
+Node 38 < 2 >
+Node 39 < 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 20 Seq N:2 (Experiment ID: 2 got from node 0 - 20:17:33 @ 15-03-2010)Node: 20 Support Data: Avg Temperature:25.21 Avg Humidity:12.13432 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+32	5	-31	13
+33	5	-30	14
+34	5	-59	114
+35	5	-67	80
+36	5	-45	25
+37	5	-52	120
+38	5	-29	15
+39	5	-32	12
+40	0	0	0
+41	0	0	0
+42	0	0	0
+Waiting for: 
+
+Node 0 < >
+Node 1 < 2 >
+Node 2 < 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < >
+Node 11 < >
+Node 12 < >
+Node 13 < >
+Node 14 < >
+Node 15 < >
+Node 16 < >
+Node 17 < >
+Node 18 < >
+Node 19 < >
+Node 20 < >
+Node 21 < 2 >
+Node 22 < 2 >
+Node 23 < 2 >
+Node 24 < 2 >
+Node 25 < 2 >
+Node 26 < 2 >
+Node 27 < 2 >
+Node 28 < 2 >
+Node 29 < 2 >
+Node 30 < 2 >
+Node 31 < 2 >
+Node 32 < 2 >
+Node 33 < 2 >
+Node 34 < 2 >
+Node 35 < 2 >
+Node 36 < 2 >
+Node 37 < 2 >
+Node 38 < 2 >
+Node 39 < 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 21 Seq N:2 (Experiment ID: 2 got from node 0 - 20:17:34 @ 15-03-2010)Node: 21 Support Data: Avg Temperature:25.190000000000005 Avg Humidity:12.7448672 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+32	5	-35	9
+33	5	-39	5
+34	5	-55	118
+35	5	-71	75
+36	5	-41	3
+37	5	-58	115
+38	5	-41	3
+39	5	-47	100
+40	0	0	0
+41	0	0	0
+42	0	0	0
+Waiting for: 
+
+Node 0 < >
+Node 1 < 2 >
+Node 2 < 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < >
+Node 11 < >
+Node 12 < >
+Node 13 < >
+Node 14 < >
+Node 15 < >
+Node 16 < >
+Node 17 < >
+Node 18 < >
+Node 19 < >
+Node 20 < >
+Node 21 < >
+Node 22 < 2 >
+Node 23 < 2 >
+Node 24 < 2 >
+Node 25 < 2 >
+Node 26 < 2 >
+Node 27 < 2 >
+Node 28 < 2 >
+Node 29 < 2 >
+Node 30 < 2 >
+Node 31 < 2 >
+Node 32 < 2 >
+Node 33 < 2 >
+Node 34 < 2 >
+Node 35 < 2 >
+Node 36 < 2 >
+Node 37 < 2 >
+Node 38 < 2 >
+Node 39 < 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 22 Seq N:2 (Experiment ID: 2 got from node 0 - 20:17:35 @ 15-03-2010)Node: 22 Support Data: Avg Temperature:25.35 Avg Humidity:13.239881200000003 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+32	5	-43	26
+33	5	-39	5
+34	5	-54	118
+35	5	-79	68
+36	5	-46	24
+37	5	-57	116
+38	5	-47	100
+39	5	-48	124
+40	0	0	0
+41	0	0	0
+42	0	0	0
+Waiting for: 
+
+Node 0 < >
+Node 1 < 2 >
+Node 2 < 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < >
+Node 11 < >
+Node 12 < >
+Node 13 < >
+Node 14 < >
+Node 15 < >
+Node 16 < >
+Node 17 < >
+Node 18 < >
+Node 19 < >
+Node 20 < >
+Node 21 < >
+Node 22 < >
+Node 23 < 2 >
+Node 24 < 2 >
+Node 25 < 2 >
+Node 26 < 2 >
+Node 27 < 2 >
+Node 28 < 2 >
+Node 29 < 2 >
+Node 30 < 2 >
+Node 31 < 2 >
+Node 32 < 2 >
+Node 33 < 2 >
+Node 34 < 2 >
+Node 35 < 2 >
+Node 36 < 2 >
+Node 37 < 2 >
+Node 38 < 2 >
+Node 39 < 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 23 Seq N:2 (Experiment ID: 2 got from node 0 - 20:17:36 @ 15-03-2010)Node: 23 Support Data: Avg Temperature:25.240000000000002 Avg Humidity:12.0579008 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+32	5	-43	1
+33	5	-36	8
+34	5	-54	119
+35	5	-78	68
+36	5	-43	2
+37	5	-55	117
+38	5	-46	75
+39	5	-48	124
+40	0	0	0
+41	0	0	0
+42	0	0	0
+Waiting for: 
+
+Node 0 < >
+Node 1 < 2 >
+Node 2 < 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < >
+Node 11 < >
+Node 12 < >
+Node 13 < >
+Node 14 < >
+Node 15 < >
+Node 16 < >
+Node 17 < >
+Node 18 < >
+Node 19 < >
+Node 20 < >
+Node 21 < >
+Node 22 < >
+Node 23 < >
+Node 24 < 2 >
+Node 25 < 2 >
+Node 26 < 2 >
+Node 27 < 2 >
+Node 28 < 2 >
+Node 29 < 2 >
+Node 30 < 2 >
+Node 31 < 2 >
+Node 32 < 2 >
+Node 33 < 2 >
+Node 34 < 2 >
+Node 35 < 2 >
+Node 36 < 2 >
+Node 37 < 2 >
+Node 38 < 2 >
+Node 39 < 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 24 Seq N:2 (Experiment ID: 2 got from node 0 - 20:17:38 @ 15-03-2010)Node: 24 Support Data: Avg Temperature:25.15 Avg Humidity:11.637194800000001 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+32	5	-44	0
+33	5	-38	7
+34	5	-52	120
+35	5	-81	66
+36	5	-46	75
+37	5	-55	117
+38	5	-50	122
+39	5	-54	118
+40	0	0	0
+41	0	0	0
+42	0	0	0
+Waiting for: 
+
+Node 0 < >
+Node 1 < 2 >
+Node 2 < 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < >
+Node 11 < >
+Node 12 < >
+Node 13 < >
+Node 14 < >
+Node 15 < >
+Node 16 < >
+Node 17 < >
+Node 18 < >
+Node 19 < >
+Node 20 < >
+Node 21 < >
+Node 22 < >
+Node 23 < >
+Node 24 < >
+Node 25 < 2 >
+Node 26 < 2 >
+Node 27 < 2 >
+Node 28 < 2 >
+Node 29 < 2 >
+Node 30 < 2 >
+Node 31 < 2 >
+Node 32 < 2 >
+Node 33 < 2 >
+Node 34 < 2 >
+Node 35 < 2 >
+Node 36 < 2 >
+Node 37 < 2 >
+Node 38 < 2 >
+Node 39 < 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 25 Seq N:2 (Experiment ID: 2 got from node 0 - 20:17:39 @ 15-03-2010)Node: 25 Support Data: Avg Temperature:24.949999999999996 Avg Humidity:12.5923648 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+32	5	-31	14
+33	5	-29	15
+34	5	-48	124
+35	5	-78	69
+36	5	-27	18
+37	5	-51	121
+38	5	-31	13
+39	5	-37	7
+40	0	0	0
+41	0	0	0
+42	0	0	0
+Waiting for: 
+
+Node 0 < >
+Node 1 < 2 >
+Node 2 < 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < >
+Node 11 < >
+Node 12 < >
+Node 13 < >
+Node 14 < >
+Node 15 < >
+Node 16 < >
+Node 17 < >
+Node 18 < >
+Node 19 < >
+Node 20 < >
+Node 21 < >
+Node 22 < >
+Node 23 < >
+Node 24 < >
+Node 25 < >
+Node 26 < 2 >
+Node 27 < 2 >
+Node 28 < 2 >
+Node 29 < 2 >
+Node 30 < 2 >
+Node 31 < 2 >
+Node 32 < 2 >
+Node 33 < 2 >
+Node 34 < 2 >
+Node 35 < 2 >
+Node 36 < 2 >
+Node 37 < 2 >
+Node 38 < 2 >
+Node 39 < 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 26 Seq N:2 (Experiment ID: 2 got from node 0 - 20:17:40 @ 15-03-2010)Node: 26 Support Data: Avg Temperature:25.240000000000002 Avg Humidity:11.828508799999998 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+32	5	-46	126
+33	5	-40	4
+34	5	-65	108
+35	1	-57	116
+36	5	-41	3
+37	5	-65	107
+38	5	-39	5
+39	5	-51	122
+40	0	0	0
+41	0	0	0
+42	0	0	0
+Waiting for: 
+
+Node 0 < >
+Node 1 < 2 >
+Node 2 < 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < >
+Node 11 < >
+Node 12 < >
+Node 13 < >
+Node 14 < >
+Node 15 < >
+Node 16 < >
+Node 17 < >
+Node 18 < >
+Node 19 < >
+Node 20 < >
+Node 21 < >
+Node 22 < >
+Node 23 < >
+Node 24 < >
+Node 25 < >
+Node 26 < >
+Node 27 < 2 >
+Node 28 < 2 >
+Node 29 < 2 >
+Node 30 < 2 >
+Node 31 < 2 >
+Node 32 < 2 >
+Node 33 < 2 >
+Node 34 < 2 >
+Node 35 < 2 >
+Node 36 < 2 >
+Node 37 < 2 >
+Node 38 < 2 >
+Node 39 < 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 27 Seq N:2 (Experiment ID: 2 got from node 0 - 20:17:40 @ 15-03-2010)Node: 27 Support Data: Avg Temperature:25.059999999999995 Avg Humidity:12.325270000000002 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+32	5	-50	122
+33	5	-41	4
+34	5	-65	107
+35	1	-53	120
+36	5	-45	76
+37	5	-62	110
+38	5	-38	6
+39	5	-44	0
+40	0	0	0
+41	0	0	0
+42	0	0	0
+Waiting for: 
+
+Node 0 < >
+Node 1 < 2 >
+Node 2 < 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < >
+Node 11 < >
+Node 12 < >
+Node 13 < >
+Node 14 < >
+Node 15 < >
+Node 16 < >
+Node 17 < >
+Node 18 < >
+Node 19 < >
+Node 20 < >
+Node 21 < >
+Node 22 < >
+Node 23 < >
+Node 24 < >
+Node 25 < >
+Node 26 < >
+Node 27 < >
+Node 28 < 2 >
+Node 29 < 2 >
+Node 30 < 2 >
+Node 31 < 2 >
+Node 32 < 2 >
+Node 33 < 2 >
+Node 34 < 2 >
+Node 35 < 2 >
+Node 36 < 2 >
+Node 37 < 2 >
+Node 38 < 2 >
+Node 39 < 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 28 Seq N:2 (Experiment ID: 2 got from node 0 - 20:17:41 @ 15-03-2010)Node: 28 Support Data: Avg Temperature:25.160000000000004 Avg Humidity:12.172521200000002 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+32	5	-34	10
+33	5	-35	10
+34	5	-71	101
+35	1	-54	119
+36	5	-39	5
+37	5	-55	117
+38	5	-36	8
+39	5	-41	3
+40	0	0	0
+41	0	0	0
+42	0	0	0
+Waiting for: 
+
+Node 0 < >
+Node 1 < 2 >
+Node 2 < 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < >
+Node 11 < >
+Node 12 < >
+Node 13 < >
+Node 14 < >
+Node 15 < >
+Node 16 < >
+Node 17 < >
+Node 18 < >
+Node 19 < >
+Node 20 < >
+Node 21 < >
+Node 22 < >
+Node 23 < >
+Node 24 < >
+Node 25 < >
+Node 26 < >
+Node 27 < >
+Node 28 < >
+Node 29 < 2 >
+Node 30 < 2 >
+Node 31 < 2 >
+Node 32 < 2 >
+Node 33 < 2 >
+Node 34 < 2 >
+Node 35 < 2 >
+Node 36 < 2 >
+Node 37 < 2 >
+Node 38 < 2 >
+Node 39 < 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 29 Seq N:2 (Experiment ID: 2 got from node 0 - 20:17:42 @ 15-03-2010)Node: 29 Support Data: Avg Temperature:25.35 Avg Humidity:12.4016108 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+32	5	-37	8
+33	5	-35	10
+34	5	-62	110
+35	5	-78	68
+36	5	-36	8
+37	5	-55	117
+38	5	-36	8
+39	5	-37	8
+40	0	0	0
+41	0	0	0
+42	0	0	0
+Waiting for: 
+
+Node 0 < >
+Node 1 < 2 >
+Node 2 < 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < >
+Node 11 < >
+Node 12 < >
+Node 13 < >
+Node 14 < >
+Node 15 < >
+Node 16 < >
+Node 17 < >
+Node 18 < >
+Node 19 < >
+Node 20 < >
+Node 21 < >
+Node 22 < >
+Node 23 < >
+Node 24 < >
+Node 25 < >
+Node 26 < >
+Node 27 < >
+Node 28 < >
+Node 29 < >
+Node 30 < 2 >
+Node 31 < 2 >
+Node 32 < 2 >
+Node 33 < 2 >
+Node 34 < 2 >
+Node 35 < 2 >
+Node 36 < 2 >
+Node 37 < 2 >
+Node 38 < 2 >
+Node 39 < 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 30 Seq N:2 (Experiment ID: 2 got from node 0 - 20:17:43 @ 15-03-2010)Node: 30 Support Data: Avg Temperature:25.119999999999997 Avg Humidity:12.325270000000002 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+32	5	-27	17
+33	5	-37	7
+34	5	-56	116
+35	5	-71	76
+36	5	-29	16
+37	5	-46	126
+38	5	-26	19
+39	5	-39	6
+40	0	0	0
+41	0	0	0
+42	0	0	0
+Waiting for: 
+
+Node 0 < >
+Node 1 < 2 >
+Node 2 < 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < >
+Node 11 < >
+Node 12 < >
+Node 13 < >
+Node 14 < >
+Node 15 < >
+Node 16 < >
+Node 17 < >
+Node 18 < >
+Node 19 < >
+Node 20 < >
+Node 21 < >
+Node 22 < >
+Node 23 < >
+Node 24 < >
+Node 25 < >
+Node 26 < >
+Node 27 < >
+Node 28 < >
+Node 29 < >
+Node 30 < >
+Node 31 < 2 >
+Node 32 < 2 >
+Node 33 < 2 >
+Node 34 < 2 >
+Node 35 < 2 >
+Node 36 < 2 >
+Node 37 < 2 >
+Node 38 < 2 >
+Node 39 < 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 31 Seq N:2 (Experiment ID: 2 got from node 0 - 20:17:44 @ 15-03-2010)Node: 31 Support Data: Avg Temperature:25.119999999999997 Avg Humidity:12.8210848 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+32	5	-21	24
+33	5	-23	21
+34	5	-51	121
+35	5	-72	74
+36	5	-21	23
+37	5	-42	3
+38	5	-27	18
+39	5	-32	13
+40	0	0	0
+41	0	0	0
+42	0	0	0
+Waiting for: 
+
+Node 0 < >
+Node 1 < 2 >
+Node 2 < 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < >
+Node 11 < >
+Node 12 < >
+Node 13 < >
+Node 14 < >
+Node 15 < >
+Node 16 < >
+Node 17 < >
+Node 18 < >
+Node 19 < >
+Node 20 < >
+Node 21 < >
+Node 22 < >
+Node 23 < >
+Node 24 < >
+Node 25 < >
+Node 26 < >
+Node 27 < >
+Node 28 < >
+Node 29 < >
+Node 30 < >
+Node 31 < >
+Node 32 < 2 >
+Node 33 < 2 >
+Node 34 < 2 >
+Node 35 < 2 >
+Node 36 < 2 >
+Node 37 < 2 >
+Node 38 < 2 >
+Node 39 < 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 32 Nr Hop:0 Seq N:2 Stats Retx:1 (Experiment ID: 2 got from node 0 - 20:17:45 @ 15-03-2010)Node: 32 Support Data: Avg Temperature:24.93 Avg Humidity:12.516080000000002 Init Battery:2.9992676 End Battery:2.9992676 Radio Activations:0
+Ref ID	Rcv	RSSI[dBm]	LQI
+33	5	-23	22
+34	5	-39	6
+35	5	-66	81
+36	5	-21	24
+37	5	-39	6
+38	5	-25	20
+39	5	-30	14
+40	0	0	0
+41	0	0	0
+42	0	0	0
+Waiting for: 
+
+Node 0 < >
+Node 1 < 2 >
+Node 2 < 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < >
+Node 11 < >
+Node 12 < >
+Node 13 < >
+Node 14 < >
+Node 15 < >
+Node 16 < >
+Node 17 < >
+Node 18 < >
+Node 19 < >
+Node 20 < >
+Node 21 < >
+Node 22 < >
+Node 23 < >
+Node 24 < >
+Node 25 < >
+Node 26 < >
+Node 27 < >
+Node 28 < >
+Node 29 < >
+Node 30 < >
+Node 31 < >
+Node 32 < >
+Node 33 < 2 >
+Node 34 < 2 >
+Node 35 < 2 >
+Node 36 < 2 >
+Node 37 < 2 >
+Node 38 < 2 >
+Node 39 < 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 33 Nr Hop:0 Seq N:2 Stats Retx:1 (Experiment ID: 2 got from node 0 - 20:17:47 @ 15-03-2010)Node: 33 Support Data: Avg Temperature:25.020000000000003 Avg Humidity:12.287091199999999 Init Battery:2.9992676 End Battery:2.9992676 Radio Activations:0
+Ref ID	Rcv	RSSI[dBm]	LQI
+32	5	-25	20
+34	5	-31	14
+35	5	-59	88
+36	5	-27	18
+37	5	-39	6
+38	5	-17	28
+39	5	-28	16
+40	0	0	0
+41	0	0	0
+42	0	0	0
+Waiting for: 
+
+Node 0 < >
+Node 1 < 2 >
+Node 2 < 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < >
+Node 11 < >
+Node 12 < >
+Node 13 < >
+Node 14 < >
+Node 15 < >
+Node 16 < >
+Node 17 < >
+Node 18 < >
+Node 19 < >
+Node 20 < >
+Node 21 < >
+Node 22 < >
+Node 23 < >
+Node 24 < >
+Node 25 < >
+Node 26 < >
+Node 27 < >
+Node 28 < >
+Node 29 < >
+Node 30 < >
+Node 31 < >
+Node 32 < >
+Node 33 < >
+Node 34 < 2 >
+Node 35 < 2 >
+Node 36 < 2 >
+Node 37 < 2 >
+Node 38 < 2 >
+Node 39 < 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 34 Nr Hop:0 Seq N:2 Stats Retx:1 (Experiment ID: 2 got from node 0 - 20:17:48 @ 15-03-2010)Node: 34 Support Data: Avg Temperature:25.1 Avg Humidity:12.516080000000002 Init Battery:2.9992676 End Battery:2.9992676 Radio Activations:0
+Ref ID	Rcv	RSSI[dBm]	LQI
+32	5	-22	22
+33	5	-15	29
+35	5	-52	95
+36	5	-28	17
+37	5	-43	1
+38	5	-17	27
+39	5	-14	30
+40	0	0	0
+41	0	0	0
+42	0	0	0
+Waiting for: 
+
+Node 0 < >
+Node 1 < 2 >
+Node 2 < 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < >
+Node 11 < >
+Node 12 < >
+Node 13 < >
+Node 14 < >
+Node 15 < >
+Node 16 < >
+Node 17 < >
+Node 18 < >
+Node 19 < >
+Node 20 < >
+Node 21 < >
+Node 22 < >
+Node 23 < >
+Node 24 < >
+Node 25 < >
+Node 26 < >
+Node 27 < >
+Node 28 < >
+Node 29 < >
+Node 30 < >
+Node 31 < >
+Node 32 < >
+Node 33 < >
+Node 34 < >
+Node 35 < 2 >
+Node 36 < 2 >
+Node 37 < 2 >
+Node 38 < 2 >
+Node 39 < 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 35 Nr Hop:0 Seq N:2 Stats Retx:1 (Experiment ID: 2 got from node 0 - 20:17:50 @ 15-03-2010)Node: 35 Support Data: Avg Temperature:24.79 Avg Humidity:12.6304988 Init Battery:2.9992676 End Battery:2.9992676 Radio Activations:0
+Ref ID	Rcv	RSSI[dBm]	LQI
+32	5	-29	16
+33	5	-26	19
+34	5	-34	10
+36	5	-29	15
+37	5	-47	126
+38	5	-25	20
+39	5	-24	20
+40	0	0	0
+41	0	0	0
+42	0	0	0
+Waiting for: 
+
+Node 0 < >
+Node 1 < 2 >
+Node 2 < 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < >
+Node 11 < >
+Node 12 < >
+Node 13 < >
+Node 14 < >
+Node 15 < >
+Node 16 < >
+Node 17 < >
+Node 18 < >
+Node 19 < >
+Node 20 < >
+Node 21 < >
+Node 22 < >
+Node 23 < >
+Node 24 < >
+Node 25 < >
+Node 26 < >
+Node 27 < >
+Node 28 < >
+Node 29 < >
+Node 30 < >
+Node 31 < >
+Node 32 < >
+Node 33 < >
+Node 34 < >
+Node 35 < >
+Node 36 < 2 >
+Node 37 < 2 >
+Node 38 < 2 >
+Node 39 < 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 36 Nr Hop:0 Seq N:2 Stats Retx:1 (Experiment ID: 2 got from node 0 - 20:17:51 @ 15-03-2010)Node: 36 Support Data: Avg Temperature:25.029999999999994 Avg Humidity:12.668627200000001 Init Battery:2.9992676 End Battery:2.9992676 Radio Activations:0
+Ref ID	Rcv	RSSI[dBm]	LQI
+32	5	-22	22
+33	5	-27	18
+34	5	-50	122
+35	5	-68	79
+37	5	-34	10
+38	5	-25	19
+39	5	-31	14
+40	0	0	0
+41	0	0	0
+42	0	0	0
+Waiting for: 
+
+Node 0 < >
+Node 1 < 2 >
+Node 2 < 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < >
+Node 11 < >
+Node 12 < >
+Node 13 < >
+Node 14 < >
+Node 15 < >
+Node 16 < >
+Node 17 < >
+Node 18 < >
+Node 19 < >
+Node 20 < >
+Node 21 < >
+Node 22 < >
+Node 23 < >
+Node 24 < >
+Node 25 < >
+Node 26 < >
+Node 27 < >
+Node 28 < >
+Node 29 < >
+Node 30 < >
+Node 31 < >
+Node 32 < >
+Node 33 < >
+Node 34 < >
+Node 35 < >
+Node 36 < >
+Node 37 < 2 >
+Node 38 < 2 >
+Node 39 < 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 37 Nr Hop:0 Seq N:2 Stats Retx:1 (Experiment ID: 2 got from node 0 - 20:17:52 @ 15-03-2010)Node: 37 Support Data: Avg Temperature:24.889999999999993 Avg Humidity:12.8591852 Init Battery:2.9992676 End Battery:2.9992676 Radio Activations:0
+Ref ID	Rcv	RSSI[dBm]	LQI
+32	5	-24	20
+33	5	-23	21
+34	5	-48	124
+35	5	-66	80
+36	5	-21	24
+38	5	-21	24
+39	5	-29	16
+40	0	0	0
+41	0	0	0
+42	0	0	0
+Waiting for: 
+
+Node 0 < >
+Node 1 < 2 >
+Node 2 < 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < >
+Node 11 < >
+Node 12 < >
+Node 13 < >
+Node 14 < >
+Node 15 < >
+Node 16 < >
+Node 17 < >
+Node 18 < >
+Node 19 < >
+Node 20 < >
+Node 21 < >
+Node 22 < >
+Node 23 < >
+Node 24 < >
+Node 25 < >
+Node 26 < >
+Node 27 < >
+Node 28 < >
+Node 29 < >
+Node 30 < >
+Node 31 < >
+Node 32 < >
+Node 33 < >
+Node 34 < >
+Node 35 < >
+Node 36 < >
+Node 37 < >
+Node 38 < 2 >
+Node 39 < 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 38 Nr Hop:0 Seq N:2 Stats Retx:1 (Experiment ID: 2 got from node 0 - 20:17:53 @ 15-03-2010)Node: 38 Support Data: Avg Temperature:25.04 Avg Humidity:12.0579008 Init Battery:2.9992676 End Battery:2.9992676 Radio Activations:0
+Ref ID	Rcv	RSSI[dBm]	LQI
+32	5	-24	20
+33	5	-14	31
+34	5	-31	14
+35	5	-57	89
+36	5	-23	21
+37	5	-31	14
+39	5	-26	18
+40	0	0	0
+41	0	0	0
+42	0	0	0
+Waiting for: 
+
+Node 0 < >
+Node 1 < 2 >
+Node 2 < 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < >
+Node 11 < >
+Node 12 < >
+Node 13 < >
+Node 14 < >
+Node 15 < >
+Node 16 < >
+Node 17 < >
+Node 18 < >
+Node 19 < >
+Node 20 < >
+Node 21 < >
+Node 22 < >
+Node 23 < >
+Node 24 < >
+Node 25 < >
+Node 26 < >
+Node 27 < >
+Node 28 < >
+Node 29 < >
+Node 30 < >
+Node 31 < >
+Node 32 < >
+Node 33 < >
+Node 34 < >
+Node 35 < >
+Node 36 < >
+Node 37 < >
+Node 38 < >
+Node 39 < 2 >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 39 Nr Hop:0 Seq N:2 Stats Retx:1 (Experiment ID: 2 got from node 0 - 20:17:54 @ 15-03-2010)Node: 39 Support Data: Avg Temperature:25.119999999999997 Avg Humidity:11.8667548 Init Battery:2.9992676 End Battery:2.9992676 Radio Activations:0
+Ref ID	Rcv	RSSI[dBm]	LQI
+32	5	-28	16
+33	5	-23	21
+34	5	-27	18
+35	5	-55	91
+36	5	-27	18
+37	5	-43	2
+38	5	-25	19
+40	0	0	0
+41	0	0	0
+42	0	0	0
+Waiting for: 
+
+Node 0 < >
+Node 1 < 2 >
+Node 2 < 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < >
+Node 11 < >
+Node 12 < >
+Node 13 < >
+Node 14 < >
+Node 15 < >
+Node 16 < >
+Node 17 < >
+Node 18 < >
+Node 19 < >
+Node 20 < >
+Node 21 < >
+Node 22 < >
+Node 23 < >
+Node 24 < >
+Node 25 < >
+Node 26 < >
+Node 27 < >
+Node 28 < >
+Node 29 < >
+Node 30 < >
+Node 31 < >
+Node 32 < >
+Node 33 < >
+Node 34 < >
+Node 35 < >
+Node 36 < >
+Node 37 < >
+Node 38 < >
+Node 39 < >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 1 Seq N:2 (Experiment ID: 2 got from node 0 - 20:18:00 @ 15-03-2010)Node: 1 Support Data: Avg Temperature:25.470000000000006 Avg Humidity:12.4016108 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+32	5	-54	118
+33	5	-53	119
+34	5	-67	105
+35	1	-51	122
+36	5	-38	7
+37	5	-60	112
+38	5	-39	5
+39	5	-45	25
+40	0	0	0
+41	0	0	0
+42	0	0	0
+Waiting for: 
+
+Node 0 < >
+Node 1 < >
+Node 2 < 2 >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < >
+Node 11 < >
+Node 12 < >
+Node 13 < >
+Node 14 < >
+Node 15 < >
+Node 16 < >
+Node 17 < >
+Node 18 < >
+Node 19 < >
+Node 20 < >
+Node 21 < >
+Node 22 < >
+Node 23 < >
+Node 24 < >
+Node 25 < >
+Node 26 < >
+Node 27 < >
+Node 28 < >
+Node 29 < >
+Node 30 < >
+Node 31 < >
+Node 32 < >
+Node 33 < >
+Node 34 < >
+Node 35 < >
+Node 36 < >
+Node 37 < >
+Node 38 < >
+Node 39 < >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 2 Seq N:2 (Experiment ID: 2 got from node 0 - 20:18:01 @ 15-03-2010)Node: 2 Support Data: Avg Temperature:24.940000000000005 Avg Humidity:13.239881200000003 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+32	5	-42	2
+33	5	-43	1
+34	5	-62	111
+35	2	-69	103
+36	5	-32	12
+37	5	-56	117
+38	5	-51	122
+39	5	-61	111
+40	0	0	0
+41	0	0	0
+42	0	0	0
+Waiting for: 
+
+Node 0 < >
+Node 1 < >
+Node 2 < >
+Node 3 < 2 >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < >
+Node 11 < >
+Node 12 < >
+Node 13 < >
+Node 14 < >
+Node 15 < >
+Node 16 < >
+Node 17 < >
+Node 18 < >
+Node 19 < >
+Node 20 < >
+Node 21 < >
+Node 22 < >
+Node 23 < >
+Node 24 < >
+Node 25 < >
+Node 26 < >
+Node 27 < >
+Node 28 < >
+Node 29 < >
+Node 30 < >
+Node 31 < >
+Node 32 < >
+Node 33 < >
+Node 34 < >
+Node 35 < >
+Node 36 < >
+Node 37 < >
+Node 38 < >
+Node 39 < >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 3 Seq N:2 (Experiment ID: 2 got from node 0 - 20:18:03 @ 15-03-2010)Node: 3 Support Data: Avg Temperature:25.199999999999996 Avg Humidity:12.439772800000002 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+32	5	-49	97
+33	5	-38	7
+34	5	-59	113
+35	5	-75	72
+36	5	-35	9
+37	5	-54	118
+38	5	-44	0
+39	4	-64	108
+40	0	0	0
+41	0	0	0
+42	0	0	0
+Waiting for: 
+
+Node 0 < >
+Node 1 < >
+Node 2 < >
+Node 3 < >
+Node 4 < 2 >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < >
+Node 11 < >
+Node 12 < >
+Node 13 < >
+Node 14 < >
+Node 15 < >
+Node 16 < >
+Node 17 < >
+Node 18 < >
+Node 19 < >
+Node 20 < >
+Node 21 < >
+Node 22 < >
+Node 23 < >
+Node 24 < >
+Node 25 < >
+Node 26 < >
+Node 27 < >
+Node 28 < >
+Node 29 < >
+Node 30 < >
+Node 31 < >
+Node 32 < >
+Node 33 < >
+Node 34 < >
+Node 35 < >
+Node 36 < >
+Node 37 < >
+Node 38 < >
+Node 39 < >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 4 Seq N:2 (Experiment ID: 2 got from node 0 - 20:18:04 @ 15-03-2010)Node: 4 Support Data: Avg Temperature:25.309999999999995 Avg Humidity:12.439772800000002 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+32	5	-31	13
+33	5	-35	10
+34	5	-54	119
+35	5	-69	78
+36	5	-25	19
+37	5	-51	122
+38	5	-43	1
+39	5	-46	126
+40	0	0	0
+41	0	0	0
+42	0	0	0
+Waiting for: 
+
+Node 0 < >
+Node 1 < >
+Node 2 < >
+Node 3 < >
+Node 4 < >
+Node 5 < 2 >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < >
+Node 11 < >
+Node 12 < >
+Node 13 < >
+Node 14 < >
+Node 15 < >
+Node 16 < >
+Node 17 < >
+Node 18 < >
+Node 19 < >
+Node 20 < >
+Node 21 < >
+Node 22 < >
+Node 23 < >
+Node 24 < >
+Node 25 < >
+Node 26 < >
+Node 27 < >
+Node 28 < >
+Node 29 < >
+Node 30 < >
+Node 31 < >
+Node 32 < >
+Node 33 < >
+Node 34 < >
+Node 35 < >
+Node 36 < >
+Node 37 < >
+Node 38 < >
+Node 39 < >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 5 Seq N:2 (Experiment ID: 2 got from node 0 - 20:18:05 @ 15-03-2010)Node: 5 Support Data: Avg Temperature:24.740000000000002 Avg Humidity:12.325270000000002 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+32	5	-37	7
+33	5	-28	16
+34	5	-55	117
+35	5	-74	73
+36	5	-24	21
+37	5	-50	123
+38	5	-44	0
+39	5	-41	3
+40	0	0	0
+41	0	0	0
+42	0	0	0
+Waiting for: 
+
+Node 0 < >
+Node 1 < >
+Node 2 < >
+Node 3 < >
+Node 4 < >
+Node 5 < >
+Node 6 < 2 >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < >
+Node 11 < >
+Node 12 < >
+Node 13 < >
+Node 14 < >
+Node 15 < >
+Node 16 < >
+Node 17 < >
+Node 18 < >
+Node 19 < >
+Node 20 < >
+Node 21 < >
+Node 22 < >
+Node 23 < >
+Node 24 < >
+Node 25 < >
+Node 26 < >
+Node 27 < >
+Node 28 < >
+Node 29 < >
+Node 30 < >
+Node 31 < >
+Node 32 < >
+Node 33 < >
+Node 34 < >
+Node 35 < >
+Node 36 < >
+Node 37 < >
+Node 38 < >
+Node 39 < >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 6 Seq N:2 (Experiment ID: 2 got from node 0 - 20:18:06 @ 15-03-2010)Node: 6 Support Data: Avg Temperature:25.059999999999995 Avg Humidity:12.363443199999999 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+32	5	-49	123
+33	5	-44	26
+34	5	-69	104
+35	1	-62	111
+36	5	-39	5
+37	5	-56	116
+38	5	-42	3
+39	5	-56	116
+40	0	0	0
+41	0	0	0
+42	0	0	0
+Waiting for: 
+
+Node 0 < >
+Node 1 < >
+Node 2 < >
+Node 3 < >
+Node 4 < >
+Node 5 < >
+Node 6 < >
+Node 7 < 2 >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < >
+Node 11 < >
+Node 12 < >
+Node 13 < >
+Node 14 < >
+Node 15 < >
+Node 16 < >
+Node 17 < >
+Node 18 < >
+Node 19 < >
+Node 20 < >
+Node 21 < >
+Node 22 < >
+Node 23 < >
+Node 24 < >
+Node 25 < >
+Node 26 < >
+Node 27 < >
+Node 28 < >
+Node 29 < >
+Node 30 < >
+Node 31 < >
+Node 32 < >
+Node 33 < >
+Node 34 < >
+Node 35 < >
+Node 36 < >
+Node 37 < >
+Node 38 < >
+Node 39 < >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 7 Seq N:2 (Experiment ID: 2 got from node 0 - 20:18:07 @ 15-03-2010)Node: 7 Support Data: Avg Temperature:25.369999999999997 Avg Humidity:12.8210848 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+32	5	-35	9
+33	5	-42	2
+34	5	-62	110
+35	1	-61	112
+36	5	-31	13
+37	5	-65	108
+38	5	-44	0
+39	5	-44	0
+40	0	0	0
+41	0	0	0
+42	0	0	0
+Waiting for: 
+
+Node 0 < >
+Node 1 < >
+Node 2 < >
+Node 3 < >
+Node 4 < >
+Node 5 < >
+Node 6 < >
+Node 7 < >
+Node 8 < 2 >
+Node 9 < 0 1 2 >
+Node 10 < >
+Node 11 < >
+Node 12 < >
+Node 13 < >
+Node 14 < >
+Node 15 < >
+Node 16 < >
+Node 17 < >
+Node 18 < >
+Node 19 < >
+Node 20 < >
+Node 21 < >
+Node 22 < >
+Node 23 < >
+Node 24 < >
+Node 25 < >
+Node 26 < >
+Node 27 < >
+Node 28 < >
+Node 29 < >
+Node 30 < >
+Node 31 < >
+Node 32 < >
+Node 33 < >
+Node 34 < >
+Node 35 < >
+Node 36 < >
+Node 37 < >
+Node 38 < >
+Node 39 < >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+
+Received Statistics from Node: 8 Seq N:2 (Experiment ID: 2 got from node 0 - 20:18:08 @ 15-03-2010)Node: 8 Support Data: Avg Temperature:25.309999999999995 Avg Humidity:12.2107168 Init Battery:2.9992676 End Battery:2.9992676
+Ref ID	Rcv	RSSI[dBm]	LQI
+32	5	-36	8
+33	5	-36	8
+34	5	-63	110
+35	5	-72	75
+36	5	-27	17
+37	5	-53	119
+38	5	-56	116
+39	5	-42	2
+40	0	0	0
+41	0	0	0
+42	0	0	0
+Waiting for: 
+
+Node 0 < >
+Node 1 < >
+Node 2 < >
+Node 3 < >
+Node 4 < >
+Node 5 < >
+Node 6 < >
+Node 7 < >
+Node 8 < >
+Node 9 < 0 1 2 >
+Node 10 < >
+Node 11 < >
+Node 12 < >
+Node 13 < >
+Node 14 < >
+Node 15 < >
+Node 16 < >
+Node 17 < >
+Node 18 < >
+Node 19 < >
+Node 20 < >
+Node 21 < >
+Node 22 < >
+Node 23 < >
+Node 24 < >
+Node 25 < >
+Node 26 < >
+Node 27 < >
+Node 28 < >
+Node 29 < >
+Node 30 < >
+Node 31 < >
+Node 32 < >
+Node 33 < >
+Node 34 < >
+Node 35 < >
+Node 36 < >
+Node 37 < >
+Node 38 < >
+Node 39 < >
+Node 40 < 0 1 2 >
+Node 41 < 0 1 2 >
+Node 42 < 0 1 2 >
+
+

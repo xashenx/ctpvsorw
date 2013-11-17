@@ -1,0 +1,27 @@
+--- LinkEstimatorP.nc.old	2008-07-02 08:49:58.000000000 +0200
++++ LinkEstimatorP.nc	2008-07-02 09:09:59.000000000 +0200
+@@ -39,6 +39,9 @@
+     interface LinkEstimator;
+     interface Init;
+     interface Packet;
++#ifdef CTP_CLEAR
++    interface CtpClear;
++#endif
+   }
+ 
+   uses {
+@@ -428,6 +431,14 @@
+     return SUCCESS;
+   }
+ 
++#ifdef CTP_CLEAR
++  command error_t CtpClear.clear(){
++    dbg("LI", "Link estimator init\n");
++    initNeighborTable();
++    return SUCCESS;
++  }
++#endif
++
+   // return bi-directional link quality to the neighbor
+   command uint8_t LinkEstimator.getLinkQuality(am_addr_t neighbor) {
+     uint8_t idx;
