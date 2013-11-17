@@ -6,6 +6,7 @@ MSG_SIZE = 94
 CFLAGS += -I$(TOSDIR)/lib/net \
           -I$(TOSDIR)/lib/net/le \
           -I$(TOSDIR)/lib/net/ctp \
+          -I$(TOSDIR)/chips/cc2420/interfaces \
           -IroutingTest/common \
 		  -IroutingTest/common/routingInfo \
 		  -IPLR
@@ -14,6 +15,10 @@ PFLAGS += -DCTP_CLEAR
 PFLAGS += -DLPL_COEXISTENCE
 PFLAGS += -DCTP_REPORT
 PFLAGS += -DRADIO_ACTIVATIONS
+
+#OPPXMAC_ROOT=I$(TOSDIR)/chips/cc2420
+
+CFLAGS += -I$(TOSDIR)/chips/cc2420/dc \
 
 # PFLAGS += -DCTP_RADIO_SETTINGS
 
