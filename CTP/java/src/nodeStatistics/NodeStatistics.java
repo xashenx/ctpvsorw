@@ -45,6 +45,9 @@ public class NodeStatistics {
 	/** Dropped packets because of TX queue full. */
 	private int txQueueFullCount;
 
+	/** Messages that the node should forward */
+	private int msgForwarded;
+
 	/**
 	 * @param acksFailedCount
 	 * @param acksReceivedCount
@@ -60,12 +63,14 @@ public class NodeStatistics {
 	 * @param parentsChanges
 	 * @param parentsCount
 	 * @param txQueueFullCount
+	 * @param msgForwarded
 	 */
 	public NodeStatistics(int acksFailedCount, int acksReceivedCount,
 			int beaconsSentCount, int duplicatesDroppedCount,
 			int duplicatesReceivedCount, int lastParent, int lostCount,
 			int msgCount, int nodeId, int parentOverflowCount,
-			int parentsChanges, int parentsCount, int txQueueFullCount) {
+			int parentsChanges, int parentsCount, int txQueueFullCount,
+			int msgForwarded) {
 		this.acksFailedCount = acksFailedCount;
 		this.acksReceivedCount = acksReceivedCount;
 		this.beaconsSentCount = beaconsSentCount;
@@ -79,6 +84,7 @@ public class NodeStatistics {
 		this.parentsChanges = parentsChanges;
 		this.parentsCount = parentsCount;
 		this.txQueueFullCount = txQueueFullCount;
+		this.msgForwarded = msgForwarded;
 	}
 
 	/**
@@ -173,6 +179,13 @@ public class NodeStatistics {
 	 */
 	public int getTxQueueFullCount() {
 		return txQueueFullCount;
+	}
+
+	/**
+	 *  @return the msgForwarded
+	 */
+	public int getMsgForwarded(){
+		return msgForwarded;
 	}
 
 }

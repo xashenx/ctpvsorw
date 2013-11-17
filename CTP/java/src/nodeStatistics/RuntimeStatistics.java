@@ -9,6 +9,7 @@ package nodeStatistics;
  * parsing the entire history.
  * 
  * @author Stefan Guna
+ * @author Fabrizio Zeni
  * 
  */
 public class RuntimeStatistics {
@@ -45,6 +46,8 @@ public class RuntimeStatistics {
 
 	/** Dropped packets because of TX queue full. */
 	private int txQueueFullCount;
+	
+	private int msgForwarded;
 
 	private int voltage;
 
@@ -60,12 +63,13 @@ public class RuntimeStatistics {
 	 * @param parentOverflowCount
 	 * @param parentsCount
 	 * @param txQueueFullCount
+	 * @param msgForwarded
 	 */
 	public RuntimeStatistics(int acksFailedCount, int acksReceivedCount,
 			int beaconsSentCount, int duplicatesDroppedCount,
 			int duplicatesReceivedCount, int lastParent, int msgCount,
 			int nodeId, int parentOverflowCount, int parentsCount,
-			int txQueueFullCount, int temperature, int humidity, int voltage) {
+			int txQueueFullCount, int msgForwarded, int temperature, int humidity, int voltage) {
 		this.acksFailedCount = acksFailedCount;
 		this.acksReceivedCount = acksReceivedCount;
 		this.beaconsSentCount = beaconsSentCount;
@@ -77,6 +81,7 @@ public class RuntimeStatistics {
 		this.parentOverflowCount = parentOverflowCount;
 		this.parentsCount = parentsCount;
 		this.txQueueFullCount = txQueueFullCount;
+		this.msgForwarded = msgForwarded;
 		this.temperature = temperature;
 		this.voltage = voltage;
 		this.humidity = humidity;
@@ -174,6 +179,13 @@ public class RuntimeStatistics {
 	 */
 	public int getTxQueueFullCount() {
 		return txQueueFullCount;
+	}
+
+	/**
+	 * @return the msgForwarded
+	 */
+	public int getMsgForwardedCount() {
+		return msgForwarded;
 	}
 
 	/**

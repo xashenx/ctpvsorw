@@ -29,4 +29,7 @@ interface RoutingInfo {
 
   /* Gets the number of dropped duplicated messages */
   command uint16_t getNumDroppedDuplicates();
+
+  /* Gets the number of message that the node should forward */
+  command uint16_t getNumForwardedMessages();
 }

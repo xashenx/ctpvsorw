@@ -1,9 +1,9 @@
-#include <Timer.h>
-#include "route_msg.h"
+ #include <Timer.h>
+ #include "route_msg.h"
 
-#ifdef PRINTF_SUPPORT
-#include "printf.h"
-#endif
+ #ifdef PRINTF_SUPPORT
+ #include "printf.h"
+ #endif
 
 configuration RoutingTesterC {
   uses {

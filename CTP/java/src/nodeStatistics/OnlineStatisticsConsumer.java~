@@ -74,7 +74,7 @@ public class OnlineStatisticsConsumer extends StatisticsConsumer {
 				+ stats.getDuplicatesDroppedCount() + "\t" + "\t"
 				+ stats.getAcksFailedCount() + "\t" + stats.getParentsCount()
 				+ "\t" + "\t" + stats.getTxQueueFullCount() + "\t" + "\t"
-				+ "\t" + "\t" + stats.getMsgForwardedCount() + "\t" + "\t"
+				+ "\t" + "\t" + stats.getMsgForwarded() + "\t" + "\t"
 				+ decimalFormat.format(temperature) + "\t"
 				+ decimalFormat.format(humidity) + "\t"
 				+ decimalFormat.format(voltage) + "\n");

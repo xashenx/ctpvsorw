@@ -34,4 +34,6 @@ public class GlobalStatistics {
 	static public int parentChanges = 0;
 
 	static public int txQueueFullCount = 0;
+
+	static public int msgForwarded = 0;
 }

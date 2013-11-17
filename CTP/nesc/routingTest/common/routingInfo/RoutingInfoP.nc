@@ -1,8 +1,8 @@
-#include "Ctp.h"
+ #include "Ctp.h"
 
-#ifdef PRINTF_SUPPORT
-#include "printf.h"
-#endif
+ #ifdef PRINTF_SUPPORT
+ #include "printf.h"
+ #endif
 
 module RoutingInfoP {
   uses {
@@ -33,6 +33,7 @@ implementation {
   uint16_t num_beacon_sent;
   uint16_t num_tx_queue_full;
   uint16_t num_dropped_duplicates;
+  uint16_t num_forwarded_messages;
 
   event void Boot.booted() {
     current_parent = TOS_NODE_ID;
@@ -42,6 +43,7 @@ implementation {
     num_beacon_sent = 0;
     num_tx_queue_full = 0;
     num_dropped_duplicates = 0;
+    num_forwarded_messages = 0;
 #ifdef PRINTF_SUPPORT
     call PrintfControl.start();
 #endif
@@ -95,6 +97,8 @@ implementation {
       num_ack_failed++;
     } else if (type == NET_C_FE_SENDDONE_FAIL_ACK_FWD){
       num_ack_failed++;
+    } else if (type == NET_C_FE_RCV_MSG){
+      num_forwarded_messages++;
     }
     //Useless signaled events
     //NET_C_FE_LOOP_DETECTED
@@ -134,6 +138,7 @@ implementation {
     num_beacon_sent = 0;
     num_tx_queue_full = 0;
     num_dropped_duplicates = 0;
+    num_forwarded_messages = 0;
   }
   
   command uint16_t RoutingInfo.getParent(){
@@ -177,6 +182,10 @@ implementation {
 
   command uint16_t RoutingInfo.getNumDroppedDuplicates(){
     return num_dropped_duplicates;
+  }
+
+  command uint16_t RoutingInfo.getNumForwardedMessages(){
+    return num_forwarded_messages;
   }
   
 #ifdef PRINTF_SUPPORT

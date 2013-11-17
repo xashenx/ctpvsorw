@@ -153,6 +153,9 @@ public class ResultMsg extends net.tinyos.message.Message {
         }
         s += "]\n";
       } catch (ArrayIndexOutOfBoundsException aioobe) { /* Skip field */ }
+      try {
+        s += "  [data_msg.routing_data.forwarded=0x"+Long.toHexString(get_data_msg_routing_data_forwarded())+"]\n";
+      } catch (ArrayIndexOutOfBoundsException aioobe) { /* Skip field */ }
       return s;
     }
 
@@ -978,6 +981,69 @@ public class ResultMsg extends net.tinyos.message.Message {
     }
 
     /////////////////////////////////////////////////////////
+    // Accessor methods for field: data_msg.routing_data.forwarded
+    //   Field type: int
+    //   Offset (bits): 224
+    //   Size (bits): 16
+    /////////////////////////////////////////////////////////
+
+    /**
+     * Return whether the field 'data_msg.routing_data.forwarded' is signed (false).
+     */
+    public static boolean isSigned_data_msg_routing_data_forwarded() {
+        return false;
+    }
+
+    /**
+     * Return whether the field 'data_msg.routing_data.forwarded' is an array (false).
+     */
+    public static boolean isArray_data_msg_routing_data_forwarded() {
+        return false;
+    }
+
+    /**
+     * Return the offset (in bytes) of the field 'data_msg.routing_data.forwarded'
+     */
+    public static int offset_data_msg_routing_data_forwarded() {
+        return (224 / 8);
+    }
+
+    /**
+     * Return the offset (in bits) of the field 'data_msg.routing_data.forwarded'
+     */
+    public static int offsetBits_data_msg_routing_data_forwarded() {
+        return 224;
+    }
+
+    /**
+     * Return the value (as a int) of the field 'data_msg.routing_data.forwarded'
+     */
+    public int get_data_msg_routing_data_forwarded() {
+        return (int)getUIntBEElement(offsetBits_data_msg_routing_data_forwarded(), 16);
+    }
+
+    /**
+     * Set the value of the field 'data_msg.routing_data.forwarded'
+     */
+    public void set_data_msg_routing_data_forwarded(int value) {
+        setUIntBEElement(offsetBits_data_msg_routing_data_forwarded(), 16, value);
+    }
+
+    /**
+     * Return the size, in bytes, of the field 'data_msg.routing_data.forwarded'
+     */
+    public static int size_data_msg_routing_data_forwarded() {
+        return (16 / 8);
+    }
+
+    /**
+     * Return the size, in bits, of the field 'data_msg.routing_data.forwarded'
+     */
+    public static int sizeBits_data_msg_routing_data_forwarded() {
+        return 16;
+    }
+
+    /////////////////////////////////////////////////////////
     // Accessor methods for field: data_msg.routing_data.parents.addr
     //   Field type: int[]
     //   Offset (bits): 0
@@ -1004,7 +1070,7 @@ public class ResultMsg extends net.tinyos.message.Message {
     public static int offset_data_msg_routing_data_parents_addr(int index1) {
         int offset = 0;
         if (index1 < 0 || index1 >= 3) throw new ArrayIndexOutOfBoundsException();
-        offset += 224 + index1 * 64;
+        offset += 240 + index1 * 64;
         return (offset / 8);
     }
 
@@ -1014,7 +1080,7 @@ public class ResultMsg extends net.tinyos.message.Message {
     public static int offsetBits_data_msg_routing_data_parents_addr(int index1) {
         int offset = 0;
         if (index1 < 0 || index1 >= 3) throw new ArrayIndexOutOfBoundsException();
-        offset += 224 + index1 * 64;
+        offset += 240 + index1 * 64;
         return offset;
     }
 
@@ -1132,7 +1198,7 @@ public class ResultMsg extends net.tinyos.message.Message {
     public static int offset_data_msg_routing_data_parents_etx(int index1) {
         int offset = 16;
         if (index1 < 0 || index1 >= 3) throw new ArrayIndexOutOfBoundsException();
-        offset += 224 + index1 * 64;
+        offset += 240 + index1 * 64;
         return (offset / 8);
     }
 
@@ -1142,7 +1208,7 @@ public class ResultMsg extends net.tinyos.message.Message {
     public static int offsetBits_data_msg_routing_data_parents_etx(int index1) {
         int offset = 16;
         if (index1 < 0 || index1 >= 3) throw new ArrayIndexOutOfBoundsException();
-        offset += 224 + index1 * 64;
+        offset += 240 + index1 * 64;
         return offset;
     }
 
@@ -1260,7 +1326,7 @@ public class ResultMsg extends net.tinyos.message.Message {
     public static int offset_data_msg_routing_data_parents_periods(int index1) {
         int offset = 32;
         if (index1 < 0 || index1 >= 3) throw new ArrayIndexOutOfBoundsException();
-        offset += 224 + index1 * 64;
+        offset += 240 + index1 * 64;
         return (offset / 8);
     }
 
@@ -1270,7 +1336,7 @@ public class ResultMsg extends net.tinyos.message.Message {
     public static int offsetBits_data_msg_routing_data_parents_periods(int index1) {
         int offset = 32;
         if (index1 < 0 || index1 >= 3) throw new ArrayIndexOutOfBoundsException();
-        offset += 224 + index1 * 64;
+        offset += 240 + index1 * 64;
         return offset;
     }
 
@@ -1388,7 +1454,7 @@ public class ResultMsg extends net.tinyos.message.Message {
     public static int offset_data_msg_routing_data_parents_subunits(int index1) {
         int offset = 48;
         if (index1 < 0 || index1 >= 3) throw new ArrayIndexOutOfBoundsException();
-        offset += 224 + index1 * 64;
+        offset += 240 + index1 * 64;
         return (offset / 8);
     }
 
@@ -1398,7 +1464,7 @@ public class ResultMsg extends net.tinyos.message.Message {
     public static int offsetBits_data_msg_routing_data_parents_subunits(int index1) {
         int offset = 48;
         if (index1 < 0 || index1 >= 3) throw new ArrayIndexOutOfBoundsException();
-        offset += 224 + index1 * 64;
+        offset += 240 + index1 * 64;
         return offset;
     }
 

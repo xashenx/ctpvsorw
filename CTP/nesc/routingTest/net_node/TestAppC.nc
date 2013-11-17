@@ -1,7 +1,7 @@
-#include <Timer.h>
-#ifdef PRINTF_SUPPORT
-#include "printf.h"
-#endif
+ #include <Timer.h>
+ #ifdef PRINTF_SUPPORT
+ #include "printf.h"
+ #endif
 
 configuration TestAppC {
   uses interface ResetFlooding;

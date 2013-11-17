@@ -1,10 +1,10 @@
-#ifndef __ROUTE_MSG_H
-#define __ROUTE_MSG_H
+ #ifndef __ROUTE_MSG_H
+ #define __ROUTE_MSG_H
 
 enum{
 	MAX_PARENTS = 3,
-    AM_DATA_MSG = 13,
-    AM_RESULT_MSG = 12 
+	AM_DATA_MSG = 13,
+	AM_RESULT_MSG = 12 
 };
 
 typedef nx_struct parent {
@@ -25,9 +25,9 @@ typedef nx_struct routing_info {
 	// dropped packets
 	nx_uint16_t tx_queue_full;
 	nx_uint16_t dropped_duplicates;
-  nx_uint16_t parents_seen;
-	
+	nx_uint16_t parents_seen;
 	nx_uint16_t parents_no;
+	nx_uint16_t forwarded;
 	parent_t parents[MAX_PARENTS];
 } routing_info_t;
 

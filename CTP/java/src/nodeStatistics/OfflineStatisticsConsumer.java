@@ -57,6 +57,7 @@ public class OfflineStatisticsConsumer extends StatisticsConsumer {
 				+ GlobalStatistics.duplicatesReceivedCount + "\t"
 				+ GlobalStatistics.lostCount + "\t"
 				+ GlobalStatistics.acksFailedCount + "\t"
+				+ GlobalStatistics.msgForwarded + "\t"
 				+ GlobalStatistics.parentChanges + "\t" + "\t"
 				+ GlobalStatistics.txQueueFullCount + "\n");
 	}
@@ -77,7 +78,7 @@ public class OfflineStatisticsConsumer extends StatisticsConsumer {
 				+ "AckRx" + "\t" + "Beacon" + "\t" + "DuplDropped" + "\t"
 				+ "DuplRx" + "\t" + "Lost" + "\t" + "AckFail" + "\t"
 				+ "ParentChanges" + "\t" + "ParentsCount" + "\t"
-				+ "TxQueueFull" + "\n");
+				+ "TxQueueFull" + "\tMsgForwarded\n");
 	}
 
 	protected void printNodeStats(NodeInfo node) throws IOException {
@@ -90,7 +91,8 @@ public class OfflineStatisticsConsumer extends StatisticsConsumer {
 				+ stats.getLostCount() + "\t" + stats.getAcksFailedCount()
 				+ "\t" + stats.getParentsChanges() + "\t" + "\t"
 				+ stats.getParentsCount() + "\t" + "\t"
-				+ stats.getTxQueueFullCount() + "\n");
+				+ stats.getTxQueueFullCount() + "\t" + "\t" 
+				+ stats.getMsgForwarded() + "\n");
 	}
 
 }

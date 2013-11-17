@@ -1,9 +1,9 @@
  #include <Timer.h>
-#include "route_msg.h"
+ #include "route_msg.h"
 
-#ifdef PRINTF_SUPPORT
-#include "printf.h"
-#endif
+ #ifdef PRINTF_SUPPORT
+ #include "printf.h"
+ #endif
 
 module RoutingTesterP {
   uses {
@@ -116,6 +116,8 @@ implementation {
       call RoutingInfo.getNumQueueFull();
     msg->routing_data.dropped_duplicates = 
       call RoutingInfo.getNumDroppedDuplicates();
+    msg->routing_data.forwarded =
+      call RoutingInfo.getNumForwardedMessages();
 
     msg->routing_data.parents_seen = numParentsSeen;
 
