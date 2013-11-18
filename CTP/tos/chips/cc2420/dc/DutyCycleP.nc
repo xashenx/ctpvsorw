@@ -92,6 +92,14 @@ implementation {
  		}
 	}
 	
+	command uint32_t DutyCycle.getTimeData(){
+		return upTimeData;
+	}
+
+	command uint32_t DutyCycle.getTimeIdle(){
+		return upTimeIdle;
+	}
+
 	event void Timer.fired(){
 	   /*uint32_t dcycleData = (1000 * upTimeData) / totalTime;	   
 	   uint32_t dcycleIdle = (1000 * upTimeIdle) / totalTime;	   
@@ -101,11 +109,4 @@ implementation {
 	   upTimeIdle = 0;
 	}
 
-	command uint32_t get_upTimeData(){
-		return upTimeData;
-	}
-
-	command uint32_t get_upTimeIdle(){
-		return upTimeIdle;
-	}
 }

@@ -38,7 +38,7 @@
   
 	command void radioOff(bool action);
 	
-	command uint32_t get_upTimeData();
+	command uint32_t getTimeData();
 
-	command uint32_t get_upTimeIdle();
+	command uint32_t getTimeIdle();
 } 
