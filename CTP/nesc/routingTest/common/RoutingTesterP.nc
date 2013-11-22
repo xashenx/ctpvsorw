@@ -22,6 +22,7 @@ module RoutingTesterP {
     interface CtpClear;
     interface CtpRadioSettings;
     interface Random;
+    interface DutyCycle;
 
 #ifdef PRINTF_SUPPORT
     interface SplitControl as PrintfControl;
@@ -100,7 +101,9 @@ implementation {
   void sendMsg(){
     uint8_t i;
     uint16_t parent_id;
+    uint32_t timeIdle;
     data_msg_t* msg = (data_msg_t*) call Send.getPayload(&packet);
+    timeIdle = (uint32_t) call DutyCycle.getTimeIdle();
     msg->temperature = currentTemp;
     msg->humidity = currentHum;
     msg->voltage = currentBat;

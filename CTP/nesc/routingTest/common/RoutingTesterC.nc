@@ -33,6 +33,7 @@ implementation {
   components new TimerMilliC() as Period;
   components CtpRadioSettingsP;
   components RandomC;
+  components DutyCycleC;
 
   RoutingInfoC.Boot = Boot;
   RoutingInfoC.AMPacket = AMPacket;
@@ -65,5 +66,5 @@ implementation {
   RoutingTesterP.PrintfControl = PrintfControl;
   RoutingTesterP.PrintfFlush = PrintfFlush;
 #endif
-
+  RoutingTesterP.DutyCycle -> DutyCycleC;
 }
