@@ -28,6 +28,8 @@ typedef nx_struct routing_info {
 	nx_uint16_t parents_seen;
 	nx_uint16_t parents_no;
 	nx_uint16_t forwarded;
+	nx_uint32_t dcIdle;
+	nx_uint32_t dcActive;
 	parent_t parents[MAX_PARENTS];
 } routing_info_t;
 

@@ -46,6 +46,8 @@ implementation {
   parent_t parents[MAX_PARENTS];
   uint8_t current_parent_index;
   uint32_t last_time_recorded;
+  uint32_t dcIdle;
+  uint32_t dcActive;
   uint16_t currentTick;
 
   message_t packet;
@@ -121,6 +123,10 @@ implementation {
       call RoutingInfo.getNumDroppedDuplicates();
     msg->routing_data.forwarded =
       call RoutingInfo.getNumForwardedMessages();
+    msg->routing_data.dcIdle =
+      call DutyCycle.getTimeIdle();
+    msg->routing_data.dcActive =
+      call DutyCycle.getTimeData();
 
     msg->routing_data.parents_seen = numParentsSeen;
 
