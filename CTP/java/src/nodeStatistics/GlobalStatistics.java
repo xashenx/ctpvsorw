@@ -36,4 +36,8 @@ public class GlobalStatistics {
 	static public int txQueueFullCount = 0;
 
 	static public int msgForwarded = 0;
+	
+	static public long dcIdle = 0;
+	
+	static public long dcData = 0;
 }

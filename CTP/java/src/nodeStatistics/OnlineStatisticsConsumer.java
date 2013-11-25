@@ -37,7 +37,8 @@ public class OnlineStatisticsConsumer extends StatisticsConsumer {
 
 	protected void printGlobalStats() throws IOException {
 		globalLog.write("Msgs" + "\t" + "ACKRx" + "\t" + "Beacon" + "\t"
-				+ "DuplDropped" + "\t" + "AckFail" + "\t" + "TxQueueFull"
+				+ "DuplDropped" + "\t" + "AckFail" + "\t" 
+				+ "Forwarded" + "\t" + "DutyCycle(D/I)" + "\t" + "TxQueueFull"
 				+ "\n");
 		globalLog.write(GlobalStatistics.msgCount + "\t"
 				+ GlobalStatistics.acksReceivedCount + "\t"
@@ -45,6 +46,7 @@ public class OnlineStatisticsConsumer extends StatisticsConsumer {
 				+ GlobalStatistics.duplicatesDroppedCount + "\t" + "\t"
 				+ GlobalStatistics.acksFailedCount + "\t"
 				+ GlobalStatistics.msgForwarded + "\t"
+				+ GlobalStatistics.dcData + "/" + GlobalStatistics.msgForwarded + "\t"
 				+ GlobalStatistics.txQueueFullCount + "\n");
 	}
 
@@ -57,7 +59,7 @@ public class OnlineStatisticsConsumer extends StatisticsConsumer {
 		globalLog.write("Node" + "\t" + "Parent" + "\t" + "Msgs" + "\t"
 				+ "AckRx" + "\t" + "Beacon" + "\t" + "DuplDropped" + "\t"
 				+ "AckFail" + "\t" + "ParentsCount" + "\t" + "TxQueueFull"
-				+ "\tMsgForw\t" + "Temp" + "\t" + "Hum" + "\t" + "Voltage" + "\n");
+				+ "\tMsgForw\t" + "DC(D/I)\t" + "Temp" + "\t" + "Hum" + "\t" + "Voltage" + "\n");
 	}
 
 	protected void printNodeStats(NodeInfo node) throws IOException {
@@ -75,6 +77,7 @@ public class OnlineStatisticsConsumer extends StatisticsConsumer {
 				+ stats.getAcksFailedCount() + "\t" + stats.getParentsCount()
 				+ "\t" + "\t" + stats.getTxQueueFullCount() + "\t" + "\t"
 				+ "\t" + "\t" + stats.getMsgForwardedCount() + "\t" + "\t"
+				+ "\t" + "\t" + stats.getDcIdle() + "/" + stats.getDcData() + "\t" + "\t"
 				+ decimalFormat.format(temperature) + "\t"
 				+ decimalFormat.format(humidity) + "\t"
 				+ decimalFormat.format(voltage) + "\n");

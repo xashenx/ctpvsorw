@@ -47,7 +47,7 @@ implementation {
   uint8_t current_parent_index;
   uint32_t last_time_recorded;
   uint32_t dcIdle;
-  uint32_t dcActive;
+  uint32_t dcData;
   uint16_t currentTick;
 
   message_t packet;
@@ -125,7 +125,7 @@ implementation {
       call RoutingInfo.getNumForwardedMessages();
     msg->routing_data.dcIdle =
       call DutyCycle.getTimeIdle();
-    msg->routing_data.dcActive =
+    msg->routing_data.dcData =
       call DutyCycle.getTimeData();
 
     msg->routing_data.parents_seen = numParentsSeen;

@@ -48,7 +48,11 @@ public class NodeInfo {
 
 	private int parentChanges = 0;
 
-	private int forwaderdMsg = 0;
+	private int lastForwardedMsg = 0;
+
+	private long lastDcIdle = 0;
+
+	private long lastDcData = 0;
 
 	/**
 	 * The last message sent by the nodeStatistics and received. It is not
@@ -119,6 +123,15 @@ public class NodeInfo {
 				GlobalStatistics.msgCount += (lastReceived
 						.get_routing_data_seq_no() + 1)
 						- lastMsgCnt;
+				GlobalStatistics.msgForwarded += lastReceived
+						.get_routing_data_forwarded()
+						- lastForwardedMsg;
+				GlobalStatistics.dcIdle += lastReceived
+						.get_routing_data_dcIdle()
+						- lastDcIdle;
+				GlobalStatistics.dcData += lastReceived
+						.get_routing_data_dcData()
+						- lastDcData;
 			}
 
 			lastAckFailed = lastReceived.get_routing_data_ack_failed();
@@ -133,7 +146,12 @@ public class NodeInfo {
 
 			lastMsgCnt = lastReceived.get_routing_data_seq_no() + 1;
 
-			forwaderdMsg = lastReceived.get_routing_data_forwarded();
+			lastForwardedMsg = lastReceived.get_routing_data_forwarded();
+
+			lastDcIdle = lastReceived.get_routing_data_dcIdle();
+
+			lastDcData = lastReceived.get_routing_data_dcData();
+
 		}
 
 		if (runtime)
@@ -169,6 +187,8 @@ public class NodeInfo {
 				parentOverflow, parents.cardinality(),
 				lastReceived.get_routing_data_tx_queue_full(),
 				lastReceived.get_routing_data_forwarded(),
+				lastReceived.get_routing_data_dcIdle(),
+				lastReceived.get_routing_data_dcData(),
 				lastReceived.get_temperature(), lastReceived.get_humidity(),
 				lastReceived.get_voltage());
 
@@ -196,7 +216,9 @@ public class NodeInfo {
 				lastReceived.get_routing_data_seq_no() + 1, id, parentOverflow,
 				parentChanges, parents.cardinality(),
 				lastReceived.get_routing_data_tx_queue_full(),
-				lastReceived.get_routing_data_forwarded());
+				lastReceived.get_routing_data_forwarded(),
+				lastReceived.get_routing_data_dcIdle(),
+				lastReceived.get_routing_data_dcData());
 		return offlineStats;
 	}
 

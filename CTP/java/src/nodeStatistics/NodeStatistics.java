@@ -7,6 +7,7 @@ package nodeStatistics;
  * A summary with node statistics.
  * 
  * @author Stefan Guna
+ * @author Fabrizio Zeni
  * 
  */
 public class NodeStatistics {
@@ -48,6 +49,12 @@ public class NodeStatistics {
 	/** Messages that the node should forward */
 	private int msgForwarded;
 
+	/** Time spent listening during duty cycles*/
+	private long dcIdle;
+	
+	/** Time spent transmitting during duty cycles*/
+	private long dcData;
+
 	/**
 	 * @param acksFailedCount
 	 * @param acksReceivedCount
@@ -64,13 +71,15 @@ public class NodeStatistics {
 	 * @param parentsCount
 	 * @param txQueueFullCount
 	 * @param msgForwarded
+	 * @param dcIdle
+	 * @param dcData
 	 */
 	public NodeStatistics(int acksFailedCount, int acksReceivedCount,
 			int beaconsSentCount, int duplicatesDroppedCount,
 			int duplicatesReceivedCount, int lastParent, int lostCount,
 			int msgCount, int nodeId, int parentOverflowCount,
 			int parentsChanges, int parentsCount, int txQueueFullCount,
-			int msgForwarded) {
+			int msgForwarded, long dcIdle, long dcData) {
 		this.acksFailedCount = acksFailedCount;
 		this.acksReceivedCount = acksReceivedCount;
 		this.beaconsSentCount = beaconsSentCount;
@@ -85,6 +94,8 @@ public class NodeStatistics {
 		this.parentsCount = parentsCount;
 		this.txQueueFullCount = txQueueFullCount;
 		this.msgForwarded = msgForwarded;
+		this.dcIdle = dcIdle;
+		this.dcData = dcData;
 	}
 
 	/**
@@ -188,4 +199,17 @@ public class NodeStatistics {
 		return msgForwarded;
 	}
 
+	/**
+	 *  @return the dcIdle
+	 */
+	public long getDcIdle(){
+		return dcIdle;
+	}
+
+	/**
+	 *  @return the dcData
+	 */
+	public long getDcData(){
+		return dcData;
+	}
 }
