@@ -378,6 +378,7 @@ implementation {
   }
     
   event void SubControl.stopDone(error_t error) {
+    call DutyCycle.radioOff(action);
     if(!error) {
       call DutyCycle.radioOff(action);
 

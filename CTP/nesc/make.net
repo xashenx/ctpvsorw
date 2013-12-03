@@ -1,12 +1,25 @@
 #!/bin/bash
 echo Building network node...
+
 OBJECTIVE=NET make tmote
-if [ $# = "3" ]
-then
+if [ $# = "3" ]; then
     for i in $(seq $1 $2);
     do 
         read -p "Insert mote ${i} in $3 and press any key to continue"
         make tmote reinstall,${i} $3;
     done
-fi
+elif [ $# = 2 ]; then
+	if [ $2 = "hub" ]; then
 
+		read -p "You are going to flash all the motes, connect them to the ports and press any key to continue. Check with motelist their presence. This script will flash from /dev/ttyUSB1 to /dev/ttyUSB$1"
+		for i in $(seq 1 $1);
+		do
+			make tmote reinstall,${i} bsl,/dev/ttyUSB${i};
+		done
+	elif [ $2 = "silent" ]; then 
+		for i in $(seq 1 $1);
+		do
+			make tmote reinstall,${i} bsl,/dev/ttyUSB${i};
+		done
+	fi
+fi

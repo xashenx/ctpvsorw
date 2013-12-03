@@ -97,7 +97,7 @@ implementation {
       num_ack_failed++;
     } else if (type == NET_C_FE_SENDDONE_FAIL_ACK_FWD){
       num_ack_failed++;
-    } else if (type == NET_C_FE_RCV_MSG){
+    } else if (type == NET_C_FE_RCV_MSG && !(TOS_NODE_ID == 0)){
       num_forwarded_messages++;
     }
     //Useless signaled events

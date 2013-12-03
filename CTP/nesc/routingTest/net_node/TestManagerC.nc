@@ -45,6 +45,7 @@ implementation {
      memcpy(msg, &config, sizeof(config_msg_t));
      call ResetFlooding.reset();
 #ifdef LPL_COEXISTENCE
+     //call LowPowerListening.setRxSleepInterval(&config_packet, 100);
      call LowPowerListening.setRxSleepInterval(&config_packet, 0);
 #endif
      if (call ConfigSend.send(AM_BROADCAST_ADDR, &config_packet, 
@@ -73,6 +74,9 @@ implementation {
     } else if (test_state == BOOTING_ROUTING){
       //call Leds.led0Off();
       call Leds.led1On();
+      // CHANGE FROM FABRIZIO
+      call LowPowerListening.setLocalSleepInterval(2048);
+      // END OF CHANGE
       test_state = RUNNING_APP;
       call RoutingTester.activateTask(config.randomize_start,
                                       1000ULL * config.app_period, 

@@ -71,13 +71,15 @@ implementation {
  	}
 	
 	command void DutyCycle.radioOn(){
-	   	uint32_t now = call LocalTime32khz.get();
+	   	/*uint32_t now = call LocalTime32khz.get();
 	    	updateEnergyStat(now);
-   		upStartTime = now;
+   		upStartTime = now;*/
+		upTimeData++;
 	}
   
 	command void DutyCycle.radioOff(bool action){
-	   	uint32_t now = call LocalTime32khz.get();
+		upTimeIdle++;
+	   	/*uint32_t now = call LocalTime32khz.get();
 	   	uint32_t d;
 	    	updateEnergyStat(now);
  		if (now < upStartTime) {
@@ -89,24 +91,27 @@ implementation {
 			upTimeData += d;
  		} else {
 	 		upTimeIdle += d;
- 		}
+ 		}*/
 	}
 	
 	command uint32_t DutyCycle.getTimeData(){
 		return upTimeData;
+		//return TOS_NODE_ID+1;
 	}
 
 	command uint32_t DutyCycle.getTimeIdle(){
 		return upTimeIdle;
+		//return TOS_NODE_ID;
 	}
 
 	event void Timer.fired(){
 	   /*uint32_t dcycleData = (1000 * upTimeData) / totalTime;	   
 	   uint32_t dcycleIdle = (1000 * upTimeIdle) / totalTime;	   
-	   uint16_t time = (uint16_t)(call Timer.getNow() / 1024);*/
+	   uint16_t time = (uint16_t)(call Timer.getNow() / 1024);
 	   totalTime = 0;
 	   upTimeData = 0;
-	   upTimeIdle = 0;
+	   upTimeIdle = 0;*/
+	   upTimeIdle++;
 	}
 
 }

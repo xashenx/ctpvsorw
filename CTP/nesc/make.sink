@@ -1,9 +1,9 @@
 #!/bin/bash
-echo Building sink node... 
-OBJECTIVE=SINK make tmote
-
-if [ $# = "2" ]
-then
-    read -p "Insert the mote to $2 and press any key to continue..."
-    make tmote reinstall,$1 $2
+  echo Building sink node... 
+  OBJECTIVE=SINK make tmote
+if [ $# = "2" ]; then
+  read -p "Insert the mote to $2 and press any key to continue..."
+  make tmote reinstall,$1 $2
+elif [[ $# = 3 && $3 = "silent" ]]; then
+  make tmote reinstall,$1 $2
 fi
