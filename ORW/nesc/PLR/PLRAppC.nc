@@ -43,7 +43,9 @@ implementation {
   components CtpReportP;
   components new QueueC(StatsMsg, QUEUE_SIZE) as MessageQueue;
   components OppC as Collector;
-  components new CollectionSenderC(AM_STATSMSG) as SendStats;
+  //components new CollectionSenderC(AM_STATSMSG) as SendStats;
+  components new AMSenderC(AM_STATSMSG) as SendStats;
+  components new AMReceiverC(AM_STATSMSG) as ReceiveStats;
 #endif
 
   components new SerialAMSenderC(AM_STATSMSG);
@@ -122,7 +124,8 @@ implementation {
 #else
   CtpReportP.Packet -> SendStats;
   CtpReportP.SendStats -> SendStats;
-  CtpReportP.ReceiveStats -> Collector.Receive[AM_STATSMSG];
+  //CtpReportP.ReceiveStats -> Collector.Receive[AM_STATSMSG];
+  CtpReportP.ReceiveStats -> ReceiveStats;
   CtpReportP.SendUART -> SerialAMSenderC;
   CtpReportP.SerialPacket -> SerialAMSenderC;
   CtpReportP.MessageQueue -> MessageQueue;

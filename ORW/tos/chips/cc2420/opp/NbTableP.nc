@@ -443,6 +443,10 @@ implementation {
 	command void DutyCycle.radioOff(bool action){
 		newDc = TRUE;		
 	}
+
+	command uint16_t DutyCycle.getTimeIdle(){return 1;}
+	command uint16_t DutyCycle.getTimeData(){return 2;}
+
 	
   	default command error_t NtDebug.dumpTable(nbTableEntry_t* nbTable__, uint8_t* p__, uint8_t type__, uint8_t edc__, uint8_t nextHopEdc__, uint8_t indexesInUse__, uint8_t indexes__, uint32_t avgDc__, uint32_t txTime__, uint32_t timestamp__){
     	return SUCCESS;

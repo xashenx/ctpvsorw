@@ -1,4 +1,6 @@
- #include "Ctp.h"
+ #include "opp.h"
+ #include "oppDebug.h"
+ #include "AM.h"
 
  #ifdef PRINTF_SUPPORT
  #include "printf.h"
@@ -8,8 +10,8 @@ module RoutingInfoP {
   uses {
     interface Boot;
     interface Leds;
-    interface CollectionPacket;
-    interface CtpInfo;
+    //interface CollectionPacket;
+    //interface CtpInfo;
     interface AMPacket;
 
 #ifdef PRINTF_SUPPORT
@@ -112,7 +114,8 @@ implementation {
                                                 uint8_t hopcount, 
                                                 uint16_t metric) {
     if (type == NET_C_TREE_NEW_PARENT){
-      if (parent == INVALID_ADDR){
+      //if (parent == INVALID_ADDR){
+      if (parent == TOS_BCAST_ADDR){
         current_parent = TOS_NODE_ID;
         current_parent_etx = 0;
         signal RoutingInfo.parentLost();
@@ -144,7 +147,8 @@ implementation {
   command uint16_t RoutingInfo.getParent(){
     uint16_t parent;
     error_t err;
-    err = call CtpInfo.getParent(&parent);
+    // TODO wiring
+    //err = call CtpInfo.getParent(&parent);
     current_parent = parent;
     if (err == FAIL){
       current_parent = TOS_NODE_ID;
@@ -156,7 +160,8 @@ implementation {
   command uint16_t RoutingInfo.getParentEtx(){
     uint16_t etx;
     error_t err;
-    err = call CtpInfo.getEtx(&etx);
+    // TODO wiring
+    // err = call CtpInfo.getEtx(&etx);
     current_parent_etx = 0;
     if (err == SUCCESS){
       current_parent_etx = etx;

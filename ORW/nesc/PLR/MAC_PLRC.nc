@@ -136,7 +136,8 @@ implementation {
   message_t pkt;
   event void TimerSend.fired() {
 
-    PLRMsg* btrpkt =  (PLRMsg*)(call Packet.getPayload(&pkt, NULL));
+    //PLRMsg* btrpkt =  (PLRMsg*)(call Packet.getPayload(&pkt, NULL));
+    PLRMsg* btrpkt =  (PLRMsg*)(call Packet.getPayload(&pkt, sizeof(PLRMsg)));
     btrpkt->nodeid = TOS_NODE_ID;
     btrpkt->seqn = experimentId;
     btrpkt->packet_seqn = packet_seqn++; 

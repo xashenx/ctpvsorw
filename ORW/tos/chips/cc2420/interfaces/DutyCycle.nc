@@ -38,4 +38,7 @@
   
 	command void radioOff(bool action);
 	
+	command uint16_t getTimeIdle();
+	command uint16_t getTimeData();
+	
 } 

@@ -41,6 +41,7 @@ module OppP{
 	provides interface Init;
 	provides interface Receive;
 	provides interface SplitControl as Control;
+	provides interface StdControl;
 	
 	uses interface Leds;
 	uses interface AMSend as SubSend;
@@ -125,6 +126,14 @@ implementation {
    	async command void Opp.update(uint16_t etx, am_addr_t src, bool accept){
 		call NbTable.update( src, getSourceEtx(etx), accept );
    	}
+	
+	command error_t StdControl.start(){
+		return SUCCESS;
+	}
+
+	command error_t StdControl.stop(){
+		return SUCCESS;
+	}
 
 	command error_t Send.send(message_t* msg, uint8_t len){
 	    if( appMsgPtr != NULL ) {return EBUSY;}
@@ -140,7 +149,7 @@ implementation {
 		send();
 		return SUCCESS;
   	}
-  
+
   	command error_t Send.cancel(message_t* msg){
   		return FAIL;
   	}
@@ -152,6 +161,8 @@ implementation {
 	command void* Send.getPayload(message_t* msg, uint8_t len){
  		return call Packet.getPayload(msg, len);
  	}	
+
+
 	
 	event void SubSend.sendDone(message_t* msg, error_t error){
 		//TODO: add retry counter		

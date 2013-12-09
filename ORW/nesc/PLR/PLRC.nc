@@ -144,7 +144,8 @@ implementation {
     /*     } else  */if(packet_seqn<nr_packets) {
 
       if(!radioBusy) {
-        PLRMsg* btrpkt =  (PLRMsg*)(call Packet.getPayload(&pkt, NULL));
+        PLRMsg* btrpkt =  (PLRMsg*)(call Packet.getPayload(&pkt, sizeof(PLRMsg)));
+        //PLRMsg* btrpkt =  (PLRMsg*)(call Packet.getPayload(&pkt, NULL));
         btrpkt->nodeid = TOS_NODE_ID;
         btrpkt->seqn = experimentId;
         btrpkt->packet_seqn = packet_seqn++; 

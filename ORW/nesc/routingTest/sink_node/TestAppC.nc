@@ -56,7 +56,7 @@ implementation {
   TestManagerC.Leds -> LedsC;
   TestManagerC.RoutingTester -> RoutingTesterC.RoutingTester;
   //TestManagerC.Receive -> Collector.Receive[AM_DATA_MSG];
-  TestManagerC.Receive -> OppC.Receive[AM_DATA_MSG];
+  TestManagerC.Receive -> OppC.Receive;
   //TestManagerC.Receive -> OppC.Receive;
   TestManagerC.Timer -> Timer;
   TestManagerC.ConfigFwTimer -> ConfigFwTimer;

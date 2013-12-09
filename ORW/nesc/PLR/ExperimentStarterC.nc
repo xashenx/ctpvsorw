@@ -84,7 +84,8 @@ implementation {
   void startExperiment(StartMsg* btrpkt) {
 
     StartMsg* btrpktForward = (StartMsg*) 
-      call Packet.getPayload(&startMsgForward, NULL);
+      call Packet.getPayload(&startMsgForward, sizeof(StartMsg));
+      //call Packet.getPayload(&startMsgForward, NULL);
 
     // It's a new start message
     if(lastmsgstart < btrpkt->seqn) {

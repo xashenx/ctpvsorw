@@ -9,4 +9,6 @@ PFLAGS += -I$(OPPXMAC_ROOT) \
        -I$(OPPXMAC_ROOT)/opp/debug \
        -I$(OPPXMAC_ROOT)/unique \
        -I$(OPPXMAC_ROOT)/dc \
-       -I$(OPPXMAC_ROOT)/lpl 
+       -I$(OPPXMAC_ROOT)/lpl \
+       -I$(TOSDIR)/lib/net \
+       -I$(TOSDIR)/interfaces \

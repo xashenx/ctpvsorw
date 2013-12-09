@@ -40,6 +40,7 @@ configuration OppC{
 	provides interface Receive;
 	provides interface Packet;
 	provides interface SplitControl;
+	provides interface StdControl;
 }
 
 implementation {
@@ -67,7 +68,7 @@ implementation {
 #else
 #error "LPL testing not supported on this platform"
 #endif
-		
+	StdControl = OppP.StdControl;
 	Opp = OppP.Opp;
 	Send = OppP.Send;
 	Receive = OppP.Receive;

@@ -10,7 +10,7 @@ module RoutingTesterP {
     interface Boot;
     interface SplitControl as RadioControl;
     interface StdControl as RoutingControl;
-    interface RootControl;
+    //interface RootControl;
     interface Leds;
     interface Send;
     interface AMPacket;
@@ -19,8 +19,8 @@ module RoutingTesterP {
     interface Read<uint16_t> as ReadHumidity;
     interface Timer<TMilli> as Period;
     interface RoutingInfo;
-    interface CtpClear;
-    interface CtpRadioSettings;
+    //interface CtpClear;
+    //nterface CtpRadioSettings;
     interface Random;
     interface DutyCycle;
 
@@ -103,7 +103,7 @@ implementation {
   void sendMsg(){
     uint8_t i;
     uint16_t parent_id;
-    data_msg_t* msg = (data_msg_t*) call Send.getPayload(&packet);
+    data_msg_t* msg = (data_msg_t*) call Send.getPayload(&packet,sizeof(data_msg_t));
     msg->temperature = currentTemp;
     msg->humidity = currentHum;
     msg->voltage = currentBat;
@@ -193,7 +193,7 @@ implementation {
   }
 
   command void RoutingTester.startRouting(){
-    call CtpClear.clear();
+    // TODO call CtpClear.clear();
     call RoutingInfo.clearStats();
     call RoutingControl.start();
   }
@@ -202,9 +202,9 @@ implementation {
     call RoutingControl.stop();
   }
 
-  command void RoutingTester.setRoot(){
-    call RootControl.setRoot();
-  }
+  /*command void RoutingTester.setRoot(){
+     call RootControl.setRoot();
+  }*/
 
   command void RoutingTester.activateTask(bool randomize_start,
                                           uint32_t taskPeriod, 
@@ -239,7 +239,7 @@ implementation {
   }
 
   command void RoutingTester.setPower(uint8_t newPower) {
-    call CtpRadioSettings.setPower(newPower);
+    // TODO call CtpRadioSettings.setPower(newPower);
   }
 
   event void RoutingInfo.parentChanged(){

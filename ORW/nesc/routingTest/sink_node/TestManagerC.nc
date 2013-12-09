@@ -83,7 +83,7 @@ implementation {
       ReportSend.getPayload(&packet);
     msg->rep_seq_no = 0xFFFFFFFF;
 #ifdef LPL_COEXISTENCE
-    call LowPowerListening.setRxSleepInterval(&packet, 0);
+    call LowPowerListening.setRemoteWakeupInterval(&packet, 0);
 #endif
     call ReportSend.send(AM_BROADCAST_ADDR, &packet, sizeof(result_msg_t));
   }
@@ -154,7 +154,7 @@ implementation {
       call Leds.set(0);
       call Leds.led0On();
       call RoutingTester.startRouting();
-      call RoutingTester.setRoot();
+      //call RoutingTester.setRoot();
       test_state = BOOTING_ROUTING;
       call Timer.startOneShot(1000ULL * config.routing_boot_period);
     } else if (test_state == BOOTING_ROUTING){
@@ -210,7 +210,7 @@ implementation {
    else if (!serialBusy) {
      result_msg_t temp = call Queue.head();
      result_msg_t* msg = (result_msg_t*) call
-       SerialSend.getPayload(&packet);
+       SerialSend.getPayload(&packet,sizeof(result_msg_t));
      memcpy(msg, &temp, sizeof(result_msg_t));
      if (call SerialSend.send(AM_BROADCAST_ADDR,
                               &packet,
@@ -250,12 +250,12 @@ implementation {
   event void ConfigFwTimer.fired()
   {
     config_msg_t *msg = (config_msg_t *)
-      call ConfigSend.getPayload(&config_packet);
+      call ConfigSend.getPayload(&config_packet,sizeof(config_msg_t));
     memcpy(msg, &config, sizeof(config_msg_t));
     call Leds.led2Toggle();
     call ResetFlooding.reset();   
 #ifdef LPL_COEXISTENCE
-    call LowPowerListening.setRxSleepInterval(&config_packet, 0);
+    call LowPowerListening.setRemoteWakeupInterval(&config_packet, 0);
 #endif
     if (call ConfigSend.send(AM_BROADCAST_ADDR, &config_packet, 
                              sizeof(config_msg_t)) != SUCCESS)
@@ -339,7 +339,7 @@ implementation {
       result_msg_t *msg = (result_msg_t *) call ReportSend.getPayload(&packet);
       memcpy(msg, buf, sizeof(result_msg_t));
 #ifdef LPL_COEXISTENCE
-      call LowPowerListening.setRxSleepInterval(&packet, 0);
+      call LowPowerListening.setRemoteWakeupInterval(&packet, 0);
 #endif
       call ReportSend.send(AM_BROADCAST_ADDR, &packet, sizeof(result_msg_t));
       call Leds.led1Toggle();

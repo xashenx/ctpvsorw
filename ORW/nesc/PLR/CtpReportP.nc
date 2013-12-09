@@ -156,7 +156,8 @@ implementation {
       if (!call MessageQueue.empty()) {
         stats = call MessageQueue.head();
         
-        st_msg = (StatsMsg*)(call SerialPacket.getPayload(&msg, NULL));
+        //st_msg = (StatsMsg*)(call SerialPacket.getPayload(&msg, NULL));
+        st_msg = (StatsMsg*)(call SerialPacket.getPayload(&msg, sizeof(StatsMsg)));
         memcpy(st_msg, &stats, sizeof(StatsMsg));
 
         atomic {
@@ -186,7 +187,8 @@ implementation {
       if (!call MessageQueue.empty()) {
         stats = call MessageQueue.head();
 
-        st_msg = (StatsMsg*)(call Packet.getPayload(&msg, NULL));
+        //st_msg = (StatsMsg*)(call Packet.getPayload(&msg, NULL));
+        st_msg = (StatsMsg*)(call Packet.getPayload(&msg,sizeof(StatsMsg)));
         memcpy(st_msg, &stats, sizeof(StatsMsg));
 
 #ifdef PRINTF_SUPPORT
@@ -197,7 +199,7 @@ implementation {
 
         if (!radioBusy) {
           radioBusy = TRUE;
-          call LowPowerListening.setRxSleepInterval(&msg, 0);
+          call LowPowerListening.setRemoteWakeupInterval(&msg, 0);
           /*       call CC2420Packet.setPower(&statMsg, SIGNALLING_POWER); */
           if ((err = call SendStats.send(&msg, sizeof(StatsMsg))) != SUCCESS) {
             radioBusy = FALSE;

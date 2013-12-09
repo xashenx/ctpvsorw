@@ -7,7 +7,7 @@ interface RoutingTester {
   command void stopRouting();
 
   /* Sets the node as root of the collection tree */
-  command void setRoot();
+  //command void setRoot();
 
   /* Activates the application task */
   command void activateTask(bool randomize_start,

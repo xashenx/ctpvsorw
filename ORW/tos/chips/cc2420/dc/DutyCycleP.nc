@@ -91,6 +91,9 @@ implementation {
 	 		upTimeIdle += d;
  		}
 	}
+
+	command uint16_t DutyCycle.getTimeIdle(){return 1;}
+	command uint16_t DutyCycle.getTimeData(){return 2;}
 	
 	event void Timer.fired(){
 	   uint32_t dcycleData = (1000 * upTimeData) / totalTime;	   

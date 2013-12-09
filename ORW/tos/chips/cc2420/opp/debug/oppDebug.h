@@ -8,7 +8,7 @@ enum {
 //    NET_C_DEBUG_STARTED = 0xDE,
 //
     NET_C_FE_MSG_POOL_EMPTY = 0x10,    //::no args
-//    NET_C_FE_SEND_QUEUE_FULL = 0x11,   //::no args
+    NET_C_FE_SEND_QUEUE_FULL = 0x11,   //::no args  || REINSERTED BY FABRIZIO
 //    NET_C_FE_NO_ROUTE = 0x12,          //::no args
 //    NET_C_FE_SUBSEND_OFF = 0x13,
 //    NET_C_FE_SUBSEND_BUSY = 0x14,
@@ -27,15 +27,15 @@ enum {
 
     NET_C_FE_SENT_MSG = 0x20,  //:app. send       :msg uid, origin, next_hop
     NET_C_FE_RCV_MSG =  0x21,  //:next hop receive:msg uid, origin, last_hop
-//    NET_C_FE_FWD_MSG =  0x22,  //:fwd msg         :msg uid, origin, next_hop
+    NET_C_FE_FWD_MSG =  0x22,  //:fwd msg         :msg uid, origin, next_hop   // REINSERTED BY FABRIZIO
 //    NET_C_FE_DST_MSG =  0x23,  //:base app. recv  :msg_uid, origin, last_hop
     NET_C_FE_SENDDONE_FAIL = 0x24,
     NET_C_FE_SENDDONE_WAITACK = 0x25,
-//    NET_C_FE_SENDDONE_FAIL_ACK_SEND = 0x26,
-//    NET_C_FE_SENDDONE_FAIL_ACK_FWD  = 0x27,
+    NET_C_FE_SENDDONE_FAIL_ACK_SEND = 0x26,	// REINSERTED BY FABRIZIO
+    NET_C_FE_SENDDONE_FAIL_ACK_FWD  = 0x27,	// REINSERTED BY FABRIZIO
     NET_C_FE_DUPLICATE_CACHE = 0x28,  //dropped duplicate packet seen in cache
-//    NET_C_FE_DUPLICATE_QUEUE = 0x29,  //dropped duplicate packet seen in queue
-//    NET_C_FE_DUPLICATE_CACHE_AT_SEND = 0x2A,  //dropped duplicate packet seen in cache
+    NET_C_FE_DUPLICATE_QUEUE = 0x29,  //dropped duplicate packet seen in queue  // REINSERTED BY FABRIZIO
+    NET_C_FE_DUPLICATE_CACHE_AT_SEND = 0x2A,  //dropped duplicate packet seen in cache  // REINSERTED BY FABRIZIO
 //    NET_C_FE_CONGESTION_SENDWAIT = 0x2B, // sendTask deferring for congested parent
 //    NET_C_FE_CONGESTION_BEGIN = 0x2C, //
 //    NET_C_FE_CONGESTION_END = 0x2D, // congestion over: reason is arg;
@@ -45,9 +45,9 @@ enum {
 //    NET_C_FE_CONGESTED = 0x2E,
 //
 //    NET_C_TREE_NO_ROUTE   = 0x30,   //:        :no args
-//    NET_C_TREE_NEW_PARENT = 0x31,   //:        :parent_id, hopcount, metric
+    NET_C_TREE_NEW_PARENT = 0x31,   //:        :parent_id, hopcount, metric  // REINSERTED BY FABRIZIO
 //    NET_C_TREE_ROUTE_INFO = 0x32,   //:periodic:parent_id, hopcount, metric
-//    NET_C_TREE_SENT_BEACON = 0x33,
+    NET_C_TREE_SENT_BEACON = 0x33,	// INSERTED BY FABRIZIO
 //    NET_C_TREE_RCV_BEACON = 0x34,
 //
 //    NET_C_DBG_1 = 0x40,             //:any     :uint16_t a

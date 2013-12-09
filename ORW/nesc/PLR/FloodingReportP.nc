@@ -139,7 +139,7 @@ implementation {
 
   }
 
-  command void StatsReport.report(StatsMsg * st_msg) {
+  command void StatsReport.report(message_t * st_msg) {
 
 #ifndef ROUTING_NODE
     call Leds.led0Off();
@@ -155,7 +155,7 @@ implementation {
       }
     }
 
-    enqueueStat(&st_msg);
+    enqueueStat(st_msg);
 #endif
 
   }

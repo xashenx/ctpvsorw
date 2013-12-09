@@ -1,8 +1,8 @@
-#include "Ctp.h"
+ #include "opp.h"
 
-#ifdef PRINTF_SUPPORT
-#include "printf.h"
-#endif
+ #ifdef PRINTF_SUPPORT
+ #include "printf.h"
+ #endif
 
 configuration RoutingInfoC {
   uses {
@@ -22,15 +22,16 @@ configuration RoutingInfoC {
 }
 
 implementation {
-  components CollectionC as Collector;
+  //components CollectionC as Collector;
+  components OppC;
   components RoutingInfoP;
 
   RoutingInfoP.Boot = Boot;
   RoutingInfoP.Leds = Leds;
-  RoutingInfoP.CollectionPacket -> Collector;
-  RoutingInfoP.CtpInfo -> Collector;
+  //RoutingInfoP.CollectionPacket -> OppC;
+  //RoutingInfoP.CtpInfo -> OppC;
   RoutingInfoP.AMPacket = AMPacket;
-  RoutingInfoP.CollectionDebug <- Collector.CollectionDebug;
+  //RoutingInfoP.CollectionDebug <- Collector.CollectionDebug;
   RoutingInfoP.RoutingInfo = RoutingInfo;
 
 #ifdef PRINTF_SUPPORT
