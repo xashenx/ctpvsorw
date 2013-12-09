@@ -1,9 +1,17 @@
 #!/bin/bash
-  echo Building sink node... 
-  OBJECTIVE=SINK make tmote
+
+echo Building sink node... 
+if [[ $# = 4 && $4 = "LSLEEP="* ]]; then
+	OBJECTIVE=SINK make tmote ctp $4
+else
+	OBJECTIVE=SINK make tmote ctp
+fi
+
 if [ $# = "2" ]; then
-  read -p "Insert the mote to $2 and press any key to continue..."
-  make tmote reinstall,$1 $2
+	read -p "Insert the mote to $2 and press any key to continue..."
+	make tmote reinstall,$1 $2
 elif [[ $# = 3 && $3 = "silent" ]]; then
-  make tmote reinstall,$1 $2
+	make tmote reinstall,$1 $2
+elif [[ $# = 4 && $3 = "silent" && $4 = "LSLEEP="* ]]; then
+	make tmote reinstall,$1 $2
 fi

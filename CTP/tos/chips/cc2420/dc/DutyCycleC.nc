@@ -43,6 +43,7 @@ implementation {
 	components MainC;
 	components new TimerMilliC();
 	components LedsC;
+	components CC2420ActiveMessageC;
 	
 	MainC -> DutyCycleP.Init;
 	
@@ -55,5 +56,5 @@ implementation {
 	DutyCycleP.LocalTime32khz -> CounterToLocalTimeC;
 	
 	DutyCycleP.Leds -> LedsC;
-	
+	DutyCycleP.LowPowerListening -> CC2420ActiveMessageC;
 }

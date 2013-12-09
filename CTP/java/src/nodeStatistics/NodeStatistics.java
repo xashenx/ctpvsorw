@@ -50,10 +50,10 @@ public class NodeStatistics {
 	private int msgForwarded;
 
 	/** Time spent listening during duty cycles*/
-	private long dcIdle;
+	private int dcIdle;
 	
 	/** Time spent transmitting during duty cycles*/
-	private long dcData;
+	private int dcData;
 
 	/**
 	 * @param acksFailedCount
@@ -79,7 +79,7 @@ public class NodeStatistics {
 			int duplicatesReceivedCount, int lastParent, int lostCount,
 			int msgCount, int nodeId, int parentOverflowCount,
 			int parentsChanges, int parentsCount, int txQueueFullCount,
-			int msgForwarded, long dcIdle, long dcData) {
+			int msgForwarded, int dcIdle, int dcData) {
 		this.acksFailedCount = acksFailedCount;
 		this.acksReceivedCount = acksReceivedCount;
 		this.beaconsSentCount = beaconsSentCount;
@@ -202,14 +202,14 @@ public class NodeStatistics {
 	/**
 	 *  @return the dcIdle
 	 */
-	public long getDcIdle(){
+	public int getDcIdle(){
 		return dcIdle;
 	}
 
 	/**
 	 *  @return the dcData
 	 */
-	public long getDcData(){
+	public int getDcData(){
 		return dcData;
 	}
 }

@@ -49,9 +49,9 @@ public class RuntimeStatistics {
 	
 	private int msgForwarded;
 	
-	private long dcIdle;
+	private int dcIdle;
 
-	private long dcData;
+	private int dcData;
 
 	private int voltage;
 
@@ -75,7 +75,7 @@ public class RuntimeStatistics {
 			int beaconsSentCount, int duplicatesDroppedCount,
 			int duplicatesReceivedCount, int lastParent, int msgCount,
 			int nodeId, int parentOverflowCount, int parentsCount,
-			int txQueueFullCount, int msgForwarded, long dcIdle, long dcData,
+			int txQueueFullCount, int msgForwarded, int dcIdle, int dcData,
 			int temperature, int humidity, int voltage) {
 		this.acksFailedCount = acksFailedCount;
 		this.acksReceivedCount = acksReceivedCount;
@@ -200,14 +200,14 @@ public class RuntimeStatistics {
 /**
 	 * @return the dcIdle
 	 */
-	public long getDcIdle() {
+	public int getDcIdle() {
 		return dcIdle;
 	}
 
 	/**
 	 * @return the dcData
 	 */
-	public long getDcData() {
+	public int getDcData() {
 		return dcData;
 	}
 

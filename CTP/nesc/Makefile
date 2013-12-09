@@ -1,26 +1,26 @@
+TOSMAKE_PATH=../support/make/
+
 COMPONENT=GlobalTestAppC
+
 CFLAGS += -DCC2420_DEF_RFPOWER=27
 CFLAGS += -DCC2420_DEF_CHANNEL=17
 CFLAGS += -DACK_LOW_POWER_LISTENING
 MSG_SIZE = 94
-CFLAGS += -I$(TOSDIR)/lib/net \
-          -I$(TOSDIR)/lib/net/le \
-          -I$(TOSDIR)/lib/net/ctp \
-          -I$(TOSDIR)/chips/cc2420/interfaces \
-          -IroutingTest/common \
-		  -IroutingTest/common/routingInfo \
-		  -IPLR
+
 
 PFLAGS += -DCTP_CLEAR
 PFLAGS += -DLPL_COEXISTENCE
 PFLAGS += -DCTP_REPORT
 PFLAGS += -DRADIO_ACTIVATIONS
 
-#OPPXMAC_ROOT=I$(TOSDIR)/chips/cc2420
-
-CFLAGS += -I$(TOSDIR)/chips/cc2420/dc \
-
+CFLAGS += -IroutingTest/common \
+	  -IroutingTest/common/routingInfo \
+	  -IPLR
 # PFLAGS += -DCTP_RADIO_SETTINGS
+
+ifdef LSLEEP
+CFLAGS += -DLOCAL_SLEEP=$(LSLEEP)
+endif
 
 ifeq ($(OBJECTIVE),SINK)
 CFLAGS += -IroutingTest/sink_node 
@@ -34,7 +34,7 @@ CFLAGS += -DMSG_LOGGER
 endif
 
 ifeq ($(OBJECTIVE),NET)
-CFLAGS += -IroutingTest/net_node 
+CFLAGS += -IroutingTest/net_node
 endif
 
 ifeq ($(OBJECTIVE),BRIDGE_SINK)

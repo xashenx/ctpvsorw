@@ -14,6 +14,7 @@ implementation {
   components new TimerMilliC() as Timer;
   components new TimerMilliC() as ConfigFwTimer;
   components RandomC;
+  components DutyCycleC;
   
   components new AMSenderC(AM_CONFIG_MSG) as ConfigSend;
   components new AMReceiverC(AM_CONFIG_MSG) as ConfigReceive;
@@ -52,4 +53,5 @@ implementation {
   TestManagerC.PrintfControl -> PrintfC;
   TestManagerC.PrintfFlush -> PrintfC;
 #endif
+  TestManagerC.DutyCycle -> DutyCycleC;
 }

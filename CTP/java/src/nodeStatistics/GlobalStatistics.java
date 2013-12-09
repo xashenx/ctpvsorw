@@ -37,7 +37,7 @@ public class GlobalStatistics {
 
 	static public int msgForwarded = 0;
 	
-	static public long dcIdle = 0;
+	static public int dcIdle = 0;
 	
-	static public long dcData = 0;
+	static public int dcData = 0;
 }

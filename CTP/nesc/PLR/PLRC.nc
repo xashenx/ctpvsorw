@@ -1,12 +1,12 @@
-#include <Timer.h>
-#include "PLR.h"
-#include <UserButton.h>
+ #include <Timer.h>
+ #include "PLR.h"
+ #include <UserButton.h>
 
-#ifdef PRINTF_SUPPORT
-#include "printf.h"
-#endif
+ #ifdef PRINTF_SUPPORT
+ #include "printf.h"
+ #endif
 
-#define MIN_DELTA 3000
+ #define MIN_DELTA 3000
 
 module PLRC {
 

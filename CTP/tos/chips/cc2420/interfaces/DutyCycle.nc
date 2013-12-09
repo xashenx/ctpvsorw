@@ -38,7 +38,11 @@
   
 	command void radioOff(bool action);
 	
-	command uint32_t getTimeData();
+	command uint16_t getTimeData();
 
-	command uint32_t getTimeIdle();
+	command uint16_t getTimeIdle();
+
+	command void startExperiment();
+	
+	command void stopExperiment();
 } 

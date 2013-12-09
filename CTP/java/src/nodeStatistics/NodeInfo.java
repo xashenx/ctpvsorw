@@ -50,9 +50,9 @@ public class NodeInfo {
 
 	private int lastForwardedMsg = 0;
 
-	private long lastDcIdle = 0;
+	private int lastDcIdle = 0;
 
-	private long lastDcData = 0;
+	private int lastDcData = 0;
 
 	/**
 	 * The last message sent by the nodeStatistics and received. It is not

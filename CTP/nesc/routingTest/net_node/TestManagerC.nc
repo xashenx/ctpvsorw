@@ -19,6 +19,7 @@ module TestManagerC {
     interface Receive as ConfigReceive;
 
    interface ResetFlooding;
+   interface DutyCycle;
 
 #ifdef LPL_COEXISTENCE
     interface LowPowerListening;
@@ -45,7 +46,6 @@ implementation {
      memcpy(msg, &config, sizeof(config_msg_t));
      call ResetFlooding.reset();
 #ifdef LPL_COEXISTENCE
-     //call LowPowerListening.setRxSleepInterval(&config_packet, 100);
      call LowPowerListening.setRxSleepInterval(&config_packet, 0);
 #endif
      if (call ConfigSend.send(AM_BROADCAST_ADDR, &config_packet, 
@@ -75,7 +75,11 @@ implementation {
       //call Leds.led0Off();
       call Leds.led1On();
       // CHANGE FROM FABRIZIO
-      call LowPowerListening.setLocalSleepInterval(2048);
+      call DutyCycle.startExperiment();
+      #ifdef LOCAL_SLEEP
+      call LowPowerListening.setLocalSleepInterval(LOCAL_SLEEP);
+      #endif
+
       // END OF CHANGE
       test_state = RUNNING_APP;
       call RoutingTester.activateTask(config.randomize_start,
@@ -89,6 +93,15 @@ implementation {
     } else if (test_state == STOPPING_APP){
       call RoutingTester.stopRouting();
       test_state = DONE;
+      // CHANGE FROM FABRIZIO
+      // setting back the radio as always on
+      // so net_nodes will be waiting for further config messages
+      call DutyCycle.stopExperiment();
+      #ifdef LOCAL_SLEEP
+      #warning changing the Local Sleep!
+      call LowPowerListening.setLocalSleepInterval(0);
+      #endif
+      // END OF CHANGE
       call Leds.set(0);
     }
   }

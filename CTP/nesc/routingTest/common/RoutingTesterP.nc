@@ -46,8 +46,8 @@ implementation {
   parent_t parents[MAX_PARENTS];
   uint8_t current_parent_index;
   uint32_t last_time_recorded;
-  uint32_t dcIdle;
-  uint32_t dcData;
+  uint16_t dcIdle;
+  uint16_t dcData;
   uint16_t currentTick;
 
   message_t packet;
@@ -103,9 +103,7 @@ implementation {
   void sendMsg(){
     uint8_t i;
     uint16_t parent_id;
-    uint32_t timeIdle;
     data_msg_t* msg = (data_msg_t*) call Send.getPayload(&packet);
-    timeIdle = (uint32_t) call DutyCycle.getTimeIdle();
     msg->temperature = currentTemp;
     msg->humidity = currentHum;
     msg->voltage = currentBat;

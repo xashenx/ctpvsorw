@@ -248,10 +248,10 @@ implementation {
   command uint16_t LowPowerListening.sleepIntervalToDutyCycle(
       uint16_t sleepInterval) {
     if(sleepInterval == 0) {
-      return 10000;
+      return 100;
     }
     
-    return getActualDutyCycle((DUTY_ON_TIME * 10000) 
+    return getActualDutyCycle((DUTY_ON_TIME * 100) 
         / (sleepInterval + DUTY_ON_TIME));
   }
 
@@ -378,7 +378,6 @@ implementation {
   }
     
   event void SubControl.stopDone(error_t error) {
-    call DutyCycle.radioOff(action);
     if(!error) {
       call DutyCycle.radioOff(action);
 

@@ -3,8 +3,14 @@ clear
 
 echo -e "THIS SCRIPT WILL FLASH ALL THE NODE BUT IT WORKS UNDER SOME ASSUMPTIONS:\n"
 echo -e "\tSink is mounted on /dev/ttyUSB0\n"
-echo -e "\tThe other nodes are mounte from /dev/ttyUSB1 to /dev/ttyUSB$1\n"
+echo -e "\tThe other nodes are mounted from /dev/ttyUSB1 to /dev/ttyUSB$1\n"
 read -p "press any key to continue..."
 
-./make.sink 0 "bsl,/dev/ttyUSB0" "silent"
-./make.net $1 "silent"
+
+if [[ $2 = "LSLEEP="* ]]; then
+	./make.sink 0 "bsl,/dev/ttyUSB0" silent $2
+	./make.net $1 silent $2
+else
+	./make.sink 0 "bsl,/dev/ttyUSB0" silent
+	./make.net $1 silent
+fi
