@@ -14,12 +14,13 @@ module TestManagerC {
     interface RoutingTester;
     interface Timer<TMilli> as ConfigFwTimer;
     interface Random;
+    interface Receive;
     
     interface AMSend as ConfigSend;
     interface Receive as ConfigReceive;
 
-   interface ResetFlooding;
-   interface DutyCycle;
+   //interface ResetFlooding;
+   //interface DutyCycle;
 
 #ifdef LPL_COEXISTENCE
     interface LowPowerListening;
@@ -42,11 +43,11 @@ implementation {
   event void ConfigFwTimer.fired()
   {
      config_msg_t *msg = (config_msg_t *)
-           call ConfigSend.getPayload(&config_packet);
+           call ConfigSend.getPayload(&config_packet,sizeof(config_msg_t));
      memcpy(msg, &config, sizeof(config_msg_t));
-     call ResetFlooding.reset();
+     //call ResetFlooding.reset();
 #ifdef LPL_COEXISTENCE
-     call LowPowerListening.setRxSleepInterval(&config_packet, 0);
+     call LowPowerListening.setRemoteWakeupInterval(&config_packet, 0);
 #endif
      if (call ConfigSend.send(AM_BROADCAST_ADDR, &config_packet, 
             sizeof(config_msg_t)) != SUCCESS)
@@ -75,7 +76,7 @@ implementation {
       //call Leds.led0Off();
       call Leds.led1On();
       // CHANGE FROM FABRIZIO
-      call DutyCycle.startExperiment();
+      //call DutyCycle.startExperiment();
       #ifdef LOCAL_SLEEP
       call LowPowerListening.setLocalSleepInterval(LOCAL_SLEEP);
       #endif
@@ -96,7 +97,7 @@ implementation {
       // CHANGE FROM FABRIZIO
       // setting back the radio as always on
       // so net_nodes will be waiting for further config messages
-      call DutyCycle.stopExperiment();
+      //call DutyCycle.stopExperiment();
       #ifdef LOCAL_SLEEP
       #warning changing the Local Sleep!
       call LowPowerListening.setLocalSleepInterval(0);
@@ -130,6 +131,13 @@ implementation {
     call Timer.startOneShot(1000ULL * config.wait_period);
     call Leds.set(0);
   }
+
+event message_t* Receive.receive(message_t* bufPtr, 
+				   void* payload, uint8_t len){
+    return bufPtr;
+  }
+
+
 
 #ifdef PRINTF_SUPPORT
   event void PrintfControl.startDone(error_t error) {}

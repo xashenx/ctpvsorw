@@ -7,9 +7,9 @@
  #include "printf.h"
  #endif
 
- #ifdef MSG_LOGGER
+ /*#ifdef MSG_LOGGER
  #include "StorageVolumes.h"
- #endif
+ #endif*/
 
 module TestManagerC {
   uses {
@@ -21,18 +21,18 @@ module TestManagerC {
     interface Receive;
     interface AMPacket;
     interface RoutingTester;
-    interface Queue<result_msg_t>;
+    interface Queue<result_msg_t> as ResultQueue;
     interface AMSend as ConfigSend;
 
-    interface ResetFlooding;
+    //interface ResetFlooding;
 
-#ifdef MSG_LOGGER
+/*#ifdef MSG_LOGGER
     interface Timer<TMilli> as FwTimer;
     interface LogRead;
     interface LogWrite;
     interface AMSend as ReportSend;
     interface Receive as ConfigReceive;
-#endif
+#endif*/
 
 #ifdef ALTERNATE_RADIO_FLASH
     interface SplitControl as AMControl;
@@ -181,13 +181,15 @@ implementation {
                                    void* payload, 
                                    uint8_t len) {
     result_msg_t temp;
+    //result_msg_t *temp2;
     call Leds.led2Toggle();
     if (len == sizeof(data_msg_t) && test_state != DONE){
       data_msg_t* net_msg = (data_msg_t *) payload;
-      if (call Queue.size() < call Queue.maxSize()) {
+      if (call ResultQueue.size() < call ResultQueue.maxSize()) {
         memcpy(&(temp.data_msg), net_msg, sizeof(data_msg_t));
+        //memcpy(temp2, net_msg, sizeof(data_msg_t));
         temp.rep_seq_no = ++last_result_seq_no;
-        call Queue.enqueue(temp);
+        call ResultQueue.enqueue(temp);
 #ifdef SERIAL_FW
         if (!serialBusy) {
           post serialSend();
@@ -204,13 +206,13 @@ implementation {
 
 #ifdef SERIAL_FW
  task void serialSend() {
-   if (call Queue.empty()) {
+   if (call ResultQueue.empty()) {
      return;
    }
    else if (!serialBusy) {
-     result_msg_t temp = call Queue.head();
+     result_msg_t temp = call ResultQueue.head();
      result_msg_t* msg = (result_msg_t*) call
-       SerialSend.getPayload(&packet);
+       SerialSend.getPayload(&packet,sizeof(result_msg_t));
      memcpy(msg, &temp, sizeof(result_msg_t));
      if (call SerialSend.send(AM_BROADCAST_ADDR,
                               &packet,
@@ -227,13 +229,13 @@ implementation {
   task void flashLog()
   {
     result_msg_t temp;
-    if (call Queue.empty()){
+    if (call ResultQueue.empty()){
       flashBusy = FALSE;
 #ifdef ALTERNATE_RADIO_FLASH
       call AMControl.start();
 #endif
     } else {
-      temp = call Queue.head();
+      temp = call ResultQueue.head();
 #ifdef ALTERNATE_RADIO_FLASH
       call AMControl.stop();
 #endif
@@ -250,12 +252,12 @@ implementation {
   event void ConfigFwTimer.fired()
   {
     config_msg_t *msg = (config_msg_t *)
-      call ConfigSend.getPayload(&config_packet);
+      call ConfigSend.getPayload(&config_packet,sizeof(config_msg_t));
     memcpy(msg, &config, sizeof(config_msg_t));
     call Leds.led2Toggle();
-    call ResetFlooding.reset();   
+    //call ResetFlooding.reset();   
 #ifdef LPL_COEXISTENCE
-    call LowPowerListening.setRxSleepInterval(&config_packet, 0);
+    call LowPowerListening.setRemoteWakeupInterval(&config_packet, 0);
 #endif
     if (call ConfigSend.send(AM_BROADCAST_ADDR, &config_packet, 
                              sizeof(config_msg_t)) != SUCCESS)
@@ -306,9 +308,9 @@ implementation {
 #ifdef SERIAL_FW
   event void SerialSend.sendDone(message_t* msg, error_t error) {
     if (error == SUCCESS)
-      call Queue.dequeue();
+      call ResultQueue.dequeue();
     serialBusy = FALSE;
-    if (!call Queue.empty()) {
+    if (!call ResultQueue.empty()) {
       post serialSend();
     }
   }
@@ -358,7 +360,7 @@ implementation {
         error_t err)
   {
     if (err == SUCCESS)
-      call Queue.dequeue();
+      call ResultQueue.dequeue();
     post flashLog();
   }
 

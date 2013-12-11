@@ -6,20 +6,20 @@
  #include "printf.h"
  #endif
 
- #ifdef MSG_LOGGER
+ /*#ifdef MSG_LOGGER
  #include "StorageVolumes.h"
- #endif
+ #endif*/
 
 configuration TestAppC {
-  uses interface ResetFlooding;
+  //uses interface ResetFlooding;
 }
 
 implementation {
-  components MainC, LedsC, ActiveMessageC;
-  components CollectionC as Collector;
+  components MainC, LedsC, ActiveMessageC,OppC;
+  //components CollectionC as Collector;
   components RoutingTesterC;
   components TestManagerC;
-  components new QueueC(result_msg_t, 12);
+  components new QueueC(result_msg_t,1) as ResultQueue;
   components new TimerMilliC() as Timer;
   components new TimerMilliC() as ConfigFwTimer;
   components new AMSenderC(AM_CONFIG_MSG) as ConfigSend;
@@ -48,20 +48,20 @@ implementation {
   RoutingTesterC.Boot -> MainC;
   RoutingTesterC.AMPacket -> ActiveMessageC;
   RoutingTesterC.Leds -> LedsC;
-  RoutingTesterC.RadioControl -> ActiveMessageC;
+  //RoutingTesterC.RadioControl -> ActiveMessageC;
 
   TestManagerC.Boot -> MainC;
   TestManagerC.AMPacket -> ActiveMessageC;
   TestManagerC.Leds -> LedsC;
   TestManagerC.RoutingTester -> RoutingTesterC.RoutingTester;
-  TestManagerC.Receive -> Collector.Receive[AM_DATA_MSG];
+  TestManagerC.Receive -> OppC;
   TestManagerC.Timer -> Timer;
   TestManagerC.ConfigFwTimer -> ConfigFwTimer;
-  TestManagerC.Queue -> QueueC;
+  TestManagerC.ResultQueue -> ResultQueue;
   TestManagerC.ConfigSend -> ConfigSend;
   TestManagerC.Random -> RandomC;
 
-  TestManagerC.ResetFlooding = ResetFlooding;
+  //TestManagerC.ResetFlooding = ResetFlooding;
 
 #ifdef MSG_LOGGER
   TestManagerC.FwTimer -> FwTimer;

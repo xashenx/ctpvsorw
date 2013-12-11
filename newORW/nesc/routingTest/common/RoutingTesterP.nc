@@ -9,20 +9,22 @@ module RoutingTesterP {
   uses {
     interface Boot;
     interface SplitControl as RadioControl;
-    interface StdControl as RoutingControl;
-    interface RootControl;
+    //TODO IMPLEMENT THE STOP OF THE ROUTING
+    //interface StdControl as RoutingControl;
+    //interface RootControl;
     interface Leds;
     interface Send;
-    interface AMPacket;
+    //interface AMPacket;
+    interface Packet;
     interface Read<uint16_t> as ReadVoltage;
     interface Read<uint16_t> as ReadTemp;
     interface Read<uint16_t> as ReadHumidity;
     interface Timer<TMilli> as Period;
     interface RoutingInfo;
-    interface CtpClear;
-    interface CtpRadioSettings;
+    //interface CtpClear;
+    //interface CtpRadioSettings;
     interface Random;
-    interface DutyCycle;
+    //interface DutyCycle;
 
 #ifdef PRINTF_SUPPORT
     interface SplitControl as PrintfControl;
@@ -103,11 +105,13 @@ implementation {
   void sendMsg(){
     uint8_t i;
     uint16_t parent_id;
-    data_msg_t* msg = (data_msg_t*) call Send.getPayload(&packet);
+    data_msg_t* msg = (data_msg_t*) call Send.getPayload(&packet,sizeof(data_msg_t));
     msg->temperature = currentTemp;
     msg->humidity = currentHum;
     msg->voltage = currentBat;
-    msg->routing_data.node_addr = call AMPacket.address();
+    // TODO GET IT FROM OPP
+    //msg->routing_data.node_addr = call AMPacket.address();
+    //msg->routing_data.node_addr = call Packet.address();
     msg->routing_data.seq_no = msgSeqNum++;
     msg->routing_data.ack_received = 
       call RoutingInfo.getNumAckReceived();
@@ -121,10 +125,10 @@ implementation {
       call RoutingInfo.getNumDroppedDuplicates();
     msg->routing_data.forwarded =
       call RoutingInfo.getNumForwardedMessages();
-    msg->routing_data.dcIdle =
+    /*msg->routing_data.dcIdle =
       call DutyCycle.getTimeIdle();
     msg->routing_data.dcData =
-      call DutyCycle.getTimeData();
+      call DutyCycle.getTimeData();*/
 
     msg->routing_data.parents_seen = numParentsSeen;
 
@@ -193,17 +197,17 @@ implementation {
   }
 
   command void RoutingTester.startRouting(){
-    call CtpClear.clear();
+    //call CtpClear.clear();
     call RoutingInfo.clearStats();
-    call RoutingControl.start();
+    //call RoutingControl.start();
   }
 
   command void RoutingTester.stopRouting(){
-    call RoutingControl.stop();
+    //call RoutingControl.stop();
   }
 
   command void RoutingTester.setRoot(){
-    call RootControl.setRoot();
+    //call RootControl.setRoot();
   }
 
   command void RoutingTester.activateTask(bool randomize_start,
@@ -239,7 +243,7 @@ implementation {
   }
 
   command void RoutingTester.setPower(uint8_t newPower) {
-    call CtpRadioSettings.setPower(newPower);
+    //call CtpRadioSettings.setPower(newPower);
   }
 
   event void RoutingInfo.parentChanged(){

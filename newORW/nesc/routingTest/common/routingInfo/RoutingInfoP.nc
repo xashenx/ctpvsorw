@@ -1,4 +1,4 @@
- #include "Ctp.h"
+ #include "opp.h"
 
  #ifdef PRINTF_SUPPORT
  #include "printf.h"
@@ -8,8 +8,8 @@ module RoutingInfoP {
   uses {
     interface Boot;
     interface Leds;
-    interface CollectionPacket;
-    interface CtpInfo;
+    //interface CollectionPacket;
+    //interface CtpInfo;
     interface AMPacket;
 
 #ifdef PRINTF_SUPPORT
@@ -20,7 +20,7 @@ module RoutingInfoP {
 
   provides {
     interface RoutingInfo;
-    interface CollectionDebug;
+    //interface CollectionDebug;
   }
 }
 
@@ -49,7 +49,7 @@ implementation {
 #endif
   }
 
-  command error_t CollectionDebug.logEvent(uint8_t type) {
+  /*command error_t CollectionDebug.logEvent(uint8_t type) {
     if (type == NET_C_FE_SEND_QUEUE_FULL){
       num_tx_queue_full++;    
     } else if (type == NET_C_FE_DUPLICATE_CACHE_AT_SEND){
@@ -128,7 +128,7 @@ implementation {
     }
 
     return SUCCESS;
-  }
+  }*/
 
   command void RoutingInfo.clearStats(){
     current_parent = TOS_NODE_ID;
@@ -144,7 +144,8 @@ implementation {
   command uint16_t RoutingInfo.getParent(){
     uint16_t parent;
     error_t err;
-    err = call CtpInfo.getParent(&parent);
+    //err = call CtpInfo.getParent(&parent);
+    err = SUCCESS;
     current_parent = parent;
     if (err == FAIL){
       current_parent = TOS_NODE_ID;
@@ -156,7 +157,8 @@ implementation {
   command uint16_t RoutingInfo.getParentEtx(){
     uint16_t etx;
     error_t err;
-    err = call CtpInfo.getEtx(&etx);
+    //err = call CtpInfo.getEtx(&etx);
+    err = SUCCESS;
     current_parent_etx = 0;
     if (err == SUCCESS){
       current_parent_etx = etx;

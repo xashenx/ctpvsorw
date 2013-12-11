@@ -4,17 +4,17 @@
  #endif
 
 configuration TestAppC {
-  uses interface ResetFlooding;
+  //uses interface ResetFlooding;
 }
 
 implementation {
-  components MainC, LedsC, ActiveMessageC;
+  components MainC, LedsC, ActiveMessageC,OppC;
   components RoutingTesterC;
   components TestManagerC;
   components new TimerMilliC() as Timer;
   components new TimerMilliC() as ConfigFwTimer;
   components RandomC;
-  components DutyCycleC;
+  //components DutyCycleC;
   
   components new AMSenderC(AM_CONFIG_MSG) as ConfigSend;
   components new AMReceiverC(AM_CONFIG_MSG) as ConfigReceive;
@@ -29,19 +29,20 @@ implementation {
   RoutingTesterC.Boot -> MainC;
   RoutingTesterC.AMPacket -> ActiveMessageC;
   RoutingTesterC.Leds -> LedsC;
-  RoutingTesterC.RadioControl -> ActiveMessageC;
+  //RoutingTesterC.RadioControl -> OppC;
 
   TestManagerC.Boot -> MainC;
   TestManagerC.AMPacket -> ActiveMessageC;
   TestManagerC.Leds -> LedsC;
   TestManagerC.RoutingTester -> RoutingTesterC.RoutingTester;
   TestManagerC.Timer -> Timer;
+  TestManagerC.Receive -> OppC;
   TestManagerC.ConfigSend -> ConfigSend;
   TestManagerC.ConfigReceive -> ConfigReceive;
   TestManagerC.ConfigFwTimer -> ConfigFwTimer;
   TestManagerC.Random -> RandomC;
 
-  TestManagerC.ResetFlooding = ResetFlooding;
+  //TestManagerC.ResetFlooding = ResetFlooding;
 
 #ifdef LPL_COEXISTENCE
   TestManagerC.LowPowerListening -> CC2420ActiveMessageC;
@@ -53,5 +54,5 @@ implementation {
   TestManagerC.PrintfControl -> PrintfC;
   TestManagerC.PrintfFlush -> PrintfC;
 #endif
-  TestManagerC.DutyCycle -> DutyCycleC;
+  //TestManagerC.DutyCycle -> DutyCycleC;
 }

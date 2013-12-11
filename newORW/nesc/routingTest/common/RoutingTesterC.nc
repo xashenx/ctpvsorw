@@ -8,7 +8,7 @@
 configuration RoutingTesterC {
   uses {
     interface Boot;
-    interface SplitControl as RadioControl;
+    //interface SplitControl as RadioControl;
     interface AMPacket;
     interface Leds;
     
@@ -24,30 +24,34 @@ configuration RoutingTesterC {
 }
 
 implementation {
-  components CollectionC as Collector;
-  components new CollectionSenderC(AM_DATA_MSG);
+  //components CollectionC as Collector;
+  components OppC;
+  //components new CollectionSenderC(AM_DATA_MSG);
   components RoutingInfoC;
   components RoutingTesterP;
   components new SensirionSht11C() as TempHum;
   components new VoltageC() as Battery;
   components new TimerMilliC() as Period;
-  components CtpRadioSettingsP;
+  //components CtpRadioSettingsP;
   components RandomC;
-  components DutyCycleC;
+  //components DutyCycleC;
 
   RoutingInfoC.Boot = Boot;
   RoutingInfoC.AMPacket = AMPacket;
   RoutingInfoC.Leds = Leds;
 
   RoutingTesterP.Boot = Boot;
-  RoutingTesterP.RadioControl = RadioControl;
-  RoutingTesterP.RootControl -> Collector;
-  RoutingTesterP.RoutingControl -> Collector;
-  RoutingTesterP.Send -> CollectionSenderC;
+  //RoutingTesterP.RadioControl = RadioControl;
+  RoutingTesterP.RadioControl -> OppC;
+  //RoutingTesterP.RootControl -> Collector;
+  //RoutingTesterP.RoutingControl -> OppC;
+  //RoutingTesterP.Send -> CollectionSenderC;
+  RoutingTesterP.Send -> OppC.Send;
   RoutingTesterP.Leds = Leds;
-  RoutingTesterP.AMPacket = AMPacket;
-  RoutingTesterP.CtpClear -> Collector;
-  RoutingTesterP.CtpRadioSettings -> CtpRadioSettingsP;
+  //RoutingTesterP.AMPacket = AMPacket;
+  RoutingTesterP.Packet -> OppC;
+  //RoutingTesterP.CtpClear -> Collector;
+  //RoutingTesterP.CtpRadioSettings -> CtpRadioSettingsP;
 
   RoutingTesterP.RoutingInfo -> RoutingInfoC.RoutingInfo;
   RoutingTesterP.RoutingTester = RoutingTester;
@@ -66,5 +70,5 @@ implementation {
   RoutingTesterP.PrintfControl = PrintfControl;
   RoutingTesterP.PrintfFlush = PrintfFlush;
 #endif
-  RoutingTesterP.DutyCycle -> DutyCycleC;
+  //RoutingTesterP.DutyCycle -> DutyCycleC;
 }

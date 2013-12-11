@@ -1,4 +1,4 @@
-#TOSMAKE_PATH=../support/make/
+TOSMAKE_PATH=../support/make/
 
 COMPONENT=GlobalTestAppC
 
@@ -14,6 +14,9 @@ PFLAGS += -DCTP_REPORT
 PFLAGS += -DRADIO_ACTIVATIONS
 
 CFLAGS += -IPLR
+CFLAGS += -IroutingTest/common
+CFLAGS += -IroutingTest/common/routingInfo
+
 # PFLAGS += -DCTP_RADIO_SETTINGS
 
 ifdef LSLEEP
@@ -28,7 +31,7 @@ CFLAGS += -DLPL_DEF_REMOTE_WAKEUP=2048
 endif
 ifeq ($(OBJECTIVE),SINK)
 CFLAGS += -IroutingTest/sink_node 
-CFLAGS += -DSERIAL_FW
+#CFLAGS += -DSERIAL_FW
 endif
 
 ifeq ($(OBJECTIVE),WINE_SINK)
