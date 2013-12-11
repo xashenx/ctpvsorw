@@ -1,0 +1,75 @@
+*** CtpRoutingEngineP.nc.old	2010-02-19 11:20:09.814397983 +0100
+--- CtpRoutingEngineP.nc	2010-02-19 11:20:48.769546546 +0100
+***************
+*** 101,106 ****
+--- 101,109 ----
+          interface StdControl;
+          interface CtpRoutingPacket;
+          interface Init;
++ #ifdef CTP_CLEAR
++         interface CtpClear;
++ #endif
+      } 
+      uses {
+          interface AMSend as BeaconSend;
+***************
+*** 113,118 ****
+--- 116,128 ----
+          interface Random;
+          interface CollectionDebug;
+          interface CtpCongestion;
++ #ifdef LPL_COEXISTENCE
++         interface LowPowerListening;
++ #endif
++ #ifdef CTP_RADIO_SETTINGS
++         interface CC2420Packet;
++         interface CtpRadioSettings;
++ #endif
+      }
+  }
+  
+***************
+*** 214,219 ****
+--- 224,249 ----
+          return SUCCESS;
+      }
+  
++ #ifdef CTP_CLEAR
++   command error_t CtpClear.clear(){
++     uint8_t maxLength;
++     call BeaconTimer.stop();
++     call RouteTimer.stop();
++     routeUpdateTimerCount = 0;
++     running = FALSE;
++     parentChanges = 0;
++     state_is_root = 0;
++     routeInfoInit(&routeInfo);
++     routingTableInit();
++     my_ll_addr = call AMPacket.address();
++     beaconMsg = call BeaconSend.getPayload(&beaconMsgBuffer);
++     maxLength = call BeaconSend.maxPayloadLength();
++     dbg("TreeRoutingCtl","TreeRouting initialized. (used payload:%d max payload:%d!\n", 
++         sizeof(beaconMsg), maxLength);
++     return SUCCESS;
++   }
++ #endif
++ 
+      command error_t StdControl.start() {
+        //start will (re)start the sending of messages
+        if (!running) {
+***************
+*** 413,418 ****
+--- 443,455 ----
+                    beaconMsg->etx);
+          call CollectionDebug.logEventRoute(NET_C_TREE_SENT_BEACON, beaconMsg->parent, 0, beaconMsg->etx);
+  
++ #ifdef LPL_COEXISTENCE
++         call LowPowerListening.setRxSleepInterval(&beaconMsgBuffer, 0);
++ #endif
++ 
++ #ifdef CTP_RADIO_SETTINGS
++         call CC2420Packet.setPower(&beaconMsgBuffer, call CtpRadioSettings.getPower());
++ #endif
+          eval = call BeaconSend.send(AM_BROADCAST_ADDR, 
+                                      &beaconMsgBuffer, 
+                                      sizeof(ctp_routing_header_t));

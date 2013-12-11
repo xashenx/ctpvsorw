@@ -1,0 +1,9 @@
+#!/bin/bash
+echo Building sink node... 
+OBJECTIVE=WINE_SINK make tmote
+
+if [ $# = "2" ]
+then
+    read -p "Insert the mote with id $1 in $2 and press any key to continue..."
+    make tmote reinstall,$1 $2
+fi

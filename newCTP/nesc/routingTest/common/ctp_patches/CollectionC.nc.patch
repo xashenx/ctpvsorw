@@ -1,0 +1,33 @@
+--- CollectionC.nc.old	2008-07-02 08:49:58.000000000 +0200
++++ CollectionC.nc	2008-07-02 09:07:26.000000000 +0200
+@@ -56,7 +56,10 @@
+ 
+     interface CtpInfo;
+     interface CtpCongestion;
+-    interface RootControl;    
++    interface RootControl;
++#ifdef CTP_CLEAR
++    interface CtpClear;
++#endif
+   }
+ 
+   uses {
+@@ -73,7 +76,7 @@
+   Receive = CtpP.Receive;
+   Snoop = CtpP.Snoop;
+   Intercept = CtpP;
+-
++  
+   Packet = CtpP;
+   CollectionPacket = CtpP;
+   CtpPacket = CtpP;
+@@ -81,6 +84,9 @@
+   CtpInfo = CtpP;
+   CtpCongestion = CtpP;
+   RootControl = CtpP;
++#ifdef CTP_CLEAR
++  CtpClear = CtpP;
++#endif
+ 
+   CollectionId = CtpP;
+   CollectionDebug = CtpP;
