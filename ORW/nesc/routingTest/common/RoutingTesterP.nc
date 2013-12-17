@@ -92,12 +92,12 @@ implementation {
     uint8_t i;
     uint16_t parent_id;
     data_msg_t* msg = (data_msg_t*) call Send.getPayload(&packet,sizeof(data_msg_t));
-    msg->temperature = currentTemp;
+/*    msg->temperature = currentTemp;
     msg->humidity = currentHum;
-    msg->voltage = currentBat;
+    msg->voltage = currentBat;*/
     // TODO GET IT FROM OPP
-    //msg->routing_data.node_addr = call AMPacket.address();
-    //msg->routing_data.node_addr = call Packet.address();
+/*    msg->routing_data.node_addr = call AMPacket.address();
+    msg->routing_data.node_addr = call Packet.address();
     msg->routing_data.seq_no = msgSeqNum++;
     msg->routing_data.ack_received = 
       call RoutingInfo.getNumAckReceived();
@@ -111,13 +111,35 @@ implementation {
       call RoutingInfo.getNumDroppedDuplicates();
     msg->routing_data.forwarded =
       call RoutingInfo.getNumForwardedMessages();
-    /*msg->routing_data.dcIdle =
+    msg->routing_data.dcIdle =
       call DutyCycle.getTimeIdle();
     msg->routing_data.dcData =
       call DutyCycle.getTimeData();*/
+    msg->temperature = TOS_NODE_ID;
+    msg->humidity = 2;
+    msg->voltage = 3;
+    // TODO GET IT FROM OPP
+    msg->routing_data.node_addr = 4;
+    msg->routing_data.seq_no = 5;
+    msg->routing_data.ack_received = 
+      currentTick;
+    msg->routing_data.beacons = 
+      7;
+    msg->routing_data.ack_failed = 
+      8;
+    msg->routing_data.tx_queue_full = 
+      9;
+    msg->routing_data.dropped_duplicates = 
+      10;
+    msg->routing_data.forwarded =
+      11;
+    msg->routing_data.dcIdle =
+      12;
+    msg->routing_data.dcData =
+      13;
+    msg->routing_data.parents_seen = 14;
 
-    msg->routing_data.parents_seen = numParentsSeen;
-
+	parents[2].subunits = 55 + TOS_NODE_ID + currentTick;
     msg->routing_data.parents_no = current_parent_index + 1;
     
     parents[current_parent_index].subunits += call Period.getNow() - 
@@ -157,7 +179,10 @@ implementation {
       parents[i].periods = 0;
       parents[i].subunits = 0;
     }
-
+#ifdef PRINTF
+	printf("sending message of length %u\n",sizeof(*msg));
+	printfflush();
+#endif
     if (call Send.send(&packet, sizeof(data_msg_t)) != SUCCESS) {
     	if(TOS_NODE_ID != SINK_ID)
 	      call Leds.led0On();

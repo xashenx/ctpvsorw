@@ -6,6 +6,10 @@
  #include "printf.h"
  #endif
 
+ #ifdef COOJA
+#warning COOJA IS SET, SINK=1
+ #endif
+
 module ExperimentStarterC {
 
   uses {

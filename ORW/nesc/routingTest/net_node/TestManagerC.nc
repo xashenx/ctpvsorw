@@ -122,6 +122,9 @@ implementation {
       // END OF CHANGE
       call Leds.set(0);
     }
+#ifdef PRINTF
+	printfflush();
+#endif
   }
  
   event message_t *ConfigReceive.receive(message_t *msg, void *payload,

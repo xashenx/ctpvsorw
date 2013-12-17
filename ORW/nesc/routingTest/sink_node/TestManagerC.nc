@@ -105,6 +105,10 @@ implementation {
     post sendBootupMsg();
 #endif
 
+#ifdef DUMMY_START
+   	call ConfigFwTimer.startOneShot(5000);
+#endif
+
 #ifdef PRINTF_SUPPORT
     call PrintfControl.start();
 #endif
@@ -145,7 +149,7 @@ implementation {
         call AMControl.stop();
   }
 #endif
-
+  
   event void Timer.fired() {
     if (test_state == DONE){
       call Leds.led0Toggle();
@@ -184,7 +188,10 @@ implementation {
     result_msg_t temp;
     //result_msg_t *temp2;
 #ifdef PRINTF
-	printf("message received\n");
+//	printf("message received of length %u(%u)\n",len,sizeof(data_msg_t));
+	data_msg_t *tentative = (data_msg_t *)(payload + 4);
+	//printf("temperature: %u; last: %u\n",tentative->temperature,tentative->routing_data.parents[2].subunits);
+	printf("temperature: %u; acks: %u; subunits: %u\n",tentative->temperature,tentative->routing_data.ack_received,tentative->routing_data.parents[2].subunits);
 	printfflush();
 #endif
     call Leds.led2Toggle();
@@ -258,6 +265,16 @@ implementation {
   {
     config_msg_t *msg = (config_msg_t *)
       call ConfigSend.getPayload(&config_packet,sizeof(config_msg_t));
+#ifdef DUMMY_START
+	config.seq_no=1;
+	config.app_period=10;
+	config.wait_period=3;
+	config.routing_boot_period=3;
+	config.run_period=60;
+	config.stop_period=3;
+	config.power=27;
+	config.randomize_start = FALSE;
+#endif 
     memcpy(msg, &config, sizeof(config_msg_t));
     call Leds.led2Toggle();
     //call ResetFlooding.reset();   

@@ -19,7 +19,12 @@ enum {
   // Estimates the minimum time (in ms) for 
   // the radio to send a message
   MIN_SEND_PACKET_TIME = 10, 
-  //SINK_NODE_ID = 1,
+  /*#ifdef COOJA
+  #warning COOJA IS ENABLED! THE SINK IS SET ON 1!
+  SINK_NODE_ID = 1,
+  #else
+  SINK_NODE_ID = 0,
+  #endif*/
   SINK_NODE_ID = 0,
 };
 
