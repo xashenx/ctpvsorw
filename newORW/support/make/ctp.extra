@@ -1,9 +1,0 @@
-CTP_ROOT=../tos
-
-CFLAGS += -I$(TOSDIR) \
-	  -I$(TOSDIR)/lib/net \
-          -I$(TOSDIR)/lib/net/le \
-          -I$(TOSDIR)/lib/net/ctp \
-          -I$(CTP_ROOT)/chips/cc2420/interfaces \
-	  -I$(CTP_ROOT)/chips/cc2420/dc \
-	  -I$(CTP_ROOT)/chips/cc2420/lpl \

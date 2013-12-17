@@ -40,7 +40,6 @@ configuration OppC{
 	provides interface Receive;
 	provides interface Packet;
 	provides interface SplitControl;
-	provides interface StdControl;
 }
 
 implementation {
@@ -74,8 +73,6 @@ implementation {
 	Receive = OppP.Receive;
 	Packet = OppP.Packet;
 	SplitControl = OppP.Control;
-	StdControl = OppP.Std;
-	//OppP.Std -> StdControl;
 
 	MainC -> OppP.Init;
 	MainC -> UniqueP.Init;

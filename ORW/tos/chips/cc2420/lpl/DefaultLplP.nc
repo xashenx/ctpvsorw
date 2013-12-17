@@ -45,7 +45,6 @@
 #include "Lpl.h"
 #include "DefaultLpl.h"
 #include "AM.h"
-#warning FORCING SLEEP INTERVAL TO 0
 
 module DefaultLplP {
   provides {
@@ -139,8 +138,7 @@ implementation {
    * @param intervalMs the length of this node's wakeup interval, in [ms]
    */
   command void LowPowerListening.setLocalWakeupInterval(uint16_t intervalMs) {
-   	//call PowerCycle.setSleepInterval(intervalMs);
-   	call PowerCycle.setSleepInterval(0);
+   	call PowerCycle.setSleepInterval(intervalMs);
   }
   
   /**

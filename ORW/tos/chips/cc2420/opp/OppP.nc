@@ -41,7 +41,6 @@ module OppP{
 	provides interface Init;
 	provides interface Receive;
 	provides interface SplitControl as Control;
-	provides interface StdControl as Std;
 	
 	uses interface Leds;
 	uses interface AMSend as SubSend;
@@ -115,16 +114,6 @@ implementation {
 			post logQueueFull_task();
 		}
 	  	return queueFull;	
-	}
-	
-	command error_t Std.start(){
-		call LowPowerListening.setLocalWakeupInterval(0);
-		return SUCCESS;
-	}
-
-	command error_t Std.stop(){
-		call LowPowerListening.setLocalWakeupInterval(0);
-		return SUCCESS;
 	}
 
 	async command bool Opp.acceptMsg( uint16_t etxPack ){
@@ -350,7 +339,6 @@ implementation {
 
 	event void SubControl.startDone(error_t error) {
 //	    call LowPowerListening.setLocalWakeupInterval(OPP_WAKEUP_INTERVAL);	
-	    call LowPowerListening.setLocalWakeupInterval(0);	
 		signal Control.startDone(error);
   	}
     

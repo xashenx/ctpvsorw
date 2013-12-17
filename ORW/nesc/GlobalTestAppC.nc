@@ -2,8 +2,9 @@ configuration GlobalTestAppC {
 }
 
 implementation {
-  components PreRoutingAppC;
-  components TestNetworkLplAppC;
-  //components RoutingAppC;
-  //components DataAppC;
+  //components PLRAppC;
+  components TestAppC;
+  //components WatchdogC;
+
+  //TestAppC.ResetFlooding -> PLRAppC.ResetFlooding;
 }

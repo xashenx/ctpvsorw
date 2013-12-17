@@ -1,7 +1,0 @@
-#!/bin/bash
-echo Building bridge to serial node...
-OBJECTIVE=BRIDGE_SINK make tmote
-if [ $# = "3" ]
-then
-    for i in $(seq $1 $2); do read -p "Insert mote ${i} in $3 and press any key to continue"; make tmote reinstall,${i} $3;done
-fi

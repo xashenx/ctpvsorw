@@ -4,7 +4,6 @@ echo Building sink node...
 if [[ $# = 4 && $4 = "LSLEEP="* ]]; then
 	OBJECTIVE=SINK make tmote ctp $4
 else
-	#OBJECTIVE=SINK make tmote ctp
 	OBJECTIVE=SINK make tmote oppxmac
 fi
 

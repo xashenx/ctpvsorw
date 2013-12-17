@@ -10,3 +10,4 @@ PFLAGS += -I$(OPPXMAC_ROOT) \
        -I$(OPPXMAC_ROOT)/unique \
        -I$(OPPXMAC_ROOT)/dc \
        -I$(OPPXMAC_ROOT)/lpl \
+       -I$(TOSDIR)/lib/net \
