@@ -37,6 +37,11 @@
 #define MAX_TTL 20
 
 #ifndef SINK_ID
+/*#ifdef COOJA
+#define SINK_ID 1
+#else
+#define SINK_ID 0
+#endif*/
 #define SINK_ID 0
 #endif
 

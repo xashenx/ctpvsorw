@@ -82,14 +82,13 @@ implementation {
     } else if (test_state == BOOTING_ROUTING){
 #ifdef PRINTF
 		printf("phase change: running app\n");
+		printf("initial WakupI: %u\n",call LowPowerListening.getLocalWakeupInterval());
 #endif
       //call Leds.led0Off();
       call Leds.led1On();
       // CHANGE FROM FABRIZIO
       //call DutyCycle.startExperiment();
-      #ifdef LOCAL_SLEEP
-      call LowPowerListening.setLocalSleepInterval(LOCAL_SLEEP);
-      #endif
+      call LowPowerListening.setLocalWakeupInterval(LPL_DEF_LOCAL_WAKEUP);
 
       // END OF CHANGE
       test_state = RUNNING_APP;
@@ -100,27 +99,30 @@ implementation {
     } else if (test_state == RUNNING_APP){
 #ifdef PRINTF
 		printf("phase change: stopping app\n");
+		printf("running WakupI: %u\n",call LowPowerListening.getLocalWakeupInterval());
 #endif
 
       call Leds.led1Off();
       test_state = STOPPING_APP;
       call Timer.startOneShot(1000ULL * config.stop_period);
     } else if (test_state == STOPPING_APP){
-#ifdef PRINTF
-		printf("phase change: end of the test\n");
-#endif
       call RoutingTester.stopRouting();
       test_state = DONE;
       // CHANGE FROM FABRIZIO
       // setting back the radio as always on
       // so net_nodes will be waiting for further config messages
       //call DutyCycle.stopExperiment();
-      #ifdef LOCAL_SLEEP
-      #warning changing the Local Sleep!
-      call LowPowerListening.setLocalSleepInterval(0);
-      #endif
+      call LowPowerListening.setLocalWakeupInterval(0);
       // END OF CHANGE
       call Leds.set(0);
+#ifdef DUMMY_START
+	// so that by unplug and replug the sink we can start another test!
+	last_seq_no = 0;
+#endif
+#ifdef PRINTF
+		printf("phase change: end of the test\n");
+		printf("final WakupI: %u\n",call LowPowerListening.getLocalWakeupInterval());
+#endif
     }
 #ifdef PRINTF
 	printfflush();

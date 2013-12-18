@@ -189,14 +189,18 @@ implementation {
     //result_msg_t *temp2;
 #ifdef PRINTF
 //	printf("message received of length %u(%u)\n",len,sizeof(data_msg_t));
-	data_msg_t *tentative = (data_msg_t *)(payload + 4);
+	//data_msg_t *tentative = (data_msg_t *)(payload + 4);
 	//printf("temperature: %u; last: %u\n",tentative->temperature,tentative->routing_data.parents[2].subunits);
-	printf("temperature: %u; acks: %u; subunits: %u\n",tentative->temperature,tentative->routing_data.ack_received,tentative->routing_data.parents[2].subunits);
-	printfflush();
+	//printf("temperature: %u; acks: %u; subunits: %u\n",tentative->temperature,tentative->routing_data.ack_received,tentative->routing_data.parents[2].subunits);
+	//printfflush();
 #endif
     call Leds.led2Toggle();
-    if (len == sizeof(data_msg_t) && test_state != DONE){
-      data_msg_t* net_msg = (data_msg_t *) payload;
+    if ((len-4) == sizeof(data_msg_t) && test_state != DONE){
+      data_msg_t* net_msg = (data_msg_t *)(payload +4);
+#ifdef PRINTF
+		printf("data message enqueued from %u with %u\n",net_msg->temperature,net_msg->routing_data.parents[2].subunits);
+		printfflush();
+#endif
       if (call ResultQueue.size() < call ResultQueue.maxSize()) {
         memcpy(&(temp.data_msg), net_msg, sizeof(data_msg_t));
         //memcpy(temp2, net_msg, sizeof(data_msg_t));
@@ -329,8 +333,13 @@ implementation {
 
 #ifdef SERIAL_FW
   event void SerialSend.sendDone(message_t* msg, error_t error) {
-    if (error == SUCCESS)
-      call ResultQueue.dequeue();
+    if (error == SUCCESS){
+      	call ResultQueue.dequeue();
+#ifdef PRINTF
+	printf("result message sent via serial\n");
+	printfflush();
+#endif
+    }
     serialBusy = FALSE;
     if (!call ResultQueue.empty()) {
       post serialSend();

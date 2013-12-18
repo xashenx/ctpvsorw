@@ -58,7 +58,7 @@ implementation {
 
   event void AMControl.startDone(error_t err) {
     if (err == SUCCESS) {
-      call LowPowerListening.setLocalWakeupInterval(0);
+      //call LowPowerListening.setLocalWakeupInterval(0);
       if (TOS_NODE_ID == SINK_NODE_ID) {
 	call SerialAMControl.start();
       }

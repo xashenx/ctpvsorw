@@ -78,7 +78,8 @@ module PowerCycleP {
 implementation {
   
   /** The current period of the duty cycle, equivalent of wakeup interval */
-  uint16_t sleepInterval = LPL_DEF_LOCAL_WAKEUP;
+  //uint16_t sleepInterval = LPL_DEF_LOCAL_WAKEUP;
+  uint16_t sleepInterval = 0; // initially we want the radio to be always on!
   
   /** The number of times the CCA has been sampled in this wakeup period */
   uint16_t ccaChecks;
