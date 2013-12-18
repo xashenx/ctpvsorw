@@ -1,4 +1,5 @@
  #include "opp.h"
+ #include "oppDebug.h"
 
  #ifdef PRINTF_SUPPORT
  #include "printf.h"
@@ -20,7 +21,7 @@ module RoutingInfoP {
 
   provides {
     interface RoutingInfo;
-    //interface CollectionDebug;
+    interface OppDebug;
   }
 }
 
@@ -49,10 +50,11 @@ implementation {
 #endif
   }
 
-  /*command error_t CollectionDebug.logEvent(uint8_t type) {
+  command error_t OppDebug.logEvent(uint8_t type) {
     if (type == NET_C_FE_SEND_QUEUE_FULL){
       num_tx_queue_full++;    
-    } else if (type == NET_C_FE_DUPLICATE_CACHE_AT_SEND){
+    //} else if (type == NET_C_FE_DUPLICATE_CACHE_AT_SEND){
+    } else if (type == NET_LL_DUPLICATE){
       num_dropped_duplicates++;
     } else if (type == NET_C_FE_DUPLICATE_CACHE){
       num_dropped_duplicates++;
@@ -78,15 +80,15 @@ implementation {
     return SUCCESS;
   }
  
-  command error_t CollectionDebug.logEventSimple(uint8_t type, uint16_t arg) {
+  command error_t OppDebug.logEventSimple(uint8_t type, uint16_t arg) {
     return SUCCESS;
   }
   
-  command error_t CollectionDebug.logEventDbg(uint8_t type, uint16_t arg1, uint16_t arg2, uint16_t arg3) {
+  command error_t OppDebug.logEventDbg(uint8_t type, uint16_t arg1, uint16_t arg2, uint16_t arg3) {
     return SUCCESS;
   }
   
-  command error_t CollectionDebug.logEventMsg(uint8_t type, uint16_t msg, am_addr_t origin, am_addr_t node) {
+  command error_t OppDebug.logEventMsg(uint8_t type, uint16_t msg, am_addr_t origin, am_addr_t node) {
     if (type == NET_C_FE_SENT_MSG){
       num_ack_received++;
     } else if (type == NET_C_FE_FWD_MSG){
@@ -107,12 +109,14 @@ implementation {
     return SUCCESS;
   }
   
-  command error_t CollectionDebug.logEventRoute(uint8_t type, 
+  command error_t OppDebug.logEventRoute(uint8_t type, 
                                                 am_addr_t parent, 
                                                 uint8_t hopcount, 
                                                 uint16_t metric) {
     if (type == NET_C_TREE_NEW_PARENT){
-      if (parent == INVALID_ADDR){
+      //if (parent == INVALID_ADDR){
+      //TODO CHANGE THIS!
+      if (parent == TOS_NODE_ID){
         current_parent = TOS_NODE_ID;
         current_parent_etx = 0;
         signal RoutingInfo.parentLost();
@@ -128,7 +132,7 @@ implementation {
     }
 
     return SUCCESS;
-  }*/
+  }
 
   command void RoutingInfo.clearStats(){
     current_parent = TOS_NODE_ID;

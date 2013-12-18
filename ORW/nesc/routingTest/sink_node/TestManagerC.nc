@@ -198,7 +198,7 @@ implementation {
     if ((len-4) == sizeof(data_msg_t) && test_state != DONE){
       data_msg_t* net_msg = (data_msg_t *)(payload +4);
 #ifdef PRINTF
-		printf("data message enqueued from %u with %u\n",net_msg->temperature,net_msg->routing_data.parents[2].subunits);
+		printf("data message enqueued from %u with temp %u hum %u\n",net_msg->routing_data.node_addr,net_msg->temperature,net_msg->humidity);
 		printfflush();
 #endif
       if (call ResultQueue.size() < call ResultQueue.maxSize()) {

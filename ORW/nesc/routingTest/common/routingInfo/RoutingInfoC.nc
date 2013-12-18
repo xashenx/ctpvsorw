@@ -18,6 +18,7 @@ configuration RoutingInfoC {
 
   provides{
     interface RoutingInfo;
+    interface OppDebug;
   }
 }
 
@@ -31,7 +32,7 @@ implementation {
   //RoutingInfoP.CollectionPacket -> Collector;
   //RoutingInfoP.CtpInfo -> Collector;
   RoutingInfoP.AMPacket = AMPacket;
-  //RoutingInfoP.CollectionDebug <- Collector.CollectionDebug;
+  RoutingInfoP.OppDebug = OppDebug;
   RoutingInfoP.RoutingInfo = RoutingInfo;
 
 #ifdef PRINTF_SUPPORT

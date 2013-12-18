@@ -98,7 +98,7 @@ implementation {
     // TODO GET IT FROM OPP
 /*    msg->routing_data.node_addr = call AMPacket.address();
     msg->routing_data.node_addr = call Packet.address();
-    msg->routing_data.seq_no = msgSeqNum++;
+    msg->routing_data.seq_no = msgSeqNum++;*/
     msg->routing_data.ack_received = 
       call RoutingInfo.getNumAckReceived();
     msg->routing_data.beacons = 
@@ -111,17 +111,17 @@ implementation {
       call RoutingInfo.getNumDroppedDuplicates();
     msg->routing_data.forwarded =
       call RoutingInfo.getNumForwardedMessages();
-    msg->routing_data.dcIdle =
+    /*msg->routing_data.dcIdle =
       call DutyCycle.getTimeIdle();
     msg->routing_data.dcData =
       call DutyCycle.getTimeData();*/
-    msg->temperature = TOS_NODE_ID;
-    msg->humidity = 2;
-    msg->voltage = 3;
+    msg->temperature = currentTemp;
+    msg->humidity = currentHum;
+    msg->voltage = currentBat;
     // TODO GET IT FROM OPP
-    msg->routing_data.node_addr = 4;
-    msg->routing_data.seq_no = 5;
-    msg->routing_data.ack_received = 
+    msg->routing_data.node_addr = TOS_NODE_ID;
+    msg->routing_data.seq_no = msgSeqNum++;
+    /*msg->routing_data.ack_received = 
       currentTick;
     msg->routing_data.beacons = 
       7;
@@ -132,14 +132,13 @@ implementation {
     msg->routing_data.dropped_duplicates = 
       10;
     msg->routing_data.forwarded =
-      11;
+      11;*/
     msg->routing_data.dcIdle =
       12;
     msg->routing_data.dcData =
       13;
     msg->routing_data.parents_seen = 14;
 
-	parents[2].subunits = 55 + TOS_NODE_ID + currentTick;
     msg->routing_data.parents_no = current_parent_index + 1;
     
     parents[current_parent_index].subunits += call Period.getNow() - 
@@ -200,8 +199,8 @@ implementation {
       call Period.stop();
     } else {
       currentTick++;
-      sendMsg();
-      //call ReadTemp.read();
+      //sendMsg();
+      call ReadTemp.read();
     }
 #ifdef PRINTF_SUPPORT
     call PrintfFlush.flush();
@@ -215,12 +214,14 @@ implementation {
 
   event void ReadTemp.readDone(error_t result, uint16_t val) {  
     currentTemp = val;
-    call ReadHumidity.read();
+    sendMsg();
+    //call ReadHumidity.read();
   }
 
   event void ReadHumidity.readDone(error_t result, uint16_t val) {
     currentHum = val;
-    call ReadVoltage.read();
+    sendMsg();
+    //call ReadVoltage.read();
   }
 
   event void ReadVoltage.readDone(error_t result, uint16_t val) {
