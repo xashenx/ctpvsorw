@@ -41,18 +41,21 @@
 #include "opp.h"
 
 module UniqueP{
-  provides {
-    interface Receive;
-    interface Init;
-  }
+	provides {
+		interface Receive;
+		interface Init;
+		// BEGIN ADD BY FABRIZIO
+		interface OppClear;
+		// END ADD
+	}
   
-  uses {
-    interface Receive as SubReceive;
-    interface OppPacket;
-    interface OppDebug;
-    interface AMPacket;
-    interface Leds;
-  }
+	uses {
+		interface Receive as SubReceive;
+		interface OppPacket;
+		interface OppDebug;
+		interface AMPacket;	
+		interface Leds;
+	}
 }
 
 implementation {
@@ -76,6 +79,22 @@ implementation {
     writeIndex = 0;
     return SUCCESS;
   }
+// BEGIN ADD BY FABRIZIO
+  /***************** Clear Information  ******************/
+	command error_t OppClear.clear(){
+		int i;
+		for(i = 0; i < RECEIVE_HISTORY_SIZE; i++) {
+			receivedMessages[i].source = (am_addr_t) 0xFFFF;
+			receivedMessages[i].seqNum = 0;
+		}
+		writeIndex = 0;
+		#ifdef PRINTF
+		printf("Clear UniqueP\n");
+		printfflush();
+		#endif
+    		return SUCCESS;
+	}
+// END ADD
   
   /***************** Prototypes Commands ***************/
   bool hasSeen(uint16_t source, uint8_t seqNum);

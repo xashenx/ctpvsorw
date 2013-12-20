@@ -32,6 +32,9 @@
  */
  
 #include "opp.h"
+// BEGIN ADD BY FABRIZIO
+#include "route_msg.h"
+// END ADD
 
 module OppP{
 
@@ -116,7 +119,7 @@ implementation {
 	// BEGIN ADD BY FABRIZIO
 	command error_t OppClear.clear(){
 		#ifdef PRINTF
-		printf("OppClear.clear()\n");
+		printf("Clear OppP\n");
 		printfflush();
 		#endif
 	    	seqNum = 0;
@@ -140,6 +143,8 @@ implementation {
 			printf("RC stop OppP\n");
 			printfflush();
 		#endif
+		call Timer.stop();
+		call TxTimer.stop();
 		return SUCCESS;
 	}
 	// END ADD
@@ -164,8 +169,14 @@ implementation {
 	command error_t Send.send(message_t* msg, uint8_t len){
 	    if( appMsgPtr != NULL ) {return EBUSY;}
 	    if( len > call Send.maxPayloadLength() ) {return ESIZE;} 
-	    if( TOS_NODE_ID == SINK_ID ) {return FAIL;}	    	    
-
+	    // BEGIN CHANGE BY FABRIZIO
+	    //if( TOS_NODE_ID == SINK_ID ) {return FAIL;}	    	    
+	    if( TOS_NODE_ID == SINK_ID ) {
+	    	data_msg_t * payload = (data_msg_t *) call SubSend.getPayload(msg,sizeof(data_msg_t));
+		signal Receive.receive(msg, payload, len);
+	    	return SUCCESS;
+	    }	    	    
+	    // END CHANGE
     	//LPL will enable packet acks
     	call Packet.setPayloadLength(msg, len);
  		call OppPacket.init(msg, TOS_NODE_ID, incSeqNum(), 0, FALSE);
@@ -462,12 +473,12 @@ implementation {
 	}
  	
  	void logSent(message_t* msg){
-		//if(call OppPacket.getSeqNNum(msg)!= OPP_DUMMY_SEQ_NUM){
+		if(call OppPacket.getSeqNum(msg)!= OPP_DUMMY_SEQ_NUM){
 			call OppDebug.logEventMsg(NET_C_FE_SENT_MSG, 
 					call OppPacket.getSeqNum(msg), 
 					call OppPacket.getSource(msg), 
                 	call AMPacket.destination(msg));
-		//}
+		}
   	}
 
  	void logSentFail(message_t* msg){
@@ -483,32 +494,33 @@ implementation {
 		    	call OppDebug.logEventMsg(NET_C_FE_RCV_MSG,
 					 call OppPacket.getSeqNum(msg), 
 					 call OppPacket.getSource(msg), 
-		     call AMPacket.source(msg));
+		     //call AMPacket.source(msg));
+		     call AMPacket.type(msg));
 		}
  	}
 
  	void logLLDupReceive(message_t* msg){
 		// BEGIN ADD BY FABRIZIO
-		uint8_t arg2 = call AMPacket.type(msg);
-		
-		#ifdef PRINTF
-			printf("LL: %u\n",arg2);
-			printfflush();
-		#endif
-		if((arg2!=23)){
+		uint8_t type = call AMPacket.type(msg);
+		uint8_t seq_no = call OppPacket.getSeqNum(msg);
+
+		//if((type!=23)){
 			//arg2 = call OppPacket.getSeqNum(msg);
 			// we cannot log seq_no because it might go over 23!
-			arg2 = 1;
-		}
+		//	type = 1;
+		//}
 		// END ADD
- 		call OppDebug.logEventMsg(NET_LL_DUPLICATE, 
-					 //maybe we should log dsn here? 
 		// BEGIN CHANGE BY FABRIZIO
+		if(type!=14 && (type!=23 || seq_no!= OPP_DUMMY_SEQ_NUM)){
+			// !config message &&  !dummy
+	 		call OppDebug.logEventMsg(NET_LL_DUPLICATE, 
+					 //maybe we should log dsn here? 
 					 //call OppPacket.getSeqNum(msg),
-					 arg2,
-		// END CHANGE
+					 type,
 					 call OppPacket.getSource(msg), 
 				     call AMPacket.source(msg));
+		}
+		// END CHANGE
  	}
 
  	void logMediumBusy(message_t* msg){

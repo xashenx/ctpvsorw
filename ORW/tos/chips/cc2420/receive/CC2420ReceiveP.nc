@@ -639,7 +639,7 @@ implementation {
           call CSN.clr();
 	  call RXFIFO.beginRead(buf + 1 + SACK_HEADER_LENGTH,
 				rxFrameLength - SACK_HEADER_LENGTH);
-	acceptMsg=TRUE;
+	//acceptMsg=TRUE;
           return;
         }
 // END OF MOD

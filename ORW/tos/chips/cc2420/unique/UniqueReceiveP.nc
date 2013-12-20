@@ -49,6 +49,7 @@ module UniqueReceiveP @safe() {
     interface Unique;
     interface AsyncUnique;
     interface TxTime;
+    interface OppClear;
   }
   
   uses {
@@ -101,6 +102,27 @@ implementation {
   void insert(uint16_t msgSource, uint8_t msgDsn, uint8_t count, uint32_t txTime, int hold);
 //  uint16_t getSourceKey(message_t *msg);
   
+  /***************** OppClear ***************/
+ 	// BEGIN ADD BY FABRIZIO
+	command error_t OppClear.clear(){
+		int i;
+		atomic {
+			writeIndex = 0;
+			lastSeen = 0;
+		#ifdef PRINTF
+		printf("Clear UniqueReceiveP\n");
+		printfflush();
+		#endif
+	    		for(i = 0; i < RECEIVE_HISTORY_SIZE; i++) {
+      				receivedMessages[i].source = (am_addr_t) 0xFFFF;
+				receivedMessages[i].dsn = 0;
+				receivedMessages[i].count = 0;
+				receivedMessages[i].txTime = 0;
+				receivedMessages[i].hold = 0;
+    			}
+		}
+    		return SUCCESS;
+	}
   /***************** SubReceive Events *****************/
   event message_t *SubReceive.receive(message_t* msg, void* payload, uint8_t len) {
 	
@@ -109,9 +131,9 @@ implementation {
 	int element = hasSeen(msgSource, msgDsn);
 
 	// BEGIN ADD BY FABRIZIO
-	if (call AMPacket.type(msg) == 14){
+	/*if (call AMPacket.type(msg) == 14){
     		return signal Receive.receive(msg, payload, len);
-	}
+	}*/
 	// END ADD
 	
 	if( element != INVALID_ELEMENT ){

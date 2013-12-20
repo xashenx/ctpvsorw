@@ -46,6 +46,9 @@ configuration UniqueReceiveC {
     interface Unique;
     interface AsyncUnique;
     interface TxTime;
+    // BEGIN ADD BY FABRIZIO
+    interface OppClear;
+    // END ADD
   }
   
   uses {
@@ -79,14 +82,12 @@ implementation {
   UniqueReceiveP.LocalTime -> LocalTimeMilliC;
   // BEGIN ADD BY FABRIZIO
   UniqueReceiveP.AMPacket -> ActiveMessageC;
+  OppClear = UniqueReceiveP.OppClear;
   //UniqueReceiveP.OppDebug -> RoutingInfoC;
   //END ADD
   TxTime = UniqueReceiveP.TxTime;
   
   components RandomC;
   UniqueReceiveP.Random -> RandomC;
-  
-  
-  
 }
 

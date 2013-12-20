@@ -52,6 +52,7 @@ implementation {
   uint16_t dcIdle;
   uint16_t dcData;
   uint16_t currentTick;
+  uint16_t sinkAcks;
 
   message_t packet;
   uint16_t msgSeqNum;
@@ -65,6 +66,7 @@ implementation {
     current_parent_index = 0;
     currentTick = 0;
     numParentsSeen = 0;
+    sinkAcks = 0;
     for (i = 0; i < MAX_PARENTS; i++){
       parents[i].addr = TOS_NODE_ID;
       parents[i].etx = 0;
@@ -100,8 +102,11 @@ implementation {
 /*    msg->routing_data.node_addr = call AMPacket.address();
     msg->routing_data.node_addr = call Packet.address();
     msg->routing_data.seq_no = msgSeqNum++;*/
-    msg->routing_data.ack_received = 
-      call RoutingInfo.getNumAckReceived();
+    if(TOS_NODE_ID != SINK_ID)
+	    msg->routing_data.ack_received = 
+      		call RoutingInfo.getNumAckReceived();
+    else
+	    msg->routing_data.ack_received = sinkAcks; 
     msg->routing_data.beacons = 
       call RoutingInfo.getNumBeaconSent();
     msg->routing_data.ack_failed = 
@@ -183,10 +188,10 @@ implementation {
 	printf("sending message of length %u\n",sizeof(*msg));
 	printfflush();
 #endif*/
-    if (call Send.send(&packet, sizeof(data_msg_t)) != SUCCESS) {
-    	if(TOS_NODE_ID != SINK_ID)
+    if (call Send.send(&packet, sizeof(data_msg_t)) != SUCCESS)
 	      call Leds.led0On();
-    }
+    else if(TOS_NODE_ID == SINK_ID)
+	      sinkAcks++;
   }
 
   event void Period.fired(){
@@ -257,6 +262,7 @@ implementation {
     operatingPeriods = taskOperatingPeriods;
     msgSeqNum = 0;
     current_parent_index = 0;
+    sinkAcks = 0;
     numParentsSeen = 0;    
     parents[0].addr = TOS_NODE_ID;
     parents[0].etx = 0;

@@ -35,6 +35,7 @@ implementation {
   components new TimerMilliC() as Period;
   //components CtpRadioSettingsP;
   components RandomC;
+  components UniqueReceiveC;
   //components DutyCycleC;
 #ifdef PRINTF
 	components PrintfC, SerialStartC;
@@ -55,6 +56,7 @@ implementation {
   //RoutingTesterP.AMPacket = AMPacket;
   RoutingTesterP.Packet -> OppC;
   RoutingTesterP.OppClear -> OppC;
+  RoutingTesterP.OppClear -> UniqueReceiveC;
   //RoutingTesterP.CtpRadioSettings -> CtpRadioSettingsP;
 
   RoutingTesterP.RoutingInfo -> RoutingInfoC.RoutingInfo;

@@ -111,11 +111,12 @@ implementation {
   
   command error_t OppDebug.logEventMsg(uint8_t type, uint16_t msg, am_addr_t origin, am_addr_t node) {
     	#ifdef PRINTF
-		printf("logEventMsg(%u): ",type);
+		printf("logEventMsg(%u)(%u)(%u)(%u): ",type,
+				msg,origin,node);
 	#endif
     if (type == NET_C_FE_SENT_MSG){
        	#ifdef PRINTF
-		printf("sent msg from (+ack)");
+		printf("sent msg (+ack)");
 	#endif
       num_ack_received++;
     } else if (type == NET_APP_SENT){

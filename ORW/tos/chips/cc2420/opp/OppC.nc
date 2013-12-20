@@ -85,6 +85,7 @@ implementation {
 	OppClear = OppP.OppClear;
 	StdControl = NbTableP.RoutingControl;
 	OppClear = NbTableP.OppClear;
+	OppClear = UniqueP.OppClear;
 	// END ADD
 
 	MainC -> OppP.Init;

@@ -103,7 +103,7 @@ implementation {
 	command error_t OppClear.clear(){
 		int i;
 		#ifdef PRINTF
-		printf("OppClear.clear()\n");
+		printf("Clear NbTableP\n");
 		printfflush();
 		#endif
 		if( TOS_NODE_ID != SINK_ID ){
