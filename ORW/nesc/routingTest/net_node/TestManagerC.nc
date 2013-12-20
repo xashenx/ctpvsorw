@@ -134,10 +134,14 @@ implementation {
   {
     config_msg_t *data = (config_msg_t *) payload;
 #ifdef PRINTF
-		printf("CONFIG message received\n");
+		printf("CONFIG message received from %u\n",call AMPacket.source(msg));
 #endif
     if (data->seq_no <= last_seq_no)
       return msg;
+#ifdef PRINTF
+	printf("config accepted!!!\n");
+	printfflush();
+#endif
     call Leds.led2Toggle();    
     memcpy(&config, payload, sizeof(config_msg_t));
     last_seq_no = config.seq_no;

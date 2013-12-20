@@ -40,6 +40,10 @@ configuration OppC{
 	provides interface Receive;
 	provides interface Packet;
 	provides interface SplitControl;
+	// BEGIN ADD BY FABRIZIO
+	provides interface StdControl;
+	provides interface OppClear;
+	// END ADD
 }
 
 implementation {
@@ -56,6 +60,9 @@ implementation {
   	components new TimerMilliC() as TxTimer;
   	components RandomC;
   	components UniqueReceiveC;
+	// BEGIN ADD BY FABRIZIO
+	components RoutingInfoC;
+	// END ADD
 #if defined(PLATFORM_MICA2) || defined(PLATFORM_MICA2DOT)
   components CC1000CsmaRadioC as LplRadio;
 #elif defined(PLATFORM_MICAZ) || defined(PLATFORM_TELOSB) || defined(PLATFORM_SHIMMER) || defined(PLATFORM_SHIMMER2) || defined(PLATFORM_INTELMOTE2) || defined(PLATFORM_EPIC)
@@ -73,6 +80,12 @@ implementation {
 	Receive = OppP.Receive;
 	Packet = OppP.Packet;
 	SplitControl = OppP.Control;
+	// BEGIN ADD BY FABRIZIO - ADDING STDCONTROL
+	StdControl = OppP.RoutingControl;
+	OppClear = OppP.OppClear;
+	StdControl = NbTableP.RoutingControl;
+	OppClear = NbTableP.OppClear;
+	// END ADD
 
 	MainC -> OppP.Init;
 	MainC -> UniqueP.Init;
@@ -99,6 +112,10 @@ implementation {
 	UniqueP.OppPacket  -> OppPacketP;
 	UniqueP.AMPacket -> ActiveMessageC;
 	UniqueP.Leds -> LedsC;
+	// BEGIN ADD BY FABRIZIO
+	OppP.OppDebug -> RoutingInfoC;
+	UniqueP.OppDebug -> RoutingInfoC;
+	// END ADD
 	
 	NbTableP.Leds -> LedsC;
 	NbTableP.LocalTime -> LocalTimeMilliC;

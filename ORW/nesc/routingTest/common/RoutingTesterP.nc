@@ -11,7 +11,7 @@ module RoutingTesterP {
     interface Boot;
     interface SplitControl as RadioControl;
     //TODO IMPLEMENT THE STOP OF THE ROUTING
-    //interface StdControl as RoutingControl;
+    interface StdControl as RoutingControl;
     //interface RootControl;
     interface Leds;
     interface Send;
@@ -22,7 +22,7 @@ module RoutingTesterP {
     interface Read<uint16_t> as ReadHumidity;
     interface Timer<TMilli> as Period;
     interface RoutingInfo;
-    //interface CtpClear;
+    interface OppClear;
     //interface CtpRadioSettings;
     interface Random;
     //interface DutyCycle;
@@ -58,6 +58,7 @@ implementation {
 
   event void Boot.booted() {
     uint8_t i;
+    call RoutingControl.stop();
     period = 0;
     operatingPeriods = 0;
     msgSeqNum = 0;
@@ -178,10 +179,10 @@ implementation {
       parents[i].periods = 0;
       parents[i].subunits = 0;
     }
-#ifdef PRINTF
+/*#ifdef PRINTF
 	printf("sending message of length %u\n",sizeof(*msg));
 	printfflush();
-#endif
+#endif*/
     if (call Send.send(&packet, sizeof(data_msg_t)) != SUCCESS) {
     	if(TOS_NODE_ID != SINK_ID)
 	      call Leds.led0On();
@@ -230,13 +231,13 @@ implementation {
   }
 
   command void RoutingTester.startRouting(){
-    //call CtpClear.clear();
+    call OppClear.clear();
     call RoutingInfo.clearStats();
-    //call RoutingControl.start();
+    call RoutingControl.start();
   }
 
   command void RoutingTester.stopRouting(){
-    //call RoutingControl.stop();
+    call RoutingControl.stop();
   }
 
   command void RoutingTester.setRoot(){

@@ -57,6 +57,10 @@ module UniqueReceiveP @safe() {
     interface Leds;
     interface LocalTime<TMilli>;
     interface Random;
+    // CHANGE BY FABRIZIO
+    interface AMPacket;
+	//interface OppDebug;
+    // END CHANGE
   }
 }
 
@@ -99,10 +103,16 @@ implementation {
   
   /***************** SubReceive Events *****************/
   event message_t *SubReceive.receive(message_t* msg, void* payload, uint8_t len) {
-
+	
     uint16_t msgSource = (call CC2420PacketBody.getHeader(msg))->src;
     uint8_t msgDsn = (call CC2420PacketBody.getHeader(msg))->dsn;
 	int element = hasSeen(msgSource, msgDsn);
+
+	// BEGIN ADD BY FABRIZIO
+	if (call AMPacket.type(msg) == 14){
+    		return signal Receive.receive(msg, payload, len);
+	}
+	// END ADD
 	
 	if( element != INVALID_ELEMENT ){
 		uint8_t count;

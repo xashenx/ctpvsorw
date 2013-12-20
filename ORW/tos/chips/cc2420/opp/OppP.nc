@@ -41,6 +41,10 @@ module OppP{
 	provides interface Init;
 	provides interface Receive;
 	provides interface SplitControl as Control;
+	// BEGIN ADD BY FABRIZIO
+	provides interface StdControl as RoutingControl;
+	provides interface OppClear;
+	// END ADD
 	
 	uses interface Leds;
 	uses interface AMSend as SubSend;
@@ -109,6 +113,37 @@ implementation {
     	return SUCCESS;
   	}
 
+	// BEGIN ADD BY FABRIZIO
+	command error_t OppClear.clear(){
+		#ifdef PRINTF
+		printf("OppClear.clear()\n");
+		printfflush();
+		#endif
+	    	seqNum = 0;
+    		currentMsgPtr = NULL;
+	    	appMsgPtr = NULL;
+    		dummyMsgPtr = NULL;
+	    	atomic queueFull = FALSE;
+    		return SUCCESS;
+	}
+
+	command error_t RoutingControl.start(){
+		#ifdef PRINTF
+			printf("RC start OppP\n");
+			printfflush();
+		#endif
+		return SUCCESS;
+	}
+
+	command error_t RoutingControl.stop(){
+		#ifdef PRINTF
+			printf("RC stop OppP\n");
+			printfflush();
+		#endif
+		return SUCCESS;
+	}
+	// END ADD
+
 	bool checkQueue(){
 		if (queueFull){
 			post logQueueFull_task();
@@ -170,13 +205,17 @@ implementation {
 						}		
 						post send_task();
 					} else {
+						// BEGIN ADD BY FABRIZIO
+						// ORIGINAL POSITION BELOW! (THIS IS A RETRANSMISSION IN ANY CASE!
+						logSentFail(msg);
+						// END ADD
 						txCount++;
 						if( txCount < call NbTable.getMaxTxDc() ){
 							//expected, try again, no penalities
 							call NbTable.txEnd(TX_HOLD, txTime);					
 						} else {
 							//fail: need penalty for neighhor table, initiate pull
-							logSentFail(msg);
+							//logSentFail(msg);
 							call OppPacket.setPull(currentMsgPtr, TRUE);		
 							call NbTable.txEnd(TX_FAIL, txTime);
 						}
@@ -423,10 +462,12 @@ implementation {
 	}
  	
  	void logSent(message_t* msg){
-		call OppDebug.logEventMsg(NET_C_FE_SENT_MSG, 
+		//if(call OppPacket.getSeqNNum(msg)!= OPP_DUMMY_SEQ_NUM){
+			call OppDebug.logEventMsg(NET_C_FE_SENT_MSG, 
 					call OppPacket.getSeqNum(msg), 
 					call OppPacket.getSource(msg), 
-                    call AMPacket.destination(msg));
+                	call AMPacket.destination(msg));
+		//}
   	}
 
  	void logSentFail(message_t* msg){
@@ -437,16 +478,35 @@ implementation {
   	}
 
  	void logReceive(message_t* msg){
-    	call OppDebug.logEventMsg(NET_C_FE_RCV_MSG,
+
+		if(call OppPacket.getSeqNum(msg)!= OPP_DUMMY_SEQ_NUM){
+		    	call OppDebug.logEventMsg(NET_C_FE_RCV_MSG,
 					 call OppPacket.getSeqNum(msg), 
 					 call OppPacket.getSource(msg), 
-				     call AMPacket.source(msg));
+		     call AMPacket.source(msg));
+		}
  	}
 
  	void logLLDupReceive(message_t* msg){
+		// BEGIN ADD BY FABRIZIO
+		uint8_t arg2 = call AMPacket.type(msg);
+		
+		#ifdef PRINTF
+			printf("LL: %u\n",arg2);
+			printfflush();
+		#endif
+		if((arg2!=23)){
+			//arg2 = call OppPacket.getSeqNum(msg);
+			// we cannot log seq_no because it might go over 23!
+			arg2 = 1;
+		}
+		// END ADD
  		call OppDebug.logEventMsg(NET_LL_DUPLICATE, 
 					 //maybe we should log dsn here? 
-					 call OppPacket.getSeqNum(msg),
+		// BEGIN CHANGE BY FABRIZIO
+					 //call OppPacket.getSeqNum(msg),
+					 arg2,
+		// END CHANGE
 					 call OppPacket.getSource(msg), 
 				     call AMPacket.source(msg));
  	}

@@ -39,6 +39,10 @@ module NbTableP{
 	provides interface Init;
 	provides interface NbTable;
 	provides interface DutyCycle;
+	// BEGIN ADD BY FABRIZIO
+	provides interface StdControl as RoutingControl;
+	provides interface OppClear;
+	// END ADD
 	
 	uses interface NtDebug;
 	uses interface Leds;
@@ -93,6 +97,48 @@ implementation {
 		}
 		return SUCCESS;
 	}
+
+
+	// BEGIN ADD BY FABRIZIO
+	command error_t OppClear.clear(){
+		int i;
+		#ifdef PRINTF
+		printf("OppClear.clear()\n");
+		printfflush();
+		#endif
+		if( TOS_NODE_ID != SINK_ID ){
+			atomic myEdc = OPP_INVALID_EDC + 1;
+			nextHopEdc = OPP_INVALID_EDC;
+		} else {
+			atomic myEdc = OPP_EDC_TX_PENALTY;
+			nextHopEdc = 0;
+		}
+		indexes = 0;
+		memset(&nbTable, 0, sizeof(nbTable));
+		avgDc = OPP_FLOAT_FAC / 4; //initial dc is one quarter
+		newDc = FALSE;
+		for( i = 0; i < OPP_NB_TABLE_SIZE; i++){
+			nbTable[i].addr = OPP_NT_TABLE_INVALID_ENTRY;		
+		}
+		return SUCCESS;
+	}
+
+	command error_t RoutingControl.start(){
+		#ifdef PRINTF
+			printf("RC start NbTableP\n");
+			printfflush();
+		#endif
+		return SUCCESS;
+	}
+
+	command error_t RoutingControl.stop(){
+		#ifdef PRINTF
+			printf("RC stop NbTableP\n");
+			printfflush();
+		#endif
+		return SUCCESS;
+	}
+	// END ADD
 
 	async command void NbTable.update(uint16_t src, uint8_t edc, bool accept){
 		if( TOS_NODE_ID != SINK_ID && edc < OPP_INVALID_EDC /*&& !accept*/){	

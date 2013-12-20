@@ -48,6 +48,7 @@ module UniqueSendP @safe() {
     interface State;
     interface Random;
     interface CC2420PacketBody;
+    //interface OppDebug;
   }
 }
 
@@ -84,6 +85,9 @@ implementation {
       (call CC2420PacketBody.getHeader(msg))->dsn = localSendId++;
       
       if((error = call SubSend.send(msg, len)) != SUCCESS) {
+      	// CHANGE BY FABRIZIO
+		//call OppDebug.logEventMsg(NET_C_FE_SENT_MSG,1,1,TOS_NODE_ID);
+	// END CHANGE
         call State.toIdle();
       }
       

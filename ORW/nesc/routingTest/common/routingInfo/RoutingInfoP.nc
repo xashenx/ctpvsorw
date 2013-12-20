@@ -1,7 +1,8 @@
  #include "opp.h"
  #include "oppDebug.h"
 
- #ifdef PRINTF_SUPPORT
+// #ifdef PRINTF_SUPPORT
+ #ifdef PRINTF
  #include "printf.h"
  #endif
 
@@ -51,14 +52,30 @@ implementation {
   }
 
   command error_t OppDebug.logEvent(uint8_t type) {
-    if (type == NET_C_FE_SEND_QUEUE_FULL){
+  #ifdef PRINTF
+	printf("logEvent (%u): ",type);
+  #endif
+    //if (type == NET_C_FE_SEND_QUEUE_FULL){
+    if (type == NET_C_FE_MSG_POOL_EMPTY){
+    	#ifdef PRINTF
+		printf("queue full");
+	#endif
       num_tx_queue_full++;    
     //} else if (type == NET_C_FE_DUPLICATE_CACHE_AT_SEND){
     } else if (type == NET_LL_DUPLICATE){
+    	#ifdef PRINTF
+		printf("duplicate");
+	#endif
       num_dropped_duplicates++;
     } else if (type == NET_C_FE_DUPLICATE_CACHE){
+    	#ifdef PRINTF
+		printf("duplicate2");
+	#endif
       num_dropped_duplicates++;
     } else if (type == NET_C_FE_DUPLICATE_QUEUE){
+    	#ifdef PRINTF
+		printf("duplicate3");
+	#endif
       num_dropped_duplicates++;
     }
     //Useless signaled events
@@ -77,6 +94,10 @@ implementation {
     //NET_C_FE_SUBSEND_OFF
     //NET_C_FE_SUBSEND_BUSY
     //NET_C_FE_SUBSEND_SIZE
+    #ifdef PRINTF
+	printf("\n");
+	printfflush();
+    #endif
     return SUCCESS;
   }
  
@@ -89,19 +110,59 @@ implementation {
   }
   
   command error_t OppDebug.logEventMsg(uint8_t type, uint16_t msg, am_addr_t origin, am_addr_t node) {
+    	#ifdef PRINTF
+		printf("logEventMsg(%u): ",type);
+	#endif
     if (type == NET_C_FE_SENT_MSG){
+       	#ifdef PRINTF
+		printf("sent msg from (+ack)");
+	#endif
       num_ack_received++;
+    } else if (type == NET_APP_SENT){
+     	#ifdef PRINTF
+		printf("data application generated");
+	#endif   	
     } else if (type == NET_C_FE_FWD_MSG){
+    	#ifdef PRINTF
+		printf("fwd msg(+ack)");
+	#endif
       num_ack_received++;
     } else if (type == NET_C_FE_SENDDONE_WAITACK){
+    	#ifdef PRINTF
+		printf("wait ack (+failack)");
+	#endif
       num_ack_failed++;
     } else if (type == NET_C_FE_SENDDONE_FAIL_ACK_SEND){
+    	#ifdef PRINTF
+		printf("fail ack send");
+	#endif
       num_ack_failed++;
     } else if (type == NET_C_FE_SENDDONE_FAIL_ACK_FWD){
+    	#ifdef PRINTF
+		printf("fail ack fwd(+ackfail)");
+	#endif
       num_ack_failed++;
-    } else if (type == NET_C_FE_RCV_MSG && !(TOS_NODE_ID == 0)){
-      num_forwarded_messages++;
+    } else if (type == NET_C_FE_RCV_MSG){
+    	if(TOS_NODE_ID!=0){
+	      num_forwarded_messages++;
+      	#ifdef PRINTF
+		printf("forward message(+fwd)");
+	#endif
+	}else{
+      	#ifdef PRINTF
+		printf("received message from %u origin %u",node,origin);
+	#endif
+	}
+    }else if (type == NET_LL_DUPLICATE && msg == 23){
+	num_dropped_duplicates++;
+      	#ifdef PRINTF
+		printf("LL DUPLICATE (+drop)");
+	#endif
     }
+    	#ifdef PRINTF
+		printf("\n");
+		printfflush();
+	#endif
     //Useless signaled events
     //NET_C_FE_LOOP_DETECTED
     //NET_C_FE_RCV_MSG
@@ -113,6 +174,10 @@ implementation {
                                                 am_addr_t parent, 
                                                 uint8_t hopcount, 
                                                 uint16_t metric) {
+    	#ifdef PRINTF
+		printf("logEventRoute %u\n",type);
+		printfflush();
+	#endif
     if (type == NET_C_TREE_NEW_PARENT){
       //if (parent == INVALID_ADDR){
       //TODO CHANGE THIS!

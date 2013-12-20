@@ -281,18 +281,31 @@ implementation {
 #endif 
     memcpy(msg, &config, sizeof(config_msg_t));
     call Leds.led2Toggle();
+    #ifdef PRINTF
+	printf("sending conf message\n");
+	printfflush();
+    #endif
     //call ResetFlooding.reset();   
 #ifdef LPL_COEXISTENCE
     call LowPowerListening.setRemoteWakeupInterval(&config_packet, 0);
 #endif
     if (call ConfigSend.send(AM_BROADCAST_ADDR, &config_packet, 
-                             sizeof(config_msg_t)) != SUCCESS)
+                             sizeof(config_msg_t)) != SUCCESS){
+	#ifdef PRINTF
+		printf("fail of send1\n");
+		printfflush();
+	#endif
       call ConfigFwTimer.startOneShot(call Random.rand32() % 10);
+     }
   }
 
   event void ConfigSend.sendDone(message_t *msg, error_t error)
   {
     if (error != SUCCESS) {
+    	#ifdef PRINTF
+	printf("fail of send2\n");
+	printfflush();
+	#endif
       call ConfigFwTimer.startOneShot(call Random.rand32() % 10);
       return;
     }

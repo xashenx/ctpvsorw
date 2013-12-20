@@ -83,7 +83,6 @@ implementation {
   
   /***************** SubReceive Events *****************/
   event message_t *SubReceive.receive(message_t* msg, void* payload, uint8_t len) {
-
 	opp_header_t* oppHeader;
 	uint16_t source;
 	uint8_t seqNum;
@@ -93,11 +92,19 @@ implementation {
 	oppHeader = (opp_header_t*) payload;
 	source = oppHeader->src;
 	seqNum = oppHeader->seqNum;
+	// CHANGE FROM FABRIZIO //
+	//call OppDebug.logEventMsg(NET_C_FE_RCV_MSG,1,oppHeader->src,TOS_NODE_ID);
+	//call OppDebug.logEventMsg(NET_C_FE_RCV_MSG,call OppPacket.getSeqNum(msg),call OppPacket.getSource(msg),call AMPacket.source(msg));
+	// END CHANGE
 
     if(!hasSeen(source, seqNum)) {
+      /*if(TOS_NODE_ID != SINK_ID && source != TOS_NODE_ID){
+		call OppDebug.logEventMsg(NET_C_FE_RCV_MSG,call OppPacket.getSeqNum(msg),call OppPacket.getSource(msg),call AMPacket.source(msg));
+      }*/
       insert(source, seqNum);
       return signal Receive.receive(msg, payload, len);
     }
+
     logDup(msg);
     return msg;
   }

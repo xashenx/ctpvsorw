@@ -1,6 +1,7 @@
  #include "opp.h"
 
- #ifdef PRINTF_SUPPORT
+ //#ifdef PRINTF_SUPPORT
+ #ifdef PRINTF
  #include "printf.h"
  #endif
 
@@ -26,6 +27,9 @@ implementation {
   //components CollectionC as Collector;
   components OppC;
   components RoutingInfoP;
+  #ifdef PRINTF
+	components PrintfC, SerialStartC;
+  #endif
 
   RoutingInfoP.Boot = Boot;
   RoutingInfoP.Leds = Leds;

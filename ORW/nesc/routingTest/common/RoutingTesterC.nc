@@ -48,13 +48,13 @@ implementation {
   //RoutingTesterP.RadioControl = RadioControl;
   RoutingTesterP.RadioControl -> OppC;
   //RoutingTesterP.RootControl -> Collector;
-  //RoutingTesterP.RoutingControl -> OppC;
+  RoutingTesterP.RoutingControl -> OppC;
   //RoutingTesterP.Send -> CollectionSenderC;
   RoutingTesterP.Send -> OppC.Send;
   RoutingTesterP.Leds = Leds;
   //RoutingTesterP.AMPacket = AMPacket;
   RoutingTesterP.Packet -> OppC;
-  //RoutingTesterP.CtpClear -> Collector;
+  RoutingTesterP.OppClear -> OppC;
   //RoutingTesterP.CtpRadioSettings -> CtpRadioSettingsP;
 
   RoutingTesterP.RoutingInfo -> RoutingInfoC.RoutingInfo;

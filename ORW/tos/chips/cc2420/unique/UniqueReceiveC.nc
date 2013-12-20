@@ -50,6 +50,7 @@ configuration UniqueReceiveC {
   
   uses {
     interface Receive as SubReceive;
+
   }
 }
 
@@ -58,6 +59,10 @@ implementation {
       CC2420PacketC,
       LedsC, LocalTimeMilliC,
       MainC;
+   // BEGIN ADD BY FABRIZIO
+   components ActiveMessageC;
+   // END ADD
+      //RoutingInfoC;
   
   Receive = UniqueReceiveP.Receive;
   DuplicateReceive = UniqueReceiveP.DuplicateReceive;
@@ -72,7 +77,10 @@ implementation {
   
   UniqueReceiveP.Leds -> LedsC;
   UniqueReceiveP.LocalTime -> LocalTimeMilliC;
-  
+  // BEGIN ADD BY FABRIZIO
+  UniqueReceiveP.AMPacket -> ActiveMessageC;
+  //UniqueReceiveP.OppDebug -> RoutingInfoC;
+  //END ADD
   TxTime = UniqueReceiveP.TxTime;
   
   components RandomC;
