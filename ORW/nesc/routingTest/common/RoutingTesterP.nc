@@ -23,7 +23,7 @@ module RoutingTesterP {
     interface Timer<TMilli> as Period;
     interface RoutingInfo;
     interface OppClear;
-    //interface CtpRadioSettings;
+    interface OppRadioSettings;
     interface Random;
     //interface DutyCycle;
 
@@ -255,7 +255,7 @@ implementation {
     uint8_t i;
     uint32_t random_delay;
 #ifdef PRINTF
-	printf("sending task activated(%u,%u,%u)\n",randomize_start,taskPeriod,taskOperatingPeriods);
+	printf("sending task activated(%lu,%i,%lu)\n",randomize_start,taskPeriod,taskOperatingPeriods);
 	printfflush();
 #endif
     period = taskPeriod;
@@ -287,7 +287,7 @@ implementation {
   }
 
   command void RoutingTester.setPower(uint8_t newPower) {
-    //call CtpRadioSettings.setPower(newPower);
+    call OppRadioSettings.setPower(newPower);
   }
 
   event void RoutingInfo.parentChanged(){

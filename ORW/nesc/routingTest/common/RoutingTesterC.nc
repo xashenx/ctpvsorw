@@ -33,7 +33,7 @@ implementation {
   components new SensirionSht11C() as TempHum;
   components new VoltageC() as Battery;
   components new TimerMilliC() as Period;
-  //components CtpRadioSettingsP;
+  components OppRadioSettingsP;
   components RandomC;
   components UniqueReceiveC;
   //components DutyCycleC;
@@ -57,7 +57,7 @@ implementation {
   RoutingTesterP.Packet -> OppC;
   RoutingTesterP.OppClear -> OppC;
   RoutingTesterP.OppClear -> UniqueReceiveC;
-  //RoutingTesterP.CtpRadioSettings -> CtpRadioSettingsP;
+  RoutingTesterP.OppRadioSettings -> OppRadioSettingsP;
 
   RoutingTesterP.RoutingInfo -> RoutingInfoC.RoutingInfo;
   RoutingTesterP.RoutingTester = RoutingTester;

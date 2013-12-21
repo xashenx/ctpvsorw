@@ -62,6 +62,7 @@ implementation {
   	components UniqueReceiveC;
 	// BEGIN ADD BY FABRIZIO
 	components RoutingInfoC;
+	components OppRadioSettingsP;
 	// END ADD
 #if defined(PLATFORM_MICA2) || defined(PLATFORM_MICA2DOT)
   components CC1000CsmaRadioC as LplRadio;
@@ -86,6 +87,8 @@ implementation {
 	StdControl = NbTableP.RoutingControl;
 	OppClear = NbTableP.OppClear;
 	OppClear = UniqueP.OppClear;
+	OppP.CC2420Packet -> LplRadio;
+	OppP.OppRadioSettings -> OppRadioSettingsP;
 	// END ADD
 
 	MainC -> OppP.Init;

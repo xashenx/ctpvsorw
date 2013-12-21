@@ -114,7 +114,6 @@ implementation {
 			nextHopEdc = 0;
 		}
 		indexes = 0;
-		memset(&nbTable, 0, sizeof(nbTable));
 		avgDc = OPP_FLOAT_FAC / 4; //initial dc is one quarter
 		newDc = FALSE;
 		for( i = 0; i < OPP_NB_TABLE_SIZE; i++){

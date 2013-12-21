@@ -115,10 +115,18 @@ implementation {
 				msg,origin,node);
 	#endif
     if (type == NET_C_FE_SENT_MSG){
-       	#ifdef PRINTF
-		printf("sent msg (+ack)");
-	#endif
-      num_ack_received++;
+
+		if(origin != TOS_NODE_ID){
+			num_forwarded_messages++;
+	      	#ifdef PRINTF
+			printf("forward message(+fwd)");
+		#endif
+		}
+ 	      	#ifdef PRINTF
+		else
+			printf("sent msg (+ack)");
+		#endif
+		num_ack_received++;
     } else if (type == NET_APP_SENT){
      	#ifdef PRINTF
 		printf("data application generated");
@@ -144,18 +152,19 @@ implementation {
 	#endif
       num_ack_failed++;
     } else if (type == NET_C_FE_RCV_MSG){
-    	if(TOS_NODE_ID!=0){
+    	if(TOS_NODE_ID==SINK_ID){
+    	/*if(TOS_NODE_ID!=0){
 	      num_forwarded_messages++;
       	#ifdef PRINTF
 		printf("forward message(+fwd)");
 	#endif
-	}else{
+	}else{*/
       	#ifdef PRINTF
 		printf("received message from %u origin %u",node,origin);
 	#endif
 	}
     }else if (type == NET_LL_DUPLICATE && msg == 23){
-	num_dropped_duplicates++;
+	//num_dropped_duplicates++;
       	#ifdef PRINTF
 		printf("LL DUPLICATE (+drop)");
 	#endif

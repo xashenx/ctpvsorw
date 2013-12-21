@@ -67,7 +67,10 @@ module OppP{
     uses interface Unique;
     uses interface TxTime;
     uses interface Timer<TMilli> as TxTimer;
-	
+    	// BEGIN ADD BY FABRIZIO
+	uses interface OppRadioSettings;
+	uses interface CC2420Packet;
+	// END ADD
 } 
 implementation {
 	//split control still missing
@@ -127,6 +130,8 @@ implementation {
 	    	appMsgPtr = NULL;
     		dummyMsgPtr = NULL;
 	    	atomic queueFull = FALSE;
+		while(! call MsgQueue.empty())
+			call MsgQueue.dequeue();
     		return SUCCESS;
 	}
 
@@ -178,11 +183,19 @@ implementation {
 	    }	    	    
 	    // END CHANGE
     	//LPL will enable packet acks
-    	call Packet.setPayloadLength(msg, len);
+    		call Packet.setPayloadLength(msg, len);
  		call OppPacket.init(msg, TOS_NODE_ID, incSeqNum(), 0, FALSE);
 		logAppSent(msg);
 		appMsgPtr = msg;	  
-		call LowPowerListening.setRemoteWakeupInterval(appMsgPtr, LPL_DEF_REMOTE_WAKEUP);		  	    
+		call LowPowerListening.setRemoteWakeupInterval(appMsgPtr, LPL_DEF_REMOTE_WAKEUP);
+		// BEGIN ADD BY FABRIZIO
+		// SETTING THE POWER
+		call CC2420Packet.setPower(appMsgPtr,call OppRadioSettings.getPower());
+		#ifdef PRINTF
+		printf("setting power: %u\n",call OppRadioSettings.getPower());
+		printfflush();
+		#endif
+		// END ADD
 		send();
 		return SUCCESS;
   	}
@@ -237,7 +250,11 @@ implementation {
 					if(call LowPowerListening.getRemoteWakeupInterval(msg) != 0 ){
 						if( call PacketAcknowledgements.wasAcked(msg) || call NbTable.getMyEdc() < OPP_INVALID_EDC ){
 							call NbTable.txEnd(TX_SUCCESS, txTime);
-							logSent(msg);
+							// BEGIN CHANGE BY FABRIZIO
+							// LOG DUMMY MSG AS BEACONS
+							//logSent(msg);
+							call OppDebug.logEventRoute(NET_C_TREE_SENT_BEACON,0,0,0);
+							// END CHANGE
 							currentMsgPtr = NULL;
 							dummyMsgPtr = NULL;
 							post send_task();
