@@ -110,6 +110,7 @@ implementation {
   }
   
   command error_t OppDebug.logEventMsg(uint8_t type, uint16_t msg, am_addr_t origin, am_addr_t node) {
+  if (type)
     	#ifdef PRINTF
 		printf("logEventMsg(%u)(%u)(%u)(%u): ",type,
 				msg,origin,node);
@@ -166,7 +167,12 @@ implementation {
     }else if (type == NET_LL_DUPLICATE && msg == 23){
 	//num_dropped_duplicates++;
       	#ifdef PRINTF
-		printf("LL DUPLICATE (+drop)");
+		printf("LL DUPLICATE (+LLdrop)");
+	#endif
+    } else if (type == NET_C_FE_DUPLICATE_CACHE){
+	num_dropped_duplicates++;
+      	#ifdef PRINTF
+		printf("NET DUPLICATE (+drop)");
 	#endif
     }
     	#ifdef PRINTF

@@ -220,8 +220,8 @@ implementation {
 
   event void ReadTemp.readDone(error_t result, uint16_t val) {  
     currentTemp = val;
-    sendMsg();
-    //call ReadHumidity.read();
+    //sendMsg();
+    call ReadHumidity.read();
   }
 
   event void ReadHumidity.readDone(error_t result, uint16_t val) {
@@ -255,7 +255,7 @@ implementation {
     uint8_t i;
     uint32_t random_delay;
 #ifdef PRINTF
-	printf("sending task activated(%lu,%i,%lu)\n",randomize_start,taskPeriod,taskOperatingPeriods);
+	printf("sending task activated(%u,%lu,%lu)\n",randomize_start,taskPeriod,taskOperatingPeriods);
 	printfflush();
 #endif
     period = taskPeriod;
