@@ -1,7 +1,6 @@
  #include "opp.h"
  #include "oppDebug.h"
 
-// #ifdef PRINTF_SUPPORT
  #ifdef PRINTF
  #include "printf.h"
  #endif
@@ -46,9 +45,6 @@ implementation {
     num_tx_queue_full = 0;
     num_dropped_duplicates = 0;
     num_forwarded_messages = 0;
-#ifdef PRINTF_SUPPORT
-    call PrintfControl.start();
-#endif
   }
 
   command error_t OppDebug.logEvent(uint8_t type) {
@@ -160,10 +156,10 @@ implementation {
 		printf("forward message(+fwd)");
 	#endif
 	}else{*/
-      	#ifdef PRINTF
-		printf("received message from %u origin %u",node,origin);
-	#endif
 	}
+      	#ifdef PRINTF
+		printf("received message %u from %u origin %u",msg,node,origin);
+	#endif
     }else if (type == NET_LL_DUPLICATE && msg == 23){
 	//num_dropped_duplicates++;
       	#ifdef PRINTF

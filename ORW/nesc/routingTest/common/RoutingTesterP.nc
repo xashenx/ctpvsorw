@@ -25,6 +25,7 @@ module RoutingTesterP {
     interface OppClear;
     interface OppRadioSettings;
     interface Random;
+    interface DCevaluator;
     //interface DutyCycle;
 
 #ifdef PRINTF_SUPPORT
@@ -127,20 +128,8 @@ implementation {
     // TODO GET IT FROM OPP
     msg->routing_data.node_addr = TOS_NODE_ID;
     msg->routing_data.seq_no = msgSeqNum++;
-    /*msg->routing_data.ack_received = 
-      currentTick;
-    msg->routing_data.beacons = 
-      7;
-    msg->routing_data.ack_failed = 
-      8;
-    msg->routing_data.tx_queue_full = 
-      9;
-    msg->routing_data.dropped_duplicates = 
-      10;
-    msg->routing_data.forwarded =
-      11;*/
     msg->routing_data.dcIdle =
-      12;
+      call DCevaluator.getActualDutyCycle();
     msg->routing_data.dcData =
       13;
     msg->routing_data.parents_seen = 14;

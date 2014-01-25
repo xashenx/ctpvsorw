@@ -15,7 +15,7 @@ implementation {
   components new TimerMilliC() as Timer;
   components new TimerMilliC() as ConfigFwTimer;
   components RandomC;
-  //components DutyCycleC;
+  components DCevaluatorC;
   
   components new AMSenderC(AM_CONFIG_MSG) as ConfigSend;
   components new AMReceiverC(AM_CONFIG_MSG) as ConfigReceive;
@@ -27,9 +27,7 @@ implementation {
 #ifdef LPL_COEXISTENCE
   components CC2420ActiveMessageC;
 #endif
-#ifdef PRINTF_SUPPORT
-  components PrintfC;
-#endif
+
 
   RoutingTesterC.Boot -> MainC;
   RoutingTesterC.AMPacket -> ActiveMessageC;
@@ -59,5 +57,5 @@ implementation {
   TestManagerC.PrintfControl -> PrintfC;
   TestManagerC.PrintfFlush -> PrintfC;
 #endif
-  //TestManagerC.DutyCycle -> DutyCycleC;
+  TestManagerC.DCevaluator -> DCevaluatorC;
 }

@@ -511,8 +511,8 @@ implementation {
 		    	call OppDebug.logEventMsg(NET_C_FE_RCV_MSG,
 					 call OppPacket.getSeqNum(msg), 
 					 call OppPacket.getSource(msg), 
-		     //call AMPacket.source(msg));
-		     call AMPacket.type(msg));
+		     call AMPacket.source(msg));
+		     //call AMPacket.type(msg));
 		}
  	}
 
@@ -528,7 +528,7 @@ implementation {
 		//}
 		// END ADD
 		// BEGIN CHANGE BY FABRIZIO
-		if(type!=14 && (type!=23 || seq_no!= OPP_DUMMY_SEQ_NUM)){
+		/*if(type!=14 && (type!=23 || seq_no!= OPP_DUMMY_SEQ_NUM)){
 			// !config message &&  !dummy
 	 		call OppDebug.logEventMsg(NET_LL_DUPLICATE, 
 					 //maybe we should log dsn here? 
@@ -536,7 +536,7 @@ implementation {
 					 type,
 					 call OppPacket.getSource(msg), 
 				     call AMPacket.source(msg));
-		}
+		}*/
 		// END CHANGE
  	}
 

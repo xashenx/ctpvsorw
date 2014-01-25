@@ -68,7 +68,8 @@ implementation {
       new TimerMilliC() as SendDoneTimerC,
       SystemLowPowerListeningC,
       LedsC,
-      NbTableP;
+      NbTableP,
+      DCevaluatorC;
 	
 #ifndef NO_OPP_DEBUG
    components DutyCycleC;
@@ -103,4 +104,5 @@ implementation {
   DefaultLplP.DutyCycle -> DutyCycleC;
 #endif	
   DefaultLplP.DutyCycle -> NbTableP;
+  DefaultLplP.DutyCycle -> DCevaluatorC;
 }

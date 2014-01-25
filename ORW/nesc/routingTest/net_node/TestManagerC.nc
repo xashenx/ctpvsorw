@@ -21,7 +21,7 @@ module TestManagerC {
     interface Receive as ConfigReceive;
 
    //interface ResetFlooding;
-   //interface DutyCycle;
+   interface DCevaluator;
 
 #ifdef LPL_COEXISTENCE
     interface LowPowerListening;
@@ -73,22 +73,23 @@ implementation {
     } else if (test_state == WAITING){
 #ifdef PRINTF
 		printf("phase change: booting\n");
+		printf("initial WakupI: %u\n",call LowPowerListening.getLocalWakeupInterval());
 #endif
       call Leds.set(0);
       call Leds.led0On();
+      call LowPowerListening.setLocalWakeupInterval(LPL_DEF_LOCAL_WAKEUP);
       call RoutingTester.startRouting();
       test_state = BOOTING_ROUTING;
       call Timer.startOneShot(1000ULL * config.routing_boot_period);
     } else if (test_state == BOOTING_ROUTING){
 #ifdef PRINTF
 		printf("phase change: running app\n");
-		printf("initial WakupI: %u\n",call LowPowerListening.getLocalWakeupInterval());
+		printf("running WakupI: %u\n",call LowPowerListening.getLocalWakeupInterval());
 #endif
       //call Leds.led0Off();
       call Leds.led1On();
       // CHANGE FROM FABRIZIO
-      //call DutyCycle.startExperiment();
-      call LowPowerListening.setLocalWakeupInterval(LPL_DEF_LOCAL_WAKEUP);
+      call DCevaluator.startExperiment();
 
       // END OF CHANGE
       test_state = RUNNING_APP;
@@ -99,7 +100,6 @@ implementation {
     } else if (test_state == RUNNING_APP){
 #ifdef PRINTF
 		printf("phase change: stopping app\n");
-		printf("running WakupI: %u\n",call LowPowerListening.getLocalWakeupInterval());
 #endif
 
       call Leds.led1Off();
@@ -111,7 +111,7 @@ implementation {
       // CHANGE FROM FABRIZIO
       // setting back the radio as always on
       // so net_nodes will be waiting for further config messages
-      //call DutyCycle.stopExperiment();
+      call DCevaluator.stopExperiment();
       call LowPowerListening.setLocalWakeupInterval(0);
       // END OF CHANGE
       call Leds.set(0);

@@ -36,7 +36,7 @@ implementation {
   components OppRadioSettingsP;
   components RandomC;
   components UniqueReceiveC;
-  //components DutyCycleC;
+  components DCevaluatorC;
 #ifdef PRINTF
 	components PrintfC, SerialStartC;
 #endif 
@@ -76,5 +76,5 @@ implementation {
   RoutingTesterP.PrintfControl = PrintfControl;
   RoutingTesterP.PrintfFlush = PrintfFlush;
 #endif
-  //RoutingTesterP.DutyCycle -> DutyCycleC;
+  RoutingTesterP.DCevaluator -> DCevaluatorC;
 }
