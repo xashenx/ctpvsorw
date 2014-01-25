@@ -1,7 +1,6 @@
  #include <Timer.h>
  #include "route_msg.h"
 
- //#ifdef PRINTF_SUPPORT
  #ifdef PRINTF
  #include "printf.h"
  #endif
@@ -26,12 +25,8 @@ module RoutingTesterP {
     interface OppRadioSettings;
     interface Random;
     interface DCevaluator;
+    interface NbInfo;
     //interface DutyCycle;
-
-#ifdef PRINTF_SUPPORT
-    interface SplitControl as PrintfControl;
-    interface PrintfFlush;
-#endif
   }
 
   provides {
@@ -132,11 +127,22 @@ implementation {
       call DCevaluator.getActualDutyCycle();
     msg->routing_data.dcData =
       13;
-    msg->routing_data.parents_seen = 14;
+    call NbInfo.getActualNeighbors();
 
-    msg->routing_data.parents_no = current_parent_index + 1;
+    if (TOS_NODE_ID != SINK_ID){
+    	msg->routing_data.parents_seen = call NbInfo.getNeighborsSeen();
+
+    	msg->routing_data.parents_no = call NbInfo.getNeighborsNo();
+
+    	for (i = 0; i < MAX_PARENTS; i++){
+    		msg->routing_data.parents[i].addr = parents[i].addr;
+    	 	msg->routing_data.parents[i].etx = parents[i].etx;
+    	  	msg->routing_data.parents[i].periods = parents[i].periods;
+  	    	msg->routing_data.parents[i].subunits = parents[i].subunits;
+  	  }
+	}
     
-    parents[current_parent_index].subunits += call Period.getNow() - 
+    /*parents[current_parent_index].subunits += call Period.getNow() - 
       last_time_recorded;
     last_time_recorded = call Period.getNow();
 
@@ -172,7 +178,7 @@ implementation {
       parents[i].etx = 0;
       parents[i].periods = 0;
       parents[i].subunits = 0;
-    }
+    }*/
 /*#ifdef PRINTF
 	printf("sending message of length %u\n",sizeof(*msg));
 	printfflush();
@@ -280,7 +286,7 @@ implementation {
   }
 
   event void RoutingInfo.parentChanged(){
-    if (current_parent_index < MAX_PARENTS){
+    /*if (current_parent_index < MAX_PARENTS){
       parents[current_parent_index].subunits += call Period.getNow() - 
         last_time_recorded;
       if (parents[current_parent_index].subunits >= period){
@@ -296,11 +302,11 @@ implementation {
       parents[current_parent_index].etx = call RoutingInfo.getParentEtx();
       parents[current_parent_index].periods = 0;
       parents[current_parent_index].subunits = 0;      
-    }
+    }*/
   }
 
   event void RoutingInfo.parentLost(){
-    if (current_parent_index < MAX_PARENTS){
+    /*if (current_parent_index < MAX_PARENTS){
       parents[current_parent_index].subunits += call Period.getNow() - 
         last_time_recorded;
       if (parents[current_parent_index].subunits >= period){
@@ -315,16 +321,14 @@ implementation {
       parents[current_parent_index].etx = 0;
       parents[current_parent_index].periods = 0;
       parents[current_parent_index].subunits = 0;      
-    }
+    }*/
   }
 
-
-#ifdef PRINTF_SUPPORT
-  event void PrintfControl.startDone(error_t error) {}
-
-  event void PrintfControl.stopDone(error_t error) {}
-
-  event void PrintfFlush.flushDone(error_t error) {}
-#endif
+	event void NbInfo.updateNb(uint16_t addr,uint8_t edc, uint8_t position){
+		if(parents[position].addr == addr)
+			parents[position].periods += 1;
+		parents[position].addr = addr;
+		parents[position].etx = edc;
+	}
 
 }

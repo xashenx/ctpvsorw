@@ -42,6 +42,7 @@ module NbTableP{
 	// BEGIN ADD BY FABRIZIO
 	provides interface StdControl as RoutingControl;
 	provides interface OppClear;
+	provides interface NbInfo;
 	// END ADD
 	
 	uses interface NtDebug;
@@ -487,6 +488,22 @@ implementation {
   
 	command void DutyCycle.radioOff(bool action){
 		newDc = TRUE;		
+	}
+
+	// this interface command, lets RoutingTesterP to updat the
+	// top three neighbors before sending the message
+	command void NbInfo.getActualNeighbors(){
+		signal NbInfo.updateNb(nbTable[0].addr,nbTable[0].edc,(uint8_t)0);
+		signal NbInfo.updateNb(nbTable[1].addr,nbTable[1].edc,(uint8_t)1);
+		signal NbInfo.updateNb(nbTable[2].addr,nbTable[2].edc,(uint8_t)2);
+	}
+
+	command uint8_t NbInfo.getNeighborsSeen(){
+
+	}
+
+	command uint8_t NbInfo.getNeighborsNo(){
+
 	}
 	
   	default command error_t NtDebug.dumpTable(nbTableEntry_t* nbTable__, uint8_t* p__, uint8_t type__, uint8_t edc__, uint8_t nextHopEdc__, uint8_t indexesInUse__, uint8_t indexes__, uint32_t avgDc__, uint32_t txTime__, uint32_t timestamp__){

@@ -38,10 +38,4 @@ implementation {
   RoutingInfoP.AMPacket = AMPacket;
   RoutingInfoP.OppDebug = OppDebug;
   RoutingInfoP.RoutingInfo = RoutingInfo;
-
-#ifdef PRINTF_SUPPORT
-  RoutingInfoP.PrintfControl = PrintfControl;
-  RoutingInfoP.PrintfFlush = PrintfFlush;
-#endif
-
 }

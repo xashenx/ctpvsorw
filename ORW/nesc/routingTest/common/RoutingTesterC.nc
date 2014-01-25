@@ -1,7 +1,6 @@
  #include <Timer.h>
  #include "route_msg.h"
 
- //#ifdef PRINTF_SUPPORT
  #ifdef PRINTF
  #include "printf.h"
  #endif
@@ -12,11 +11,6 @@ configuration RoutingTesterC {
     //interface SplitControl as RadioControl;
     interface AMPacket;
     interface Leds;
-    
-#ifdef PRINTF_SUPPORT
-    interface SplitControl as PrintfControl;
-    interface PrintfFlush;
-#endif
   }
 
   provides{
@@ -69,12 +63,6 @@ implementation {
   RoutingTesterP.ReadVoltage -> Battery;
   RoutingTesterP.Period -> Period;
 
-#ifdef PRINTF_SUPPORT
-  RoutingInfoC.PrintfControl = PrintfControl;
-  RoutingInfoC.PrintfFlush = PrintfFlush;
-
-  RoutingTesterP.PrintfControl = PrintfControl;
-  RoutingTesterP.PrintfFlush = PrintfFlush;
-#endif
   RoutingTesterP.DCevaluator -> DCevaluatorC;
+  RoutingTesterP.NbInfo -> OppC.NbInfo;
 }

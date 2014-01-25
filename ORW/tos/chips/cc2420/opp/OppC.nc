@@ -43,6 +43,7 @@ configuration OppC{
 	// BEGIN ADD BY FABRIZIO
 	provides interface StdControl;
 	provides interface OppClear;
+	provides interface NbInfo;
 	// END ADD
 }
 
@@ -63,6 +64,7 @@ implementation {
 	// BEGIN ADD BY FABRIZIO
 	components RoutingInfoC;
 	components OppRadioSettingsP;
+	components RoutingTesterC;
 	// END ADD
 #if defined(PLATFORM_MICA2) || defined(PLATFORM_MICA2DOT)
   components CC1000CsmaRadioC as LplRadio;
@@ -80,6 +82,7 @@ implementation {
 	Send = OppP.Send;
 	Receive = OppP.Receive;
 	Packet = OppP.Packet;
+	NbInfo = NbTableP.NbInfo;
 	SplitControl = OppP.Control;
 	// BEGIN ADD BY FABRIZIO - ADDING STDCONTROL
 	StdControl = OppP.RoutingControl;
