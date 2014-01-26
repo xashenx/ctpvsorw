@@ -58,7 +58,7 @@ implementation {
 	uint16_t dcycleRawSum;
 	uint16_t dcycle;	   
 	uint16_t samplesCounter;
-	bool last_state;
+	bool last_state; // do we get at least an update?
 
 	
 	command error_t Init.init() {
@@ -110,8 +110,8 @@ implementation {
    			d = (now - upStartTime);
  		}
 
-		/*
- 		if( action ){
+		
+ 		/*if( action ){
 			upTimeData += d;
  		} else {
 	 		upTimeIdle += d;
@@ -123,6 +123,8 @@ implementation {
 	}
 	
 	command uint16_t DCevaluator.getActualDutyCycle(){
+		if (TOS_NODE_ID == SINK_ID)
+			return 1000;
 		return dcycle;
 	}
 
@@ -130,15 +132,16 @@ implementation {
 		/*#ifdef PRINTF
 		printf("DCEV: start Exp!\n");
 		#endif*/
-   		lastUpdateTime = call LocalTime32khz.get();
+	   	lastUpdateTime = call LocalTime32khz.get();
    		totalTime = 0;
    		upTimeData = 0;
-   		upTimeIdle = 0;
+	   	upTimeIdle = 0;
 		dcycle = 0;
 		dcycleRawSum = 0;
 		samplesCounter = 0;
 		last_state = FALSE;
-   		call Timer.startPeriodic(7000);
+	   	//call Timer.startPeriodic(1000);
+   		call Timer.startPeriodic(2048*2);
 	}
 
 	command void DCevaluator.stopExperiment(){
@@ -154,14 +157,21 @@ implementation {
 	   if(last_state)
 	    	updateEnergyStat(now);
 	   if(upTimeData == 0 && upTimeIdle == 0){
+	   	#ifdef PRINTF
+		printf("DCEV: uptime = 0\n");
+		#endif
 		dcycleRawSum += 1000;	   
 	   }else{
+	   	#ifdef PRINTF
+		printf("DCEV: normal timer computation\n");
+		#endif
 	   	dcycleRawSum += (1000 * upTimeData) / totalTime;	   
 	   }
-	   dcycle = dcycleRawSum / samplesCounter;	   
-		#ifdef PRINTF
-		printf("DCEV: duty cycle = %u!\n", dcycle);
-		#endif
+	   dcycle = dcycleRawSum / samplesCounter;  
+	   #ifdef PRINTF
+	   printf("DCEV: duty cycle = %u!\n", dcycle);
+	   printfflush();
+	   #endif
 	   //dcycleIdle = (1000 * upTimeIdle) / totalTime;	   
 	   //uint16_t time = (uint16_t)(call Timer.getNow() / 1024);
 	   totalTime = 0;

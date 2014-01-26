@@ -63,6 +63,9 @@ implementation {
 	
 //Debug	
 //	uint8_t indexesInUse;
+	// ADD BY FABRIZIO
+	uint8_t nbseen;
+	// END ADD
 	uint8_t indexes;
 	bool newDc;
 	
@@ -90,6 +93,9 @@ implementation {
 		}
 //		indexesInUse = 0;
 		indexes = 0;
+		// ADD BY FABRIZIO
+		nbseen = 0;
+		// END ADD
 		memset(&nbTable, 0, sizeof(nbTable));
 		avgDc = OPP_FLOAT_FAC / 4; //initial dc is one quarter
 		newDc = FALSE;
@@ -115,6 +121,7 @@ implementation {
 			nextHopEdc = 0;
 		}
 		indexes = 0;
+		nbseen = 0;
 		avgDc = OPP_FLOAT_FAC / 4; //initial dc is one quarter
 		newDc = FALSE;
 		for( i = 0; i < OPP_NB_TABLE_SIZE; i++){
@@ -213,6 +220,7 @@ implementation {
 		nbTable[i].set = TRUE;
 		if( indexes < OPP_NB_TABLE_SIZE ){
 			indexes++;
+			nbseen++;
 		}
 	}
 
@@ -499,11 +507,11 @@ implementation {
 	}
 
 	command uint8_t NbInfo.getNeighborsSeen(){
-
+		return nbseen;
 	}
 
 	command uint8_t NbInfo.getNeighborsNo(){
-
+		return indexes;
 	}
 	
   	default command error_t NtDebug.dumpTable(nbTableEntry_t* nbTable__, uint8_t* p__, uint8_t type__, uint8_t edc__, uint8_t nextHopEdc__, uint8_t indexesInUse__, uint8_t indexes__, uint32_t avgDc__, uint32_t txTime__, uint32_t timestamp__){
