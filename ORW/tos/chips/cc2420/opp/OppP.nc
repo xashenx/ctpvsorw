@@ -518,8 +518,8 @@ implementation {
 
  	void logLLDupReceive(message_t* msg){
 		// BEGIN ADD BY FABRIZIO
-		uint8_t type = call AMPacket.type(msg);
-		uint8_t seq_no = call OppPacket.getSeqNum(msg);
+		//uint8_t type = call AMPacket.type(msg);
+		//uint8_t seq_no = call OppPacket.getSeqNum(msg);
 
 		//if((type!=23)){
 			//arg2 = call OppPacket.getSeqNum(msg);

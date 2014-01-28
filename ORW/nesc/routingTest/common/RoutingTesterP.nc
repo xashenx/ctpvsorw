@@ -89,7 +89,7 @@ implementation {
 
   void sendMsg(){
     uint8_t i;
-    uint16_t parent_id;
+    //uint16_t parent_id;
     data_msg_t* msg = (data_msg_t*) call Send.getPayload(&packet,sizeof(data_msg_t));
 /*    msg->temperature = currentTemp;
     msg->humidity = currentHum;
@@ -192,20 +192,19 @@ implementation {
   event void Period.fired(){
 #ifdef PRINTF
 	printf("period fired: %u\n",currentTick);
+	printfflush();
 #endif
     if (currentTick == 0){
       call Period.startPeriodic(period);
     }
-    if (currentTick == operatingPeriods){
+    //if (currentTick == operatingPeriods){
+    if (currentTick == operatingPeriods-1){
       call Period.stop();
     } else {
       currentTick++;
       //sendMsg();
       call ReadTemp.read();
     }
-#ifdef PRINTF_SUPPORT
-    call PrintfFlush.flush();
-#endif
   } 
 
   event void Send.sendDone(message_t* m, error_t err) {

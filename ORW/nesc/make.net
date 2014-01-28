@@ -1,13 +1,13 @@
 #!/bin/bash
 echo Building network node...
-echo $3
-if [[ $3 = "LSLEEP="* ]]; then
-    OBJECTIVE=NET make tmote ctp $3
+echo $4
+if [[ $4 = "OL_CUSTOM_LPL="* ]]; then
+    OBJECTIVE=NET make tmote $4 oppxmac
 else
     OBJECTIVE=NET make tmote oppxmac
 fi
 
-if [ $# = "3" ]; then
+if [[ $# = "3" || $# = "4" ]]; then
 	if [ $2 = "hub" ]; then
 
 		read -p "You are going to flash all the motes, connect them to the ports and press any key to continue. Check with motelist their presence. This script will flash from /dev/ttyUSB1 to /dev/ttyUSB$1"

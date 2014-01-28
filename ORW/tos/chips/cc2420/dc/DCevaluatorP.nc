@@ -141,7 +141,7 @@ implementation {
 		samplesCounter = 0;
 		last_state = FALSE;
 	   	//call Timer.startPeriodic(1000);
-   		call Timer.startPeriodic(2048*2);
+   		call Timer.startPeriodic(LPL_DEF_LOCAL_WAKEUP*1.2);
 	}
 
 	command void DCevaluator.stopExperiment(){
