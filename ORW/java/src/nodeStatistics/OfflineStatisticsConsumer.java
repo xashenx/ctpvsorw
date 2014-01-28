@@ -48,7 +48,8 @@ public class OfflineStatisticsConsumer extends StatisticsConsumer {
 	protected void printGlobalStats() throws IOException {
 		globalLog.write("Msgs" + "\t" + "AckRx" + "\t" + "Beacon" + "\t"
 				+ "DuplDropped" + "\t" + "DuplRx" + "\t" + "Lost" + "\t"
-				+ "AckFail" + "\t" + "MsgForw\t" + "DC(D/I)\t" + "ParentChanges" 
+				//+ "AckFail" + "\t" + "MsgForw\t" + "DutyCycle\t" + "NbChanges" 
+				+ "AckFail" + "\t" + "MsgForw\t" + "DutyCycle" 
 				+ "\t" + "TxQueueFull" + "\n");
 		globalLog.write(GlobalStatistics.msgCount + "\t"
 				+ GlobalStatistics.acksReceivedCount + "\t"
@@ -58,8 +59,9 @@ public class OfflineStatisticsConsumer extends StatisticsConsumer {
 				+ GlobalStatistics.lostCount + "\t"
 				+ GlobalStatistics.acksFailedCount + "\t"
 				+ GlobalStatistics.msgForwarded + "\t"
-				+ GlobalStatistics.dcData + "/" + GlobalStatistics.dcIdle + "\t"
-				+ GlobalStatistics.parentChanges + "\t" + "\t"
+				//+ GlobalStatistics.dcData + "/" + GlobalStatistics.dcIdle + "\t"
+				+ GlobalStatistics.dcIdle + "\t\t"
+				//+ GlobalStatistics.parentChanges + "\t" + "\t"
 				+ GlobalStatistics.txQueueFullCount + "\n");
 	}
 
@@ -75,11 +77,12 @@ public class OfflineStatisticsConsumer extends StatisticsConsumer {
 	}
 
 	protected void printNodeHeader() throws IOException {
-		globalLog.write("Node" + "\t" + "Parent" + "\t" + "Msgs" + "\t"
+		globalLog.write("Node" + "\t" + "1°Nb" + "\t" + "Msgs" + "\t"
 				+ "AckRx" + "\t" + "Beacon" + "\t" + "DuplDropped" + "\t"
 				+ "DuplRx" + "\t" + "Lost" + "\t" + "AckFail" + "\t"
-				+ "ParentChanges" + "\t" + "ParentsCount" + "\t"
-				+ "TxQueueFull" + "\tMsgForwarded\t" + "DC(D/I)\n");
+				//+ "NbChanges" + "\t" + "NbCount" + "\t\t"
+				+ "NbCount" + "\t\t"
+				+ "TxQueueFull" + "\tMsgForwarded\t" + "DC\n");
 	}
 
 	protected void printNodeStats(NodeInfo node) throws IOException {
@@ -90,11 +93,12 @@ public class OfflineStatisticsConsumer extends StatisticsConsumer {
 				+ stats.getDuplicatesDroppedCount() + "\t" + "\t"
 				+ stats.getDuplicatesReceivedCount() + "\t"
 				+ stats.getLostCount() + "\t" + stats.getAcksFailedCount()
-				+ "\t" + stats.getParentsChanges() + "\t" + "\t"
-				+ stats.getParentsCount() + "\t" + "\t"
+			//	+ "\t" + stats.getParentsChanges() + "\t" + "\t"
+				+ "\t" + stats.getParentsCount() + "\t" + "\t"
 				+ stats.getTxQueueFullCount() + "\t" + "\t" 
 				+ stats.getMsgForwarded() + "\t" + "\t"
-				+ stats.getDcData() + "/" + stats.getDcIdle() + "\n");
+				//+ stats.getDcData() + "/" + stats.getDcIdle() + "\n");
+				+ stats.getDcIdle() + "\n");
 	}
 
 }
