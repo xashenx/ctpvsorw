@@ -34,9 +34,9 @@ implementation {
   components CtpRadioSettingsP;
   components RandomC;
   //components DutyCycleC;
-  #ifdef LOCAL_SLEEP
+  //#ifdef LOCAL_SLEEP
   components DCevaluatorC;
-  #endif
+  //#endif
 
   RoutingInfoC.Boot = Boot;
   RoutingInfoC.AMPacket = AMPacket;
@@ -70,7 +70,7 @@ implementation {
   RoutingTesterP.PrintfFlush = PrintfFlush;
 #endif
   //RoutingTesterP.DutyCycle -> DutyCycleC;
-  #ifdef LOCAL_SLEEP
+  //#ifdef LOCAL_SLEEP
   RoutingTesterP.DCevaluator -> DCevaluatorC;
-  #endif
+  //#endif
 }

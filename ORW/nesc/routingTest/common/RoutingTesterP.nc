@@ -123,10 +123,8 @@ implementation {
     // TODO GET IT FROM OPP
     msg->routing_data.node_addr = TOS_NODE_ID;
     msg->routing_data.seq_no = msgSeqNum++;
-    msg->routing_data.dcIdle =
-      call DCevaluator.getActualDutyCycle();
-    msg->routing_data.dcData =
-      13;
+    msg->routing_data.dcIdle = call DCevaluator.getActualDutyCycle();
+    msg->routing_data.dcData = call DCevaluator.getSleepInterval();
     call NbInfo.getActualNeighbors();
 
     if (TOS_NODE_ID != SINK_ID){
@@ -197,8 +195,8 @@ implementation {
     if (currentTick == 0){
       call Period.startPeriodic(period);
     }
-    //if (currentTick == operatingPeriods){
-    if (currentTick == operatingPeriods-1){
+    if (currentTick == operatingPeriods){
+    //if (currentTick == operatingPeriods-1){
       call Period.stop();
     } else {
       currentTick++;

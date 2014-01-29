@@ -101,7 +101,7 @@ public class LaunchTest {
 
 			sleep(time);
 			System.exit(0);
-		} else if (args.length >= 5 && args[0].equals("ROUTING")) {
+		} else if (args.length >= 6 && args[0].equals("ROUTING")) {
 			ConfigMsg configMsg = new ConfigMsg();
 			configMsg.set_seq_no(Integer.parseInt(args[1]));
 			configMsg.set_app_period(Integer.parseInt(args[2]));
@@ -113,10 +113,10 @@ public class LaunchTest {
 			configMsg.set_stop_period(Integer.parseInt(Strings
 					.getString("RouteTest.STOP_PERIOD")));
 			configMsg.set_power(Short.parseShort(args[4]));
-
-			if (args.length == 6 && args[5].equals("DESYNCH_APP"))
+			configMsg.set_sleep_interval(Integer.parseInt(args[5]));
+			if (args.length == 7 && args[6].equals("DESYNCH_APP"))
 				configMsg.set_randomize_start((byte) 1);
-			else if (args.length == 5)
+			else if (args.length == 6)
 				configMsg.set_randomize_start((byte) 0);
 			else
 				printUsageAndExit();
@@ -208,7 +208,7 @@ public class LaunchTest {
 						+ "[number of packets] [test channel] [delta time] {LPL check interval}\n"
 						+ "Routing test:\n"
 						+ "java netTest.LaunchTest ROUTING [experiment id] [app period] "
-						+ "[run period] [power] {DESYNCH_APP}");
+						+ "[run period] [power] [sleep interval] {DESYNCH_APP}");
 		System.exit(-1);
 	}
 

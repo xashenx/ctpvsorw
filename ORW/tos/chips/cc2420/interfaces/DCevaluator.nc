@@ -36,7 +36,9 @@
 
 	command uint16_t getActualDutyCycle();
 
-	command void startExperiment();
+	command uint16_t getSleepInterval();
+
+	command void startExperiment(uint16_t sleep);
 	
 	command void stopExperiment();
 } 

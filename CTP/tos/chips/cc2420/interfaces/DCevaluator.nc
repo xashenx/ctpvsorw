@@ -35,8 +35,10 @@
  interface DCevaluator{
 
 	command uint16_t getActualDutyCycle();
+	
+	command uint16_t getSleepInterval();
 
-	command void startExperiment();
+	command void startExperiment(uint16_t sleep);
 	
 	command void stopExperiment();
 } 

@@ -73,10 +73,9 @@ implementation {
       call Timer.startOneShot(1000ULL * config.routing_boot_period);
 
     } else if (test_state == BOOTING_ROUTING){
-      #ifdef LOCAL_SLEEP
-      call LowPowerListening.setLocalSleepInterval(LOCAL_SLEEP);
-      call DCevaluator.startExperiment();
-      #endif
+      //call LowPowerListening.setLocalSleepInterval(LOCAL_SLEEP);
+      call LowPowerListening.setLocalSleepInterval(config.sleep_interval);
+      call DCevaluator.startExperiment(config.sleep_interval);
       //call Leds.led0Off();
       call Leds.led1On();
       // CHANGE FROM FABRIZIO
@@ -96,11 +95,9 @@ implementation {
       // CHANGE FROM FABRIZIO
       // setting back the radio as always on
       // so net_nodes will be waiting for further config messages
-      #ifdef LOCAL_SLEEP
-      #warning changing the Local Sleep!
+      //#warning changing the Local Sleep!
       call DCevaluator.stopExperiment();
       call LowPowerListening.setLocalSleepInterval(0);
-      #endif
       // END OF CHANGE
       call Leds.set(0);
     }

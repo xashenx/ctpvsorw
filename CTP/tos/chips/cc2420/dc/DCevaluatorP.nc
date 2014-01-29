@@ -35,6 +35,7 @@ implementation {
 	uint16_t dcycleRawSum;
 	uint16_t dcycle;	   
 	uint16_t samplesCounter;
+	uint16_t sleepInterval;
 	bool last_state; // do we get at least an update?
 
 	
@@ -46,6 +47,7 @@ implementation {
 		dcycle = 0;
 		dcycleRawSum = 0;
 		samplesCounter = 0;
+		sleepInterval = 0;
    		//call Timer.startPeriodic(100000L);
 		last_state = FALSE;
 #ifdef PRINTF
@@ -109,12 +111,16 @@ implementation {
 	}
 	
 	command uint16_t DCevaluator.getActualDutyCycle(){
-		if (TOS_NODE_ID == SINK_ID)
+		if (TOS_NODE_ID == SINK_ID || sleepInterval == 0)
 			return 1000;
 		return dcycle;
 	}
 
-	command void DCevaluator.startExperiment(){
+	command uint16_t DCevaluator.getSleepInterval(){
+		return sleepInterval;
+	}
+
+	command void DCevaluator.startExperiment(uint16_t sleep){
 		/*#ifdef PRINTF
 		printf("DCEV: start Exp!\n");
 		#endif*/
@@ -128,9 +134,16 @@ implementation {
 		samplesCounter = 0;
 		last_state = FALSE;
 	   	//call Timer.startPeriodic(1000);
-		#ifdef LOCAL_SLEEP
+		/*#ifdef LOCAL_SLEEP
    		call Timer.startPeriodic(LOCAL_SLEEP*1.2);
-		#endif
+		#endif*/
+		sleepInterval = sleep;
+		if(sleepInterval > 0){
+	   		call Timer.startPeriodic(sleepInterval*1.2);
+			#ifdef PRINTF
+			printf("|%u|",sleep);
+			#endif
+		}
 	}
 
 	command void DCevaluator.stopExperiment(){
