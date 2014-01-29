@@ -70,8 +70,10 @@ implementation {
       new StateC() as SendStateC,
       new TimerMilliC() as OffTimerC,
       new TimerMilliC() as SendDoneTimerC,
+      //DutyCycleC;
       LedsC,
-      DutyCycleC;
+      DCevaluatorC;
+
 
 #ifdef RADIO_ACTIVATIONS
   DefaultLplP = RadioActivations;
@@ -105,5 +107,6 @@ implementation {
   DefaultLplP.RadioBackoff -> CC2420CsmaC;
   DefaultLplP.Random -> RandomC;
   DefaultLplP.Leds -> LedsC;
-  DefaultLplP.DutyCycle -> DutyCycleC;
+  //DefaultLplP.DutyCycle -> DutyCycleC;
+  DefaultLplP.DutyCycle -> DCevaluatorC;
 }

@@ -19,7 +19,7 @@ module TestManagerC {
     interface Receive as ConfigReceive;
 
    interface ResetFlooding;
-   interface DutyCycle;
+   interface DCevaluator;
 
 #ifdef LPL_COEXISTENCE
     interface LowPowerListening;
@@ -71,15 +71,15 @@ implementation {
       call RoutingTester.startRouting();
       test_state = BOOTING_ROUTING;
       call Timer.startOneShot(1000ULL * config.routing_boot_period);
+
     } else if (test_state == BOOTING_ROUTING){
+      #ifdef LOCAL_SLEEP
+      call LowPowerListening.setLocalSleepInterval(LOCAL_SLEEP);
+      call DCevaluator.startExperiment();
+      #endif
       //call Leds.led0Off();
       call Leds.led1On();
       // CHANGE FROM FABRIZIO
-      call DutyCycle.startExperiment();
-      #ifdef LOCAL_SLEEP
-      call LowPowerListening.setLocalSleepInterval(LOCAL_SLEEP);
-      #endif
-
       // END OF CHANGE
       test_state = RUNNING_APP;
       call RoutingTester.activateTask(config.randomize_start,
@@ -96,9 +96,9 @@ implementation {
       // CHANGE FROM FABRIZIO
       // setting back the radio as always on
       // so net_nodes will be waiting for further config messages
-      call DutyCycle.stopExperiment();
       #ifdef LOCAL_SLEEP
       #warning changing the Local Sleep!
+      call DCevaluator.stopExperiment();
       call LowPowerListening.setLocalSleepInterval(0);
       #endif
       // END OF CHANGE

@@ -32,29 +32,11 @@
  * @author Omprakash Gnawali
  */
  
- configuration DutyCycleC{
+ interface DCevaluator{
+
+	command uint16_t getActualDutyCycle();
+
+	command void startExperiment();
 	
-	provides interface DutyCycle;
-	
+	command void stopExperiment();
 } 
-implementation {
-
-	components DutyCycleP;
-	components MainC;
-	components new TimerMilliC();
-	components LedsC;
-	components CC2420ActiveMessageC;
-	
-	MainC -> DutyCycleP.Init;
-	
-	DutyCycleP.Timer -> TimerMilliC;
-	
-	DutyCycle = DutyCycleP;	
-
-	components Counter32khz32C, new CounterToLocalTimeC(T32khz);
-  	CounterToLocalTimeC.Counter -> Counter32khz32C;
-	DutyCycleP.LocalTime32khz -> CounterToLocalTimeC;
-	
-	DutyCycleP.Leds -> LedsC;
-	DutyCycleP.LowPowerListening -> CC2420ActiveMessageC;
-}

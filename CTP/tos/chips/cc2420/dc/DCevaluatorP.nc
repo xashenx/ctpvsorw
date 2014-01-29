@@ -1,41 +1,14 @@
 /*
- * Copyright (c) 2012-2013 Omprakash Gnawali, Olaf Landsiedel
- * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions
- * are met:
- * - Redistributions of source code must retain the above copyright
- *   notice, this list of conditions and the following disclaimer.
- * - Redistributions in binary form must reproduce the above copyright
- *   notice, this list of conditions and the following disclaimer in the
- *   documentation and/or other materials provided with the
- *   distribution.
- * - Neither the name of the Arch Rock Corporation nor the names of
- *   its contributors may be used to endorse or promote products derived
- *   from this software without specific prior written permission.
- *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
- * ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
- * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
- * FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE
- * ARCHED ROCK OR ITS CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
- * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
- * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
- * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
- * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
- * STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
- * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
- * OF THE POSSIBILITY OF SUCH DAMAGE
- *
- * @author Olaf Landsiedel
- * @author Omprakash Gnawali
  * @author Fabrizio Zeni
  */
 
  #ifdef PRINTF
  #include "printf.h"
  #endif
+
+enum {
+	SINK_ID = 0,
+};
 
 module DCevaluatorP{
 
@@ -47,6 +20,10 @@ module DCevaluatorP{
 	uses interface Timer<TMilli>;
 	uses interface Leds;
 	uses interface LowPowerListening;
+#ifdef PRINTF
+    uses interface SplitControl as PrintfControl;
+    uses interface PrintfFlush;
+#endif
 } 
 
 implementation {
@@ -71,6 +48,9 @@ implementation {
 		samplesCounter = 0;
    		//call Timer.startPeriodic(100000L);
 		last_state = FALSE;
+#ifdef PRINTF
+    call PrintfControl.start();
+#endif
     		return SUCCESS;
   	}
 
@@ -85,6 +65,8 @@ implementation {
 	     		t = (now - lastUpdateTime);
    		}
    		totalTime += t;
+		/*printf("(%lu)",totalTime);
+	   	call PrintfFlush.flush();*/
    		lastUpdateTime = now;
  	}
 	
@@ -93,6 +75,10 @@ implementation {
 	    	updateEnergyStat(now);
    		upStartTime = now;
 		last_state = TRUE;
+		#ifdef PRINTF
+		printf("On");
+	   	call PrintfFlush.flush();
+		#endif
 		/*#ifdef PRINTF
 		printf("DCEV: radio turned on!\n");
 		#endif*/
@@ -142,7 +128,9 @@ implementation {
 		samplesCounter = 0;
 		last_state = FALSE;
 	   	//call Timer.startPeriodic(1000);
-   		call Timer.startPeriodic(LPL_DEF_LOCAL_WAKEUP*1.2);
+		#ifdef LOCAL_SLEEP
+   		call Timer.startPeriodic(LOCAL_SLEEP*1.2);
+		#endif
 	}
 
 	command void DCevaluator.stopExperiment(){
@@ -153,31 +141,6 @@ implementation {
 	}
 
 	event void Timer.fired(){
-	   /*uint32_t now = call LocalTime32khz.get();
-	   samplesCounter++;
-	   if(last_state)
-	    	updateEnergyStat(now);
-	   if(upTimeData == 0 && upTimeIdle == 0){
-	   	#ifdef PRINTF
-		printf("DCEV: uptime = 0\n");
-		#endif
-		dcycleRawSum += 1000;	   
-	   }else{
-	   	#ifdef PRINTF
-		printf("DCEV: normal timer computation\n");
-		#endif
-	   	dcycleRawSum += (1000 * upTimeData) / totalTime;	   
-	   }
-	   dcycle = dcycleRawSum / samplesCounter;  
-	   #ifdef PRINTF
-	   printf("DCEV: duty cycle = %u!\n", dcycle);
-	   printfflush();
-	   #endif
-	   //dcycleIdle = (1000 * upTimeIdle) / totalTime;	   
-	   //uint16_t time = (uint16_t)(call Timer.getNow() / 1024);
-	   totalTime = 0;
-	   upTimeData = 0;
-	   upTimeIdle = 0;*/
 	   uint32_t now = call LocalTime32khz.get();
 	   if(last_state){
 	    	updateEnergyStat(now);
@@ -193,10 +156,24 @@ implementation {
 		#endif
 	   	dcycleRawSum += (1000 * upTimeData) / totalTime;	   
 	   	dcycle = dcycleRawSum / samplesCounter;  
-		totalTime = 0;
-		upTimeData = 0;
-		upTimeIdle = 0;
+		   totalTime = 0;
+		   upTimeData = 0;
+		   upTimeIdle = 0;
 	   }
+	   #ifdef PRINTF
+	   //printf("DCEV: duty cycle = %u!\n", dcycle);
+	   call PrintfFlush.flush();
+	   #endif
+	   //dcycleIdle = (1000 * upTimeIdle) / totalTime;	   
+	   //uint16_t time = (uint16_t)(call Timer.getNow() / 1024);
 	}
+
+#ifdef PRINTF
+  event void PrintfControl.startDone(error_t error) {}
+
+  event void PrintfControl.stopDone(error_t error) {}
+
+  event void PrintfFlush.flushDone(error_t error) {}
+#endif
 
 }

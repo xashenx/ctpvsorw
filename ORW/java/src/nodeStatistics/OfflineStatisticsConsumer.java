@@ -49,7 +49,7 @@ public class OfflineStatisticsConsumer extends StatisticsConsumer {
 		globalLog.write("Msgs" + "\t" + "AckRx" + "\t" + "Beacon" + "\t"
 				+ "DuplDropped" + "\t" + "DuplRx" + "\t" + "Lost" + "\t"
 				//+ "AckFail" + "\t" + "MsgForw\t" + "DutyCycle\t" + "NbChanges" 
-				+ "AckFail" + "\t" + "MsgForw\t" + "DutyCycle" 
+				+ "AckFail" + "\t" + "MsgForw" 
 				+ "\t" + "TxQueueFull" + "\n");
 		globalLog.write(GlobalStatistics.msgCount + "\t"
 				+ GlobalStatistics.acksReceivedCount + "\t"
@@ -60,7 +60,6 @@ public class OfflineStatisticsConsumer extends StatisticsConsumer {
 				+ GlobalStatistics.acksFailedCount + "\t"
 				+ GlobalStatistics.msgForwarded + "\t"
 				//+ GlobalStatistics.dcData + "/" + GlobalStatistics.dcIdle + "\t"
-				+ GlobalStatistics.dcIdle + "\t\t"
 				//+ GlobalStatistics.parentChanges + "\t" + "\t"
 				+ GlobalStatistics.txQueueFullCount + "\n");
 	}

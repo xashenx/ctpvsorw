@@ -368,6 +368,7 @@ implementation {
 
       call DutyCycle.radioOn();
 
+
       if(call SendState.getState() == S_LPL_FIRST_MESSAGE
           || call SendState.getState() == S_LPL_SENDING) {
         initializeSend();

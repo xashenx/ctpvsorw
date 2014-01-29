@@ -48,7 +48,8 @@ public class OfflineStatisticsConsumer extends StatisticsConsumer {
 	protected void printGlobalStats() throws IOException {
 		globalLog.write("Msgs" + "\t" + "AckRx" + "\t" + "Beacon" + "\t"
 				+ "DuplDropped" + "\t" + "DuplRx" + "\t" + "Lost" + "\t"
-				+ "AckFail" + "\t" + "MsgForw\t" + "DC(D/I)\t" + "ParentChanges" 
+				+ "AckFail" + "\t" + "MsgForw\t" + "ParentChanges" 
+				//+ "AckFail" + "\t" + "MsgForw\t" + "DC(D/I)\t" + "ParentChanges" 
 				+ "\t" + "TxQueueFull" + "\n");
 		globalLog.write(GlobalStatistics.msgCount + "\t"
 				+ GlobalStatistics.acksReceivedCount + "\t"
@@ -58,7 +59,7 @@ public class OfflineStatisticsConsumer extends StatisticsConsumer {
 				+ GlobalStatistics.lostCount + "\t"
 				+ GlobalStatistics.acksFailedCount + "\t"
 				+ GlobalStatistics.msgForwarded + "\t"
-				+ GlobalStatistics.dcData + "/" + GlobalStatistics.dcIdle + "\t"
+				//+ GlobalStatistics.dcData + "/" + GlobalStatistics.dcIdle + "\t"
 				+ GlobalStatistics.parentChanges + "\t" + "\t"
 				+ GlobalStatistics.txQueueFullCount + "\n");
 	}
@@ -79,7 +80,8 @@ public class OfflineStatisticsConsumer extends StatisticsConsumer {
 				+ "AckRx" + "\t" + "Beacon" + "\t" + "DuplDropped" + "\t"
 				+ "DuplRx" + "\t" + "Lost" + "\t" + "AckFail" + "\t"
 				+ "ParentChanges" + "\t" + "ParentsCount" + "\t"
-				+ "TxQueueFull" + "\tMsgForwarded\t" + "DC(D/I)\n");
+				+ "TxQueueFull" + "\tMsgForwarded\t" + "DC\n");
+				//+ "TxQueueFull" + "\tMsgForwarded\t" + "DC(D/I)\n");
 	}
 
 	protected void printNodeStats(NodeInfo node) throws IOException {
@@ -94,7 +96,8 @@ public class OfflineStatisticsConsumer extends StatisticsConsumer {
 				+ stats.getParentsCount() + "\t" + "\t"
 				+ stats.getTxQueueFullCount() + "\t" + "\t" 
 				+ stats.getMsgForwarded() + "\t" + "\t"
-				+ stats.getDcData() + "/" + stats.getDcIdle() + "\n");
+				//+ stats.getDcData() + "/" + stats.getDcIdle() + "\n");
+				+ stats.getDcIdle() + "\n");
 	}
 
 }

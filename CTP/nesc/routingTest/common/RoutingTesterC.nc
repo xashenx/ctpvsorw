@@ -33,7 +33,10 @@ implementation {
   components new TimerMilliC() as Period;
   components CtpRadioSettingsP;
   components RandomC;
-  components DutyCycleC;
+  //components DutyCycleC;
+  #ifdef LOCAL_SLEEP
+  components DCevaluatorC;
+  #endif
 
   RoutingInfoC.Boot = Boot;
   RoutingInfoC.AMPacket = AMPacket;
@@ -66,5 +69,8 @@ implementation {
   RoutingTesterP.PrintfControl = PrintfControl;
   RoutingTesterP.PrintfFlush = PrintfFlush;
 #endif
-  RoutingTesterP.DutyCycle -> DutyCycleC;
+  //RoutingTesterP.DutyCycle -> DutyCycleC;
+  #ifdef LOCAL_SLEEP
+  RoutingTesterP.DCevaluator -> DCevaluatorC;
+  #endif
 }

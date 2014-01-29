@@ -22,8 +22,10 @@ module RoutingTesterP {
     interface CtpClear;
     interface CtpRadioSettings;
     interface Random;
-    interface DutyCycle;
-
+    //interface DutyCycle;
+    #ifdef LOCAL_SLEEP
+    interface DCevaluator;
+    #endif
 #ifdef PRINTF_SUPPORT
     interface SplitControl as PrintfControl;
     interface PrintfFlush;
@@ -121,10 +123,17 @@ implementation {
       call RoutingInfo.getNumDroppedDuplicates();
     msg->routing_data.forwarded =
       call RoutingInfo.getNumForwardedMessages();
-    msg->routing_data.dcIdle =
+      #ifdef LOCAL_SLEEP
+    msg->routing_data.dcIdle = call DCevaluator.getActualDutyCycle();
+    msg->routing_data.dcData = LOCAL_SLEEP;
+      #else
+    msg->routing_data.dcIdle = TOS_NODE_ID;
+    msg->routing_data.dcData = TOS_NODE_ID; // unused, just put a constant
+      #endif
+    /*msg->routing_data.dcIdle =
       call DutyCycle.getTimeIdle();
     msg->routing_data.dcData =
-      call DutyCycle.getTimeData();
+      call DutyCycle.getTimeData();*/
 
     msg->routing_data.parents_seen = numParentsSeen;
 

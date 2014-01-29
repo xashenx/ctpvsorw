@@ -2,7 +2,7 @@
 echo Building network node...
 echo $3
 if [[ $3 = "LSLEEP="* ]]; then
-    OBJECTIVE=NET make tmote ctp $3
+    OBJECTIVE=NET make tmote $3 ctp
 else
     OBJECTIVE=NET make tmote ctp
 fi
