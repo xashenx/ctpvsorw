@@ -1,5 +1,5 @@
  #include <Timer.h>
- #ifdef PRINTF_SUPPORT
+ #ifdef PRINTF
  #include "printf.h"
  #endif
 
@@ -23,8 +23,12 @@ implementation {
 #ifdef LPL_COEXISTENCE
   components CC2420ActiveMessageC;
 #endif
-#ifdef PRINTF_SUPPORT
+#ifdef PRINTF
   components PrintfC;
+  TestManagerC.PrintfControl -> PrintfC;
+  TestManagerC.PrintfFlush -> PrintfC;
+  RoutingTesterC.PrintfControl -> PrintfC;
+  RoutingTesterC.PrintfFlush -> PrintfC;
 #endif
 
   RoutingTesterC.Boot -> MainC;

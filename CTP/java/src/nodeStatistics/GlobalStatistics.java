@@ -29,6 +29,8 @@ public class GlobalStatistics {
 
 	static public int msgCount = 0;
 
+	static public int uniqueMsgReceived = 0;
+
 	static public int parentOverflowCount = 0;
 
 	static public int parentChanges = 0;

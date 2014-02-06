@@ -1,7 +1,7 @@
  #include <Timer.h>
  #include <Configuration.h>
  #include "config_msg.h"
- #ifdef PRINTF_SUPPORT
+ #ifdef PRINTF
  #include "printf.h"
  #endif
 
@@ -25,7 +25,7 @@ module TestManagerC {
     interface LowPowerListening;
 #endif
 
-#ifdef PRINTF_SUPPORT
+#ifdef PRINTF
     interface SplitControl as PrintfControl;
     interface PrintfFlush;
 #endif
@@ -128,7 +128,7 @@ implementation {
     call Leds.set(0);
   }
 
-#ifdef PRINTF_SUPPORT
+#ifdef PRINTF
   event void PrintfControl.startDone(error_t error) {}
 
   event void PrintfControl.stopDone(error_t error) {}

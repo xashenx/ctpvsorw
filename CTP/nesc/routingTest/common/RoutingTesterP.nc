@@ -1,7 +1,7 @@
  #include <Timer.h>
  #include "route_msg.h"
 
- #ifdef PRINTF_SUPPORT
+ #ifdef PRINTF
  #include "printf.h"
  #endif
 
@@ -24,7 +24,7 @@ module RoutingTesterP {
     interface Random;
     //interface DutyCycle;
     interface DCevaluator;
-#ifdef PRINTF_SUPPORT
+#ifdef PRINTF
     interface SplitControl as PrintfControl;
     interface PrintfFlush;
 #endif
@@ -122,7 +122,7 @@ implementation {
     msg->routing_data.forwarded =
       call RoutingInfo.getNumForwardedMessages();
     msg->routing_data.dcIdle = call DCevaluator.getActualDutyCycle();
-    msg->routing_data.dcData = TOS_NODE_ID; // unused, just put a constant
+    msg->routing_data.dcData = call DCevaluator.getSleepInterval(); // unused, just put a constant
 /*      #ifdef LOCAL_SLEEP
     msg->routing_data.dcIdle = call DCevaluator.getActualDutyCycle();
     msg->routing_data.dcData = LOCAL_SLEEP;
@@ -248,6 +248,10 @@ implementation {
   }
 
   command void RoutingTester.setPower(uint8_t newPower) {
+  	#ifdef PRINTF
+	printf("setting power: %u || \n",newPower);
+	call PrintfFlush.flush();
+	#endif
     call CtpRadioSettings.setPower(newPower);
   }
 
@@ -291,7 +295,7 @@ implementation {
   }
 
 
-#ifdef PRINTF_SUPPORT
+#ifdef PRINTF
   event void PrintfControl.startDone(error_t error) {}
 
   event void PrintfControl.stopDone(error_t error) {}

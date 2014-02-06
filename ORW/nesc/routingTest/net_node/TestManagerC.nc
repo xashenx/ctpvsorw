@@ -78,7 +78,6 @@ implementation {
       call Leds.set(0);
       call Leds.led0On();
       //call LowPowerListening.setLocalWakeupInterval(LPL_DEF_LOCAL_WAKEUP);
-      call LowPowerListening.setLocalWakeupInterval(config.sleep_interval);
       call RoutingTester.startRouting();
       test_state = BOOTING_ROUTING;
       call Timer.startOneShot(1000ULL * config.routing_boot_period);
@@ -90,6 +89,7 @@ implementation {
       //call Leds.led0Off();
       call Leds.led1On();
       // CHANGE FROM FABRIZIO
+      call LowPowerListening.setLocalWakeupInterval(config.sleep_interval);
       call DCevaluator.startExperiment(config.sleep_interval);
 
       // END OF CHANGE

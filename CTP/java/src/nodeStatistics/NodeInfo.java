@@ -29,6 +29,7 @@ public class NodeInfo {
 
 	/** Number of duplicate packets received by this nodeStatistics. */
 	private int duplicates = 0;
+	private int uniqueCount = 0;
 
 	/** A history of messages received. */
 	private Vector<DataMsg> history;
@@ -123,6 +124,7 @@ public class NodeInfo {
 				GlobalStatistics.msgCount += (lastReceived
 						.get_routing_data_seq_no() + 1)
 						- lastMsgCnt;
+				GlobalStatistics.uniqueMsgReceived += 1;
 				GlobalStatistics.msgForwarded += lastReceived
 						.get_routing_data_forwarded()
 						- lastForwardedMsg;
@@ -145,6 +147,8 @@ public class NodeInfo {
 			lastTxQueueFull = lastReceived.get_routing_data_tx_queue_full();
 
 			lastMsgCnt = lastReceived.get_routing_data_seq_no() + 1;
+
+			uniqueCount++;
 
 			lastForwardedMsg = lastReceived.get_routing_data_forwarded();
 
@@ -213,7 +217,9 @@ public class NodeInfo {
 				lastReceived.get_routing_data_beacons(),
 				lastReceived.get_routing_data_dropped_duplicates(),
 				duplicates, lastParent(), lostPackets, 
-				lastReceived.get_routing_data_seq_no() + 1, id, parentOverflow,
+				//lastReceived.get_routing_data_seq_no() + 1, id, parentOverflow,
+				lastReceived.get_routing_data_seq_no() + 1, uniqueCount, id, parentOverflow,
+				//uniqueCount, id, parentOverflow,
 				parentChanges, parents.cardinality(),
 				lastReceived.get_routing_data_tx_queue_full(),
 				lastReceived.get_routing_data_forwarded(),

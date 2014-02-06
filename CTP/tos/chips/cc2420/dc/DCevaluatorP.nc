@@ -78,7 +78,7 @@ implementation {
    		upStartTime = now;
 		last_state = TRUE;
 		#ifdef PRINTF
-		printf("On");
+		//printf("On");
 	   	call PrintfFlush.flush();
 		#endif
 		/*#ifdef PRINTF
@@ -141,7 +141,7 @@ implementation {
 		if(sleepInterval > 0){
 	   		call Timer.startPeriodic(sleepInterval*1.2);
 			#ifdef PRINTF
-			printf("|%u|",sleep);
+			//printf("|%u|",sleep);
 			#endif
 		}
 	}
@@ -165,7 +165,7 @@ implementation {
 	   }else{*/
 	   	samplesCounter++;
 	   	#ifdef PRINTF
-		printf("%lu:%lu:%u:%u",upTimeData,totalTime,dcycleRawSum,samplesCounter);
+		//printf("%lu:%lu:%u:%u",upTimeData,totalTime,dcycleRawSum,samplesCounter);
 		#endif
 	   	dcycleRawSum += (1000 * upTimeData) / totalTime;	   
 	   	dcycle = dcycleRawSum / samplesCounter;  

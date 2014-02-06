@@ -51,7 +51,7 @@ public class OfflineStatisticsConsumer extends StatisticsConsumer {
 				//+ "AckFail" + "\t" + "MsgForw\t" + "DutyCycle\t" + "NbChanges" 
 				+ "AckFail" + "\t" + "MsgForw" 
 				+ "\t" + "TxQueueFull" + "\n");
-		globalLog.write(GlobalStatistics.msgCount + "\t"
+		globalLog.write(GlobalStatistics.uniqueMsgReceived + "\\" + GlobalStatistics.msgCount + "\t"
 				+ GlobalStatistics.acksReceivedCount + "\t"
 				+ GlobalStatistics.beaconsSentCount + "\t"
 				+ GlobalStatistics.duplicatesDroppedCount + "\t" + "\t"
@@ -87,7 +87,8 @@ public class OfflineStatisticsConsumer extends StatisticsConsumer {
 	protected void printNodeStats(NodeInfo node) throws IOException {
 		NodeStatistics stats = node.getStatistics();
 		globalLog.write(stats.getNodeId() + "\t" + stats.getLastParent() + "\t"
-				+ stats.getMsgCount() + "\t" + +stats.getAcksReceivedCount()
+				+ stats.getUniqueCount() + "\\" + stats.getMsgCount() + "\t" 
+				+ +stats.getAcksReceivedCount()
 				+ "\t" + stats.getBeaconsSentCount() + "\t"
 				+ stats.getDuplicatesDroppedCount() + "\t" + "\t"
 				+ stats.getDuplicatesReceivedCount() + "\t"

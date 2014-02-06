@@ -30,6 +30,8 @@ public class NodeStatistics {
 	private int lostCount;
 
 	private int msgCount;
+	
+	private int uniqueCount;
 
 	private int nodeId;
 
@@ -64,6 +66,7 @@ public class NodeStatistics {
 	 * @param lastParent
 	 * @param lostCount
 	 * @param msgCount
+	 * @param uniqueCount
 	 * @param nodeId
 	 * @param outOfOrderCount
 	 * @param parentOverflowCount
@@ -77,7 +80,7 @@ public class NodeStatistics {
 	public NodeStatistics(int acksFailedCount, int acksReceivedCount,
 			int beaconsSentCount, int duplicatesDroppedCount,
 			int duplicatesReceivedCount, int lastParent, int lostCount,
-			int msgCount, int nodeId, int parentOverflowCount,
+			int msgCount, int uniqueCount, int nodeId, int parentOverflowCount,
 			int parentsChanges, int parentsCount, int txQueueFullCount,
 			int msgForwarded, int dcIdle, int dcData) {
 		this.acksFailedCount = acksFailedCount;
@@ -88,6 +91,7 @@ public class NodeStatistics {
 		this.lastParent = lastParent;
 		this.lostCount = lostCount;
 		this.msgCount = msgCount;
+		this.uniqueCount = uniqueCount;
 		this.nodeId = nodeId;
 		this.parentOverflowCount = parentOverflowCount;
 		this.parentsChanges = parentsChanges;
@@ -162,6 +166,13 @@ public class NodeStatistics {
 	 */
 	public int getMsgCount() {
 		return msgCount;
+	}
+
+	/**
+	 * @return the uniqueCount
+	 */
+	public int getUniqueCount() {
+		return uniqueCount;
 	}
 
 	/**
