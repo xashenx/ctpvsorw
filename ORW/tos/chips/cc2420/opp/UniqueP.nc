@@ -62,7 +62,10 @@ implementation {
   
   struct {
     uint16_t source;
-    uint8_t seqNum;
+    // MOD BY FABRIZIO INTEGER OVERFLOW
+    //uint8_t seqNum;
+    uint16_t seqNum;
+    // END MOD
   } receivedMessages[OPP_RECEIVE_HISTORY_SIZE];
   
   uint8_t writeIndex;
@@ -97,14 +100,21 @@ implementation {
 // END ADD
   
   /***************** Prototypes Commands ***************/
-  bool hasSeen(uint16_t source, uint8_t seqNum);
-  void insert(uint16_t source, uint8_t seqNum);
+// MOD BY FABRIZIO INTEGER OVERFLOW
+  //bool hasSeen(uint16_t source, uint8_t seqNum);
+  bool hasSeen(uint16_t source, uint16_t seqNum);
+  //void insert(uint16_t source, uint8_t seqNum);
+  void insert(uint16_t source, uint16_t seqNum);
+// END MOD
   
   /***************** SubReceive Events *****************/
   event message_t *SubReceive.receive(message_t* msg, void* payload, uint8_t len) {
 	opp_header_t* oppHeader;
 	uint16_t source;
-	uint8_t seqNum;
+	// MOD BY FABRIZIO INTEGER OVERFLOW
+	//uint8_t seqNum;
+	uint16_t seqNum;
+	// END MOD
 
 	if( len < sizeof(opp_header_t) ) {return msg;}
 	
@@ -123,12 +133,14 @@ implementation {
       insert(source, seqNum);
       return signal Receive.receive(msg, payload, len);
     }
-
     logDup(msg);
     return msg;
   }
-  
-  bool hasSeen(uint16_t source, uint8_t seqNum) {
+ 
+ // MOD BY FABRIZIO INTEGER OVERFLOW
+  //bool hasSeen(uint16_t source, uint8_t seqNum) {
+  bool hasSeen(uint16_t source, uint16_t seqNum) {
+  // END MOD
     int i;
     if( seqNum == OPP_DUMMY_SEQ_NUM ){
     	return FALSE;
@@ -140,8 +152,10 @@ implementation {
   	}
     return FALSE;
   }
-  
-  void insert(uint16_t source, uint8_t seqNum) {   
+ // MOD BY FABRIZIO INTEGER OVERFLOW 
+  //void insert(uint16_t source, uint8_t seqNum) {   
+  void insert(uint16_t source, uint16_t seqNum) {  
+ // END MOD
 	receivedMessages[writeIndex].source = source;
    	receivedMessages[writeIndex].seqNum = seqNum;
     writeIndex++;

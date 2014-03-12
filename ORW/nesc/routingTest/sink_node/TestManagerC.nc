@@ -188,6 +188,8 @@ implementation {
     result_msg_t temp;
     //result_msg_t *temp2;
 #ifdef PRINTF
+	printf("size %u / %u\n",len, sizeof(data_msg_t));
+	printfflush();
 	//printf("message received of length %u(%u)\n",len,sizeof(data_msg_t));
 	//data_msg_t *tentative = (data_msg_t *)(payload + 4);
 	//printf("temperature: %u; last: %u\n",tentative->temperature,tentative->routing_data.parents[2].subunits);
@@ -195,11 +197,12 @@ implementation {
 	//printfflush();
 #endif
     call Leds.led2Toggle();
-    if (((len-4) == sizeof(data_msg_t) || len == sizeof(data_msg_t))
-    		&& test_state != DONE){
-      data_msg_t* net_msg = (data_msg_t *)(payload +4);
+    //if (((len-4) == sizeof(data_msg_t) || len == sizeof(data_msg_t)) && test_state != DONE){
+    if ((len == 59 || len == sizeof(data_msg_t)) && test_state != DONE){
+      data_msg_t* net_msg = (data_msg_t *)(payload +5);
+
 #ifdef PRINTF
-		printf("data message enqueued from %u with temp %u hum %u\n",net_msg->routing_data.node_addr,net_msg->temperature,net_msg->humidity);
+		printf("data message enqueued from %u with temp %u seqno %u dc %u\n",net_msg->routing_data.node_addr,net_msg->temperature,net_msg->routing_data.seq_no,net_msg->routing_data.dcIdle);
 		printfflush();
 #endif
       if (call ResultQueue.size() < call ResultQueue.maxSize()) {
@@ -278,6 +281,7 @@ implementation {
 	config.run_period=60;
 	config.stop_period=3;
 	config.power=27;
+	config.sleep_interval=2048;
 	config.randomize_start = FALSE;
 #endif 
     memcpy(msg, &config, sizeof(config_msg_t));

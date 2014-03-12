@@ -102,7 +102,10 @@ implementation {
 	task void logQueueFull_task();
 	task void send_task();
 	
-	uint8_t incSeqNum(){
+	// MOD BY FABRIZIO INTEGER OVERFLOW
+	//uint8_t incSeqNum(){
+	uint16_t incSeqNum(){
+	// END MOD
 		seqNum++;
 		if( seqNum == OPP_DUMMY_SEQ_NUM ){
 			seqNum = OPP_DUMMY_SEQ_NUM + 1;

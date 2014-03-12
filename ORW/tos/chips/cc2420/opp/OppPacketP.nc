@@ -64,13 +64,17 @@ implementation {
   		opp_header_t* header = getHeader(msg);
   		header->src = src;
   	}
-
-  	command uint8_t OppPacket.getSeqNum(message_t* msg){
+	
+	// MOD BY FABRIZIO SEQ NUMBER OVERFLOW
+  	//command uint8_t OppPacket.getSeqNum(message_t* msg){
+  	command uint16_t OppPacket.getSeqNum(message_t* msg){
   		opp_header_t* header = getHeader(msg);
   		return header->seqNum;
   	}
   
-  	command void OppPacket.setSeqNum(message_t* msg, uint8_t seqNum){
+  	//command void OppPacket.setSeqNum(message_t* msg, uint8_t seqNum){
+  	command void OppPacket.setSeqNum(message_t* msg, uint16_t seqNum){
+	// END MOD
   		opp_header_t* header = getHeader(msg);
   		header->seqNum = seqNum;
   	}
@@ -84,8 +88,11 @@ implementation {
   		opp_header_t* header = getHeader(msg);
   		header->pull = pull;
   	}
-  	
-	command void OppPacket.init(message_t* msg, am_addr_t src, uint8_t seqNum, uint8_t ttl, bool pull){
+  
+  	// MOD BY FABRIZIO INTEGER OVERFLOW
+	//command void OppPacket.init(message_t* msg, am_addr_t src, uint8_t seqNum, uint8_t ttl, bool pull){
+	command void OppPacket.init(message_t* msg, am_addr_t src, uint16_t seqNum, uint8_t ttl, bool pull){
+	// END MOD
   		opp_header_t* header = getHeader(msg);
   		header->src = src;
   		header->seqNum = seqNum;

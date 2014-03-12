@@ -139,7 +139,11 @@ implementation {
   	    	msg->routing_data.parents[i].subunits = parents[i].subunits;
   	  }
 	}
-    
+   #ifdef PRINTF
+	printf("new message: (temp %u)(seqno %u)(dc %u)\n",msg->temperature,
+		msg->routing_data.seq_no,msg->routing_data.dcIdle);
+	printfflush();
+   #endif
     /*parents[current_parent_index].subunits += call Period.getNow() - 
       last_time_recorded;
     last_time_recorded = call Period.getNow();

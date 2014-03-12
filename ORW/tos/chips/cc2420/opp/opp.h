@@ -65,7 +65,10 @@ enum {
 //seqNum 0: dummy msg
 typedef nx_struct opp_header {
   nx_uint8_t ttl:7, pull:1;
-  nx_uint8_t seqNum;
+  // MOD BY FABRIZIO INTEGER OVERFLOW
+  //nx_uint8_t seqNum;
+  nx_uint16_t seqNum;
+  // END MOD
   nx_uint16_t src;
 } opp_header_t;
 

@@ -39,12 +39,17 @@ interface OppPacket {
 
   command am_addr_t getSource(message_t* msg);
   command void setSource(message_t* msg, am_addr_t src);
-
-  command uint8_t getSeqNum(message_t* msg);
-  command void setSeqNum(message_t* msg, uint8_t seqNum);
+// MODE BY FABRIZIO INTEGER OVERFLOW
+  //command uint8_t getSeqNum(message_t* msg);
+  command uint16_t getSeqNum(message_t* msg);
+  //command void setSeqNum(message_t* msg, uint8_t seqNum);
+  command void setSeqNum(message_t* msg, uint16_t seqNum);
+// END MOD
   
   command bool isPull(message_t* msg);
   command void setPull(message_t* msg, bool pull);
-
-  command void init(message_t* msg, am_addr_t src, uint8_t seqNum, uint8_t ttl, bool pull);
+// MOD BY FABRIZIO INTEGER OVERFLOW
+  //command void init(message_t* msg, am_addr_t src, uint8_t seqNum, uint8_t ttl, bool pull);
+  command void init(message_t* msg, am_addr_t src, uint16_t seqNum, uint8_t ttl, bool pull);
+// END MOD
 }
