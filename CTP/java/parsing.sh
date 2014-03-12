@@ -10,5 +10,5 @@ if [ $# != 1 ]; then
 	exit 0
 fi
 java -cp "netTests.jar:$TOSROOT/support/sdk/java/tinyos.jar" netTest.HistoryProcessor $1
-tail -n 25 logs/results.txt
+tail -n 29 logs/results.txt
 exit 0

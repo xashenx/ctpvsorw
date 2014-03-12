@@ -16,6 +16,7 @@ typedef nx_struct config_msg {
   nx_uint16_t sleep_interval;
   nx_uint8_t power;
   nx_bool randomize_start;
+  nx_bool random_interval;
 } config_msg_t;
 
 

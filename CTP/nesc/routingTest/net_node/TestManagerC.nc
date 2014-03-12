@@ -61,6 +61,7 @@ implementation {
   }
 
   event void Timer.fired() {
+  	uint32_t wakeup_interval;
     if (test_state == DONE){
       call Leds.led0Toggle();
       call Leds.led1Toggle();
@@ -74,8 +75,17 @@ implementation {
 
     } else if (test_state == BOOTING_ROUTING){
       //call LowPowerListening.setLocalSleepInterval(LOCAL_SLEEP);
-      call LowPowerListening.setLocalSleepInterval(config.sleep_interval);
-      call DCevaluator.startExperiment(config.sleep_interval);
+      if(config.random_interval){
+	wakeup_interval = call Random.rand32();
+      	wakeup_interval %= (config.sleep_interval - 100);
+      	wakeup_interval += 100;
+      }else{
+	wakeup_interval = config.sleep_interval;
+      }
+      /*call LowPowerListening.setLocalSleepInterval(config.sleep_interval);
+      call DCevaluator.startExperiment(config.sleep_interval);*/
+      call LowPowerListening.setLocalSleepInterval(wakeup_interval);
+      call DCevaluator.startExperiment(wakeup_interval);
       //call Leds.led0Off();
       call Leds.led1On();
       // CHANGE FROM FABRIZIO

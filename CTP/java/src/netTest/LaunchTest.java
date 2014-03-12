@@ -115,11 +115,18 @@ public class LaunchTest {
 			configMsg.set_power(Short.parseShort(args[4]));
 			configMsg.set_sleep_interval(Integer.parseInt(args[5]));
 
-			if (args.length == 7 && args[6].equals("DESYNCH_APP"))
+			if (args.length == 7 && args[6].equals("DESYNCH_APP")){
 				configMsg.set_randomize_start((byte) 1);
-			else if (args.length == 6)
+				configMsg.set_random_interval((byte) 0);
+			}
+			else if (args.length == 7 && args[6].equals("RANDOM_INTERVAL")){
+				configMsg.set_random_interval((byte) 1);
 				configMsg.set_randomize_start((byte) 0);
-			else
+			}
+			else if (args.length == 6){
+				configMsg.set_random_interval((byte) 0);
+				configMsg.set_randomize_start((byte) 0);
+			}else
 				printUsageAndExit();
 
 			System.out.println(configMsg);

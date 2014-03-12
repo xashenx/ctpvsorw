@@ -63,6 +63,7 @@ implementation {
   }
 
   event void Timer.fired() {
+	uint32_t wakeup_interval;
     if (test_state == DONE){
 #ifdef PRINTF
 		printf("phase change: turning off\n");
@@ -89,9 +90,17 @@ implementation {
       //call Leds.led0Off();
       call Leds.led1On();
       // CHANGE FROM FABRIZIO
-      call LowPowerListening.setLocalWakeupInterval(config.sleep_interval);
-      call DCevaluator.startExperiment(config.sleep_interval);
-
+      if(config.random_interval){
+	wakeup_interval = call Random.rand32();
+      	wakeup_interval %= (config.sleep_interval - 100);
+      	wakeup_interval += 100;
+      }else{
+	wakeup_interval = config.sleep_interval;
+      }
+/*      call LowPowerListening.setLocalWakeupInterval(config.sleep_interval);
+      call DCevaluator.startExperiment(config.sleep_interval);*/
+      call LowPowerListening.setLocalWakeupInterval(wakeup_interval);
+      call DCevaluator.startExperiment(wakeup_interval);
       // END OF CHANGE
       test_state = RUNNING_APP;
       call RoutingTester.activateTask(config.randomize_start,

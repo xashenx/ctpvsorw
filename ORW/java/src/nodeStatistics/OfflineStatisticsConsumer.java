@@ -81,7 +81,7 @@ public class OfflineStatisticsConsumer extends StatisticsConsumer {
 				+ "DuplRx" + "\t" + "Lost" + "\t" + "AckFail" + "\t"
 				//+ "NbChanges" + "\t" + "NbCount" + "\t\t"
 				+ "NbCount" + "\t\t"
-				+ "TxQueueFull" + "\tMsgForwarded\t" + "DC\n");
+				+ "TxQueueFull" + "\tMsgForwarded\t" + "DC\t" + "WakeUp\n");
 	}
 
 	protected void printNodeStats(NodeInfo node) throws IOException {
@@ -98,7 +98,7 @@ public class OfflineStatisticsConsumer extends StatisticsConsumer {
 				+ stats.getTxQueueFullCount() + "\t" + "\t" 
 				+ stats.getMsgForwarded() + "\t" + "\t"
 				//+ stats.getDcData() + "/" + stats.getDcIdle() + "\n");
-				+ stats.getDcIdle() + "\n");
+				+ stats.getDcIdle() + "\t" + stats.getDcData() + "\n");
 	}
 
 }

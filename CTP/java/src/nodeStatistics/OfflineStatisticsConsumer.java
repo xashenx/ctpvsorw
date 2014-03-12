@@ -81,7 +81,7 @@ public class OfflineStatisticsConsumer extends StatisticsConsumer {
 				+ "AckRx" + "\t" + "Beacon" + "\t" + "DuplDropped" + "\t"
 				+ "DuplRx" + "\t" + "Lost" + "\t" + "AckFail" + "\t"
 				+ "ParentChanges" + "\t" + "ParentsCount" + "\t"
-				+ "TxQueueFull" + "\tMsgForwarded\t" + "DC\n");
+				+ "TxQueueFull" + "\tMsgForwarded\t" + "DC\t" + "WakeUp\n");
 				//+ "TxQueueFull" + "\tMsgForwarded\t" + "DC(D/I)\n");
 	}
 
@@ -99,7 +99,8 @@ public class OfflineStatisticsConsumer extends StatisticsConsumer {
 				+ stats.getTxQueueFullCount() + "\t" + "\t" 
 				+ stats.getMsgForwarded() + "\t" + "\t"
 				//+ stats.getDcData() + "/" + stats.getDcIdle() + "\n");
-				+ stats.getDcIdle() + "\n");
+				+ stats.getDcIdle() + "\t"
+				+ stats.getDcData() + "\n");
 	}
 
 }
