@@ -2,8 +2,9 @@ TOSMAKE_PATH=../support/make/
 
 COMPONENT=GlobalTestAppC
 
+#CFLAGS += -DFIX_WAKEUP #HARDCODING OF WAKEUP INTERVALS TO FIX VALUES
 CFLAGS += -DCC2420_DEF_RFPOWER=27
-CFLAGS += -DCC2420_DEF_CHANNEL=26
+CFLAGS += -DCC2420_DEF_CHANNEL=23
 CFLAGS += -DACK_LOW_POWER_LISTENING
 MSG_SIZE = 94
 
@@ -27,12 +28,12 @@ endif
 ifeq ($(OBJECTIVE),SINK)
 CFLAGS += -IroutingTest/sink_node 
 CFLAGS += -DSERIAL_FW
+#CFLAGS += -DMSG_LOGGER
 endif
 
 ifeq ($(OBJECTIVE),WINE_SINK)
 CFLAGS += -IroutingTest/sink_node
 #CFLAGS += -DALTERNATE_RADIO_FLASH
-CFLAGS += -DMSG_LOGGER
 endif
 
 ifeq ($(OBJECTIVE),NET)
@@ -50,9 +51,9 @@ CFLAGS += -DROUTING_NODE
 CFLAGS += -IroutingTest/bridge_node 
 endif
 
-# CFLAGS += -DPRINTF_SUPPORT
-# CFLAGS += -I$(TOSDIR)/lib/printf
-# BUILD_EXTRA_DEPS += PrintfMsg.class PrintfClient.class
+#CFLAGS += -DPRINTF_SUPPORT
+#CFLAGS += -I$(TOSDIR)/lib/printf
+#BUILD_EXTRA_DEPS += PrintfMsg.class PrintfClient.class
 # %.class: %.java 
 # 	javac $<
 

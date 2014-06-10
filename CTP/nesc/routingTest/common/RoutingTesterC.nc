@@ -63,8 +63,8 @@ implementation {
   RoutingTesterP.Period -> Period;
 
 #ifdef PRINTF
-//  RoutingInfoC.PrintfControl = PrintfControl;
-//  RoutingInfoC.PrintfFlush = PrintfFlush;
+  RoutingInfoC.PrintfControl = PrintfControl;
+  RoutingInfoC.PrintfFlush = PrintfFlush;
 
   RoutingTesterP.PrintfControl = PrintfControl;
   RoutingTesterP.PrintfFlush = PrintfFlush;

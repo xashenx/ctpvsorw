@@ -24,6 +24,7 @@ module TestManagerC {
     interface RoutingTester;
     interface Queue<result_msg_t> as ResultQueue;
     interface AMSend as ConfigSend;
+    interface DCevaluator;
 
     //interface ResetFlooding;
 
@@ -151,6 +152,7 @@ implementation {
 #endif
   
   event void Timer.fired() {
+	uint32_t wakeup_interval;
     if (test_state == DONE){
       call Leds.led0Toggle();
       call Leds.led1Toggle();
@@ -164,6 +166,27 @@ implementation {
       call Timer.startOneShot(1000ULL * config.routing_boot_period);
     } else if (test_state == BOOTING_ROUTING){
       call Leds.led0Off();
+      // CHANGE FROM FABRIZIO
+      //#ifdef FIX_NODES
+      	#warning "**** SINK ALWAYS ON ****"
+	//if(config.random_interval)
+		wakeup_interval = 0;
+	/*else
+		wakeup_interval = 0;
+	#else
+	if(config.random_interval){
+		wakeup_interval = call Random.rand32();
+      		wakeup_interval %= (config.sleep_interval - 100);
+	      	wakeup_interval += 100;
+	}	else{
+		wakeup_interval = config.sleep_interval;
+	}
+	#endif*/
+/*      call LowPowerListening.setLocalWakeupInterval(config.sleep_interval);
+      call DCevaluator.startExperiment(config.sleep_interval);*/
+      call LowPowerListening.setLocalWakeupInterval(wakeup_interval);
+      call DCevaluator.startExperiment(wakeup_interval);
+      // END OF CHANGE
       test_state = RUNNING_APP;
       call RoutingTester.activateTask(config.randomize_start,
                                       1000ULL * config.app_period, 
@@ -175,6 +198,12 @@ implementation {
     } else if (test_state == STOPPING_APP){
       call RoutingTester.stopRouting();
       test_state = DONE;
+      // CHANGE FROM FABRIZIO
+      // setting back the radio as always on
+      // so net_nodes will be waiting for further config messages
+      call DCevaluator.stopExperiment();
+      call LowPowerListening.setLocalWakeupInterval(0);
+      // END OF CHANGE
       call Leds.set(0x0);
 #ifdef MSG_LOGGER
       call LogRead.read(&flash_msg, sizeof(result_msg_t));

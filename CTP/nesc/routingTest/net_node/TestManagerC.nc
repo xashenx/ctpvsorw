@@ -75,13 +75,76 @@ implementation {
 
     } else if (test_state == BOOTING_ROUTING){
       //call LowPowerListening.setLocalSleepInterval(LOCAL_SLEEP);
-      if(config.random_interval){
-	wakeup_interval = call Random.rand32();
-      	wakeup_interval %= (config.sleep_interval - 100);
-      	wakeup_interval += 100;
-      }else{
-	wakeup_interval = config.sleep_interval;
-      }
+      #ifdef FIX_WAKEUP
+      #warning "**** HARDCODING OF WAKEUP INTERVALS ****"
+      switch(TOS_NODE_ID){
+	case 1:
+		if(config.random_interval)
+			wakeup_interval = 1932;
+		else
+			wakeup_interval = 296;
+		break;
+	case 2:
+		if(config.random_interval)
+			wakeup_interval = 303;
+		else
+			wakeup_interval = 1628;
+		break;
+	case 3:
+		if(config.random_interval)
+			wakeup_interval = 993;
+		else
+			wakeup_interval = 1396;
+		break;
+	case 4:
+		if(config.random_interval)
+			wakeup_interval = 327;
+		else
+			wakeup_interval = 864;
+		break;
+	case 5:
+		if(config.random_interval)
+			wakeup_interval = 464;
+		else
+			wakeup_interval = 760;
+		break;
+	case 6:
+		if(config.random_interval)
+			wakeup_interval = 726;
+		else
+			wakeup_interval = 1853;
+		break;
+	case 7:
+		if(config.random_interval)
+			wakeup_interval = 476;
+		else
+			wakeup_interval = 1010;
+		break;
+	case 8:
+		if(config.random_interval)
+			wakeup_interval = 1043;
+		else
+			wakeup_interval = 1196;
+		break;
+	case 9:
+		if(config.random_interval)
+			wakeup_interval = 211;
+		else
+			wakeup_interval = 1734;
+		break;
+	default:
+		break;
+	}
+	#else
+      	if(config.random_interval){
+		wakeup_interval = call Random.rand32();
+		wakeup_interval %= (config.sleep_interval - 100);
+ 	     	wakeup_interval += 100;
+	} else{
+		wakeup_interval = config.sleep_interval;
+      	}
+	#endif
+
       /*call LowPowerListening.setLocalSleepInterval(config.sleep_interval);
       call DCevaluator.startExperiment(config.sleep_interval);*/
       call LowPowerListening.setLocalSleepInterval(wakeup_interval);

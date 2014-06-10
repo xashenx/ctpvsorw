@@ -1,6 +1,6 @@
  #include "Ctp.h"
 
- #ifdef PRINTF_SUPPORT
+ #ifdef PRINTF
  #include "printf.h"
  #endif
 
@@ -12,7 +12,7 @@ module RoutingInfoP {
     interface CtpInfo;
     interface AMPacket;
 
-#ifdef PRINTF_SUPPORT
+#ifdef PRINTF
     interface SplitControl as PrintfControl;
     interface PrintfFlush;
 #endif
@@ -44,7 +44,7 @@ implementation {
     num_tx_queue_full = 0;
     num_dropped_duplicates = 0;
     num_forwarded_messages = 0;
-#ifdef PRINTF_SUPPORT
+#ifdef PRINTF
     call PrintfControl.start();
 #endif
   }
@@ -52,6 +52,10 @@ implementation {
   command error_t CollectionDebug.logEvent(uint8_t type) {
     if (type == NET_C_FE_SEND_QUEUE_FULL){
       num_tx_queue_full++;    
+      #ifdef PRINTF
+	printf("Full!");
+	call PrintfFlush.flush();
+      #endif
     } else if (type == NET_C_FE_DUPLICATE_CACHE_AT_SEND){
       num_dropped_duplicates++;
     } else if (type == NET_C_FE_DUPLICATE_CACHE){
@@ -99,6 +103,10 @@ implementation {
       num_ack_failed++;
     } else if (type == NET_C_FE_RCV_MSG && !(TOS_NODE_ID == 0)){
       num_forwarded_messages++;
+      #ifdef PRINTF
+      printf("rec%u %u %u",msg,origin,node);
+      call PrintfFlush.flush();
+      #endif
     }
     //Useless signaled events
     //NET_C_FE_LOOP_DETECTED
@@ -188,7 +196,7 @@ implementation {
     return num_forwarded_messages;
   }
   
-#ifdef PRINTF_SUPPORT
+#ifdef PRINTF
   event void PrintfControl.startDone(error_t error) {}
 
   event void PrintfControl.stopDone(error_t error) {}

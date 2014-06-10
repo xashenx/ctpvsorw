@@ -23,6 +23,7 @@ module TestManagerC {
     interface RoutingTester;
     interface Queue<result_msg_t>;
     interface AMSend as ConfigSend;
+   interface DCevaluator;
 
     interface ResetFlooding;
 
@@ -146,6 +147,7 @@ implementation {
 #endif
 
   event void Timer.fired() {
+  	uint32_t wakeup_interval;
     if (test_state == DONE){
       call Leds.led0Toggle();
       call Leds.led1Toggle();
@@ -158,6 +160,22 @@ implementation {
       test_state = BOOTING_ROUTING;
       call Timer.startOneShot(1000ULL * config.routing_boot_period);
     } else if (test_state == BOOTING_ROUTING){
+/*    if(config.random_interval){
+	wakeup_interval = call Random.rand32();
+      	wakeup_interval %= (config.sleep_interval - 100);
+      	wakeup_interval += 100;
+      }else{
+	wakeup_interval = config.sleep_interval;
+      }*/
+      #warning "**** SINK ALWAYS ON ****"
+	//if(config.random_interval)
+		wakeup_interval = 0;
+/*	else
+		wakeup_interval = 0;*/
+      /*call LowPowerListening.setLocalSleepInterval(config.sleep_interval);
+      call DCevaluator.startExperiment(config.sleep_interval);*/
+      call LowPowerListening.setLocalSleepInterval(wakeup_interval);
+      call DCevaluator.startExperiment(wakeup_interval);
       call Leds.led0Off();
       test_state = RUNNING_APP;
       call RoutingTester.activateTask(config.randomize_start,

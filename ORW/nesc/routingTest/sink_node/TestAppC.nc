@@ -24,6 +24,7 @@ implementation {
   components new TimerMilliC() as Timer;
   components new TimerMilliC() as ConfigFwTimer;
   components new AMSenderC(AM_CONFIG_MSG) as ConfigSend;
+  components DCevaluatorC;
 
 #ifdef MSG_LOGGER
   components new TimerMilliC() as FwTimer;
@@ -95,5 +96,6 @@ implementation {
   TestManagerC.PrintfControl -> PrintfC;
   TestManagerC.PrintfFlush -> PrintfC;
 #endif
+  TestManagerC.DCevaluator -> DCevaluatorC;
 }
 

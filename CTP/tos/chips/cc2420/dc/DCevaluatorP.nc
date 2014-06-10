@@ -111,7 +111,8 @@ implementation {
 	}
 	
 	command uint16_t DCevaluator.getActualDutyCycle(){
-		if (TOS_NODE_ID == SINK_ID || sleepInterval == 0)
+		//if (TOS_NODE_ID == SINK_ID || sleepInterval == 0)
+		if (sleepInterval == 0)
 			return 1000;
 		return dcycle;
 	}

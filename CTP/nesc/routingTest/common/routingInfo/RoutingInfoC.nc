@@ -1,8 +1,8 @@
-#include "Ctp.h"
+ #include "Ctp.h"
 
-#ifdef PRINTF_SUPPORT
-#include "printf.h"
-#endif
+ #ifdef PRINTF
+ #include "printf.h"
+ #endif
 
 configuration RoutingInfoC {
   uses {
@@ -10,7 +10,7 @@ configuration RoutingInfoC {
     interface AMPacket;
     interface Leds;
 
-#ifdef PRINTF_SUPPORT
+#ifdef PRINTF
     interface SplitControl as PrintfControl;
     interface PrintfFlush;
 #endif
@@ -33,9 +33,10 @@ implementation {
   RoutingInfoP.CollectionDebug <- Collector.CollectionDebug;
   RoutingInfoP.RoutingInfo = RoutingInfo;
 
-#ifdef PRINTF_SUPPORT
+#ifdef PRINTF
   RoutingInfoP.PrintfControl = PrintfControl;
   RoutingInfoP.PrintfFlush = PrintfFlush;
 #endif
+
 
 }
