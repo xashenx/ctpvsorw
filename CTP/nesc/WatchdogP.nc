@@ -1,5 +1,5 @@
 // maximum 1000 ms
-#define RESET_PERIOD 700
+ #define RESET_PERIOD 700
 
 module WatchdogP {
   provides interface Watchdog;
