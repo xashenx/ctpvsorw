@@ -11,10 +11,10 @@
 #
 #
 ############# DEFINED PARAMETERS FOR THE TESTS #################
-power=14 		# starting power
+power=27 		# starting power
 #power=27 		# starting power
-sleepI=256 		# starting sleeping interval
-appP=5			# application period
+sleepI=2048 		# starting sleeping interval
+appP=4			# application period
 runsPath=logs/runs  	# path to the logs of the runs
 ################################################################
 clear
@@ -107,16 +107,17 @@ if [ $4 = "AUTO" ]; then
 			power=7
 		fi
 		#for((j=0;j<7;j++)); do
-		for((j=0;j<4;j++)); do
+		for((j=0;j<5;j++)); do
 			#SETTING SLEEP
-			if [[ $j > 0 && $j < 4 ]]; then
-				sleepI=$((sleepI+1024))
-			elif [ $j = 4 ]; then
-				sleepI=8192
-			elif [ $j = 5 ]; then
-				sleepI=14336
-			elif [ $j = 6 ]; then
-				sleepI=15360
+			if [[ $j > 0 && $j < 5 ]]; then
+				appP=$((appP*2))
+				#sleepI=$((sleepI*2))
+			#elif [ $j = 4 ]; then
+			#	sleepI=8192
+			#elif [ $j = 5 ]; then
+			#	sleepI=14336
+			#elif [ $j = 6 ]; then
+			#	sleepI=15360
 			#else
 			#	sleepI=1024
 			fi
@@ -170,6 +171,8 @@ if [ $4 = "DUAL" ]; then
 	./parsing.sh logs/$fileToParse>> $runsPath/run_$1.txt
 fi
 
+cp logs/results.txt /home/ashen/Dropbox/Tesi\ Magistrale/results/results_$1.txt
+cp $runsPath/run_$1.txt /home/ashen/Dropbox/Tesi\ Magistrale/results/
 mv logs/results.txt logs/runs/results_$1.txt
 mv logs/global.txt logs/runs/global_$1.txt
 
