@@ -23,12 +23,16 @@ import netTest.serial.SerializableMessage;
  */
 public abstract class StatisticsConsumer implements Consumer {
 	protected BufferedWriter globalLog;
+	protected BufferedWriter netPdrLog;
+	protected BufferedWriter nodesPdrLog;
 
 	protected HashMap<Integer, NodeInfo> nodes;
 
-	protected StatisticsConsumer(String logFilename) {
+	protected StatisticsConsumer(String logFilename,String logFilename2,String logFilename3) {
 		nodes = new HashMap<Integer, NodeInfo>();
 		openFiles(logFilename);
+		openFiles(logFilename2);
+		openFiles(logFilename3);
 	}
 
 	protected synchronized NodeInfo ensureNode(int index, boolean runtime) {
@@ -53,19 +57,30 @@ public abstract class StatisticsConsumer implements Consumer {
 	private void openFiles(String logFilename) {
 		File dir = new File(Strings.getString("LOG_DIR"));
 		dir.mkdir();
-
 		try {
-			globalLog = new BufferedWriter(new FileWriter(Strings
+		if(logFilename.contains("pdr")){
+			if(logFilename.contains("nodes")){
+				nodesPdrLog = new BufferedWriter(new FileWriter(Strings
 					.getString("LOG_DIR")
 					+ File.separator + logFilename, true));
-			System.out.println("write statistics in "
-					+ Strings.getString("LOG_DIR") + File.separator
-					+ logFilename);
+
+			}else {
+				netPdrLog = new BufferedWriter(new FileWriter(Strings
+					.getString("LOG_DIR")
+					+ File.separator + logFilename, true));
+			}
+		}else {
+			globalLog = new BufferedWriter(new FileWriter(Strings
+				.getString("LOG_DIR")
+				+ File.separator + logFilename, true));
+		}
+		System.out.println("write statistics in "
+			+ Strings.getString("LOG_DIR") + File.separator
+			+ logFilename);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
 	}
 
 	protected abstract void printGlobalStats() throws IOException;

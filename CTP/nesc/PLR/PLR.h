@@ -23,7 +23,7 @@ enum {
 };
 
 enum {
-  NR_NODES = 11,
+  NR_NODES = 10,
   PAYLOAD_LENGTH = 94, // Must be equal to the value in Makefile
   REPORT_DELAY_WINDOW = 1200U,
   UART_INTERVAL = 1000,

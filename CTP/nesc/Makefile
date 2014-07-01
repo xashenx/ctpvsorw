@@ -28,12 +28,12 @@ endif
 ifeq ($(OBJECTIVE),SINK)
 CFLAGS += -IroutingTest/sink_node 
 CFLAGS += -DSERIAL_FW
-#CFLAGS += -DMSG_LOGGER
 endif
 
 ifeq ($(OBJECTIVE),WINE_SINK)
 CFLAGS += -IroutingTest/sink_node
-#CFLAGS += -DALTERNATE_RADIO_FLASH
+CFLAGS += -DMSG_LOGGER
+CFLAGS += -DALTERNATE_RADIO_FLASH
 endif
 
 ifeq ($(OBJECTIVE),NET)

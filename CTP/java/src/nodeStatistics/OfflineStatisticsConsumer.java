@@ -17,7 +17,9 @@ import netTest.serial.SerializableMessage;
 public class OfflineStatisticsConsumer extends StatisticsConsumer {
 
 	public OfflineStatisticsConsumer() {
-		super(Strings.getString("OfflineStatisticsConsumer.GLOBAL_LOG_FILE"));
+		super(Strings.getString("OfflineStatisticsConsumer.GLOBAL_LOG_FILE"),
+			Strings.getString("OfflineStatisticsConsumer.PDR_LOG_FILE"),
+			Strings.getString("OfflineStatisticsConsumer.NODES_PDR_LOG_FILE"));
 	}
 
 	/*
@@ -102,5 +104,26 @@ public class OfflineStatisticsConsumer extends StatisticsConsumer {
 				+ stats.getDcIdle() + "\t"
 				+ stats.getDcData() + "\n");
 	}
+	
+	protected void printNetworkPdrHeader() throws IOException{
+		netPdrLog.write("EXP\tDEL\tHI_ID\n");
+	}
 
+	protected void printNetworkPdr(int id) throws IOException{
+		netPdrLog.write(id + "\t" 
+		+ GlobalStatistics.uniqueMsgReceived + "\t" + GlobalStatistics.msgCount + "\n");
+	}
+
+	protected void printNodesPdrHeader() throws IOException{
+		String header = null;
+		header = "EXP";
+		for(int i=0;i<8;i++){
+			header += "\tPDR" + i; 
+		}
+		nodesPdrLog.write(header + "\n");
+	}
+
+	protected void printNodePdr(int id) throws IOException{
+	
+	}
 }

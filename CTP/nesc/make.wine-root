@@ -1,6 +1,6 @@
 #!/bin/bash
 echo Building sink node... 
-OBJECTIVE=WINE_SINK make tmote
+OBJECTIVE=WINE_SINK make tmote ctp
 
 if [ $# = "2" ]
 then

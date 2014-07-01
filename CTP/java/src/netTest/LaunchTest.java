@@ -177,6 +177,58 @@ public class LaunchTest {
 					* Integer.parseInt(Strings
 							.getString("RouteTest.NUM_NET_NODES")));
 			System.exit(0);
+		} else if (args.length >= 6 && args[0].equals("GATEWAY")) {
+			ConfigMsg configMsg = new ConfigMsg();
+			configMsg.set_seq_no(Integer.parseInt(args[1]));
+			configMsg.set_app_period(Integer.parseInt(args[2]));
+			configMsg.set_wait_period(Integer.parseInt(Strings
+					.getString("RouteTest.WAIT_PERIOD")));
+			configMsg.set_routing_boot_period(Integer.parseInt(Strings
+					.getString("RouteTest.ROUTING_BOOT_PERIOD")));
+			configMsg.set_run_period(Integer.parseInt(args[3]));
+			configMsg.set_stop_period(Integer.parseInt(Strings
+					.getString("RouteTest.STOP_PERIOD")));
+			configMsg.set_power(Short.parseShort(args[4]));
+			configMsg.set_sleep_interval(Integer.parseInt(args[5]));
+
+			if (args.length == 7 && args[6].equals("DESYNCH_APP")){
+				configMsg.set_randomize_start((byte) 1);
+				configMsg.set_random_interval((byte) 0);
+			}
+			else if (args.length == 7 && args[6].equals("RANDOM_INTERVAL")){
+				configMsg.set_random_interval((byte) 1);
+				configMsg.set_randomize_start((byte) 0);
+			}
+			else if (args.length == 6){
+				configMsg.set_random_interval((byte) 0);
+				configMsg.set_randomize_start((byte) 0);
+			}else
+				printUsageAndExit();
+
+			System.out.println(configMsg);
+
+			long time = (Integer.parseInt(Strings
+					.getString("RouteTest.WAIT_PERIOD"))
+					+ Integer.parseInt(Strings
+							.getString("RouteTest.ROUTING_BOOT_PERIOD"))
+					+ Integer.parseInt(args[3]) + Integer.parseInt(Strings
+					.getString("RouteTest.STOP_PERIOD"))) * 1000;
+			time = (long) ((double) time * Double.parseDouble(Strings
+					.getString("RouteTest.EXTRA_TIMEOUT")));
+
+			if (source == null)
+				phoenix = BuildSource.makePhoenix(PrintStreamMessenger.err);
+			else
+				phoenix = BuildSource.makePhoenix(source,
+						PrintStreamMessenger.err);
+			MoteIF mote = new MoteIF(phoenix);
+			try {
+				mote.send(MoteIF.TOS_BCAST_ADDR, configMsg);
+			} catch (IOException e) {
+				e.printStackTrace();
+				return;
+			}
+
 		} else {
 			printUsageAndExit();
 		}

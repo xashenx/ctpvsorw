@@ -36,12 +36,14 @@ public class HistoryProcessor {
 			ConfigMsg configMsg = (ConfigMsg) in.readObject();
 			statConsumer.printExperimentId(id);
 			statConsumer.printConfiguration(configMsg);
+			statConsumer.printNetworkPdrHeader(id);
+			statConsumer.printNodesPdrHeader(id);
 			try {
 				while ((msg = (DataMsg) in.readObject()) != null)
 					statConsumer.messageReceived(msg);
 			} catch (EOFException e) {
-
 				statConsumer.printStats();
+				statConsumer.printPlotFiles();
 			} finally {
 				in.close();
 			}
