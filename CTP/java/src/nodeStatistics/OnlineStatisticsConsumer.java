@@ -82,4 +82,16 @@ public class OnlineStatisticsConsumer extends StatisticsConsumer {
 				+ decimalFormat.format(humidity) + "\t"
 				+ decimalFormat.format(voltage) + "\n");
 	}
+
+	@Override
+	protected void printNetworkForPlotHeader() throws IOException {}
+
+	@Override
+	protected void printNetworkStatsForPlot(int expId, int activeNodes) throws IOException {}
+
+	@Override
+	protected void printNodesForPlotHeader() throws IOException {}
+
+	@Override
+	protected void printNodeStatsForPlot(NodeInfo node) throws IOException {}
 }

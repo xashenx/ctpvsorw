@@ -56,6 +56,15 @@ public class NodeStatistics {
 	
 	/** Time spent transmitting during duty cycles*/
 	private int dcData;
+	
+	/** Sum of the temperatures */
+	private double tmpSum;
+
+	/** Sum of the temperatures */
+	private double humSum;
+
+	/** Consumption in terms of voltage*/
+	private double consumption;
 
 	/**
 	 * @param acksFailedCount
@@ -64,7 +73,7 @@ public class NodeStatistics {
 	 * @param duplicatesDroppedCount
 	 * @param duplicatesReceivedCount
 	 * @param lastParent
-	 * @param lostCoun
+	 * @param lostCount
 	 * @param msgCount
 	 * @param uniqueCount
 	 * @param nodeId
@@ -76,13 +85,17 @@ public class NodeStatistics {
 	 * @param msgForwarded
 	 * @param dcIdle
 	 * @param dcData
+	 * @param tmpSum
+	 * @param humSum
+	 * @param consumption
 	 */
 	public NodeStatistics(int acksFailedCount, int acksReceivedCount,
 			int beaconsSentCount, int duplicatesDroppedCount,
 			int duplicatesReceivedCount, int lastParent, int lostCount,
 			int msgCount, int uniqueCount, int nodeId, int parentOverflowCount,
 			int parentsChanges, int parentsCount, int txQueueFullCount,
-			int msgForwarded, int dcIdle, int dcData) {
+			int msgForwarded, int dcIdle, int dcData,
+			double tmpSum, double humSum, double consumption) {
 		this.acksFailedCount = acksFailedCount;
 		this.acksReceivedCount = acksReceivedCount;
 		this.beaconsSentCount = beaconsSentCount;
@@ -100,6 +113,9 @@ public class NodeStatistics {
 		this.msgForwarded = msgForwarded;
 		this.dcIdle = dcIdle;
 		this.dcData = dcData;
+		this.tmpSum = tmpSum;
+		this.humSum = humSum;
+		this.consumption = consumption;
 	}
 
 	/**
@@ -222,5 +238,26 @@ public class NodeStatistics {
 	 */
 	public int getDcData(){
 		return dcData;
+	}
+
+	/**
+	 *  @return the tmpAvg
+	 */
+	public double getTmpAvg(){
+		return tmpSum / uniqueCount;
+	}
+
+	/**
+	 *  @return the humAvg
+	 */
+	public double getHumAvg(){
+		return humSum / uniqueCount;
+	}
+
+	/**
+	 *  @return the consumption
+	 */
+	public double getConsumption(){
+		return consumption;
 	}
 }

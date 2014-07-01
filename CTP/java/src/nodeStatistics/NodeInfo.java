@@ -55,6 +55,14 @@ public class NodeInfo {
 
 	private int lastDcData = 0;
 
+	private double tmpSum = 0;
+
+	private double humSum = 0;
+
+	private double consumption = 0;
+
+	private double startingVoltage = 0;
+
 	/**
 	 * The last message sent by the nodeStatistics and received. It is not
 	 * necessarly the last packet received, but the packet with the biggest
@@ -156,6 +164,14 @@ public class NodeInfo {
 
 			lastDcData = lastReceived.get_routing_data_dcData();
 
+			// sum of the temperature and the humidity of the node
+			tmpSum += (double) (-39.6 + 0.01 * lastReceived.get_temperature());
+			humSum += (double) (-4.0 + 0.0405 * lastReceived.get_humidity() - 0.0000028 * (
+					lastReceived.get_humidity() * lastReceived.get_humidity()));
+			if (startingVoltage == 0 ) // first message
+				startingVoltage = (double) (lastReceived.get_voltage() / 4096. * 3.);
+			else // make the difference between the first and the last msg
+				consumption = (double) (startingVoltage - (lastReceived.get_voltage() / 4096. * 3.)); 
 		}
 
 		if (runtime)
@@ -195,7 +211,6 @@ public class NodeInfo {
 				lastReceived.get_routing_data_dcData(),
 				lastReceived.get_temperature(), lastReceived.get_humidity(),
 				lastReceived.get_voltage());
-
 	}
 
 	private NodeStatistics offlineStats = null;
@@ -224,7 +239,8 @@ public class NodeInfo {
 				lastReceived.get_routing_data_tx_queue_full(),
 				lastReceived.get_routing_data_forwarded(),
 				lastReceived.get_routing_data_dcIdle(),
-				lastReceived.get_routing_data_dcData());
+				lastReceived.get_routing_data_dcData(),
+				tmpSum, humSum, consumption);
 		return offlineStats;
 	}
 

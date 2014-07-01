@@ -4,6 +4,7 @@
 package nodeStatistics;
 
 import java.io.IOException;
+import java.text.DecimalFormat;
 
 import netTest.Strings;
 import netTest.serial.ConfigMsg;
@@ -17,8 +18,15 @@ import netTest.serial.SerializableMessage;
 public class OfflineStatisticsConsumer extends StatisticsConsumer {
 
 	public OfflineStatisticsConsumer() {
+		// plain parsing
 		super(Strings.getString("OfflineStatisticsConsumer.GLOBAL_LOG_FILE"));
 	}
+
+	public OfflineStatisticsConsumer(String plotFilename) {
+		// plain parsing + plottable file
+		super(Strings.getString("OfflineStatisticsConsumer.GLOBAL_LOG_FILE"),plotFilename);
+	}
+
 
 	/*
 	 * (non-Javadoc)
@@ -81,12 +89,14 @@ public class OfflineStatisticsConsumer extends StatisticsConsumer {
 				+ "AckRx" + "\t" + "Beacon" + "\t" + "DuplDropped" + "\t"
 				+ "DuplRx" + "\t" + "Lost" + "\t" + "AckFail" + "\t"
 				+ "ParentChanges" + "\t" + "ParentsCount" + "\t"
-				+ "TxQueueFull" + "\tMsgForwarded\t" + "DC\t" + "WakeUp\n");
+				+ "TxQueueFull" + "\tMsgForwarded\t" + "DC\t" + "WakeUp" + "\t"
+				+ "TmpAvg" + "\t" + "HumAvg" + "\t" + "Cons" + "\n");
 				//+ "TxQueueFull" + "\tMsgForwarded\t" + "DC(D/I)\n");
 	}
 
 	protected void printNodeStats(NodeInfo node) throws IOException {
 		NodeStatistics stats = node.getStatistics();
+		DecimalFormat decimalFormat = new DecimalFormat("0.#");
 		globalLog.write(stats.getNodeId() + "\t" + stats.getLastParent() + "\t"
 				+ stats.getUniqueCount() + "\\" + stats.getMsgCount() + "\t" 
 				+ +stats.getAcksReceivedCount()
@@ -99,8 +109,39 @@ public class OfflineStatisticsConsumer extends StatisticsConsumer {
 				+ stats.getTxQueueFullCount() + "\t" + "\t" 
 				+ stats.getMsgForwarded() + "\t" + "\t"
 				//+ stats.getDcData() + "/" + stats.getDcIdle() + "\n");
-				+ stats.getDcIdle() + "\t"
-				+ stats.getDcData() + "\n");
+				+ stats.getDcIdle() + "\t" + stats.getDcData() + "\t"
+				+ decimalFormat.format(stats.getTmpAvg()) + "\t"
+				+ decimalFormat.format(stats.getHumAvg()) + "\t"
+				+ decimalFormat.format(stats.getConsumption()) + "\n");
+	}
+	
+	protected void printNetworkForPlotHeader() throws IOException {
+		plotNetwork.write("ID" + "\t" + "DEL" + "\t" + "EXP" + "\t"
+					+ "MAX" + "\n");
 	}
 
+	protected void printNetworkStatsForPlot(int expId, int activeNodes) throws IOException {
+		plotNetwork.write(expId + "\t" + GlobalStatistics.uniqueMsgReceived + "\t"
+					+ GlobalStatistics.msgCount + "\t"
+					+ activeNodes*60 + "\n"); 
+					// 60 is an assumption for the data rate used.
+	}
+
+	protected void printNodesForPlotHeader() throws IOException {
+		//plotNodes.write(Strings.getString("RouteTest.NUM_NET_NODES"));
+		int nodes = Integer.parseInt(Strings.getString("RouteTest.NUM_NET_NODES"));
+		int counter = 0;
+		plotNodes.write("EXP" + "\t" + "T1" + "\t" + "H1" + "\t" + "DC1");
+		while(counter++ < nodes - 2)
+			plotNodes.write("\t" + "T" + (counter+1) + "\t" + "H" + (counter+1) + "\t"
+					+ "DC" + (counter+1));
+		plotNodes.write("\n");
+	}
+
+	protected void printNodeStatsForPlot(NodeInfo node) throws IOException {
+		NodeStatistics stats = node.getStatistics();
+		DecimalFormat decimalFormat = new DecimalFormat("0.#");
+		plotNodes.write("\t" + decimalFormat.format(stats.getTmpAvg()) + "\t"
+		+ decimalFormat.format(stats.getHumAvg()) + "\t" + stats.getDcIdle());
+	}
 }

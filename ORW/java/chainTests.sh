@@ -11,10 +11,10 @@
 #
 #
 ############# DEFINED PARAMETERS FOR THE TESTS #################
-power=27 		# starting power
-#power=27 		# starting power
-sleepI=2048 		# starting sleeping interval
-appP=4			# application period
+#power=14 		# starting power
+power=14 		# starting power
+sleepI=250 		# starting sleeping interval
+appP=30			# application period
 runsPath=logs/runs  	# path to the logs of the runs
 ################################################################
 clear
@@ -80,14 +80,15 @@ if [ $4 = "SAME" ]; then
 		else
 			echo -e "\nTEST $i\n" >> $runsPath/run_$1.txt
 		fi
-		echo -e "routing $test 15 $2 $power $sleepI"
-		./routing.sh $test 15 $2 $power $sleepI >> $runsPath/run_$1.txt
+		echo -e "routing $test $appP $2 $power $sleepI"
+		./routing.sh $test $appP $2 $power $sleepI >> $runsPath/run_$1.txt
 		fileToParse=$(ls logs | grep msg-$test-)
 		sleep 10
 		echo "PARSING logs/$fileToParse"
 		echo -e "\nPARSING $fileToParse\n" >> $runsPath/run_$1.txt
 		./parsing.sh logs/$fileToParse >> $runsPath/run_$1.txt
 		sleep 10 
+		mv logs/global.txt logs/runs/global_$test.txt
 		test=$((test+1))
 	done
 fi
@@ -99,18 +100,18 @@ if [ $4 = "AUTO" ]; then
 	#for ((i=0;i<3;i++)); do
 	for ((i=0;i<1;i++)); do
 		##SETTING POWER
-		if [ $i = 1 ]; then
+	#	if [ $i = 1 ]; then
 			power=17
-		elif [ $i = 2 ]; then
+	#	elif [ $i = 2 ]; then
 			power=14
-		elif [ $i = 3 ]; then
+	#	elif [ $i = 3 ]; then
 			power=7
-		fi
+	#	fi
 		#for((j=0;j<7;j++)); do
 		for((j=0;j<5;j++)); do
 			#SETTING SLEEP
-			if [[ $j > 0 && $j < 5 ]]; then
-				appP=$((appP*2))
+			#if [[ $j > 0 && $j < 5 ]]; then
+				#appP=$((appP*2))
 				#sleepI=$((sleepI*2))
 			#elif [ $j = 4 ]; then
 			#	sleepI=8192
@@ -120,20 +121,22 @@ if [ $4 = "AUTO" ]; then
 			#	sleepI=15360
 			#else
 			#	sleepI=1024
-			fi
+			#fi
 			echo "RUNNING TEST $testNr (id: $testId)"
 			if [ $i = 0 ]; then
 				echo -e "TEST $testNr\n" >> $runsPath/run_$1.txt
 			else
 				echo -e "\nTEST $testNr\n" >> $runsPath/run_$1.txt
 			fi
-			echo -e "routing $testId $appP $2 $power $sleepI RANDOM_INTERVAL"
-			./routing.sh $testId $appP $2 $power $sleepI RANDOM_INTERVAL >> $runsPath/run_$1.txt
+			echo -e "routing $testId $appP $2 $power $sleepI"
+			./routing.sh $testId $appP $2 $power $sleepI >> $runsPath/run_$1.txt
+			#./routing.sh $testId $appP $2 $power $sleepI >> $runsPath/run_$1.txt
 			fileToParse=$(ls logs | grep msg-$testId-)
 			sleep 10
 			echo "PARSING $fileToParse"
 			echo -e "\nPARSING $fileToParse\n" >> $runsPath/run_$1.txt
 			./parsing.sh logs/$fileToParse>> $runsPath/run_$1.txt
+			mv logs/global.txt logs/runs/global_$testId.txt
 			testNr=$((testNr+1))
 			testId=$((testId+1))
 			sleep 10
@@ -171,9 +174,9 @@ if [ $4 = "DUAL" ]; then
 	./parsing.sh logs/$fileToParse>> $runsPath/run_$1.txt
 fi
 
-cp logs/results.txt /home/ashen/Dropbox/Tesi\ Magistrale/results/results_$1.txt
-cp $runsPath/run_$1.txt /home/ashen/Dropbox/Tesi\ Magistrale/results/
+#cp logs/results.txt /home/ashen/Dropbox/Tesi\ Magistrale/results/results_$1.txt
+#cp $runsPath/run_$1.txt /home/ashen/Dropbox/Tesi\ Magistrale/results/
 mv logs/results.txt logs/runs/results_$1.txt
-mv logs/global.txt logs/runs/global_$1.txt
+#mv logs/global.txt logs/runs/global_$1.txt
 
 exit 0
