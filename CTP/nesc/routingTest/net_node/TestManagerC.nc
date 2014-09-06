@@ -44,6 +44,26 @@ implementation {
      config_msg_t *msg = (config_msg_t *)
            call ConfigSend.getPayload(&config_packet);
      memcpy(msg, &config, sizeof(config_msg_t));
+/*#ifdef DUMMY_START
+  	#ifdef PRINTF
+	printf("builduing dummy start config msg!\n");
+	call PrintfFlush.flush();
+	#endif
+	config.seq_no=27;
+	config.app_period=30;
+	config.wait_period=3;
+	config.routing_boot_period=3;
+	config.run_period=180;
+	config.stop_period=3;
+	config.power=27;
+	config.sleep_interval=250;
+	config.randomize_start = FALSE;
+	config.random_interval = FALSE;
+#endif */
+  #ifdef PRINTF
+	printf("config timer fired!\n");
+	call PrintfFlush.flush();
+#endif
      call ResetFlooding.reset();
 #ifdef LPL_COEXISTENCE
      call LowPowerListening.setRxSleepInterval(&config_packet, 0);
@@ -57,6 +77,14 @@ implementation {
     test_state = DONE;
 #ifdef PRINTF_SUPPORT
     call PrintfControl.start();
+#endif
+  	#ifdef PRINTF
+	printf("bootedA!\n");
+	call PrintfFlush.flush();
+	#endif
+#ifdef DUMMY_START
+	#warning ****** DUMMY START ACTIVE ******
+   	//call ConfigFwTimer.startOneShot(6000);
 #endif
   }
 
@@ -180,8 +208,21 @@ implementation {
         uint8_t len)
   {
     config_msg_t *data = (config_msg_t *) payload;
+  #ifdef PRINTF
+	printf("config message received! %u\n",data->app_period);
+	call PrintfFlush.flush();
+#endif
+
+    #ifndef DUMMY_START
+    //onfig_msg_t *data = (config_msg_t *) payload;
     if (data->seq_no <= last_seq_no)
       return msg;
+    #else
+  	#ifdef PRINTF
+	printf("dummy start!\n");
+	call PrintfFlush.flush();
+	#endif
+    #endif
     call Leds.led2Toggle();    
     memcpy(&config, payload, sizeof(config_msg_t));
     last_seq_no = config.seq_no;
@@ -195,6 +236,10 @@ implementation {
       call ConfigFwTimer.startOneShot(call Random.rand32() % 10);
       return;
     } 
+  	#ifdef PRINTF
+	printf("config send: %u,%lu,%u || \n",config.app_period,config.run_period,config.sleep_interval);
+	call PrintfFlush.flush();
+	#endif
     call RoutingTester.setPower(config.power);
     test_state = WAITING;
     call Timer.startOneShot(1000ULL * config.wait_period);

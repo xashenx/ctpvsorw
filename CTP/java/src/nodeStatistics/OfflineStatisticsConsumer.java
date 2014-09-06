@@ -131,10 +131,10 @@ public class OfflineStatisticsConsumer extends StatisticsConsumer {
 		//plotNodes.write(Strings.getString("RouteTest.NUM_NET_NODES"));
 		int nodes = Integer.parseInt(Strings.getString("RouteTest.NUM_NET_NODES"));
 		int counter = 0;
-		plotNodes.write("EXP" + "\t" + "T1" + "\t" + "H1" + "\t" + "DC1");
+		plotNodes.write("EXP" + "\t" + "T1" + "\t" + "H1" + "\t" + "DC1" + "\t" + "PDR1");
 		while(counter++ < nodes - 2)
 			plotNodes.write("\t" + "T" + (counter+1) + "\t" + "H" + (counter+1) + "\t"
-					+ "DC" + (counter+1));
+					+ "DC" + (counter+1) + "\t" + "PDR" + (counter+1));
 		plotNodes.write("\n");
 	}
 
@@ -142,6 +142,7 @@ public class OfflineStatisticsConsumer extends StatisticsConsumer {
 		NodeStatistics stats = node.getStatistics();
 		DecimalFormat decimalFormat = new DecimalFormat("0.#");
 		plotNodes.write("\t" + decimalFormat.format(stats.getTmpAvg()) + "\t"
-		+ decimalFormat.format(stats.getHumAvg()) + "\t" + stats.getDcIdle());
+		+ decimalFormat.format(stats.getHumAvg()) + "\t" + stats.getDcIdle()
+		+ "\t" + stats.getUniqueCount())
 	}
 }

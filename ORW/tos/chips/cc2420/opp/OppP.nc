@@ -504,7 +504,8 @@ implementation {
  	void logSentFail(message_t* msg){
 		call OppDebug.logEventMsg(NET_C_FE_SENDDONE_WAITACK, 
 					call OppPacket.getSeqNum(msg), 
-					call OppPacket.getSource(msg), 
+					//call OppPacket.getSource(msg), 
+					call OppPacket.isPull(msg),
                     call AMPacket.destination(msg));
   	}
 

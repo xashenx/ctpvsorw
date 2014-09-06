@@ -158,12 +158,12 @@ public abstract class StatisticsConsumer implements Consumer {
 				Entry<Integer, NodeInfo> entry = i.next();
 				nextNodeId = entry.getValue().getStatistics().getNodeId();
 				while(nextNodeId > counter++)
-					plotNodes.write("\t" + 0 + "\t" + 0 + "\t" + 0);
+					plotNodes.write("\t" + 0 + "\t" + 0 + "\t" + 0 + "\t" + 0);
 				if(nextNodeId != 0)
 					printNodeStatsForPlot(entry.getValue());	
 			}
 			while(counter++ < nodes)
-					plotNodes.write("\t" + 0 + "\t" + 0 + "\t" + 0);
+					plotNodes.write("\t" + 0 + "\t" + 0 + "\t" + 0 + "\t" + 0);
 			plotNodes.write("\n");
 			plotNodes.flush();
 			printNetworkStatsForPlot(id, entries.size());

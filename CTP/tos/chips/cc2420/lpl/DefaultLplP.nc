@@ -249,9 +249,11 @@ implementation {
       uint16_t sleepInterval) {
     if(sleepInterval == 0) {
       return 100;
+      //return 10000;
     }
     
     return getActualDutyCycle((DUTY_ON_TIME * 100) 
+    //return getActualDutyCycle((DUTY_ON_TIME * 10000) 
         / (sleepInterval + DUTY_ON_TIME));
   }
 

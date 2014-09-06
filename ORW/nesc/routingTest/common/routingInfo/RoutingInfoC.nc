@@ -29,6 +29,7 @@ implementation {
   components RoutingInfoP;
   #ifdef PRINTF
 	components PrintfC, SerialStartC;
+	//components SerialPrintfC, SerialStartC;
   #endif
 
   RoutingInfoP.Boot = Boot;

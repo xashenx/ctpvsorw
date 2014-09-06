@@ -24,11 +24,19 @@ implementation {
   components CC2420ActiveMessageC;
 #endif
 #ifdef PRINTF
-  components PrintfC;
-  TestManagerC.PrintfControl -> PrintfC;
-  TestManagerC.PrintfFlush -> PrintfC;
-  RoutingTesterC.PrintfControl -> PrintfC;
-  RoutingTesterC.PrintfFlush -> PrintfC;
+	#ifndef COOJA
+		components PrintfC;
+		TestManagerC.PrintfControl -> PrintfC;
+		TestManagerC.PrintfFlush -> PrintfC;
+		RoutingTesterC.PrintfControl -> PrintfC;
+		RoutingTesterC.PrintfFlush -> PrintfC;
+	#else
+		components SerialPrintfC;
+		TestManagerC.PrintfControl -> SerialPrintfC;
+		TestManagerC.PrintfFlush -> SerialPrintfC;
+		RoutingTesterC.PrintfControl -> SerialPrintfC;
+		RoutingTesterC.PrintfFlush -> SerialPrintfC;
+	#endif
 #endif
 
   RoutingTesterC.Boot -> MainC;
@@ -53,10 +61,17 @@ implementation {
 #endif
   
 #ifdef PRINTF_SUPPORT
-  RoutingTesterC.PrintfControl -> PrintfC;
-  RoutingTesterC.PrintfFlush -> PrintfC;
-  TestManagerC.PrintfControl -> PrintfC;
-  TestManagerC.PrintfFlush -> PrintfC;
+	#ifndef COOJA
+		RoutingTesterC.PrintfControl -> PrintfC;
+		RoutingTesterC.PrintfFlush -> PrintfC;
+		TestManagerC.PrintfControl -> PrintfC;
+		TestManagerC.PrintfFlush -> PrintfC;
+	#else
+		RoutingTesterC.PrintfControl -> SerialPrintfC;
+		RoutingTesterC.PrintfFlush -> SerialPrintfC;
+		TestManagerC.PrintfControl -> SerialPrintfC;
+		TestManagerC.PrintfFlush -> SerialPrintfC;
+	#endif
 #endif
   //TestManagerC.DutyCycle -> DutyCycleC;
   TestManagerC.DCevaluator -> DCevaluatorC;

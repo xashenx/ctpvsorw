@@ -304,14 +304,15 @@ implementation {
       call ConfigSend.getPayload(&config_packet,sizeof(config_msg_t));
 #ifdef DUMMY_START
 	config.seq_no=1;
-	config.app_period=10;
+	config.app_period=30;
 	config.wait_period=3;
 	config.routing_boot_period=3;
-	config.run_period=60;
+	config.run_period=300;
 	config.stop_period=3;
 	config.power=27;
-	config.sleep_interval=2048;
+	config.sleep_interval=250;
 	config.randomize_start = FALSE;
+	config.random_interval = FALSE;
 #endif 
     memcpy(msg, &config, sizeof(config_msg_t));
     call Leds.led2Toggle();

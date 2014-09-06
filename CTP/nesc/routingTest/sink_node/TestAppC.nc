@@ -43,7 +43,9 @@ implementation {
 #ifdef PRINTF_SUPPORT
   components PrintfC;
 #endif
-
+#ifdef PRINTF
+  components PrintfC;
+#endif
   components RandomC;
 
   RoutingTesterC.Boot -> MainC;
@@ -88,6 +90,12 @@ implementation {
 
 #ifdef PRINTF_SUPPORT
   RoutingTesterC.PrintfControl -> PrintfC;
+  RoutingTesterC.PrintfFlush -> PrintfC;
+  TestManagerC.PrintfControl -> PrintfC;
+  TestManagerC.PrintfFlush -> PrintfC;
+#endif
+#ifdef PRINTF
+  RoutingTesterC.PrintfControl ->PrintfC;
   RoutingTesterC.PrintfFlush -> PrintfC;
   TestManagerC.PrintfControl -> PrintfC;
   TestManagerC.PrintfFlush -> PrintfC;

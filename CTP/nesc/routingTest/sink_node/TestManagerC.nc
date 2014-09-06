@@ -6,6 +6,10 @@
  #ifdef PRINTF_SUPPORT
  #include "printf.h"
  #endif
+#ifdef PRINTF
+ #include "printf.h"
+ #endif
+
 
  #ifdef MSG_LOGGER
  #include "StorageVolumes.h"
@@ -50,6 +54,10 @@ module TestManagerC {
 #endif
 
 #ifdef PRINTF_SUPPORT
+    interface SplitControl as PrintfControl;
+    interface PrintfFlush;
+#endif
+#ifdef PRINTF
     interface SplitControl as PrintfControl;
     interface PrintfFlush;
 #endif
@@ -107,6 +115,17 @@ implementation {
 
 #ifdef PRINTF_SUPPORT
     call PrintfControl.start();
+#endif
+#ifdef PRINTF
+    call PrintfControl.start();
+#endif
+  	#ifdef PRINTF
+	printf("sink booted!!!\n");
+	call PrintfFlush.flush();
+	#endif
+#ifdef DUMMY_START
+	#warning ****** DUMMY START ACTIVE ******
+   	call ConfigFwTimer.startOneShot(4000);
 #endif
   }
 
@@ -174,7 +193,9 @@ implementation {
 		wakeup_interval = 0;*/
       /*call LowPowerListening.setLocalSleepInterval(config.sleep_interval);
       call DCevaluator.startExperiment(config.sleep_interval);*/
+#ifdef LPL_COEXISTENCE
       call LowPowerListening.setLocalSleepInterval(wakeup_interval);
+#endif
       call DCevaluator.startExperiment(wakeup_interval);
       call Leds.led0Off();
       test_state = RUNNING_APP;
@@ -199,6 +220,10 @@ implementation {
                                    void* payload, 
                                    uint8_t len) {
     result_msg_t temp;
+  	#ifdef PRINTF
+	printf("received a message!\n");
+	call PrintfFlush.flush();
+	#endif
     call Leds.led2Toggle();
     if (len == sizeof(data_msg_t) && test_state != DONE){
       data_msg_t* net_msg = (data_msg_t *) payload;
@@ -269,25 +294,55 @@ implementation {
   {
     config_msg_t *msg = (config_msg_t *)
       call ConfigSend.getPayload(&config_packet);
-    memcpy(msg, &config, sizeof(config_msg_t));
     call Leds.led2Toggle();
     call ResetFlooding.reset();   
+#ifdef DUMMY_START
+	config.seq_no=27;
+	config.app_period=30;
+	config.wait_period=3;
+	config.routing_boot_period=3;
+	config.run_period=180;
+	config.stop_period=3;
+	config.power=27;
+	config.sleep_interval=250;
+	config.randomize_start = FALSE;
+	config.random_interval = FALSE;
+  	#ifdef PRINTF
+	printf("building dummy start config msg! %lu\n",config.run_period);
+	call PrintfFlush.flush();
+	#endif
+#endif
+    memcpy(msg, &config, sizeof(config_msg_t));
 #ifdef LPL_COEXISTENCE
     call LowPowerListening.setRxSleepInterval(&config_packet, 0);
 #endif
     if (call ConfigSend.send(AM_BROADCAST_ADDR, &config_packet, 
-                             sizeof(config_msg_t)) != SUCCESS)
+                             sizeof(config_msg_t)) != SUCCESS){
       call ConfigFwTimer.startOneShot(call Random.rand32() % 10);
+   #ifdef PRINTF
+	printf("failing to send the config message!(1)\n");
+	call PrintfFlush.flush();
+    #endif
+      }
+ 
   }
 
   event void ConfigSend.sendDone(message_t *msg, error_t error)
   {
     if (error != SUCCESS) {
       call ConfigFwTimer.startOneShot(call Random.rand32() % 10);
+    #ifdef PRINTF
+	printf("failing to send the config message!(2)\n");
+	call PrintfFlush.flush();
+    #endif
       return;
     }
     call RoutingTester.setPower(config.power);
     test_state = WAITING;
+    #ifdef PRINTF
+	printf("Configuration message broadcasted\n");
+	call PrintfFlush.flush();
+    #endif
     call Timer.startOneShot(1000ULL * config.wait_period);
     call Leds.set(0);
   }
@@ -405,6 +460,13 @@ implementation {
 #endif
 
 #ifdef PRINTF_SUPPORT
+  event void PrintfControl.startDone(error_t error) {}
+
+  event void PrintfControl.stopDone(error_t error) {}
+
+  event void PrintfFlush.flushDone(error_t error) {}
+#endif
+#ifdef PRINTF
   event void PrintfControl.startDone(error_t error) {}
 
   event void PrintfControl.stopDone(error_t error) {}
