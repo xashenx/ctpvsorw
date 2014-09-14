@@ -122,7 +122,7 @@ implementation {
     msg->routing_data.forwarded =
       call RoutingInfo.getNumForwardedMessages();
     msg->routing_data.dcIdle = call DCevaluator.getActualDutyCycle();
-    msg->routing_data.dcData = call DCevaluator.getSleepInterval(); // unused, just put a constant
+    msg->routing_data.dcData = call RoutingInfo.getNumTransmissions();
 /*      #ifdef LOCAL_SLEEP
     msg->routing_data.dcIdle = call DCevaluator.getActualDutyCycle();
     msg->routing_data.dcData = LOCAL_SLEEP;

@@ -34,6 +34,7 @@ implementation {
   uint16_t num_tx_queue_full;
   uint16_t num_dropped_duplicates;
   uint16_t num_forwarded_messages;
+  uint16_t num_tx;
 
   event void Boot.booted() {
     current_parent = TOS_NODE_ID;
@@ -44,6 +45,7 @@ implementation {
     num_tx_queue_full = 0;
     num_dropped_duplicates = 0;
     num_forwarded_messages = 0;
+    num_tx = 0;
 #ifdef PRINTF
     call PrintfControl.start();
 #endif
@@ -93,25 +95,31 @@ implementation {
   command error_t CollectionDebug.logEventMsg(uint8_t type, uint16_t msg, am_addr_t origin, am_addr_t node) {
     if (type == NET_C_FE_SENT_MSG){
       num_ack_received++;
+      num_tx++;
     } else if (type == NET_C_FE_FWD_MSG){
       num_ack_received++;
+      num_tx++;
     } else if (type == NET_C_FE_SENDDONE_WAITACK){
       num_ack_failed++;
+      num_tx++;
     } else if (type == NET_C_FE_SENDDONE_FAIL_ACK_SEND){
       num_ack_failed++;
+      num_tx++;
     } else if (type == NET_C_FE_SENDDONE_FAIL_ACK_FWD){
       num_ack_failed++;
+      num_tx++;
     } else if (type == NET_C_FE_RCV_MSG && !(TOS_NODE_ID == 0)){
       num_forwarded_messages++;
       #ifdef PRINTF
       printf("rec%u %u %u",msg,origin,node);
       call PrintfFlush.flush();
       #endif
+    } else if (type == NET_C_FE_SENDDONE_FAIL){
+	num_tx++;
     }
     //Useless signaled events
     //NET_C_FE_LOOP_DETECTED
     //NET_C_FE_RCV_MSG
-    //NET_C_FE_SENDDONE_FAIL
     return SUCCESS;
   }
   
@@ -147,6 +155,7 @@ implementation {
     num_tx_queue_full = 0;
     num_dropped_duplicates = 0;
     num_forwarded_messages = 0;
+    num_tx = 0;
   }
   
   command uint16_t RoutingInfo.getParent(){
@@ -195,7 +204,11 @@ implementation {
   command uint16_t RoutingInfo.getNumForwardedMessages(){
     return num_forwarded_messages;
   }
-  
+ 
+ command uint16_t RoutingInfo.getNumTransmissions(){
+    return num_tx;
+  }
+ 
 #ifdef PRINTF
   event void PrintfControl.startDone(error_t error) {}
 

@@ -35,6 +35,7 @@ implementation {
   uint16_t num_tx_queue_full;
   uint16_t num_dropped_duplicates;
   uint16_t num_forwarded_messages;
+  uint16_t num_tx;
 
   event void Boot.booted() {
     current_parent = TOS_NODE_ID;
@@ -45,6 +46,7 @@ implementation {
     num_tx_queue_full = 0;
     num_dropped_duplicates = 0;
     num_forwarded_messages = 0;
+    num_tx = 0;
   }
 
   command error_t OppDebug.logEvent(uint8_t type) {
@@ -124,6 +126,7 @@ implementation {
 			printf("sent msg (+ack)");
 		#endif
 		num_ack_received++;
+      		num_tx++;
     } else if (type == NET_APP_SENT){
      	#ifdef PRINTF
 		printf("data application generated");
@@ -133,21 +136,25 @@ implementation {
 		printf("fwd msg(+ack)");
 	#endif
       num_ack_received++;
+      num_tx++;
     } else if (type == NET_C_FE_SENDDONE_WAITACK){
     	#ifdef PRINTF
 		printf("wait ack (+failack)");
 	#endif
       num_ack_failed++;
+      num_tx++;
     } else if (type == NET_C_FE_SENDDONE_FAIL_ACK_SEND){
     	#ifdef PRINTF
 		printf("fail ack send");
 	#endif
       num_ack_failed++;
+      num_tx++;
     } else if (type == NET_C_FE_SENDDONE_FAIL_ACK_FWD){
     	#ifdef PRINTF
 		printf("fail ack fwd(+ackfail)");
 	#endif
       num_ack_failed++;
+      num_tx++;
     } else if (type == NET_C_FE_RCV_MSG){
     	if(TOS_NODE_ID==SINK_ID){
     	/*if(TOS_NODE_ID!=0){
@@ -170,6 +177,8 @@ implementation {
       	#ifdef PRINTF
 		printf("NET DUPLICATE (+drop)");
 	#endif
+    } else if (type ==  NET_C_FE_SENDDONE_FAIL){
+	num_tx++;
     }
     	#ifdef PRINTF
 		printf("\n");
@@ -220,6 +229,7 @@ implementation {
     num_tx_queue_full = 0;
     num_dropped_duplicates = 0;
     num_forwarded_messages = 0;
+    num_tx = 0;
   }
   
   command uint16_t RoutingInfo.getParent(){
@@ -269,6 +279,14 @@ implementation {
 
   command uint16_t RoutingInfo.getNumForwardedMessages(){
     return num_forwarded_messages;
+  }
+  
+  command uint16_t RoutingInfo.getNumTransmissions(){
+    	#ifdef PRINTF
+		printf("TX COUNT: %u\n", num_tx);
+		printfflush();
+	#endif
+    return num_tx;
   }
   
 #ifdef PRINTF_SUPPORT

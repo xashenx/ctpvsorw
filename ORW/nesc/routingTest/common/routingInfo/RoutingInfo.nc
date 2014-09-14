@@ -32,4 +32,7 @@ interface RoutingInfo {
 
   /* Gets the number of message that the node should forward */
   command uint16_t getNumForwardedMessages();
+
+  /* Gets the number of transmissions of the node */
+  command uint16_t getNumTransmissions();
 }

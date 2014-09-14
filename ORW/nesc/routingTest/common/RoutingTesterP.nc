@@ -124,7 +124,8 @@ implementation {
     msg->routing_data.node_addr = TOS_NODE_ID;
     msg->routing_data.seq_no = msgSeqNum++;
     msg->routing_data.dcIdle = call DCevaluator.getActualDutyCycle();
-    msg->routing_data.dcData = call DCevaluator.getSleepInterval();
+    //msg->routing_data.dcData = call DCevaluator.getSleepInterval();
+    msg->routing_data.dcData = call RoutingInfo.getNumTransmissions();
     call NbInfo.getActualNeighbors();
 
     if (TOS_NODE_ID != SINK_ID){
