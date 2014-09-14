@@ -24,7 +24,7 @@ implementation {
 	uint32_t totalTime;
 	uint32_t upTimeData, upStartTime;
 	uint32_t upTimeIdle;
-	uint16_t dcycleRawSum;
+	uint32_t dcycleRawSum;
 	uint16_t dcycle;	   
 	uint16_t samplesCounter;
 	uint16_t sleepInterval;
@@ -64,9 +64,9 @@ implementation {
 	    	updateEnergyStat(now);
    		upStartTime = now;
 		last_state = TRUE;
-		/*#ifdef PRINTF
+		#ifdef PRINTF
 		printf("DCEV: radio turned on!\n");
-		#endif*/
+		#endif
 	}
   
 	command void DutyCycle.radioOff(bool action){
@@ -88,9 +88,9 @@ implementation {
 	 		upTimeIdle += d;
  		}*/
 		upTimeData += d;
-		/*#ifdef PRINTF
+		#ifdef PRINTF
 		printf("DCEV: radio turned off!\n");
-		#endif*/
+		#endif
 	}
 	
 	command uint16_t DCevaluator.getActualDutyCycle(){
@@ -120,7 +120,7 @@ implementation {
 	   	//call Timer.startPeriodic(1000);
 		sleepInterval = sleep;
 		if(sleepInterval > 0){
-	   		call Timer.startPeriodic(sleepInterval*1.2);
+	   		call Timer.startPeriodic(5000);
 			#ifdef PRINTF
 			printf("sleepInterval: %u\n",sleepInterval);
 			printfflush();
@@ -172,16 +172,15 @@ implementation {
 		//dcycleRawSum += 1000;
 	   }else{*/
 	   	samplesCounter++;
-	   	dcycleRawSum += (1000 * upTimeData) / totalTime;	   
+	   	dcycleRawSum += (100 * upTimeData) / totalTime;	   
 	   	dcycle = dcycleRawSum / samplesCounter;  
 		totalTime = 0;
 		upTimeData = 0;
 		upTimeIdle = 0;
 		#ifdef PRINTF
-	 	printf("DCEV: duty cycle = %u!\n", dcycle);
+	 	printf("DCEV: duty cycle = %u! (%u)\n", dcycle,dcycleRawSum);
 	  	printfflush();
 	  	#endif
 	   }
 	}
-
 }

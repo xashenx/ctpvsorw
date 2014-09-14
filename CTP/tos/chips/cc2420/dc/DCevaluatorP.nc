@@ -32,7 +32,7 @@ implementation {
 	uint32_t totalTime;
 	uint32_t upTimeData, upStartTime;
 	uint32_t upTimeIdle;
-	uint16_t dcycleRawSum;
+	uint32_t dcycleRawSum;
 	uint16_t dcycle;	   
 	uint16_t samplesCounter;
 	uint16_t sleepInterval;
@@ -140,7 +140,7 @@ implementation {
 		#endif*/
 		sleepInterval = sleep;
 		if(sleepInterval > 0){
-	   		call Timer.startPeriodic(sleepInterval*1.2);
+	   		call Timer.startPeriodic(5000);
 			#ifdef PRINTF
 			//printf("|%u|",sleep);
 			#endif
@@ -168,11 +168,11 @@ implementation {
 	   	#ifdef PRINTF
 		//printf("%lu:%lu:%u:%u",upTimeData,totalTime,dcycleRawSum,samplesCounter);
 		#endif
-	   	dcycleRawSum += (1000 * upTimeData) / totalTime;	   
-	   	dcycle = dcycleRawSum / samplesCounter;  
-		   totalTime = 0;
-		   upTimeData = 0;
-		   upTimeIdle = 0;
+	   	dcycleRawSum += (100 * upTimeData) / totalTime;	   
+	   	dcycle = dcycleRawSum / samplesCounter; 
+		totalTime = 0;
+		upTimeData = 0;
+		upTimeIdle = 0;
 	   }
 	   #ifdef PRINTF
 	   //printf("DCEV: duty cycle = %u!\n", dcycle);
