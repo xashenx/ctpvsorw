@@ -27,6 +27,8 @@ public abstract class StatisticsConsumer implements Consumer {
 	protected boolean netFileExists = false;
 	protected BufferedWriter plotNodes;
 	protected boolean nodesFileExists = false;
+	protected BufferedWriter plotFails;
+	protected boolean failsFileExists = false;
 
 	protected HashMap<Integer, NodeInfo> nodes;
 
@@ -40,6 +42,7 @@ public abstract class StatisticsConsumer implements Consumer {
 		openFiles(logFilename,0);
 		openFiles(expDescriptor,1);
 		openFiles(expDescriptor,2);
+		openFiles(expDescriptor,3);
 	}
 
 	protected synchronized NodeInfo ensureNode(int index, boolean runtime) {
@@ -81,7 +84,7 @@ public abstract class StatisticsConsumer implements Consumer {
 				if(file.exists())
 					netFileExists = true;
 				plotNetwork = new BufferedWriter(new FileWriter(path, true));
-			} else { // plotNodes
+			} else if(fileType == 2){ // plotNodes
 				String path = Strings.getString("LOG_DIR")
 						+ File.separator + logFilename
 						+ "-nodes";
@@ -89,7 +92,16 @@ public abstract class StatisticsConsumer implements Consumer {
 				if(file.exists())
 					nodesFileExists = true;
 				plotNodes = new BufferedWriter(new FileWriter(path, true));
+			} else { // plotFails
+				String path = Strings.getString("LOG_DIR")
+						+ File.separator + logFilename
+						+ "-fails";
+				File file = new File(path);
+				if(file.exists())
+					failsFileExists = true;
+				plotFails = new BufferedWriter(new FileWriter(path, true));
 			}
+
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -112,6 +124,10 @@ public abstract class StatisticsConsumer implements Consumer {
 
 	protected abstract void printNodeStatsForPlot(NodeInfo node) throws IOException;
 	
+	protected abstract void printFailsHeader() throws IOException;
+
+	protected abstract void printFails(NodeInfo node) throws IOException;
+
 	public void printStats() {
 		try {
 			printHeader();
@@ -152,22 +168,33 @@ public abstract class StatisticsConsumer implements Consumer {
 				printNodesForPlotHeader();
 			if(!netFileExists)
 				printNetworkForPlotHeader();
+			if(!failsFileExists)
+				printFailsHeader();
 			plotNodes.write("" + id);
+			plotFails.write("" + id);
 			for (Iterator<Entry<Integer, NodeInfo>> i = entries.iterator(); i
 					.hasNext();) {
 				Entry<Integer, NodeInfo> entry = i.next();
 				nextNodeId = entry.getValue().getStatistics().getNodeId();
-				while(nextNodeId > counter++)
+				while(nextNodeId > counter++){
 					plotNodes.write("\t" + 0 + "\t" + 0 + "\t" + 0 + "\t" + 0);
-				if(nextNodeId != 0)
-					printNodeStatsForPlot(entry.getValue());	
+					plotFails.write("\t" + 0 + "\t" + 0);
+				}
+				if(nextNodeId != 0){
+					printNodeStatsForPlot(entry.getValue());
+					printFails(entry.getValue());
+				}
 			}
-			while(counter++ < nodes)
+			while(counter++ < nodes){
 					plotNodes.write("\t" + 0 + "\t" + 0 + "\t" + 0 + "\t" + 0);
+					plotFails.write("\t" + 0 + "\t" + 0);
+			}
 			plotNodes.write("\n");
 			plotNodes.flush();
 			printNetworkStatsForPlot(id, entries.size());
 			plotNetwork.flush();
+			plotFails.write("\n");
+			plotFails.flush();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

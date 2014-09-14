@@ -143,6 +143,21 @@ public class OfflineStatisticsConsumer extends StatisticsConsumer {
 		DecimalFormat decimalFormat = new DecimalFormat("0.#");
 		plotNodes.write("\t" + decimalFormat.format(stats.getTmpAvg()) + "\t"
 		+ decimalFormat.format(stats.getHumAvg()) + "\t" + stats.getDcIdle()
-		+ "\t" + stats.getUniqueCount())
+		+ "\t" + stats.getUniqueCount());
+	}
+
+	protected void printFailsHeader() throws IOException {
+		int nodes = Integer.parseInt(Strings.getString("RouteTest.NUM_NET_NODES"));
+		int counter = 0;
+		plotFails.write("EXP" + "\t" + "FACK1" + "\t" + "L1");
+		while(counter++ < nodes - 2)
+			plotFails.write("\t" + "FACK" + (counter+1) + "\t" + "L" + (counter+1));
+		plotFails.write("\n");
+	}
+
+	protected void printFails(NodeInfo node) throws IOException {
+		NodeStatistics stats = node.getStatistics();
+		plotFails.write("\t" + stats.getAcksFailedCount() + "\t"
+		+ stats.getLostCount());
 	}
 }

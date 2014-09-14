@@ -94,4 +94,10 @@ public class OnlineStatisticsConsumer extends StatisticsConsumer {
 
 	@Override
 	protected void printNodeStatsForPlot(NodeInfo node) throws IOException {}
+
+	@Override
+	protected void printFailsHeader() throws IOException {}
+
+	@Override
+	protected void printFails(NodeInfo node) throws IOException {}
 }
